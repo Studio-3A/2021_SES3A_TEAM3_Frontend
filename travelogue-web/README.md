@@ -1,4 +1,4 @@
-# Travelogue - Front-end (Web & Mobile)
+# Travelogue - Front-end (Web)
 
 ## Overview
 Travelogue's front-end (web version).
