@@ -11,9 +11,9 @@ Travelogue's front-end, split into web and mobile, with an additional folder for
 * React Native (version ?)
 
 #### Web
-* Node.js (version ?)
-* TypeScript (version ?)
-* React (version ?)
+* Node.js (version 12.x)
+* TypeScript (version 4.2.3)
+* React (version 17.0.3)
 
 ## Dev Installation
 
