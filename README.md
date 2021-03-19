@@ -15,18 +15,6 @@ Travelogue's front-end, split into web and mobile, with an additional folder for
 * TypeScript (version 4.2.3)
 * React (version 17.0.3)
 
-## Dev Installation
-
-Install node from [here](https://nodejs.org/en/download/).
-
-Install TypeScript as a global module using the command `npm i -g typescript` and verify it was installed by running `tsc -v`.
-
-Within the root directory of the repo, run the command `npm install` to install the project dependencies.
-
-## Running the API locally
-
-Run the command: `npm start dev`. (<- update this part)
-
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
