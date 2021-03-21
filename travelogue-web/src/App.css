@@ -36,3 +36,149 @@
     transform: rotate(360deg);
   }
 }
+
+/*
+Website Standard Style Sheet css
+*/
+
+/* Shadows */
+
+.btn-shadow-black {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-shadow-black:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.btn-shadow-blue {
+  box-shadow: 0px 10px 20px rgba(52, 154, 246, 0.5);
+}
+
+.btn-shadow-blue:hover {
+  box-shadow: 0px 15px 30px rgba(52, 154, 246, 0.6);
+}
+
+.card-shadow {
+ box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-shadow:hover {
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Radius */
+
+.radius-sm {
+  border-radius: 10px;
+}
+.radius-sm {
+  border-radius: 14px;
+}
+.radius-sm {
+  border-radius: 20px;  
+}
+.radius-sm {
+  border-radius: 30px;
+}
+
+/* Buttons */
+
+.btn-primary {
+  height: 30px;
+  width: 120px;
+  background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
+  border-radius: 30px;
+}
+.btn-primary:disabled {
+  background: #F0F3F5;
+}
+
+.btn-secondary {
+  height: 30px;
+  width: 120px;
+  background: linear-gradient(117.03deg, #22D792 0%, #349AF6 100%);
+  border-radius: 10px;
+}
+
+.btn-secondary:hover {
+  background: #83C2FE;
+}
+
+.btn-secondary:disabled {
+  background: #F0F3F5;;
+}
+
+.btn-confirm {
+  background: #22D792;
+  border-radius: 20px;
+}
+
+.btn-confirm:hover {
+  background: #05B672;
+}
+
+/* Form */
+
+.form-input-light {
+  border: 1px solid #C6D0EB !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 14px !important;
+}
+.form-input-dark {
+  border: 1px solid #C6D0EB !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 14px !important;
+}
+.form-select {
+  border-radius: 14px !important;
+}
+
+/* Feedback Indicators */
+
+.progress-bar {
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(90deg, #5334F5 0%, #96FFEC 100%);
+  border-radius: 5px;
+}
+
+.points-bar {
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(0deg, #34F5C7, #34F5C7);
+  border-radius: 5px;
+}
+
+/* Cards */
+
+.card {
+  width: 300px;
+  height: 225px;
+}
+
+.card:hover {
+  width: 330px;
+  height: 245px;
+}
+
+
+/* Text Components */
+
+.txt-comp-label {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+.txt-comp-number {
+  width: 18px;
+  height: 18px;
+  background: #56CCF2;
+  border-radius: 15px;
+}
+
+/* Navigation */
+
