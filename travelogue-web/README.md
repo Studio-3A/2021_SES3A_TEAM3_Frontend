@@ -1,16 +1,9 @@
-# Travelogue - Front-end (Web & Mobile)
+# Travelogue - Front-end (Web)
 
 ## Overview
-Travelogue's front-end, split into web and mobile, with an additional folder for shared resources.
+Travelogue's website front-end.
 
 ### Technologies
-
-#### Mobile
-* Node.js (version ?)
-* TypeScript (version ?)
-* React Native (version ?)
-
-#### Web
 * Node.js (version 12.x)
 * TypeScript (version 4.2.3)
 * React (version 17.0.3)
