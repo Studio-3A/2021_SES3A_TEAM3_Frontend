@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Auth from "./Auth";
+import Auth from "./Components/BackEndLogic/Auth";
 
 function App() {
   return (
