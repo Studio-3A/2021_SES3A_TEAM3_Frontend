@@ -1,16 +1,11 @@
+/* Remove Whitespace at top of react-app */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -40,6 +35,12 @@
 /*
 Website Standard Style Sheet css
 */
+
+/* Font */
+
+* {
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
 
 /* Shadows */
 
@@ -89,20 +90,41 @@ Website Standard Style Sheet css
   width: 120px;
   background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
   border-radius: 30px;
+  border: none;
+
 }
 .btn-primary:disabled {
   background: #F0F3F5;
 }
 
 .btn-secondary {
-  height: 30px;
-  width: 120px;
-  background: linear-gradient(117.03deg, #22D792 0%, #349AF6 100%);
+  padding: 1% 0 1% 0;
+  width: 15%;
+  background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
   border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  color: white;
+  font-size: 24px;
+  transition-duration: 0.4s;
+  backface-visibility: hidden;
+  min-width: 160px;
 }
 
 .btn-secondary:hover {
-  background: #83C2FE;
+  background:linear-gradient(#83C2FE, #83C2FE) ;
+  transition-duration: 0.4s;
+  backface-visibility: hidden;
+}
+.btn-secondary:active {
+  outline: none;
+  width: 15.5%;
+  padding-top: 1.2%;
+  padding-bottom: 1.2%;
+  transition-duration: 0.1s;
+}
+.btn-secondary:focus {
+  outline: none;
 }
 
 .btn-secondary:disabled {
@@ -181,4 +203,114 @@ Website Standard Style Sheet css
 }
 
 /* Navigation */
+
+/* Front Page Background Elements */
+.container {
+  position: relative;
+  height: 100vh;
+}
+.frontPageBlob1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -999;
+  height: auto;
+  width: 100%;
+}
+.frontPageBlob2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  height: auto;
+  width: 28%;
+  min-width: 800px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2.5%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-icon {
+  padding: 5% 15%;
+  height: auto;
+  width: 70px;
+}
+
+.logo-text {
+  padding: 1% 2%;
+  font-weight: 700;
+  font-size: 55px;
+  color: white;
+}
+
+.menu-items {
+  display: flex;
+  width: 33%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-items > div {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* Main-Content */
+
+.main-content {
+  height: 80vh;
+  margin: 0 8%
+}
+
+.view-landing {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 80%;
+}
+
+.view-landing-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-right: 2%;
+}
+
+.left-title {
+  font-size: 4.2rem;
+  color: #3672F8;
+  min-width: 1000px;
+}
+.left-description {
+  color: #69A7FC;
+  font-size: 20px;
+  margin-bottom: 0.67em;
+}
+
+.view-landing-right {
+  padding-left: 10%;
+}
+
+.telescopeLady {
+  height: auto;
+  width: 140%;
+  min-width: 600px;
+}
+
+
 
