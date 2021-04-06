@@ -1,0 +1,140 @@
+.body {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5vh;
+}
+
+.account-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.page-title-div {
+    padding-left: 5%;
+}
+
+.page-title-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 143.2%;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.name-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 155.14%;
+}
+
+.textbox-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.textbox-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 143.2%;
+}
+
+.textbox {
+    background: #F2F2F2;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 143.2%;
+}
+
+.save-btn-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-btn {
+    width: 12vw;
+    background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
+    box-shadow: 0px 15px 30px rgba(47, 128, 237, 0.75);
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.deactivate-btn {
+    width: 12vw;
+    background: linear-gradient(90deg, #FFA0A0 -13.01%, #FF2727 123.97%);
+    box-shadow: 0px 15px 30px rgba(255, 76, 76, 0.5);
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.deactivate-grid {
+    padding-top: 40px;
+}
+
+.deactivate-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 143.2%;
+}
+
+.deactivate-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 143.2%;
+}
+
+@media screen and (max-width: 1110px) {
+    .body {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .page-title-div {
+        padding-left: 3%;
+    }
+    .page-title-text {
+        font-size: 24px;
+    }
+    .name-text {
+        font-size: 22px;
+    }
+    .textbox-header {
+        font-size: 14px;
+    }
+    .textbox {
+        font-size: 14px;
+    }
+    .save-btn {
+       width: 28vw;
+       font-size: 14px;
+    }
+    .deactivate-btn {
+        width: 28vw;
+        font-size: 14px;
+    }
+    .deactivate-heading {
+        font-size: 22px;
+    }
+    .deactivate-text {
+        font-size: 16px;
+    }
+ }
