@@ -12,6 +12,8 @@ export interface IAppProps {
   onHide?: boolean;
 }
 
+
+//remove the maptest when merging - its just to ensure people know how to kinda use it
 function App() {
   return (
     <BrowserRouter>
