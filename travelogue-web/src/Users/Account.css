@@ -70,6 +70,7 @@
     line-height: 34px;
     text-align: center;
     color: #FFFFFF;
+    border: none;
 }
 
 .deactivate-btn {
@@ -83,6 +84,7 @@
     line-height: 34px;
     text-align: center;
     color: #FFFFFF;
+    border: none;
 }
 
 .deactivate-grid {
