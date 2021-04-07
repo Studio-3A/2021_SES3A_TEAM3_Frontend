@@ -1,7 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
-import styled from 'styled-components';
 import './NavBar.css';
 import TravelogueIcon from '../../Images/travelogue-ico.svg';
 import defaultProfile from '../../Images/default-profile-ico.svg';
@@ -40,70 +38,83 @@ function NavBar() {
             </div>
           </div>
         </li>
+        <a href={'/'}>
+          <li>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={homeIcon} />
+              </div>
+              <div className='pageLink'>
+                <span>Home</span>
+              </div>
+            </div>
+          </li>
+        </a>
+
+        <a href={'/leaderboard'}>
+          <li>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={leaderboardIcon} />
+              </div>
+              <span>Leaderboard</span>
+            </div>
+          </li>
+        </a>
+
+        <a href={'/history'}>
+          <li>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={historyIcon} />
+              </div>
+              <span>History</span>
+            </div>
+          </li>
+        </a>
+
+        <a href={'/saved'}>
+          <li>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={savedIcon} />
+              </div>
+              <span>Saved</span>
+            </div>
+          </li>
+        </a>
+
+        <a href={'/account'}>
+          <li>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={accountsIcon} />
+              </div>
+              <span>Account</span>
+            </div>
+          </li>
+        </a>
+
+        <a href={'/settings'}>
+          <li>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={settingsIcon} />
+              </div>
+              <span>Settings</span>
+            </div>
+          </li>
+        </a>
 
         <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={homeIcon} />
+          <button>
+            <div className='pageContainer'>
+              <div className='pageImage'>
+                <img src={logoutIcon} />
+              </div>
+              <span>Logout</span>
             </div>
-            <div className='pageLink'>
-              <a href={'/'}>Home</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={leaderboardIcon} />
-            </div>
-            <a href={'/leaderboard'}>Leaderboard</a>
-          </div>
-        </li>
-
-        <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={historyIcon} />
-            </div>
-            <a href={'/history'}>History</a>
-          </div>
-        </li>
-
-        <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={savedIcon} />
-            </div>
-            <a href={'/saved'}>Saved</a>
-          </div>
-        </li>
-
-        <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={accountsIcon} />
-            </div>
-            <a href={'/account'}>Account</a>
-          </div>
-        </li>
-
-        <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={settingsIcon} />
-            </div>
-            <a href={'/settings'}>Settings</a>
-          </div>
-        </li>
-
-        <li>
-          <div className='pageContainer'>
-            <div className='pageImage'>
-              <img src={logoutIcon} />
-            </div>
-            <a href={'/logout'}>Logout</a>
-          </div>
+          </button>
         </li>
       </ul>
     </div>
