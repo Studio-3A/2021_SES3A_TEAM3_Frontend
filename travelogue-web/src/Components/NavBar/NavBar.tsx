@@ -38,6 +38,7 @@ function NavBar() {
             </div>
           </div>
         </li>
+
         <a href={'/'}>
           <li>
             <div className='pageContainer'>

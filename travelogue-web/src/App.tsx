@@ -5,7 +5,7 @@ import './App.css';
 
 import Auth from './Components/BackEndLogic/Auth';
 import NavBar from './Components/NavBar/NavBar';
-// import SavedTrips from './Components/SavedTrips/SavedTrips';
+import SavedTrips from './Components/SavedTrips/SavedTrips';
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
           path='/saved'
           render={() => (
             <div className='App'>
-              {/* <SavedTrips /> */}
+              <SavedTrips />
             </div>
           )}
         />
