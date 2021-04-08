@@ -1,6 +1,18 @@
 .App{
     text-align: left;
 }
+
+.App a{
+  text-decoration: none;
+}
+
+.App button{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -15,7 +27,7 @@ ul {
     background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
   }
   
-  li a, li a:hover {
+  li a, li a:hover, li span{
     display: block;
     color: #FFFF;
     padding: 8px 16px;
