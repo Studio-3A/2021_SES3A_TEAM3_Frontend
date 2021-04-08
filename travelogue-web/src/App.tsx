@@ -5,7 +5,8 @@ import './App.css';
 
 import Auth from './Components/BackEndLogic/Auth';
 import NavBar from './Components/NavBar/NavBar';
-// import SavedTrips from './Components/SavedTrips/SavedTrips';
+import Account from './Components/Users/Account';
+// import SavedTrips from './SavedTrips/SavedTrips';
 
 function App() {
   return (
@@ -44,7 +45,11 @@ function App() {
         <Route
           exact={true}
           path='/account'
-          render={() => <div className='App'></div>}
+          render={() => (
+            <div className='App'>
+              <Account />
+            </div>
+          )}
         />
         <Route
           exact={true}
