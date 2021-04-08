@@ -10,10 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Account.css';
 
 // Images
-import AccountIcon from "../Images/account-ico.png";
-import ProfileIcon from "../Images/profile-ico.png";
-import EmailIcon from "../Images/email-ico.png";
-import ProfilePic from "../Images/profile-test.jpg";
+import AccountIcon from "../../Images/account-ico.svg";
+import ProfileIcon from "../../Images/profile-ico.svg";
+import EmailIcon from "../../Images/email-ico.svg";
+import ProfilePic from "../../Images/default-profile-ico.svg";
+import CameraIcon from "../../Images/camera-ico.svg";
 
 const Body = styled.body`
     background-color: white;
@@ -36,9 +37,9 @@ class Account extends React.Component<{}, State> {
         super(props);
 
         this.state = {
-            name: 'John Doe',
-            username: '',
-            email: ''
+            name: 'Tim Williams',
+            username: 'TimWilliams',
+            email: 'tim.williams@email.com'
         };
 
         this.onChangeUsername = this.onChangeUsername.bind(this);
@@ -96,6 +97,7 @@ class Account extends React.Component<{}, State> {
                             alignItems="center">
                             <Grid item>
                                 <img src={ProfilePic} alt="profilePic" className="profile-img" />
+                                <img src={CameraIcon} alt="cameraIcon" className="camera-icon" />
                             </Grid>
                             <Grid item>
                                 <h4 className="name-text">{this.state.name}</h4>
@@ -121,7 +123,7 @@ class Account extends React.Component<{}, State> {
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className="textbox-item">
                                     <Form.Group controlId="formUsername">
                                         <Form.Control type="text" 
                                         name="username" 
@@ -145,7 +147,7 @@ class Account extends React.Component<{}, State> {
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className="textbox-item">
                                     <Form.Group controlId="formEmail">
                                         <Form.Control type="text" 
                                             name="email" 
@@ -162,6 +164,8 @@ class Account extends React.Component<{}, State> {
                                 </Button>
                             </div>
                         </Form>
+
+                        <hr className="line" />
 
                         {/*Deactivate Account Section*/}
                         <Grid container

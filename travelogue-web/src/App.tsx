@@ -5,6 +5,7 @@ import './App.css';
 
 import Auth from './Components/BackEndLogic/Auth';
 import NavBar from './Components/NavBar/NavBar';
+import Account from './Components/Users/Account';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 function App() {
@@ -36,15 +37,19 @@ function App() {
           exact={true}
           path='/saved'
           render={() => (
-              <div className='App'>
-                {/* <SavedTrips /> */}
-              </div>
+            <div className='App'>
+              {/* <SavedTrips /> */}
+            </div>
           )}
         />
         <Route
           exact={true}
           path='/account'
-          render={() => <div className='App'></div>}
+          render={() => (
+            <div className='App'>
+              <Account />
+            </div>
+          )}
         />
         <Route
           exact={true}
