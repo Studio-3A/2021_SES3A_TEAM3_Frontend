@@ -62,6 +62,7 @@ Website Standard Style Sheet css
 
 .card-shadow {
  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+ transition-duration: 0.4s;
 }
 
 .card-shadow:hover {
@@ -205,7 +206,11 @@ Website Standard Style Sheet css
 /* Navigation */
 
 /* Front Page Background Elements */
-.container {
+.container-fp {
+  position: relative;
+  height: auto;
+}
+.page1 {
   position: relative;
   height: 100vh;
 }
@@ -223,8 +228,8 @@ Website Standard Style Sheet css
   left: 0;
   z-index: -999;
   height: auto;
-  width: 28%;
-  min-width: 800px;
+  width: 18%;
+  min-width: 400px;
 }
 
 /* Header */
@@ -244,15 +249,15 @@ Website Standard Style Sheet css
 }
 
 .logo-icon {
-  padding: 5% 15%;
+  padding: 5% 5%;
   height: auto;
   width: 70px;
 }
 
 .logo-text {
-  padding: 1% 2%;
+  padding: 1% 15%;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 35px;
   color: white;
 }
 
@@ -267,6 +272,7 @@ Website Standard Style Sheet css
 .menu-items > div {
   font-weight: 700;
   font-size: 30px;
+  text-align: center;
 }
 
 /* Main-Content */
@@ -292,9 +298,10 @@ Website Standard Style Sheet css
 }
 
 .left-title {
-  font-size: 4.2rem;
+  font-size: 5.2rem !important;
   color: #3672F8;
-  min-width: 1000px;
+  min-width: 200px;
+  font-weight: 700;
 }
 .left-description {
   color: #69A7FC;
@@ -308,9 +315,152 @@ Website Standard Style Sheet css
 
 .telescopeLady {
   height: auto;
-  width: 140%;
+  width: 100%;
   min-width: 600px;
+}
+
+.world-map {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  text-align: center;
+}
+.world-map-img {
+  width: 85vw;
+}
+.page2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.page-title {
+  padding-top: 2%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 155.14%;
+  color:#5E90F9;
+  text-transform: uppercase;
+}
+
+.page-label {
+  font-style: normal;
+font-weight: bold;
+font-size: 3rem;
 }
 
 
 
+.page3 {
+  width: 100vw;
+  height: auto;
+  align-items: center;
+  margin-bottom: 3.5%;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.ec-right {
+  display: flex;
+  flex-direction: column; 
+  width: 30vw;
+}
+.ecr-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.ecr-item-clock {
+  width: 50vw;
+  height: auto;
+  border-radius: 45px;
+}
+
+.page4 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 7%;
+  align-items: center;
+  height: 85vh;
+}
+
+.mobile-blob {
+  margin: auto;
+  position: absolute;
+  left: 0; bottom: 0; right: 0;
+  width: 80%;
+  height: auto;
+  z-index: -999;
+}
+.mobile-div {
+  background-image: url('./components/svg/mobileBlob.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
+}
+.mobile-title {
+
+  min-width: 200px;
+  width: 70vw;
+
+  padding-top: 5%;
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  text-align: left;
+}
+.mb-img {
+  width: 17vw;
+  margin-left: 10px;
+}
+.mb-sep {
+  margin-bottom: 3%;
+}
+.mt-heading {
+  font-size: 5.2rem;
+  color: white;
+  font-weight: 700;
+}
+.mt-description {
+  color: white;
+  font-size: 2rem !important;
+}
+.app-download {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  height: auto;
+  justify-content: space-between;
+}
+.apple-download, .google-download {
+  width: 280px;
+  height: 87px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.apple-download div {
+  margin-left: 10%;
+}
+.ad-title {
+  text-transform: uppercase;
+  color: grey;
+}
+
+.ad-label {
+
+}

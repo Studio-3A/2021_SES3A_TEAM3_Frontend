@@ -1,0 +1,92 @@
+.App{
+    text-align: left;
+}
+
+.App a{
+  text-decoration: none;
+}
+
+.App button{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 234px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    text-decoration: none;
+    background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
+  }
+  
+  li a, li a:hover, li span{
+    display: block;
+    color: #FFFF;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  .iconContainer{
+      background: #2E68D4;
+      width: 234px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .icon{
+    padding-right: 20px;
+  }
+
+  .iconTxt{
+      color: #FFFF;
+    width: 130px;
+    height: 29px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 143.2%;
+  }
+
+.profileContainer{
+   display: block;
+   text-align: center;
+}
+
+.profileTxt{
+    width: 169px;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-weight: 340;
+    display: inline;
+    padding-bottom: 16px;
+    color: white;
+}
+
+.profileImg{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.pageContainer{
+    width: 234px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-top: 3px solid #69A7FC;
+}
+
+.pageContainer:active, .pageContainer:hover, .pageContainer:focus, .pageContainer:visited{
+    background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
+}
