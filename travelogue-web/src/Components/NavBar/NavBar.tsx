@@ -1,7 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
-import styled from 'styled-components';
 import './NavBar.css';
 import TravelogueIcon from '../../Images/travelogue-ico.svg';
 import defaultProfile from '../../Images/default-profile-ico.svg';
@@ -20,7 +18,7 @@ function NavBar() {
         <li>
           <div className='iconContainer'>
             <div className='icon'>
-              <img src={TravelogueIcon} />
+              <img alt="e-1" src={TravelogueIcon} />
             </div>
             <div className='iconTxt'>
               <p>Travelogue</p>
@@ -31,7 +29,7 @@ function NavBar() {
         <li>
           <div className='profileContainer'>
             <div className='profileImg'>
-              <img src={defaultProfile} />
+              <img alt="e-2" src={defaultProfile} />
             </div>
             <div className='profileTxt'>
               <p>
@@ -44,7 +42,7 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={homeIcon} />
+              <img alt="e-3" src={homeIcon} />
             </div>
             <div className='pageLink'>
               <a href={'/'}>Home</a>
@@ -55,7 +53,7 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={leaderboardIcon} />
+              <img alt="e-3" src={leaderboardIcon} />
             </div>
             <a href={'/leaderboard'}>Leaderboard</a>
           </div>
@@ -64,7 +62,7 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={historyIcon} />
+              <img alt="e-4" src={historyIcon} />
             </div>
             <a href={'/history'}>History</a>
           </div>
@@ -73,7 +71,7 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={savedIcon} />
+              <img alt="e-5" src={savedIcon} />
             </div>
             <a href={'/saved'}>Saved</a>
           </div>
@@ -82,7 +80,7 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={accountsIcon} />
+              <img alt="e-6" src={accountsIcon} />
             </div>
             <a href={'/account'}>Account</a>
           </div>
@@ -91,7 +89,7 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={settingsIcon} />
+              <img alt="e-7" src={settingsIcon} />
             </div>
             <a href={'/settings'}>Settings</a>
           </div>
@@ -100,9 +98,9 @@ function NavBar() {
         <li>
           <div className='pageContainer'>
             <div className='pageImage'>
-              <img src={logoutIcon} />
+              <img alt="e-8" src={logoutIcon} />
             </div>
-            <a href={'/logout'}>Logout</a>
+            <a href={'/Login'}>Login</a>
           </div>
         </li>
       </ul>
