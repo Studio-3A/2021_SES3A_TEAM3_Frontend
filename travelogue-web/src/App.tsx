@@ -29,8 +29,11 @@ function App() {
         <Route
           exact={true}
           path='/about'
-          
-          render={() => <div className='App'></div>}
+          render={() => 
+            <div className='App'>
+              <About />
+            </div>
+          }
         />
         {/* <Route
           exact={true}

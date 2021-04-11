@@ -42,6 +42,11 @@ export default function frontPage() {
                 <div className="search"></div>
                 <div className="menu-items">
                     <div className="menu-items-home">Home</div>
+                    <Link to="/login">
+                    <button className='menu-items-about' type='button'>
+                    About 
+                    </button>
+                    </Link>
                     <div className="menu-items-about">About</div>
                     <div className="menu-items-features">Features</div>
                     <Link to="/login">

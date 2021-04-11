@@ -2,10 +2,10 @@ import React from 'react'
 import { RouteComponentProps } from 'react-router';
 
 interface IProps{
-    name: string
+    name?: string
 }
 interface IState {
-    name: string
+    name?: string
 }
 
 export default class About extends React.Component<IProps,IState> {
