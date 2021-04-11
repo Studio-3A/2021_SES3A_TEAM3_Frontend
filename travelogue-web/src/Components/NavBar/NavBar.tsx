@@ -18,7 +18,7 @@ function NavBar() {
         <li>
           <div className='iconContainer'>
             <div className='icon'>
-              <img src={TravelogueIcon} />
+              <img alt="e-1" src={TravelogueIcon} />
             </div>
             <div className='iconTxt'>
               <p>Travelogue</p>
@@ -29,7 +29,7 @@ function NavBar() {
         <li>
           <div className='profileContainer'>
             <div className='profileImg'>
-              <img src={defaultProfile} />
+              <img alt="e-2" src={defaultProfile} />
             </div>
             <div className='profileTxt'>
               <p>
@@ -38,83 +38,65 @@ function NavBar() {
             </div>
           </div>
         </li>
-        <a href={'/'}>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={homeIcon} />
-              </div>
-              <div className='pageLink'>
-                <span>Home</span>
-              </div>
-            </div>
-          </li>
-        </a>
-
-        <a href={'/leaderboard'}>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={leaderboardIcon} />
-              </div>
-              <span>Leaderboard</span>
-            </div>
-          </li>
-        </a>
-
-        <a href={'/history'}>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={historyIcon} />
-              </div>
-              <span>History</span>
-            </div>
-          </li>
-        </a>
-
-        <a href={'/saved'}>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={savedIcon} />
-              </div>
-              <span>Saved</span>
-            </div>
-          </li>
-        </a>
-
-        <a href={'/account'}>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={accountsIcon} />
-              </div>
-              <span>Account</span>
-            </div>
-          </li>
-        </a>
-
-        <a href={'/settings'}>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={settingsIcon} />
-              </div>
-              <span>Settings</span>
-            </div>
-          </li>
-        </a>
 
         <li>
-          <button>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={logoutIcon} />
-              </div>
-              <span>Logout</span>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-3" src={homeIcon} />
             </div>
-          </button>
+            <div className='pageLink'>
+              <a href={'/'}>Home</a>
+            </div>
+            </div>
+          </li>
+
+        <li>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-3" src={leaderboardIcon} />
+            </div>
+            </div>
+          </li>
+
+        <li>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-4" src={historyIcon} />
+            </div>
+            </div>
+          </li>
+
+        <li>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-5" src={savedIcon} />
+            </div>
+            </div>
+          </li>
+
+        <li>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-6" src={accountsIcon} />
+            </div>
+            </div>
+          </li>
+
+        <li>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-7" src={settingsIcon} />
+            </div>
+            </div>
+          </li>
+
+        <li>
+          <div className='pageContainer'>
+            <div className='pageImage'>
+              <img alt="e-8" src={logoutIcon} />
+            </div>
+            <a href={'/Login'}>Login</a>
+          </div>
         </li>
       </ul>
     </div>

@@ -8,32 +8,15 @@ import Auth from './components/BackEndLogic/Auth';
 import NavBar from './components/NavBar/NavBar';
 import LandingNav from './components/NavBar/LandingNav';
 import Account from './components/Users/Account'; 
-/*
-function App() {
-  return (
-    <div className="App">
-    <Router>
-      <Switch>
-        <Route exact path="/" component={withRouter(FrontPage)}>
-        </Route>
-      </Switch>
-  </Router>
-  </div>
-  );
-}
-
-export default App; /*
-
-/*
-<div className="App">
-  <Auth>
-    <p>a</p>
-    <p>b</p>
-  </Auth>
-</div>
-*/
+import Login from './components/Login/Login';
+import About from './components/About/About';
 
 // import SavedTrips from './SavedTrips/SavedTrips';
+
+export interface IAppProps {
+  show?: boolean;
+  onHide?: boolean;
+}
 
 function App() {
   return (
@@ -46,13 +29,14 @@ function App() {
         <Route
           exact={true}
           path='/about'
+          
           render={() => <div className='App'></div>}
         />
-        <Route
+        {/* <Route
           exact={true}
           path='/leaderboard'
-          render={() => <div className='App'></div>}
-        />
+          render={() => <About />}
+        /> */}
         <Route
           exact={true}
           path='/history'
@@ -92,10 +76,7 @@ function App() {
           path='/login'
           render={() => (
             <div className='App'>
-              <Auth>
-                <p>a</p>
-                <p>b</p>
-              </Auth>
+              <Login show={true}/>
             </div>
           )}
         />

@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import '../App.css';
 import * as $ from 'jquery';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-
+import { BrowserRouter, Switch, Route, withRouter, Link} from "react-router-dom";
 import telescopeLady from "./svg/telescopeLady.svg";
 import Logo from "./svg/travelogueLogo.svg";
 import blob1 from "./svg/frontpageBlob1.svg";
@@ -17,8 +17,12 @@ import mobilePhone from "./svg/mobilePhone.svg";
 import blueSeparator from "./svg/blueSeparator.svg";
 import appleLogo from "./svg/appleLogo.svg";
 import googleLogo from "./svg/googleLogo.svg";
+import Login from './Login/Login';
+
+
 
 export default function frontPage() {
+
 
     return (
         <div className="container-fp">
@@ -40,7 +44,11 @@ export default function frontPage() {
                     <div className="menu-items-home">Home</div>
                     <div className="menu-items-about">About</div>
                     <div className="menu-items-features">Features</div>
-                    <div className="menu-items-login btn-secondary">Login</div>
+                    <Link to="/login">
+                    <button className='menu-items-login btn-secondary' type='button'>
+                        Login   
+                    </button>
+                    </Link>
                 </div>
             </div>
             <div className="main-content">
