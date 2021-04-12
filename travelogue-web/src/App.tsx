@@ -25,7 +25,6 @@ function App() {
         <Route
           exact={true}
           path='/about'
-          
           render={() => <div className='App'></div>}
         />
         {/* <Route
@@ -41,11 +40,7 @@ function App() {
         <Route
           exact={true}
           path='/saved'
-          render={() => (
-            <div className='App'>
-              {/* <SavedTrips /> */}
-            </div>
-          )}
+          render={() => <div className='App'>{/* <SavedTrips /> */}</div>}
         />
         <Route
           exact={true}
@@ -63,15 +58,10 @@ function App() {
         />
         <Route
           exact={true}
-          path='/logout'
-          render={() => <div className='App'></div>}
-        />
-        <Route
-          exact={true}
           path='/login'
           render={() => (
             <div className='App'>
-              <Login show={true}/>
+              <Login show={true} />
             </div>
           )}
         />

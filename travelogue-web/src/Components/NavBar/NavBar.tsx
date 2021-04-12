@@ -29,7 +29,7 @@ function NavBar() {
         <li>
           <div className='profileContainer'>
             <div className='profileImg'>
-              <img alt="profileIcon" src={defaultProfile} />
+              <img alt='profileIcon' src={defaultProfile} />
             </div>
             <div className='profileTxt'>
               <p>
@@ -42,7 +42,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img alt="homeIcon" src={homeIcon} />
+                <img alt='homeIcon' src={homeIcon} />
               </div>
               <div className='pageLink'>
                 <span>Home</span>
@@ -66,7 +66,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img alt="historyIcon" src={historyIcon} />
+                <img alt='historyIcon' src={historyIcon} />
               </div>
               <span>History</span>
             </div>
@@ -77,7 +77,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img alt="savedIcon" src={savedIcon} />
+                <img alt='savedIcon' src={savedIcon} />
               </div>
               <span>Saved</span>
             </div>
@@ -88,7 +88,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img alt="accountsIcon" src={accountsIcon} />
+                <img alt='accountsIcon' src={accountsIcon} />
               </div>
               <span>Account</span>
             </div>
@@ -99,7 +99,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img alt="settingsIcon" src={settingsIcon} />
+                <img alt='settingsIcon' src={settingsIcon} />
               </div>
               <span>Settings</span>
             </div>
@@ -112,7 +112,7 @@ function NavBar() {
               <div className='pageImage'>
                 <img alt='logoutIcon' src={logoutIcon} />
               </div>
-              <span>Logout</span>
+              <span>Login</span>
             </div>
           </button>
         </li>
