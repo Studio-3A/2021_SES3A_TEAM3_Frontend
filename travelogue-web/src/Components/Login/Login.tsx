@@ -43,18 +43,21 @@ class Login extends Component<IProps, IState> {
         this.setAuth(true);
         let user = firebase.auth().currentUser;
         if (!user){
-            SignInWithSocialMedia(provider)
-            .then(result => {
-                alert(result.user?.displayName);
-                // <About name={result.user?.displayName || ""}/>
-                window.location.href = "/leaderboard";
-            })
-            .catch(error => {
-                console.log(error);
+            //session cleared when the tab is closed.
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) 
+            .then(() => {
+
+                SignInWithSocialMedia(provider)
+                .then(result => {
+                    window.location.href = "/leaderboard";
+                })
+                .catch(error => {
+                    console.log(error);
+                });
             });
         }
         else{
-            
+            firebase.auth().signOut();
             alert("user has already signin as" + user.displayName);
             this.showModal(false);
             window.location.href = "/settings";
