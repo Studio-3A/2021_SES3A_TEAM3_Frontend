@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 import TravelogueIcon from '../../Images/travelogue-ico.svg';
 import defaultProfile from '../../Images/default-profile-ico.svg';
@@ -38,7 +39,8 @@ function NavBar() {
             </div>
           </div>
         </li>
-        <a href={'/'}>
+
+        <Link to='/'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
@@ -49,9 +51,9 @@ function NavBar() {
               </div>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/leaderboard'}>
+        <Link to='/leaderboard'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
@@ -60,9 +62,9 @@ function NavBar() {
               <span>Leaderboard</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/history'}>
+        <Link to='/history'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
@@ -71,9 +73,9 @@ function NavBar() {
               <span>History</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/saved'}>
+        <Link to='/saved'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
@@ -82,9 +84,9 @@ function NavBar() {
               <span>Saved</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/account'}>
+        <Link to='/account'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
@@ -93,9 +95,9 @@ function NavBar() {
               <span>Account</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/settings'}>
+        <Link to='/settings'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
@@ -104,18 +106,19 @@ function NavBar() {
               <span>Settings</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <li>
-          <button>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='logoutIcon' src={logoutIcon} />
+        <Link to='/login'>
+          <li>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='logoutIcon' src={logoutIcon} />
+                </div>
+                <span>Login</span>
               </div>
-              <span>Login</span>
-            </div>
-          </button>
-        </li>
+          </li>
+        </Link>
+          
       </ul>
     </div>
   );

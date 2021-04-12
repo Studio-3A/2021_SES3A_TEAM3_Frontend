@@ -2,18 +2,11 @@
   text-decoration: none;
 }
 
-.App button{
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0px;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 234px;
+    width: 14.625rem;
     position: absolute;
     left: 0%;
     right: 0%;
@@ -23,8 +16,8 @@ ul {
     background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
   }
   
-  li a, li a:hover, li span{
-    display: block;
+  li a, li span{
+    display: flex;
     color: #FFFF;
     padding: 8px 16px;
     text-decoration: none;
@@ -40,11 +33,11 @@ ul {
   }
 
   .icon{
-    padding-right: 20px;
+    padding-right: 15px;
   }
 
   .iconTxt{
-      color: #FFFF;
+    color: #FFFF;
     width: 130px;
     height: 29px;
     font-family: Poppins;
@@ -89,8 +82,7 @@ ul {
 
 @media screen and (max-width: 1300px) {
   ul{
-    height: auto;
-    position: absolute;
-    transform: scale(1.2);
+    min-height: 100vh;
+    max-height: fit-content;
   }
 }
