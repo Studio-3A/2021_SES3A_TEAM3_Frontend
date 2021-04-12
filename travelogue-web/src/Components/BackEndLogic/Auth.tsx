@@ -53,7 +53,7 @@ function Auth({ children }: { children: Array<JSX.Element> }) {
         return new Promise(async (resolve, reject) => {
             try {
                 // Contact the backend server (Express) to check if your session is valid
-                const result = await Axios.post(`http://${Params.SERVER}/auth/checkToken`, { token: await getToken() });
+                const result = await Axios.post(`http://${Params.SERVER}/auth/checkToken`, undefined, { headers: { "Firebase-Token": await getToken() } });
                 
                 if (result.status === 200 && result.data?.authenticated) { // Check Positive Response
                     resolve(true);
