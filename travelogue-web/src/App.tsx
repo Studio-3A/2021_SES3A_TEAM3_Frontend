@@ -46,7 +46,7 @@ function App() {
           exact={true}
           path='/account'
           render={() => (
-            <div className='App'>
+            <div>
               <Account />
             </div>
           )}
