@@ -1,11 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
-
-import Auth from './Components/BackEndLogic/Auth';
 import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
+import Login from './Components/Login/Login';
+import About from './Components/About/About';
 // import SavedTrips from './SavedTrips/SavedTrips';
+
+export interface IAppProps {
+  show?: boolean;
+  onHide?: boolean;
+}
 
 function App() {
   return (
@@ -20,13 +25,14 @@ function App() {
         <Route
           exact={true}
           path='/about'
+          
           render={() => <div className='App'></div>}
         />
-        <Route
+        {/* <Route
           exact={true}
           path='/leaderboard'
-          render={() => <div className='App'></div>}
-        />
+          render={() => <About />}
+        /> */}
         <Route
           exact={true}
           path='/history'
@@ -65,10 +71,7 @@ function App() {
           path='/login'
           render={() => (
             <div className='App'>
-              <Auth>
-                <p>a</p>
-                <p>b</p>
-              </Auth>
+              <Login show={true}/>
             </div>
           )}
         />
