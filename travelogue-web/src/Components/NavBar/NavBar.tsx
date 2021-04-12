@@ -18,7 +18,7 @@ function NavBar() {
         <li>
           <div className='iconContainer'>
             <div className='icon'>
-              <img src={TravelogueIcon} />
+              <img alt='travelogueIcon' src={TravelogueIcon} />
             </div>
             <div className='iconTxt'>
               <p>Travelogue</p>
@@ -29,7 +29,7 @@ function NavBar() {
         <li>
           <div className='profileContainer'>
             <div className='profileImg'>
-              <img src={defaultProfile} />
+              <img alt="profileIcon" src={defaultProfile} />
             </div>
             <div className='profileTxt'>
               <p>
@@ -42,7 +42,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={homeIcon} />
+                <img alt="homeIcon" src={homeIcon} />
               </div>
               <div className='pageLink'>
                 <span>Home</span>
@@ -55,7 +55,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={leaderboardIcon} />
+                <img alt='leaderboardIcon' src={leaderboardIcon} />
               </div>
               <span>Leaderboard</span>
             </div>
@@ -66,7 +66,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={historyIcon} />
+                <img alt="historyIcon" src={historyIcon} />
               </div>
               <span>History</span>
             </div>
@@ -77,7 +77,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={savedIcon} />
+                <img alt="savedIcon" src={savedIcon} />
               </div>
               <span>Saved</span>
             </div>
@@ -88,7 +88,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={accountsIcon} />
+                <img alt="accountsIcon" src={accountsIcon} />
               </div>
               <span>Account</span>
             </div>
@@ -99,7 +99,7 @@ function NavBar() {
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={settingsIcon} />
+                <img alt="settingsIcon" src={settingsIcon} />
               </div>
               <span>Settings</span>
             </div>
@@ -110,7 +110,7 @@ function NavBar() {
           <button>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={logoutIcon} />
+                <img alt='logoutIcon' src={logoutIcon} />
               </div>
               <span>Logout</span>
             </div>
