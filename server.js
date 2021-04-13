@@ -4,11 +4,11 @@ const http = require('http');
 const app = express();
 
 // Angular DIST output folderknkjnj
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'travelogue-web/build')));
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build/index.html'));
+    res.sendFile(path.join(__dirname, 'travelogue-web/build/index.html'));
 })
 
 //Set Port
