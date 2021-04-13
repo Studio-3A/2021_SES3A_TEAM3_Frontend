@@ -1,0 +1,162 @@
+.Home {
+    padding-left: 234px;
+}
+
+.background-layer1 {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 1960px;
+    margin-left: -178px;
+}
+
+.background-layer2 {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 1960px;
+    margin-top: -480px;
+    margin-left: -178px;
+}
+
+.header {
+    position: absolute;
+    margin-top: -270px;
+    margin-left: -140px;
+}
+
+.header-text1 {
+    /* Medium Text Semibold (20) */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.header-text2 {
+    /* Heading 1 (80) */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.menu-card {
+    position: absolute;
+    width: 1593px;
+    height: 83px;
+    margin-left: -140px;
+    margin-top: -65px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.menu-card-content {
+    overflow: hidden;
+    margin-top: -20px;
+}
+
+.menu-card-option:hover {
+    cursor: pointer;
+}
+
+.menu-card-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 8px;
+    /* identical to box height */
+    color: #4B4B4B;
+}
+
+.spacer-left {
+    padding-left: 20px;
+}
+
+.spacer-right {
+    padding-right: 20px;
+}
+
+.spacer-left2 {
+    padding-left: 55px;
+}
+
+.spacer-right2 {
+    padding-right: 55px;
+}
+
+.spacer-left3 {
+    padding-left: 10px;
+}
+
+.line {
+    height: 83px;
+    width: 0;
+    border: 2px solid #B6CDDA;
+}
+
+.categories-grid {
+    margin-left: -140px;
+    padding-top: 50px;
+}
+
+.categories-text {
+    padding-right: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    color: #A2A2A2;
+    cursor: pointer;
+    transition: 0.5s;
+    /*color: #4B4B4B;*/
+}
+
+.categories-text-selected {
+    padding-right: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    color: #4B4B4B;
+    text-decoration-line: underline;
+    transition: 0.5s;
+}
+
+@media screen and (min-width: 1366px) {
+    .background-layer1 {
+        width: 1400px;
+    }
+    .background-layer2 {
+        width: 1400px;
+        margin-top: -350px;
+    }
+    .header {
+        margin-top: -230px;
+    }
+    .menu-card {
+        width: 1039px;
+    }
+
+    .spacer-left {
+        padding-left: 20px;
+    }
+    
+    .spacer-right {
+        padding-right: 20px;
+    }
+    
+    .spacer-left2 {
+        padding-left: 55px;
+    }
+    
+    .spacer-right2 {
+        padding-right: 55px;
+    }
+    
+    .spacer-left3 {
+        padding-left: 10px;
+    }
+}

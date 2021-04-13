@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
+import Home from './Components/Home/Home';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -20,7 +21,11 @@ function App() {
         <Route
           exact={true}
           path='/'
-          render={() => <div className='App'></div>}
+          render={() => (
+            <div>
+              <Home />
+            </div>
+          )}
         />
         <Route
           exact={true}

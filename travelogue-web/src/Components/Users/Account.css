@@ -1,5 +1,9 @@
+.Account {
+    padding-left: 234px;
+}
+
 .body {
-    padding-left: 36%;
+    padding-left: 16%;
     padding-right: 16%;
     padding-bottom: 5vh;
 }
@@ -10,7 +14,7 @@
 }
 
 .page-title-div {
-    padding-left: 20%;
+    padding-left: 5%;
 }
 
 .page-title-text {
@@ -136,11 +140,11 @@
 
 @media screen and (max-width: 1110px) {
     .body {
-        padding-left: 32%;
+        padding-left: 12%;
         padding-right: 12%;
     }
     .page-title-div {
-        padding-left: 30%;
+        padding-left: 7%;
     }
     .page-title-text {
         font-size: 24px;
