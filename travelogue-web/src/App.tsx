@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, withRouter  } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import FrontPage from "./components/frontPage";
+import FrontPage from "./Components/frontPage";
 
-import Auth from './components/BackEndLogic/Auth';
-import NavBar from './components/NavBar/NavBar';
-import LandingNav from './components/NavBar/LandingNav';
-import Account from './components/Users/Account'; 
-import Login from './components/Login/Login';
-import About from './components/About/About';
+import Auth from './Components/BackEndLogic/Auth';
+import NavBar from './Components/NavBar/NavBar';
+import LandingNav from './Components/NavBar/LandingNav';
+import Account from './Components/Users/Account'; 
+import Login from './Components/Login/Login';
+import About from './Components/About/About';
 
 // import SavedTrips from './SavedTrips/SavedTrips';
 
@@ -31,7 +31,7 @@ function App() {
           path='/about'
           render={() => 
             <div className='App'>
-              <About />
+              
             </div>
           }
         />
