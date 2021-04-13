@@ -16,7 +16,6 @@
 .signup-modal{
     background-color: #FFFFFF;
     height: 70%;
-    width: 45%;
     display: flex;
     border-radius: 25px;
     border: 0.75px solid rgba(255, 255, 255, 0.6);
@@ -61,12 +60,11 @@
     font-weight: 800;
     font-size: 60px;
     line-height: 155.14%;
-    color: #FFFFFF ;
+    color: #000000 ;
     text-align: left;
 }
 .signup-content{
    padding-top: 5%;
-   width: 70%;
 }
 
 .signup-btns {
