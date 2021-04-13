@@ -55,10 +55,10 @@ function Auth({ children }: { children: Array<JSX.Element> }) {
                 // Contact the backend server (Express) to check if your session is valid
                 const result = await Axios.post(`http://${Params.SERVER}/auth/checkToken`, undefined, { headers: { "Firebase-Token": await getToken() } });
                 
-                if (result.status === 200 && result.data?.authenticated) { // Check Positive Response
+                if (result.status === 200) { // Check Positive Response
                     resolve(true);
                 
-                } else if (result.status === 401 || result.data?.authenticated === false) { // Check Negative Response
+                } else if (result.status === 401) { // Check Negative Response
                     resolve(false);
                 
                 } else { // Server was not able to validate token
@@ -94,6 +94,9 @@ function Auth({ children }: { children: Array<JSX.Element> }) {
     return (
         <div>
             <h1>Test</h1>
+            <p>
+                <a href={`http://${Params.SERVER}/graphql`}>GraphQL Playground</a>
+            </p>
             <button onClick={signIn}>Sign In</button>
             <button onClick={signOut}>Sign Out</button>
             <button onClick={validateAuthentication}>Check Token</button>
