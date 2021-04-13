@@ -117,7 +117,7 @@ class Home extends React.Component<{}, State> {
                                 </Grid>
                                 <Grid item>
                                     <NavButton>
-                                        <IconButton>
+                                        <IconButton className="right-arrow-btn">
                                             <img src={RightArrowIcon} className="right-arrow-icon" alt="rightArrowIcon" />
                                         </IconButton>
                                     </NavButton>

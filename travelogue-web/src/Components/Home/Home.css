@@ -176,6 +176,11 @@
     padding-top: 40px;
 }
 
+.right-arrow-btn {
+    width: 50px;
+    height: 50px;
+}
+
 @media screen and (min-width: 1366px) {
     .background-layer1 {
         width: 1400px;
