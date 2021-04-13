@@ -53,7 +53,9 @@ function Auth({ children }: { children: Array<JSX.Element> }) {
         return new Promise(async (resolve, reject) => {
             try {
                 // Contact the backend server (Express) to check if your session is valid
-                const result = await Axios.post(`http://${Params.SERVER}/auth/checkToken`, undefined, { headers: { "Firebase-Token": await getToken() } });
+                const token =  await getToken();
+                const options = { headers: token ? { "Firebase-Token": token } : {} }
+                const result = await Axios.post(`${Params.SERVER}/auth/checkToken`, undefined, options);
                 
                 if (result.status === 200) { // Check Positive Response
                     resolve(true);
@@ -95,7 +97,7 @@ function Auth({ children }: { children: Array<JSX.Element> }) {
         <div>
             <h1>Test</h1>
             <p>
-                <a href={`http://${Params.SERVER}/graphql`}>GraphQL Playground</a>
+                <a href={`${Params.SERVER}/graphql`}>GraphQL Playground</a>
             </p>
             <button onClick={signIn}>Sign In</button>
             <button onClick={signOut}>Sign Out</button>
