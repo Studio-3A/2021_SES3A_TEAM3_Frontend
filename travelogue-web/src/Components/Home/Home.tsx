@@ -3,14 +3,8 @@
 
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Form, Button } from 'react-bootstrap';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
@@ -19,10 +13,15 @@ import './Home.css';
 import Header from './Header';
 import MenuCard from './MenuCard';
 import Categories from './Categories';
+import LocationCard from './LocationCard';
 
 // Images
 import Background from '../../Images/home-bg.svg';
 import BackgroundImage from '../../Images/home-bg2.svg';
+import LocationImage1 from '../../Images/home-card-bg1.svg';
+import LocationImage2 from '../../Images/home-card-bg2.svg';
+import LeftArrowIcon from '../../Images/left-btn.svg';
+import RightArrowIcon from '../../Images/right-btn.svg';
 
 const Body = styled.body`
     background-color: white;
@@ -30,6 +29,18 @@ const Body = styled.body`
     display: flex;
     flex-direction: column;
     color: black;
+`;
+
+const NavButton = styled.button`
+    padding: 0;
+    border: none;
+    background: none;
+    height: 50px;
+    width: 50px;
+    /* Smooth Blue */
+    background: #F8F8F8;
+    border-radius: 50px;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
 `;
 
 interface State {
@@ -62,9 +73,6 @@ class Home extends React.Component<{}, State> {
         return (
             <BrowserRouter>
                 <div className="Home">
-                    {console.log(this.state.selectedItem)}
-
-                    {/*Main form section*/}
                     <Body className="body">
                         <div>
                             <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
@@ -77,9 +85,44 @@ class Home extends React.Component<{}, State> {
                             <MenuCard />
                         </div>
                         <div>
-                            <Categories 
-                                selectedItem={this.state.selectedItem} 
+                            <Categories
+                                selectedItem={this.state.selectedItem}
                                 onClickCategory={this.onClickCategory} />
+                        </div>
+                        <div className="location-card-div">
+                            <Grid container
+                                direction="row"
+                                justify="flex-start"
+                                alignItems="flex-start">
+                                <Grid item>
+                                    <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
+                                </Grid>
+                                <Grid item className="spacer-left2">
+                                    <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage2} />
+                                </Grid>
+                            </Grid>
+                        </div>
+                        <div className="nav-button-div">
+                            <Grid container
+                                direction="row"
+                                justify="center"
+                                alignItems="flex-start"
+                                spacing={3}>
+                                <Grid item>
+                                    <NavButton>
+                                        <IconButton>
+                                            <img src={LeftArrowIcon} className="left-arrow-icon" alt="leftArrowIcon" />
+                                        </IconButton>
+                                    </NavButton>
+                                </Grid>
+                                <Grid item>
+                                    <NavButton>
+                                        <IconButton>
+                                            <img src={RightArrowIcon} className="right-arrow-icon" alt="rightArrowIcon" />
+                                        </IconButton>
+                                    </NavButton>
+                                </Grid>
+                            </Grid>
                         </div>
                     </Body>
                 </div>

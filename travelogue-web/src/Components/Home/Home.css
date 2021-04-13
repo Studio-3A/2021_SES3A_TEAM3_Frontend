@@ -21,15 +21,15 @@
 
 .header {
     position: absolute;
-    margin-top: -270px;
-    margin-left: -140px;
+    margin-top: -320px;
+    margin-left: -110px;
 }
 
 .header-text1 {
     /* Medium Text Semibold (20) */
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     /* identical to box height */
     color: #FFFFFF;
 }
@@ -38,7 +38,7 @@
     /* Heading 1 (80) */
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 80px;
     /* identical to box height */
     color: #FFFFFF;
 }
@@ -47,11 +47,10 @@
     position: absolute;
     width: 1593px;
     height: 83px;
-    margin-left: -140px;
+    margin-left: -110px;
     margin-top: -65px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
 }
 
 .menu-card-content {
@@ -66,7 +65,7 @@
 .menu-card-text {
     font-style: normal;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 16px;
     padding-left: 8px;
     /* identical to box height */
     color: #4B4B4B;
@@ -99,7 +98,7 @@
 }
 
 .categories-grid {
-    margin-left: -140px;
+    margin-left: -110px;
     padding-top: 50px;
 }
 
@@ -107,7 +106,7 @@
     padding-right: 40px;
     font-style: normal;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 20px;
     color: #A2A2A2;
     cursor: pointer;
     transition: 0.5s;
@@ -125,6 +124,58 @@
     transition: 0.5s;
 }
 
+.location-card-div {
+    margin-left: -110px;
+    width: 100vw;
+    margin-top: 30px;
+}
+
+.location-card {
+    width: 488px;
+    height: 303px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.location-card-media {
+    position: relative;
+}
+
+.location-card-content {
+    position: absolute;
+    margin-top: -290px;
+    margin-left: 20px;
+}
+
+.location-card-text1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.location-card-text2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.location-card-text3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.location-card-grid {
+    padding-top: 120px;
+}
+
+.nav-button-div {
+    padding-top: 40px;
+}
+
 @media screen and (min-width: 1366px) {
     .background-layer1 {
         width: 1400px;
@@ -135,28 +186,40 @@
     }
     .header {
         margin-top: -230px;
+        margin-left: -140px;
+    }
+    .header-text1 {
+        font-size: 16px;
+    }
+    .header-text2 {
+        font-size: 64px;
     }
     .menu-card {
         width: 1039px;
+        margin-left: -140px;
     }
-
-    .spacer-left {
-        padding-left: 20px;
+    .menu-card-text {
+        font-size: 13px;
     }
-    
-    .spacer-right {
-        padding-right: 20px;
+    .categories-grid {
+        margin-left: -140px;
     }
-    
-    .spacer-left2 {
-        padding-left: 55px;
+    .categories-text {
+        font-size: 16px;
     }
-    
-    .spacer-right2 {
-        padding-right: 55px;
+    .location-card-div {
+        margin-left: -140px;
     }
-    
-    .spacer-left3 {
-        padding-left: 10px;
+    .location-card-text1 {
+        font-size: 32px;
+    }
+    .location-card-text2 {
+        font-size: 24px;
+    }
+    .location-card-text3 {
+        font-size: 16px;
+    }
+    .location-card-grid {
+        padding-top: 150px;
     }
 }

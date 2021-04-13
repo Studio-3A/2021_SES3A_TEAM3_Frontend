@@ -37,7 +37,7 @@ const StyledButton2 = styled.button`
 
 function MenuCard() {
     return (
-        <Card className="menu-card">
+        <Card className="menu-card" style={{borderRadius: "10px"}}>
             <CardContent>
                 <Grid container
                     direction="row"
