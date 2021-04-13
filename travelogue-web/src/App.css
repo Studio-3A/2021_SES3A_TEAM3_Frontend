@@ -1,5 +1,12 @@
+* {
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
 
 .App-logo {

@@ -16,7 +16,6 @@ function App() {
   return (
     <BrowserRouter>
       <React.Fragment>
-        <NavBar />
         <Route
           exact={true}
           path='/'
@@ -25,7 +24,11 @@ function App() {
         <Route
           exact={true}
           path='/about'
-          render={() => <div className='App'></div>}
+          render={() => (
+            <div className='App'>
+              <NavBar />
+            </div>
+          )}
         />
         {/* <Route
           exact={true}
@@ -35,18 +38,28 @@ function App() {
         <Route
           exact={true}
           path='/history'
-          render={() => <div className='App'></div>}
+          render={() => (
+            <div className='App'>
+              <NavBar />
+            </div>
+          )}
         />
         <Route
           exact={true}
           path='/saved'
-          render={() => <div className='App'>{/* <SavedTrips /> */}</div>}
+          render={() => (
+            <div className='App'>
+              <NavBar />
+              {/* <SavedTrips /> */}
+            </div>
+          )}
         />
         <Route
           exact={true}
           path='/account'
           render={() => (
-            <div>
+            <div className='App'>
+              <NavBar />
               <Account />
             </div>
           )}
@@ -54,13 +67,18 @@ function App() {
         <Route
           exact={true}
           path='/settings'
-          render={() => <div className='App'></div>}
+          render={() => (
+            <div className='App'>
+              <NavBar />
+            </div>
+          )}
         />
         <Route
           exact={true}
           path='/login'
           render={() => (
             <div className='App'>
+              <NavBar />
               <Login show={true} />
             </div>
           )}
