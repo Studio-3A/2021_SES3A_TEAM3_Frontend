@@ -3,8 +3,6 @@
 
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import IconButton from '@material-ui/core/IconButton';
-import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
@@ -13,15 +11,14 @@ import './Home.css';
 import Header from './Header';
 import MenuCard from './MenuCard';
 import Categories from './Categories';
-import LocationCard from './LocationCard';
+import NewList from './NewList';
+import PopularList from './PopularList';
+import RecList from './RecList';
+import NavButtons from './NavButtons';
 
 // Images
 import Background from '../../Images/home-bg.svg';
 import BackgroundImage from '../../Images/home-bg2.svg';
-import LocationImage1 from '../../Images/home-card-bg1.svg';
-import LocationImage2 from '../../Images/home-card-bg2.svg';
-import LeftArrowIcon from '../../Images/left-btn.svg';
-import RightArrowIcon from '../../Images/right-btn.svg';
 
 const Body = styled.body`
     background-color: white;
@@ -90,39 +87,21 @@ class Home extends React.Component<{}, State> {
                                 onClickCategory={this.onClickCategory} />
                         </div>
                         <div className="location-card-div">
-                            <Grid container
-                                direction="row"
-                                justify="flex-start"
-                                alignItems="flex-start">
-                                <Grid item>
-                                    <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
-                                </Grid>
-                                <Grid item className="spacer-left2">
-                                    <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage2} />
-                                </Grid>
-                            </Grid>
+                            {this.state.selectedItem === "New"
+                                ? <NewList />
+                                : null
+                            }
+                            {this.state.selectedItem === "Popular"
+                                ? <PopularList />
+                                : null
+                            }
+                            {this.state.selectedItem === "Recommendations"
+                                ? <RecList />
+                                : null
+                            }
                         </div>
                         <div className="nav-button-div">
-                            <Grid container
-                                direction="row"
-                                justify="center"
-                                alignItems="flex-start"
-                                spacing={3}>
-                                <Grid item>
-                                    <NavButton>
-                                        <IconButton>
-                                            <img src={LeftArrowIcon} className="left-arrow-icon" alt="leftArrowIcon" />
-                                        </IconButton>
-                                    </NavButton>
-                                </Grid>
-                                <Grid item>
-                                    <NavButton>
-                                        <IconButton className="right-arrow-btn">
-                                            <img src={RightArrowIcon} className="right-arrow-icon" alt="rightArrowIcon" />
-                                        </IconButton>
-                                    </NavButton>
-                                </Grid>
-                            </Grid>
+                            <NavButtons />
                         </div>
                     </Body>
                 </div>

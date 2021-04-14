@@ -59,7 +59,7 @@ function MenuCard() {
                                     </text>
                                 </Grid>
                                 <Grid item>
-                                    <hr className="line" />
+                                    <hr className="line-vertical" />
                                 </Grid>
                             </Grid>
                         </div>
@@ -79,7 +79,7 @@ function MenuCard() {
                                     </text>
                                 </Grid>
                                 <Grid item>
-                                    <hr className="line" />
+                                    <hr className="line-vertical" />
                                 </Grid>
                             </Grid>
                         </div>
@@ -99,7 +99,7 @@ function MenuCard() {
                                     </text>
                                 </Grid>
                                 <Grid item>
-                                    <hr className="line" />
+                                    <hr className="line-vertical" />
                                 </Grid>
                             </Grid>
                         </div>

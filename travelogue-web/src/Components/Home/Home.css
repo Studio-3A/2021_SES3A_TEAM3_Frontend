@@ -1,5 +1,6 @@
 .Home {
     padding-left: 234px;
+    overflow: hidden;
 }
 
 .background-layer1 {
@@ -54,7 +55,6 @@
 }
 
 .menu-card-content {
-    overflow: hidden;
     margin-top: -20px;
 }
 
@@ -91,7 +91,7 @@
     padding-left: 10px;
 }
 
-.line {
+.line-vertical {
     height: 83px;
     width: 0;
     border: 2px solid #B6CDDA;
@@ -126,8 +126,9 @@
 
 .location-card-div {
     margin-left: -110px;
-    width: 100vw;
+    width: 1600px;
     margin-top: 30px;
+    overflow-x: hidden;
 }
 
 .location-card {
@@ -152,6 +153,7 @@
     font-weight: bold;
     font-size: 40px;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 
 .location-card-text2 {
@@ -159,6 +161,7 @@
     font-weight: bold;
     font-size: 30px;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 
 .location-card-text3 {
@@ -166,6 +169,7 @@
     font-weight: bold;
     font-size: 20px;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 
 .location-card-grid {
