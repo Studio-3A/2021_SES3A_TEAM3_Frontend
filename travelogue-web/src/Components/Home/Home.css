@@ -4,7 +4,6 @@
 }
 
 .background-layer1 {
-    position: relative;
     top: 0;
     right: 0;
     width: 1960px;
@@ -12,7 +11,6 @@
 }
 
 .background-layer2 {
-    position: relative;
     top: 0;
     right: 0;
     width: 1960px;
@@ -21,7 +19,6 @@
 }
 
 .header {
-    position: absolute;
     margin-top: -320px;
     margin-left: -110px;
 }
@@ -45,7 +42,6 @@
 }
 
 .menu-card {
-    position: absolute;
     width: 1593px;
     height: 83px;
     margin-left: -110px;
@@ -110,7 +106,6 @@
     color: #A2A2A2;
     cursor: pointer;
     transition: 0.5s;
-    /*color: #4B4B4B;*/
 }
 
 .categories-text-selected {
@@ -138,12 +133,8 @@
     cursor: pointer;
 }
 
-.location-card-media {
-    position: relative;
-}
 
 .location-card-content {
-    position: absolute;
     margin-top: -290px;
     margin-left: 20px;
 }

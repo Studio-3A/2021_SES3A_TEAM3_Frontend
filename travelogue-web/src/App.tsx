@@ -21,7 +21,8 @@ function App() {
           exact={true}
           path='/'
           render={() => (
-            <div>
+            <div className='App'>
+              <NavBar />
               <Home />
             </div>
           )}
