@@ -3,18 +3,26 @@
 }
 
 .body {
-    padding-left: 16%;
-    padding-right: 16%;
-    padding-bottom: 5vh;
+    width: 55vw;
+    margin: auto;
 }
 
 .account-icon {
     width: 36px;
     height: 36px;
 }
+.Account {
+    width: 87.8vw;    
+    min-width: 500px;
+}
+
 
 .page-title-div {
-    padding-left: 5%;
+    margin: auto;
+}
+
+#formUsername, #formEmail{
+    border: none;
 }
 
 .page-title-text {

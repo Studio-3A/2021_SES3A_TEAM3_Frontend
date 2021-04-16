@@ -14,112 +14,106 @@ import logoutIcon from '../../Images/logout-ico.svg';
 
 function NavBar() {
   return (
-    <div className='App'>
-      <ul>
-        <li>
-          <div className='iconContainer'>
-            <div className='icon'>
-              <img alt='travelogueIcon' src={TravelogueIcon} />
-            </div>
-            <div className='iconTxt'>
-              <p>Travelogue</p>
-            </div>
+    <div className='nav-content'>
+      <div className='navbarCol'>
+        <div className='navHeader'>
+          <div className='icon'>
+            <img alt='travelogueIcon' src={TravelogueIcon} />
           </div>
-        </li>
-
-        <li>
-          <div className='profileContainer'>
-            <div className='profileImg'>
-              <img alt='profileIcon' src={defaultProfile} />
-            </div>
-            <div className='profileTxt'>
-              <p>
-                Welcome to <strong>Travelogue</strong>
-              </p>
-            </div>
+          <div className='iconTxt'>
+            <p>Travelogue</p>
           </div>
-        </li>
+        </div>
+        <div className='navProfile'>
+          <div className='profileImg'>
+            <img alt='profileIcon' src={defaultProfile} />
+          </div>
+          <div className='profileTxt'>
+            <p>
+              Welcome to <b>Travelogue</b>
+            </p>
+          </div>
 
-        <Link to='/'>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='homeIcon' src={homeIcon} />
+          <div className='navPages'>
+            <Link to='/'>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='homeIcon' src={homeIcon} />
+                </div>
+                <div className='pageLink'>
+                  <span>Home</span>
+                </div>
               </div>
-              <div className='pageLink'>
-                <span>Home</span>
-              </div>
-            </div>
-          </li>
-        </Link>
+            </Link>
 
-        <Link to='/leaderboard'>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='leaderboardIcon' src={leaderboardIcon} />
+            <Link to='/history'>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='leaderboardIcon' src={leaderboardIcon} />
+                </div>
+                <div className='pageLink'>
+                  <span>Leaderboard</span>
+                </div>
               </div>
-              <span>Leaderboard</span>
-            </div>
-          </li>
-        </Link>
+            </Link>
 
-        <Link to='/history'>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='historyIcon' src={historyIcon} />
+            <Link to='/history'>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='historyIcon' src={historyIcon} />
+                </div>
+                <div className='pageLink'>
+                  <span>History</span>
+                </div>
               </div>
-              <span>History</span>
-            </div>
-          </li>
-        </Link>
-
-        <Link to='/saved'>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='savedIcon' src={savedIcon} />
+            </Link>
+            
+            <Link to='/saved'>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='savedIcon' src={savedIcon} />
+                </div>
+                <div className='pageLink'>
+                  <span>Saved</span>
+                </div>
               </div>
-              <span>Saved</span>
-            </div>
-          </li>
-        </Link>
+            </Link>
 
-        <Link to='/account'>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='accountsIcon' src={accountsIcon} />
+            <Link to='/account'>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='accountsIcon' src={accountsIcon} />
+                </div>
+
+                <div className='pageLink'>
+                  <span>Account</span>
+                </div>
               </div>
-              <span>Account</span>
-            </div>
-          </li>
-        </Link>
-
-        <Link to='/settings'>
-          <li>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img alt='settingsIcon' src={settingsIcon} />
+            </Link>
+            <Link to='/settings'>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='settingsIcon' src={settingsIcon} />
+                </div>
+                <div className='pageLink'>
+                  <span>Settings</span>
+                </div>
               </div>
-              <span>Settings</span>
-            </div>
-          </li>
-        </Link>
+            </Link>
 
-        <Link to='/login'>
-          <li>
+            <Link to='/login'>
               <div className='pageContainer'>
                 <div className='pageImage'>
                   <img alt='logoutIcon' src={logoutIcon} />
                 </div>
-                <span>Login</span>
+                <div className='pageLink'>
+                  <span>Logout</span>
+                </div>
               </div>
-          </li>
-        </Link>
-          
-      </ul>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

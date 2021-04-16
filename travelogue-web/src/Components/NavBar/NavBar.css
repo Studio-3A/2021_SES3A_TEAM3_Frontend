@@ -1,27 +1,17 @@
-.App a{
-  text-decoration: none;
+.iconTxt p{
+  color: white;
+  font-family: "Poppins" !important;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 14.625rem;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;    
-    text-decoration: none;
-    background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
-  }
-  
-  li a, li span{
-    display: flex;
-    color: #FFFF;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
+.navbarCol{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
+  min-width: 234px;
+}
 
   .iconContainer{
       background: #2E68D4;
@@ -80,9 +70,39 @@ ul {
     background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
 }
 
-@media screen and (max-width: 1300px) {
+.pageImage{
+  padding-right: 0.875rem;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: start;
+  height: 100vh;
+  width: 12.2vw;
+  background-color: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
+}
+
+.navHeader {
+  display: flex;
+  flex-direction:row;
+  width: 100%;
+  background: #2E68D4;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+}
+
+.navPages > a{
+  text-decoration: none;
+}
+
+.pageLink span{
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* @media screen and (max-width: 1300px) {
   ul{
     min-height: 100vh;
     max-height: fit-content;
   }
-}
+} */
