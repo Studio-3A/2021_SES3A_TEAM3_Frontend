@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import '../App.css';
-import * as $ from 'jquery';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { BrowserRouter, Switch, Route, withRouter} from "react-router-dom";
 import telescopeLady from "./svg/telescopeLady.svg";
@@ -32,6 +31,9 @@ import { Link, Redirect } from 'react-router-dom';
 import { Providers } from '../firebase/firebase';
 import { IAppProps } from '../App';
 
+declare var jquery: any;
+declare var $: any;
+
 interface IProps {
 }
 interface IState {
@@ -48,6 +50,11 @@ class frontPage extends Component<IProps, IState> {
         };
     }
 
+    handleClick = () => {
+        console.log("Clicked!");
+    }
+
+
     setAuth = (status:boolean) =>{
         this.setState({auth:status})
     }
@@ -56,19 +63,22 @@ class frontPage extends Component<IProps, IState> {
         this.setAuth(true);
         let user = firebase.auth().currentUser;
         if (!user){
-            SignInWithSocialMedia(provider)
-            .then(result => {
-                alert(result.user?.displayName);
-                // <About name={result.user?.displayName || ""}/>
-                window.location.href = "/leaderboard";
-            })
-            .catch(error => {
-                console.log(error);
+            //session cleared when the tab is closed.
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) 
+            .then(() => {
+
+                SignInWithSocialMedia(provider)
+                .then(result => {
+                    window.location.href = "/leaderboard";
+                })
+                .catch(error => {
+                    console.log(error);
+                });
             });
         }
         else{
-            
-            alert("user has already signin as " + user.displayName);
+            firebase.auth().signOut();
+            alert("user has already signin as" + user.displayName);
             window.location.href = "/settings";
         }
         return  <Redirect to='/history'/>
@@ -105,7 +115,7 @@ class frontPage extends Component<IProps, IState> {
                         <button className='menu-items-login btn-secondary' type='button' onClick={ () => 
                         Swal.fire({
                             html: 
-                                    '<div class="signup-modal">' +
+                                    `<div class="signup-modal">` +
                                         '<div class="left-signup">' +
                                             `<img src=${RegistrationImage} alt="left-i" class="left-image"/>` +
                                         '</div>' +
@@ -114,15 +124,20 @@ class frontPage extends Component<IProps, IState> {
                                                 '<p class="heading">Login</p>' +
                                                 '<p class="tx">Get access to amazing features that will help you start your journey today.</p>' +
                                                 '<div id="test" class="signup-btns">' +
-                                                    `<img src=${GoogleSignUp} class="signup-btn" onclick=${this.signInWithSocialMedia(Providers.google)}/>` +
+                                                    `<img id="hello" src=${GoogleSignUp} class="signup-btn" />` +
                                                     `<MicrosoftSignup class="signup-btn" />` +
                                                     `<img src=${FacebookSignup} class="signup-btn"/>` +
                                                     `<AppleSignUp class="signup-btn"/>` +
                                                 '</div>' +
                                             '</div>' +
                                         '</div>' +
-                                    '</div>'
-                            })
+                                    '</div>',
+                            didRender: () => {
+                                $("#hello").click(function (this: any) {
+                                    this.signInWithSocialMedia(Providers.google);
+                                });
+                            }
+                        })
                         }>
                         Login   
                         </button>

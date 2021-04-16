@@ -402,7 +402,7 @@ font-size: 3rem;
   z-index: -999;
 }
 .mobile-div {
-  background-image: url('./components/svg/mobileBlob.svg');
+  background-image: url('./Components/svg/mobileBlob.svg');
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
