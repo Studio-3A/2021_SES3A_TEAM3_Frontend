@@ -7,17 +7,29 @@ import LocationImage2 from '../../Images/home-card-bg2.svg';
 
 function NewList() {
     return (
-        <Grid container
+        <Grid container 
             direction="row"
-            justify="flex-start"
-            alignItems="flex-start">
+            justify="center" 
+            alignItems="center"
+            wrap="wrap"
+            spacing={10}
+            className="card-list">
             <Grid item>
                 <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
             </Grid>
-            <Grid item className="spacer-left2">
+            <Grid item>
                 <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage2} />
             </Grid>
-            <Grid item className="spacer-left2">
+            <Grid item >
+                <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
+            </Grid>
+            <Grid item>
+                <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
+            </Grid>
+            <Grid item >
+                <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
+            </Grid>
+            <Grid item >
                 <LocationCard placeName="Australia Camp" price="$100" location="Sydney, Australia" image={LocationImage1} />
             </Grid>
         </Grid>

@@ -22,8 +22,13 @@ function App() {
           path='/'
           render={() => (
             <div className='App'>
-              <NavBar />
-              <Home />
+              <div className="left">
+                <NavBar />
+              </div>
+              <div className="right">
+                <Home />
+              </div>
+              
             </div>
           )}
         />

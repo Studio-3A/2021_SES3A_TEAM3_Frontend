@@ -10,4 +10,5 @@ export const Providers = {
 }
 
 export const auth = firebase.auth();
+export const firebaseCredentials = firebase.auth.AuthCredential;
 export default Firebase;

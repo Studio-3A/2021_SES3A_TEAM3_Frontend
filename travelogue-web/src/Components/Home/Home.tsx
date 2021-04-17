@@ -19,13 +19,17 @@ import NavButtons from './NavButtons';
 // Images
 import Background from '../../Images/home-bg.svg';
 import BackgroundImage from '../../Images/home-bg2.svg';
+import NavBar from '../NavBar/NavBar';
 
 const Body = styled.body`
-    background-color: white;
+    background-color: #FFFFFF;
     background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     color: black;
+    width:100%
+    height: 100vh;
 `;
 
 const NavButton = styled.button`
@@ -68,44 +72,54 @@ class Home extends React.Component<{}, State> {
 
     render() {
         return (
-            <BrowserRouter>
-                <div className="Home">
-                    <Body className="body">
-                        <div>
-                            <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
-                            <img src={Background} className="background-layer2" alt="home-bg" />
-                        </div>
-                        <div>
-                            <Header name={this.state.name} />
-                        </div>
-                        <div>
-                            <MenuCard />
-                        </div>
-                        <div>
-                            <Categories
-                                selectedItem={this.state.selectedItem}
-                                onClickCategory={this.onClickCategory} />
-                        </div>
-                        <div className="location-card-div">
-                            {this.state.selectedItem === "New"
-                                ? <NewList />
-                                : null
-                            }
-                            {this.state.selectedItem === "Popular"
-                                ? <PopularList />
-                                : null
-                            }
-                            {this.state.selectedItem === "Recommendations"
-                                ? <RecList />
-                                : null
-                            }
-                        </div>
-                        <div className="nav-button-div">
-                            <NavButtons />
-                        </div>
-                    </Body>
+            <div className="Home">
+                <div className="body">
+                    <div className="top">
+                        <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
+                        <Header name={this.state.name} />
+                        {/* <img src={Background} className="background-layer2" alt="home-bg" /> */}
+                        
+                    </div>
+                    <div className="menu">
+                        <MenuCard />
+                    </div>
+
+                    <div>
+                                <Categories
+                                    selectedItem={this.state.selectedItem}
+                                    onClickCategory={this.onClickCategory} />
+                    </div>
+                    <div className="location-card-div">
+                                {this.state.selectedItem === "New"
+                                    ? <NewList />
+                                    : null
+                                }
+                                {this.state.selectedItem === "Popular"
+                                    ? <PopularList />
+                                    : null
+                                }
+                                {this.state.selectedItem === "Recommendations"
+                                    ? <RecList />
+                                    : null
+                                }
+                    </div>
+                    {/* 
+
+                    
+                
+                    <div>
+                        
+                            
+                            <div className="nav-button-div">
+                                <NavButtons />
+                            </div> 
+                    </div> */}
                 </div>
-            </BrowserRouter >
+
+
+            </div>
+
+                
         );
     }
 }

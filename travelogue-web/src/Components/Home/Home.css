@@ -1,33 +1,39 @@
+
 .Home {
-    padding-left: 234px;
-    overflow: hidden;
+    width: 100%;
+    background-color: crimson;
+    height: 100vh;
+    align-items: center;
+    
+}
+.top {
+    text-align: left;
+}
+    
+    
+.background-layer1{
+    width: 100%;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    background-blend-mode: multiply;
+   align-items: center;
 }
 
-.background-layer1 {
-    top: 0;
-    right: 0;
-    width: 1960px;
-    margin-left: -178px;
-}
 
-.background-layer2 {
-    top: 0;
-    right: 0;
-    width: 1960px;
-    margin-top: -480px;
-    margin-left: -178px;
-}
-
-.header {
-    margin-top: -320px;
-    margin-left: -110px;
+.header{
+    position: absolute;
+    top:10%;
+    padding-left: 2em;
 }
 
 .header-text1 {
     /* Medium Text Semibold (20) */
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.5em;
     /* identical to box height */
     color: #FFFFFF;
 }
@@ -36,17 +42,16 @@
     /* Heading 1 (80) */
     font-style: normal;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 5em;
     /* identical to box height */
     color: #FFFFFF;
 }
-
+.menu{
+    padding-left: 2em;
+}
 .menu-card {
-    width: 1593px;
-    height: 83px;
-    margin-left: -110px;
-    margin-top: -65px;
-    background: #FFFFFF;
+    width: 100%;
+    height: 83px;    
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -65,6 +70,9 @@
     padding-left: 8px;
     /* identical to box height */
     color: #4B4B4B;
+    border: none;
+    background: #FFFFFF;
+    outline: none;
 }
 
 .spacer-left {
@@ -94,7 +102,8 @@
 }
 
 .categories-grid {
-    margin-left: -110px;
+    padding-left: 2em;
+    width: 70%;
     padding-top: 50px;
 }
 
@@ -120,14 +129,14 @@
 }
 
 .location-card-div {
-    margin-left: -110px;
-    width: 1600px;
-    margin-top: 30px;
-    overflow-x: hidden;
+    padding: 2em;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
 }
 
 .location-card {
-    width: 488px;
+    width: 450px;
     height: 303px;
     border-radius: 20px;
     cursor: pointer;
@@ -175,8 +184,7 @@
     width: 50px;
     height: 50px;
 }
-
-@media screen and (min-width: 1366px) {
+/* @media screen and (min-width: 1366px) {
     .background-layer1 {
         width: 1400px;
     }
@@ -222,4 +230,4 @@
     .location-card-grid {
         padding-top: 150px;
     }
-}
+} */

@@ -5,6 +5,9 @@ import CardContent from '@material-ui/core/CardMedia';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 import LocationIcon from '../../Images/location-ico.svg';
 import CalendarIcon from '../../Images/calendar-ico.svg';
@@ -12,6 +15,7 @@ import BudgetIcon from '../../Images/budget-ico.svg';
 import PeopleIcon from '../../Images/people-ico.svg';
 import SettingsIcon from '../../Images/settings-ico2.svg';
 import SearchIcon from '../../Images/search-ico.svg';
+import { useState } from 'react';
 
 const StyledButton1 = styled.button`
     padding: 0;
@@ -36,7 +40,20 @@ const StyledButton2 = styled.button`
 `;
 
 function MenuCard() {
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    
+    function handleClick(event:Event) {
+        alert(event?.currentTarget);
+        console.log(event?.currentTarget);    
+    }
+
+    function handleClose(event:any) {
+        setAnchorEl(null);
+    }
+
     return (
+        
         <Card className="menu-card" style={{borderRadius: "10px"}}>
             <CardContent>
                 <Grid container
@@ -49,14 +66,40 @@ function MenuCard() {
                             <Grid container
                                 direction="row"
                                 justify="flex-start"
-                                alignItems="center">
+                                alignItems="center">  
                                 <Grid item className="spacer-left">
                                     <img src={LocationIcon} className="location-icon" alt="locationIcon" />
                                 </Grid>
                                 <Grid item className="spacer-right">
-                                    <text className="menu-card-text">
-                                        Where do you want to go?
-                                    </text>
+                                    <input
+                                        className="menu-card-text"
+                                        type="text"
+                                        name="startinglocation"
+                                        placeholder="Starting Location"
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <hr className="line-vertical" />
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </Grid>
+                    <Grid item>
+                        <div className="menu-card-option">
+                            <Grid container
+                                direction="row"
+                                justify="flex-start"
+                                alignItems="center">  
+                                <Grid item className="spacer-left">
+                                    <img src={LocationIcon} className="location-icon" alt="locationIcon" />
+                                </Grid>
+                                <Grid item className="spacer-right">
+                                    <input
+                                        className="menu-card-text"
+                                        type="text"
+                                        name="destinationlocation"
+                                        placeholder="Destination Location?"
+                                    />
                                 </Grid>
                                 <Grid item>
                                     <hr className="line-vertical" />

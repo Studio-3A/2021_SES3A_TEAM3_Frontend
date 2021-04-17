@@ -7,7 +7,7 @@
 .App {
   text-align: center;
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
   height: 100vh;
 }
 
@@ -220,15 +220,6 @@ Website Standard Style Sheet css
   height: auto;
   width: 18%;
   min-width: 400px;
-}
-
-/* Header */
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1% 2.5%;
 }
 
 .logo {
