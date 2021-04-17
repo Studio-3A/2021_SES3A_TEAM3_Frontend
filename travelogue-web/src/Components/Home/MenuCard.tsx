@@ -35,6 +35,14 @@ const StyledButton2 = styled.button`
     border-radius: 10px;
 `;
 
+interface State {
+    location?: string,
+    durationFrom?: string,
+    durationTo?: string
+    budget?: string,
+    people?: number
+}
+
 function MenuCard() {
     return (
         <Card className="menu-card" style={{borderRadius: "10px"}}>

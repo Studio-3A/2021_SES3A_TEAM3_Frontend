@@ -6,6 +6,7 @@ import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
 import Home from './Components/Home/Home';
+import GeneratedTrip from './Components/Home/GeneratedTrip';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -27,6 +28,17 @@ function App() {
             </div>
           )}
         />
+        <Route 
+        exact={true}
+          path='/generatedtrip'
+          render={() => (
+            <div className='App'>
+              <NavBar />
+              <GeneratedTrip />
+            </div>
+            )}
+          />
+        
         <Route
           exact={true}
           path='/about'

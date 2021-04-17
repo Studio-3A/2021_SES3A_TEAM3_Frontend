@@ -1,0 +1,50 @@
+{
+    "trip":
+    {
+      "day": [
+            {
+                "date": "07/04/2021",
+                "activities": [   
+                        {
+                            "name": "Byron Beach",
+                            "price": "150",
+                            "location": "Sydney, Australia",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                            "time": "9am",
+                            "people": "8"
+                        },
+                        {
+                            "name": "Blue Mountains",
+                            "price": "150",
+                            "location": "Sydney, Australia",
+                            "description": "Lorem ipsum dolor sit amet.",
+                            "time": "2pm",
+                            "people": "8"
+                        }
+                    ] 
+            },
+            {
+                "date": "07/04/2021",
+                "activities": [   
+                    {
+                        "name": "Byron Beach",
+                        "price": "150",
+                        "location": "Sydney, Australia",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "time": "9am",
+                        "people": "8"
+                    },
+                    {
+                        "name": "Blue Mountains",
+                        "price": "150",
+                        "location": "Sydney, Australia",
+                        "description": "Lorem ipsum dolor sit amet.",
+                        "time": "2pm",
+                        "people": "8"
+                    }
+                ]    
+            }
+        ]
+    }
+        
+}
