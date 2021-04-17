@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid';
 import './Home.css';
 
 interface State {
-    name: string
+    name?: string
 }
 
 function Header(props: State) {

@@ -1,3 +1,4 @@
+import { StringDecoder } from 'node:string_decoder';
 import React from 'react';
 
 export interface IState{
@@ -23,13 +24,15 @@ interface Activity {
 
 interface TripProps {
     day: Day;
+    index?: number;
 }
 
 
 const TripDay = (props: TripProps) => {
     return(
         <div>
-            <p>Day {props.day.date}</p>
+
+            <p>Day - {props.day.date}</p>
             {props.day.activities.map(activity => {
                 return(<Activity activity={activity}/>)
             })
@@ -44,8 +47,18 @@ interface ActProps {
 
 const Activity = (props: ActProps) => {
     return (
-        <div>
-            <p>{props.activity.description}</p>
+        
+        <div className="activity-block">
+            <div className="activity-card card card-shadow">
+
+            </div>
+            <div className="activity-description">
+                <h3>Description</h3>
+                <p>{props.activity.description}</p>
+                <div className= "activity-details"> 
+                
+                </div>
+            </div>
         </div>
     );
 }
@@ -54,14 +67,15 @@ const Activity = (props: ActProps) => {
 export const Activities = (state: IState) => {
     return(
         <div>
-            <h3>Activities</h3>
-            {state.trip.day.map(d => {
+            <p className="page-label">Activities</p>
+            {state.trip.day.map(d  => {
                 return(
                     <div>
                         <TripDay day={d}/>
                     </div>
                 )
             })}
+            
         </div>
     );
 }

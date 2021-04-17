@@ -32,7 +32,7 @@ function App() {
         exact={true}
           path='/generatedtrip'
           render={() => (
-            <div className='App'>
+            <div className='generated-trips'>
               <NavBar />
               <GeneratedTrip />
             </div>
