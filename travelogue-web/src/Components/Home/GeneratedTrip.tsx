@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Component Imports
 import './Home.css';
 import './MenuCard';
-import {IState } from './Trips/Activities';
+import {Activities, IState } from './Trips/Activities';
 import InteractiveMap from './Trips/InteractiveMap';
 import TestTrip from './Trips/testtrip.json';
 
@@ -15,14 +15,15 @@ interface State {
     trip: IState;
 }
 
+const a: IState = TestTrip;
 
 class GeneratedTrip extends React.Component<{}, State> {
-
+    
         render(){
             return (
                 <div>
                     <InteractiveMap />
-                    <Activities/>
+                    <Activities trip={a.trip}/>
                 </div>
             );
         } 
