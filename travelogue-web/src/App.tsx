@@ -5,8 +5,8 @@ import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
-import Home from './Components/Home/Home';
-import GeneratedTrip from './Components/Home/GeneratedTrip';
+import GeneratedTrip from './Components/Home/GeneratedTrip'
+import LandingPage from './Components/LandingPage/LandingPage';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -21,12 +21,9 @@ function App() {
         <Route
           exact={true}
           path='/'
-          render={() => (
-            <div className='App'>
-              <NavBar />
-              <Home />
-            </div>
-          )}
+          render={() => <div className='App'>
+            <LandingPage />
+          </div>}
         />
         <Route 
         exact={true}
@@ -96,7 +93,7 @@ function App() {
           path='/login'
           render={() => (
             <div className='App'>
-              <NavBar />
+              <LandingPage />
               <Login show={true} />
             </div>
           )}
