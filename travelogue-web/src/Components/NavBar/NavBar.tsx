@@ -67,7 +67,7 @@ function NavBar() {
                 </div>
               </div>
             </Link>
-            
+
             <Link to='/saved'>
               <div className='pageContainer'>
                 <div className='pageImage'>

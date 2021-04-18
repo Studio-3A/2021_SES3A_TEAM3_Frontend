@@ -21,5 +21,10 @@
 }
 
 .header-text{
-    background: blue;
+    background-image: url('../../../Images/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 90vw;
+    min-height: 20vh;
+    padding-bottom: 3%;
+    padding-top: 1%;
 }
