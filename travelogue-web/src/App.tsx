@@ -7,6 +7,7 @@ import Login from './Components/Login/Login';
 import About from './Components/About/About';
 import GeneratedTrip from './Components/Home/GeneratedTrip'
 import LandingPage from './Components/LandingPage/LandingPage';
+import HomePage from './Components/Home/Home';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -21,21 +22,35 @@ function App() {
         <Route
           exact={true}
           path='/'
-          render={() => <div className='App'>
-            <LandingPage />
-          </div>}
+          render={() => (
+            <div className='App'>
+              <LandingPage />
+            </div>
+          )}
         />
-        <Route 
-        exact={true}
+
+        <Route
+          exact={true}
+          path='/home'
+          render={() => (
+            <div className='App'>
+              <NavBar />
+              <HomePage />
+            </div>
+          )}
+        />
+
+        <Route
+          exact={true}
           path='/generatedtrip'
           render={() => (
             <div className='generated-trips'>
               <NavBar />
               <GeneratedTrip />
             </div>
-            )}
-          />
-        
+          )}
+        />
+
         <Route
           exact={true}
           path='/about'

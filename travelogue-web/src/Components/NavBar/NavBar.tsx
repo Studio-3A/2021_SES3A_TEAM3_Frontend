@@ -35,7 +35,7 @@ function NavBar() {
           </div>
 
           <div className='navPages'>
-            <Link to='/'>
+            <Link to='/home'>
               <div className='pageContainer'>
                 <div className='pageImage'>
                   <img alt='homeIcon' src={homeIcon} />

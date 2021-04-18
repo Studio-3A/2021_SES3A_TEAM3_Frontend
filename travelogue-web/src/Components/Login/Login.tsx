@@ -50,7 +50,7 @@ class Login extends Component<IProps, IState> {
 
                 SignInWithSocialMedia(provider)
                 .then(result => {
-                    window.location.href = "/leaderboard";
+                    window.location.href = '/home';
                 })
                 .catch(error => {
                     console.log(error);
