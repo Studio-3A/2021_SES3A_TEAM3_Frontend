@@ -54,9 +54,10 @@ const Activity = (props: ActProps) => {
             </div>
             <div className="activity-description">
                 <h3>Description</h3>
-                <p>{props.activity.description}</p>
-                <div className= "activity-details"> 
                 
+                <div className= "activity-details"> 
+                <p>{props.activity.description}</p>
+
                 </div>
             </div>
         </div>

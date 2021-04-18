@@ -1,29 +1,34 @@
 .activity-block {
     width: 100vw;
     height: auto;
-    align-items: center;
+    max-width: 50vw;
+    align-items: left;
     margin-bottom: 3.5%;
     display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3% 10%;
+    text-align: left;
 }
 
 .activity-description{
     display: flex;
     flex-direction: column;
+    align-items: left;
+    text-align: left;
 }
 
 .main{
     display: flex;
     flex-direction: column;
-    height: 300vh;
+    height: fit-content;
+
 }
 
 .header-text{
     background-image: url('../../../Images/header-bg.svg');
     background-repeat: no-repeat;
-    background-size: 90vw;
+    background-size: 100vw;
     min-height: 20vh;
     padding-bottom: 3%;
     padding-top: 1%;
