@@ -12,141 +12,205 @@ import BudgetIcon from '../../Images/budget-ico.svg';
 import PeopleIcon from '../../Images/people-ico.svg';
 import SettingsIcon from '../../Images/settings-ico2.svg';
 import SearchIcon from '../../Images/search-ico.svg';
+import { useState } from 'react';
 
 const StyledButton1 = styled.button`
-    padding: 0;
-    border: none;
-    background: none;
-    height: 64px;
-    width: 64px;
-    /* Smooth Blue */
-    background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
-    border-radius: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  height: 64px;
+  width: 64px;
+  /* Smooth Blue */
+  background: linear-gradient(115.74deg, #83c2fe 1.79%, #3672f8 100%);
+  border-radius: 10px;
 `;
 
 const StyledButton2 = styled.button`
-    padding: 0;
-    border: none;
-    background: none;
-    height: 64px;
-    width: 64px;
-    /* Turquoise Blue */
-    background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
-    border-radius: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  height: 64px;
+  width: 64px;
+  /* Turquoise Blue */
+  background: linear-gradient(115.74deg, #14f1d9 1.79%, #3672f8 100%);
+  border-radius: 10px;
 `;
 
-interface State {
-    location?: string,
-    durationFrom?: string,
-    durationTo?: string
-    budget?: string,
-    people?: number
-}
-
 function MenuCard() {
-    return (
-        <Card className="menu-card" style={{borderRadius: "10px"}}>
-            <CardContent>
-                <Grid container
-                    direction="row"
-                    justify="flex-start"
-                    alignItems="center"
-                    className="menu-card-content">
-                    <Grid item>
-                        <div className="menu-card-option">
-                            <Grid container
-                                direction="row"
-                                justify="flex-start"
-                                alignItems="center">
-                                <Grid item className="spacer-left">
-                                    <img src={LocationIcon} className="location-icon" alt="locationIcon" />
-                                </Grid>
-                                <Grid item className="spacer-right">
-                                    <text className="menu-card-text">
-                                        Where do you want to go?
-                                    </text>
-                                </Grid>
-                                <Grid item>
-                                    <hr className="line-vertical" />
-                                </Grid>
-                            </Grid>
-                        </div>
-                    </Grid>
-                    <Grid item>
-                        <div className="menu-card-option">
-                            <Grid container
-                                direction="row"
-                                justify="flex-start"
-                                alignItems="center">
-                                <Grid item className="spacer-left">
-                                    <img src={CalendarIcon} className="calendar-icon" alt="calendarIcon" />
-                                </Grid>
-                                <Grid item className="spacer-right">
-                                    <text className="menu-card-text">
-                                        Duration of the trip
-                                    </text>
-                                </Grid>
-                                <Grid item>
-                                    <hr className="line-vertical" />
-                                </Grid>
-                            </Grid>
-                        </div>
-                    </Grid>
-                    <Grid item>
-                        <div className="menu-card-option">
-                            <Grid container
-                                direction="row"
-                                justify="flex-start"
-                                alignItems="center">
-                                <Grid item className="spacer-left2">
-                                    <img src={BudgetIcon} className="budget-icon" alt="budgetIcon" />
-                                </Grid>
-                                <Grid item className="spacer-right2">
-                                    <text className="menu-card-text">
-                                        Budget
-                                    </text>
-                                </Grid>
-                                <Grid item>
-                                    <hr className="line-vertical" />
-                                </Grid>
-                            </Grid>
-                        </div>
-                    </Grid>
-                    <Grid item>
-                        <div className="menu-card-option">
-                            <Grid container
-                                direction="row"
-                                justify="flex-start"
-                                alignItems="center">
-                                <Grid item className="spacer-left">
-                                    <img src={PeopleIcon} className="people-icon" alt="peopleIcon" />
-                                </Grid>
-                                <Grid item className="spacer-right">
-                                    <text className="menu-card-text">
-                                        Number of people
-                                    </text>
-                                </Grid>
-                            </Grid>
-                        </div>
-                    </Grid>
-                    <Grid item className="spacer-left2">
-                        <StyledButton1>
-                            <IconButton>
-                                <img src={SettingsIcon} className="settings-icon" alt="settingsIcon" />
-                            </IconButton>
-                        </StyledButton1>
-                    </Grid>
-                    <Grid item className="spacer-left3">
-                        <StyledButton2>
-                            <IconButton>
-                                <img src={SearchIcon} className="search-icon" alt="searchIcon" />
-                            </IconButton>
-                        </StyledButton2>
-                    </Grid>
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  function handleClick(event: Event) {
+    alert(event?.currentTarget);
+    console.log(event?.currentTarget);
+  }
+
+  function handleClose(event: any) {
+    setAnchorEl(null);
+  }
+
+  return (
+    <Card className='menu-card' style={{ borderRadius: '10px' }}>
+      <CardContent>
+        <Grid
+          container
+          direction='row'
+          justify='flex-start'
+          alignItems='center'
+          className='menu-card-content'
+        >
+          <Grid item>
+            <div className='menu-card-option'>
+              <Grid
+                container
+                direction='row'
+                justify='flex-start'
+                alignItems='center'
+              >
+                <Grid item className='spacer-left'>
+                  <img
+                    src={LocationIcon}
+                    className='location-icon'
+                    alt='locationIcon'
+                  />
                 </Grid>
-            </CardContent>
-        </Card>
-    )
+                <Grid item className='spacer-right'>
+                  <input
+                    className='menu-card-text'
+                    type='text'
+                    name='startinglocation'
+                    placeholder='Starting Location'
+                  />
+                </Grid>
+                <Grid item>
+                  <hr className='line-vertical' />
+                </Grid>
+              </Grid>
+            </div>
+          </Grid>
+          <Grid item>
+            <div className='menu-card-option'>
+              <Grid
+                container
+                direction='row'
+                justify='flex-start'
+                alignItems='center'
+              >
+                <Grid item className='spacer-left'>
+                  <img
+                    src={LocationIcon}
+                    className='location-icon'
+                    alt='locationIcon'
+                  />
+                </Grid>
+                <Grid item className='spacer-right'>
+                  <input
+                    className='menu-card-text'
+                    type='text'
+                    name='destinationlocation'
+                    placeholder='Destination Location?'
+                  />
+                </Grid>
+                <Grid item>
+                  <hr className='line-vertical' />
+                </Grid>
+              </Grid>
+            </div>
+          </Grid>
+          <Grid item>
+            <div className='menu-card-option'>
+              <Grid
+                container
+                direction='row'
+                justify='flex-start'
+                alignItems='center'
+              >
+                <Grid item className='spacer-left'>
+                  <img
+                    src={CalendarIcon}
+                    className='calendar-icon'
+                    alt='calendarIcon'
+                  />
+                </Grid>
+                <Grid item className='spacer-right'>
+                  <text className='menu-card-text'>Duration of the trip</text>
+                </Grid>
+                <Grid item>
+                  <hr className='line-vertical' />
+                </Grid>
+              </Grid>
+            </div>
+          </Grid>
+          <Grid item>
+            <div className='menu-card-option'>
+              <Grid
+                container
+                direction='row'
+                justify='flex-start'
+                alignItems='center'
+              >
+                <Grid item className='spacer-left2'>
+                  <img
+                    src={BudgetIcon}
+                    className='budget-icon'
+                    alt='budgetIcon'
+                  />
+                </Grid>
+                <Grid item className='spacer-right2'>
+                  <text className='menu-card-text'>Budget</text>
+                </Grid>
+                <Grid item>
+                  <hr className='line-vertical' />
+                </Grid>
+              </Grid>
+            </div>
+          </Grid>
+          <Grid item>
+            <div className='menu-card-option'>
+              <Grid
+                container
+                direction='row'
+                justify='flex-start'
+                alignItems='center'
+              >
+                <Grid item className='spacer-left'>
+                  <img
+                    src={PeopleIcon}
+                    className='people-icon'
+                    alt='peopleIcon'
+                  />
+                </Grid>
+                <Grid item className='spacer-right'>
+                  <text className='menu-card-text'>Number of people</text>
+                </Grid>
+              </Grid>
+            </div>
+          </Grid>
+          <Grid item className='spacer-left2'>
+            <StyledButton1>
+              <IconButton>
+                <img
+                  src={SettingsIcon}
+                  className='settings-icon'
+                  alt='settingsIcon'
+                />
+              </IconButton>
+            </StyledButton1>
+          </Grid>
+          <Grid item className='spacer-left3'>
+            <StyledButton2>
+              <IconButton>
+                <img
+                  src={SearchIcon}
+                  className='search-icon'
+                  alt='searchIcon'
+                />
+              </IconButton>
+            </StyledButton2>
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
+  );
 }
 
 export default MenuCard;

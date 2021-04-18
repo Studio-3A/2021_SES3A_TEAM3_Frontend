@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import './Trips/Trips.css'
 // Component Imports
-
 import MenuCard from './MenuCard';
 import Header from './Header'
 import {Activities, IState } from './Trips/Activities';

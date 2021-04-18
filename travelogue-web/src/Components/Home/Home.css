@@ -1,18 +1,24 @@
 .Home {
-    padding-left: 234px;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
 }
 
-.background-layer1 {
-    top: 0;
-    right: 0;
-    width: 1960px;
+.top {
+    background-image: url('../../Images/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    min-height: 28vh;
+    padding-bottom: 3%;
+    padding-top: 1%;
 }
 
-.background-layer2 {
-    top: 0;
-    right: 0;
-    width: 1960px;
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    background-blend-mode: multiply;
+    align-items: center;
 }
 
 
@@ -32,6 +38,10 @@
     font-size: 80px;
     /* identical to box height */
     color: #FFFFFF;
+}
+
+.menu{
+    padding-left: 2em;
 }
 
 .menu-card {
@@ -59,6 +69,9 @@
     padding-left: 8px;
     /* identical to box height */
     color: #4B4B4B;
+    border: none;
+    background: #FFFFFF;
+    outline: none;
 }
 
 .spacer-left {
@@ -89,6 +102,8 @@
 
 .categories-grid {
     padding-top: 50px;
+    width: 70%;
+    padding-top: 50px;
 }
 
 .categories-text {
@@ -115,7 +130,8 @@
 .location-card-div {
     width: 1600px;
     margin-top: 30px;
-    overflow-x: hidden;
+    overflow: hidden;
+    align-items: center;
 }
 
 .location-card {

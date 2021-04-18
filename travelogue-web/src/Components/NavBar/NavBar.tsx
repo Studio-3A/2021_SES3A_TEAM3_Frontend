@@ -12,7 +12,11 @@ import accountsIcon from '../../Images/accounts-ico.svg';
 import settingsIcon from '../../Images/settings-ico.svg';
 import logoutIcon from '../../Images/logout-ico.svg';
 
+import firebase from '../../firebase/firebase';
+
 function NavBar() {
+  const avatarURL = firebase.auth().currentUser?.photoURL || defaultProfile;
+
   return (
     <div className='nav-content'>
       <div className='navbarCol'>
@@ -26,7 +30,7 @@ function NavBar() {
         </div>
         <div className='navProfile'>
           <div className='profileImg'>
-            <img alt='profileIcon' src={defaultProfile} />
+            <img alt='profileIcon' src={avatarURL} />
           </div>
           <div className='profileTxt'>
             <p>
