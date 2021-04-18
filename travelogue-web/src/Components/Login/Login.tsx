@@ -33,6 +33,7 @@ class Login extends Component<IProps, IState> {
     }
     showModal = (status:boolean) => {
         this.setState({ show: status });
+        window.location.href = "/";
     };
 
     setAuth = (status:boolean) =>{
@@ -81,7 +82,7 @@ class Login extends Component<IProps, IState> {
                                 <div className="signup-content">
                                     <p className="heading">Login</p>
                                     <p className="tx">Get access to amazing features that will help you start your journey today.</p>
-                                    <div className="signup-btns">             
+                                    <div className="signup-btns"> 
                                         <GoogleSignUp className="signup-btn" onClick={() => this.signInWithSocialMedia(Providers.google)}/>
                                         <MicrosoftSignup className="signup-btn" onClick={() => this.signInWithSocialMedia(Providers.facebook)}/>
                                         <FacebookSignup className="signup-btn"/>
