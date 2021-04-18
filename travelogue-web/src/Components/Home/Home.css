@@ -37,13 +37,15 @@
 .menu-card {
     margin-left: 0.52vw;
     max-width: 80vw;
-    height: 9vh;
+    padding-right: 20px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 10px !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-card-content {
-    margin-top: -20px;
+    height: fit-content;
 }
 
 .menu-card-option:hover {
@@ -163,46 +165,4 @@
 .right-arrow-btn {
     width: 50px;
     height: 50px;
-}
-
-@media screen and (min-width: 1366px) {
-    .background-layer1 {
-        width: 1400px;
-    }
-    .background-layer2 {
-        width: 1400px;
-    }
-    .header {
-    }
-    .header-text1 {
-        font-size: 16px;
-    }
-    .header-text2 {
-        font-size: 64px;
-    }
-    .menu-card {
-        width: 1039px;
-    }
-    .menu-card-text {
-        font-size: 13px;
-    }
-    .categories-grid {
-    }
-    .categories-text {
-        font-size: 16px;
-    }
-    .location-card-div {
-    }
-    .location-card-text1 {
-        font-size: 32px;
-    }
-    .location-card-text2 {
-        font-size: 24px;
-    }
-    .location-card-text3 {
-        font-size: 16px;
-    }
-    .location-card-grid {
-        padding-top: 150px;
-    }
 }

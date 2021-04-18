@@ -168,14 +168,9 @@ Website Standard Style Sheet css
 /* Cards */
 
 .card {
-  width: 488px;
-  height: 303px;
-  border-radius: 20px !important;
-}
-
-.card:hover {
-  width: 492px;
-  height: 305px;
+  width: 30vw;
+  height: 33vh;
+  border-radius: 25px !important;
 }
 
 
