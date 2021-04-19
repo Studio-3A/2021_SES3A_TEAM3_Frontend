@@ -23,13 +23,13 @@
 }
 
 
-.header{
+.HeaderH{
     position: absolute;
     top:10%;
     padding-left: 2em;
 }
 
-.header-text1 {
+.HeaderH-text1 {
     /* Medium Text Semibold (20) */
     font-style: normal;
     font-weight: 600;
@@ -38,7 +38,7 @@
     color: #FFFFFF;
 }
 
-.header-text2 {
+.HeaderH-text2 {
     /* Heading 1 (80) */
     font-style: normal;
     font-weight: bold;
@@ -56,7 +56,7 @@
 }
 
 .menu-card-content {
-    margin-top: -20px;
+    height: fit-content;
 }
 
 .menu-card-option:hover {
@@ -145,7 +145,6 @@
 
 
 .location-card-content {
-    margin-top: -290px;
     margin-left: 20px;
 }
 
@@ -185,56 +184,6 @@
     width: 50px;
     height: 50px;
 }
-/* @media screen and (min-width: 1366px) {
-    .background-layer1 {
-        width: 1400px;
-    }
-    .background-layer2 {
-        width: 1400px;
-        margin-top: -350px;
-    }
-    .header {
-        margin-top: -230px;
-        margin-left: -140px;
-    }
-    .header-text1 {
-        font-size: 16px;
-    }
-    .header-text2 {
-        font-size: 64px;
-    }
-    .menu-card {
-        width: 1039px;
-        margin-left: -140px;
-    }
-    .menu-card-text {
-        font-size: 13px;
-    }
-    .categories-grid {
-        margin-left: -140px;
-    }
-    .categories-text {
-        font-size: 16px;
-    }
-    .location-card-div {
-        margin-left: -140px;
-    }
-    .location-card-text1 {
-        font-size: 32px;
-    }
-    .location-card-text2 {
-        font-size: 24px;
-    }
-    .location-card-text3 {
-        font-size: 16px;
-    }
-    .location-card-grid {
-        padding-top: 150px;
-    }
-} */
-
-
-
 .googleselect{
     position:absolute;
     background-color: #41b6e6;
@@ -244,5 +193,6 @@
 
 .dropdown {
     position: relative;
-  display: inline-block;
-  }
+   display: inline-block;
+}
+

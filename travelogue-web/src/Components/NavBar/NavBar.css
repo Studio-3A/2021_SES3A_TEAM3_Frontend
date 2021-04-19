@@ -10,16 +10,15 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
-  min-width: 234px;
 }
 
   .iconContainer{
-      background: #2E68D4;
-      width: 234px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    background: #2E68D4;
+    width: 234px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .icon{
@@ -37,24 +36,21 @@
     line-height: 143.2%;
   }
 
-.profileContainer{
-   display: block;
-   text-align: center;
-}
-
 .profileTxt{
     width: 169px;
     font-family: SF Pro Display;
     font-size: 18px;
-    font-weight: 340;
+    font-weight: 350;
     display: inline;
     padding-bottom: 16px;
+    text-align: center;
     color: white;
 }
 
 .profileImg{
     padding-top: 15px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .pageContainer{

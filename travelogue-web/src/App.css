@@ -1,4 +1,3 @@
-/* Remove Whitespace at top of react-app */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@
 .App {
   text-align: center;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   height: 100vh;
 }
 
@@ -168,13 +167,9 @@ Website Standard Style Sheet css
 /* Cards */
 
 .card {
-  width: 300px;
-  height: 225px;
-}
-
-.card:hover {
-  width: 330px;
-  height: 245px;
+  width: 30vw;
+  height: 33vh;
+  border-radius: 25px !important;
 }
 
 
@@ -220,6 +215,15 @@ Website Standard Style Sheet css
   height: auto;
   width: 18%;
   min-width: 400px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2.5%;
 }
 
 .logo {
@@ -331,6 +335,13 @@ font-weight: bold;
 font-size: 3rem;
 }
 
+.generated-trips{
+  display: flex;
+  flex-direction: row;
+  /* height: 100vh;
+  width: 72.8vw */
+}
+
 
 .page3 {
   width: 100vw;
@@ -371,4 +382,76 @@ font-size: 3rem;
   margin-bottom: 7%;
   align-items: center;
   height: 85vh;
+}
+
+.mobile-blob {
+  margin: auto;
+  position: absolute;
+  left: 0; bottom: 0; right: 0;
+  width: 80%;
+  height: auto;
+  z-index: -999;
+}
+.mobile-div {
+  background-image: url('./Components/svg/mobileBlob.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
+}
+.mobile-title {
+
+  min-width: 200px;
+  width: 70vw;
+
+  padding-top: 5%;
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  text-align: left;
+}
+.mb-img {
+  width: 17vw;
+  margin-left: 10px;
+}
+.mb-sep {
+  margin-bottom: 3%;
+}
+.mt-heading {
+  font-size: 5.2rem;
+  color: white;
+  font-weight: 700;
+}
+.mt-description {
+  color: white;
+  font-size: 2rem !important;
+}
+.app-download {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  height: auto;
+  justify-content: space-between;
+}
+.apple-download, .google-download {
+  width: 280px;
+  height: 87px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.apple-download div {
+  margin-left: 10%;
+}
+.ad-title {
+  text-transform: uppercase;
+  color: grey;
+}
+
+.ad-label {
+
 }

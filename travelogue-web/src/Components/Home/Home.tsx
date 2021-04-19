@@ -33,94 +33,77 @@ const Body = styled.body`
 `;
 
 const NavButton = styled.button`
-    padding: 0;
-    border: none;
-    background: none;
-    height: 50px;
-    width: 50px;
-    /* Smooth Blue */
-    background: #F8F8F8;
-    border-radius: 50px;
-    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  border: none;
+  background: none;
+  height: 50px;
+  width: 50px;
+  /* Smooth Blue */
+  background: #f8f8f8;
+  border-radius: 50px;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
 `;
 
 interface State {
-    name: string,
-    selectedItem: string
+  name: string;
+  selectedItem: string;
 }
 
 // TODO:
 class Home extends React.Component<{}, State> {
+  constructor(props: {}) {
+    super(props);
 
-    constructor(props: {}) {
-        super(props);
+    this.state = {
+      name: 'Gio',
+      selectedItem: 'New',
+    };
 
-        this.state = {
-            name: 'Gio',
-            selectedItem: 'New'
-        };
+    this.onClickCategory = this.onClickCategory.bind(this);
+  }
+  onClickCategory(e: React.MouseEvent<HTMLHeadingElement>) {
+    e.preventDefault();
+    this.setState({
+      selectedItem: e.currentTarget.textContent as string,
+    });
+  }
 
-        this.onClickCategory = this.onClickCategory.bind(this);
+  render() {
+    return (
+      <div className='Home'>
+        <div className='body'>
+          <div className="top">
+              <Header name={this.state.name} />
+              <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
+          </div>
+          <div className="menu">
+              <MenuCard />
+          </div>
 
-    }
-    onClickCategory(e: React.MouseEvent<HTMLHeadingElement>) {
-        e.preventDefault();
-        this.setState({
-            selectedItem: e.currentTarget.textContent as string
-        });
-    }
-
-    render() {
-        return (
-            <div className="Home">
-                <div className="body">
-                    <div className="top">
-                        {/* <img src={BackgroundImage} className="background-layer1" alt="home-bg2" /> */}
-                        <Header name={this.state.name} />
-                        <img src={Background} className="background-layer1" alt="home-bg" />
-                        
-                    </div>
-                    <div className="menu">
-                        <MenuCard />
-                    </div>
-
-                    <div>
-                                <Categories
-                                    selectedItem={this.state.selectedItem}
-                                    onClickCategory={this.onClickCategory} />
-                    </div>
-                    <div className="location-card-div">
-                                {this.state.selectedItem === "New"
-                                    ? <NewList />
-                                    : null
-                                }
-                                {this.state.selectedItem === "Popular"
-                                    ? <PopularList />
-                                    : null
-                                }
-                                {this.state.selectedItem === "Recommendations"
-                                    ? <RecList />
-                                    : null
-                                }
-                    </div>
-                    
-
+      <div>
+            <Categories
+              selectedItem={this.state.selectedItem}
+              onClickCategory={this.onClickCategory}
+            />
+          </div>
+          <div className='location-card-div'>
+            {this.state.selectedItem === 'New' ? <NewList /> : null}
+            {this.state.selectedItem === 'Popular' ? <PopularList /> : null}
+            {this.state.selectedItem === 'Recommendations' ? <RecList /> : null}
+          </div>
+          {/* 
                     
                 
-                    {/* <div>
+                    <div>
                         
                             
                             <div className="nav-button-div">
                                 <NavButtons />
                             </div> 
                     </div> */}
-                </div>
-
-
-            </div>
-
-                
-        );
-    }
+        </div>
+      </div>
+    );
+  }
 }
 export default Home;

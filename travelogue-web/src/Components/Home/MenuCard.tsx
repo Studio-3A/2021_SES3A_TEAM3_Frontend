@@ -17,6 +17,7 @@ import SearchIcon from '../../Images/search-ico.svg';
 import React, { useState } from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import DatePicker from "react-datepicker";
+import { TripGenerationInputs, Coordinate , generateTrip} from '../BackEndLogic/APICaller';
 
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -28,25 +29,25 @@ import {
 import { Link, useHistory } from 'react-router-dom';
 import { Select } from '@material-ui/core';
 const StyledButton1 = styled.button`
-    padding: 0;
-    border: none;
-    background: none;
-    height: 64px;
-    width: 64px;
-    /* Smooth Blue */
-    background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
-    border-radius: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  height: 64px;
+  width: 64px;
+  /* Smooth Blue */
+  background: linear-gradient(115.74deg, #83c2fe 1.79%, #3672f8 100%);
+  border-radius: 10px;
 `;
 
 const StyledButton2 = styled.button`
-    padding: 0;
-    border: none;
-    background: none;
-    height: 64px;
-    width: 64px;
-    /* Turquoise Blue */
-    background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
-    border-radius: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  height: 64px;
+  width: 64px;
+  /* Turquoise Blue */
+  background: linear-gradient(115.74deg, #14f1d9 1.79%, #3672f8 100%);
+  border-radius: 10px;
 `;
 
 //TODO we should all for budget and number of people to be drop with suggested values
@@ -56,14 +57,24 @@ function MenuCard() {
     const [startingAddress, setStartingAddress] = useState("");
     const [desAddress, setDesAddress] = useState("");
     const [open, setOpen] = useState(false);
-    const [startDate, setStartDate] = useState<any>(null);
-    const [endDate, setEndDate] = useState<any>(null);
-    const [budget, setBudget] = useState<string>("");
-    const [numPeople, setNumPeople] = useState<string>("");
+    const [startDate, setStartDate]: [Date, any] = useState<any>(null);
+    const [endDate, setEndDate]: [Date, any] = useState<any>(null);
+    const [budget, setBudget] = useState<number>(0);
+    const [numPeople, setNumPeople] = useState<number>(0);
     const [startinglatLng, setStartingLatLng] = useState<object>({});
     const [endlatLng, setEndLatLng] = useState<object>({});
     const history = useHistory();
 
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    function handleClick(event: Event) {
+      alert(event?.currentTarget);
+      console.log(event?.currentTarget);
+    }
+  
+    function handleClose(event: any) {
+      setAnchorEl(null);
+    }
     async function handleStartingSelect(value:string) {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
@@ -79,18 +90,16 @@ function MenuCard() {
 
     function handleSubmit (evt:any)  {
         evt.preventDefault();
-        const tripObject = {
-            StartingLocation: startinglatLng,
-            DestinationLocation: endlatLng,
-            StartDate: startDate,
-            EndDate: endDate,
-            Budget: budget,
-            NumPeople: numPeople
+        const tripObject: TripGenerationInputs = {
+            startLocation: startinglatLng as Coordinate,
+            endLocation: endlatLng  as Coordinate,
+            startDate: startDate.getTime(),
+            endDate: endDate.getTime(),
+            budget: budget,
+            numberOfPeople: numPeople
         }
-
-        console.log(tripObject);
-
-        
+        const result = generateTrip(tripObject);
+        console.log(result);
     }
     return (
         
@@ -232,12 +241,12 @@ function MenuCard() {
                                 </Grid>
                                 <Grid item className="spacer-right2">
                                     <input  
-                                        type="range"
+                                        type="number"
                                         pattern="[0-9]"
                                         className="menu-card-text" 
                                         name="budget"
                                         placeholder="Your budget"
-                                        onChange={e => setBudget(e.target.value)}
+                                       
                                           
                                     />
                                 </Grid>
@@ -263,7 +272,7 @@ function MenuCard() {
                                         className="menu-card-text" 
                                         name="numPeople"
                                         placeholder="Number of people"  
-                                        onChange={e => setNumPeople(e.target.value)}   
+                                          
                                     />
                                 </Grid>
                             </Grid>
@@ -284,9 +293,9 @@ function MenuCard() {
                         </StyledButton2>
                     </Grid>
                 </Grid>
-            </CardContent>
-        </Card>
-    )
+      </CardContent>
+    </Card>
+  );
 }
 
 export default MenuCard;
