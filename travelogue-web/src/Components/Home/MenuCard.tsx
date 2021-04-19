@@ -8,15 +8,25 @@ import './Home.css';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
 import LocationIcon from '../../Images/location-ico.svg';
 import CalendarIcon from '../../Images/calendar-ico.svg';
 import BudgetIcon from '../../Images/budget-ico.svg';
 import PeopleIcon from '../../Images/people-ico.svg';
 import SettingsIcon from '../../Images/settings-ico2.svg';
 import SearchIcon from '../../Images/search-ico.svg';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import PlacesAutocomplete from 'react-places-autocomplete';
+import DatePicker from "react-datepicker";
 
+import "react-datepicker/dist/react-datepicker.css";
+import {
+    geocodeByAddress,
+    geocodeByPlaceId,
+    getLatLng,
+  } from 'react-places-autocomplete';
+
+import { Link, useHistory } from 'react-router-dom';
+import { Select } from '@material-ui/core';
 const StyledButton1 = styled.button`
     padding: 0;
     border: none;
@@ -39,19 +49,49 @@ const StyledButton2 = styled.button`
     border-radius: 10px;
 `;
 
+//TODO we should all for budget and number of people to be drop with suggested values
+
 function MenuCard() {
+    const todaysDate = null;
+    const [startingAddress, setStartingAddress] = useState("");
+    const [desAddress, setDesAddress] = useState("");
+    const [open, setOpen] = useState(false);
+    const [startDate, setStartDate] = useState<any>(null);
+    const [endDate, setEndDate] = useState<any>(null);
+    const [budget, setBudget] = useState<string>("");
+    const [numPeople, setNumPeople] = useState<string>("");
+    const [startinglatLng, setStartingLatLng] = useState<object>({});
+    const [endlatLng, setEndLatLng] = useState<object>({});
+    const history = useHistory();
 
-    const [anchorEl, setAnchorEl] = useState(null);
-    
-    function handleClick(event:Event) {
-        alert(event?.currentTarget);
-        console.log(event?.currentTarget);    
+    async function handleStartingSelect(value:string) {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        setStartingAddress(value);
+        setStartingLatLng(latLng)
+    }
+    async function handleDesSelect(value:string) {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        setDesAddress(value);
+        setEndLatLng(latLng);
     }
 
-    function handleClose(event:any) {
-        setAnchorEl(null);
-    }
+    function handleSubmit (evt:any)  {
+        evt.preventDefault();
+        const tripObject = {
+            StartingLocation: startinglatLng,
+            DestinationLocation: endlatLng,
+            StartDate: startDate,
+            EndDate: endDate,
+            Budget: budget,
+            NumPeople: numPeople
+        }
 
+        console.log(tripObject);
+
+        
+    }
     return (
         
         <Card className="menu-card" style={{borderRadius: "10px"}}>
@@ -70,13 +110,24 @@ function MenuCard() {
                                 <Grid item className="spacer-left">
                                     <img src={LocationIcon} className="location-icon" alt="locationIcon" />
                                 </Grid>
-                                <Grid item className="spacer-right">
-                                    <input
-                                        className="menu-card-text"
-                                        type="text"
-                                        name="startinglocation"
-                                        placeholder="Starting Location"
-                                    />
+                                <Grid item  >
+                                    <PlacesAutocomplete value={startingAddress} onChange={setStartingAddress} onSelect={handleStartingSelect} >
+                                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                                            <div>
+                                                <input className="menu-card-text"  
+                                                    {...getInputProps({ placeholder: "Starting location" })}
+                                                />
+
+                                                <div>
+                                                   {loading? <div>...loading</div> : null}
+
+                                                    {suggestions.map(suggestion => {    
+                                                        return (<div {...getSuggestionItemProps(suggestion)}> {suggestion.description} </div> );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </PlacesAutocomplete>
                                 </Grid>
                                 <Grid item>
                                     <hr className="line-vertical" />
@@ -94,12 +145,50 @@ function MenuCard() {
                                     <img src={LocationIcon} className="location-icon" alt="locationIcon" />
                                 </Grid>
                                 <Grid item className="spacer-right">
-                                    <input
-                                        className="menu-card-text"
-                                        type="text"
-                                        name="destinationlocation"
-                                        placeholder="Destination Location?"
-                                    />
+                                    <PlacesAutocomplete value={desAddress} onChange={setDesAddress} onSelect={handleDesSelect} >
+                                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                                            <div>
+                                                <input  className="menu-card-text"  
+                                                    {...getInputProps({ placeholder: "Destination location" })}
+                                                />
+
+                                                <div>
+                                                   {loading? <div>...loading</div> : null}
+
+                                                    {suggestions.map(suggestion => {    
+                                                        return (<div {...getSuggestionItemProps(suggestion)}> {suggestion.description} </div> );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </PlacesAutocomplete>
+                                </Grid>
+                               
+                                <Grid item>
+                                    <hr className="line-vertical" />
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </Grid>
+                    <Grid item>
+                        <div className="menu-card-option">
+                            <Grid container
+                                direction="row"
+                                justify="flex-start"
+                                alignItems="center">
+                                <Grid item className="spacer-left">
+                                    <img src={CalendarIcon} className="calendar-icon" alt="calendarIcon" />
+                                </Grid>
+                                <Grid item className="spacer-right">
+
+                                    <DatePicker 
+                                        className="menu-card-text" 
+                                        placeholderText="Start Date" 
+                                        selected={startDate} 
+                                        onChange = {startDate => setStartDate(startDate)}
+                                        minDate = {new Date()} />
+                                 
+                                            
                                 </Grid>
                                 <Grid item>
                                     <hr className="line-vertical" />
@@ -117,9 +206,14 @@ function MenuCard() {
                                     <img src={CalendarIcon} className="calendar-icon" alt="calendarIcon" />
                                 </Grid>
                                 <Grid item className="spacer-right">
-                                    <text className="menu-card-text">
-                                        Duration of the trip
-                                    </text>
+                                    <DatePicker 
+                                        className="menu-card-text" 
+                                        placeholderText="End Date" 
+                                        selected={endDate} 
+                                        onChange = {endDate => setEndDate(endDate)} 
+                                        dateFormat="dd/MM/yyyy"
+                                        minDate = {startDate ? startDate : new Date()}
+                                    />
                                 </Grid>
                                 <Grid item>
                                     <hr className="line-vertical" />
@@ -137,9 +231,15 @@ function MenuCard() {
                                     <img src={BudgetIcon} className="budget-icon" alt="budgetIcon" />
                                 </Grid>
                                 <Grid item className="spacer-right2">
-                                    <text className="menu-card-text">
-                                        Budget
-                                    </text>
+                                    <input  
+                                        type="range"
+                                        pattern="[0-9]"
+                                        className="menu-card-text" 
+                                        name="budget"
+                                        placeholder="Your budget"
+                                        onChange={e => setBudget(e.target.value)}
+                                          
+                                    />
                                 </Grid>
                                 <Grid item>
                                     <hr className="line-vertical" />
@@ -157,9 +257,14 @@ function MenuCard() {
                                     <img src={PeopleIcon} className="people-icon" alt="peopleIcon" />
                                 </Grid>
                                 <Grid item className="spacer-right">
-                                    <text className="menu-card-text">
-                                        Number of people
-                                    </text>
+                                    <input  
+                                        type="text"
+                                        pattern="[0-9]"
+                                        className="menu-card-text" 
+                                        name="numPeople"
+                                        placeholder="Number of people"  
+                                        onChange={e => setNumPeople(e.target.value)}   
+                                    />
                                 </Grid>
                             </Grid>
                         </div>
@@ -174,7 +279,7 @@ function MenuCard() {
                     <Grid item className="spacer-left3">
                         <StyledButton2>
                             <IconButton>
-                                <img src={SearchIcon} className="search-icon" alt="searchIcon" />
+                                <img   onClick={handleSubmit} src={SearchIcon} className="search-icon" alt="searchIcon" />
                             </IconButton>
                         </StyledButton2>
                     </Grid>

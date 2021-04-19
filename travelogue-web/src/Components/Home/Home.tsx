@@ -75,9 +75,9 @@ class Home extends React.Component<{}, State> {
             <div className="Home">
                 <div className="body">
                     <div className="top">
-                        <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
+                        {/* <img src={BackgroundImage} className="background-layer1" alt="home-bg2" /> */}
                         <Header name={this.state.name} />
-                        {/* <img src={Background} className="background-layer2" alt="home-bg" /> */}
+                        <img src={Background} className="background-layer1" alt="home-bg" />
                         
                     </div>
                     <div className="menu">
@@ -103,11 +103,11 @@ class Home extends React.Component<{}, State> {
                                     : null
                                 }
                     </div>
-                    {/* 
+                    
 
                     
                 
-                    <div>
+                    {/* <div>
                         
                             
                             <div className="nav-button-div">

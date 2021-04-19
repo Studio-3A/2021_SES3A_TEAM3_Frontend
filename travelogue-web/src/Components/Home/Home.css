@@ -73,6 +73,7 @@
     border: none;
     background: #FFFFFF;
     outline: none;
+    word-wrap: break-word;
 }
 
 .spacer-left {
@@ -231,3 +232,17 @@
         padding-top: 150px;
     }
 } */
+
+
+
+.googleselect{
+    position:absolute;
+    background-color: #41b6e6;
+    width: 300px;
+    padding-left: -100px;
+}
+
+.dropdown {
+    position: relative;
+  display: inline-block;
+  }
