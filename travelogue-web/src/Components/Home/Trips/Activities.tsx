@@ -35,9 +35,9 @@ const ActivitySingle = (props: ActProps) => {
       : time;
 
   return (
-    <div className="activity-block">
-      <div className="activity-card card card-shadow">
-        <div className="activity-img-backdrop">
+    <div className='activity-block'>
+      <div className='activity-card card card-shadow'>
+        <div className='activity-img-backdrop'>
           <ActivityProperty label={'Name'} value={name} className={'h3'} />
           <ActivityProperty label={'Description'} value={description} />
           <ActivityProperty
@@ -52,9 +52,9 @@ const ActivitySingle = (props: ActProps) => {
           />
         </div>
       </div>
-      <div className="activity-description">
+      <div className='activity-description'>
         <ActivityProperty label={'Time'} value={actualTime} />
-        <ActivityProperty label={'Duration'} value={duration} />
+        <ActivityProperty label={'Duration'} value={`${duration} minutes`} />
         <ActivityProperty label={'Description'} value={description} />
       </div>
     </div>
