@@ -3,7 +3,7 @@ import { useState, useEffect, useContext, createContext, FC } from "react";
 import Firebase from 'firebase/app';
 import { auth } from './firebase';
 import Axios from "axios";
-import Params from "../Components/BackEndLogic/params.json";
+import config from "../Components/BackEndLogic/config";
 
 export interface AuthContext {
   user: Firebase.User | null,
@@ -63,7 +63,7 @@ function useProvideAuth() {
             // Contact the backend server (Express) to check if your session is valid
             const token =  await getToken();
             const options = { headers: token ? { "Firebase-Token": token } : {} }
-            const result = await Axios.post(`${Params.SERVER}/auth/checkToken`, undefined, options);
+            const result = await Axios.post(`${config.BACKEND_BASE_URI}/auth/checkToken`, undefined, options);
             
             if (result.status === 200) { // Check Positive Response
                 resolve(true);
