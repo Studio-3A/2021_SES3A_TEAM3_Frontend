@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 import TravelogueIcon from '../../Images/travelogue-ico.svg';
 import defaultProfile from '../../Images/default-profile-ico.svg';
@@ -18,7 +19,7 @@ function NavBar() {
         <li>
           <div className='iconContainer'>
             <div className='icon'>
-              <img src={TravelogueIcon} />
+              <img alt='travelogueIcon' src={TravelogueIcon} />
             </div>
             <div className='iconTxt'>
               <p>Travelogue</p>
@@ -29,7 +30,7 @@ function NavBar() {
         <li>
           <div className='profileContainer'>
             <div className='profileImg'>
-              <img src={defaultProfile} />
+              <img alt='profileIcon' src={defaultProfile} />
             </div>
             <div className='profileTxt'>
               <p>
@@ -38,84 +39,86 @@ function NavBar() {
             </div>
           </div>
         </li>
-        <a href={'/'}>
+
+        <Link to='/'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={homeIcon} />
+                <img alt='homeIcon' src={homeIcon} />
               </div>
               <div className='pageLink'>
                 <span>Home</span>
               </div>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/leaderboard'}>
+        <Link to='/leaderboard'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={leaderboardIcon} />
+                <img alt='leaderboardIcon' src={leaderboardIcon} />
               </div>
               <span>Leaderboard</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/history'}>
+        <Link to='/history'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={historyIcon} />
+                <img alt='historyIcon' src={historyIcon} />
               </div>
               <span>History</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/saved'}>
+        <Link to='/saved'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={savedIcon} />
+                <img alt='savedIcon' src={savedIcon} />
               </div>
               <span>Saved</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/account'}>
+        <Link to='/account'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={accountsIcon} />
+                <img alt='accountsIcon' src={accountsIcon} />
               </div>
               <span>Account</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <a href={'/settings'}>
+        <Link to='/settings'>
           <li>
             <div className='pageContainer'>
               <div className='pageImage'>
-                <img src={settingsIcon} />
+                <img alt='settingsIcon' src={settingsIcon} />
               </div>
               <span>Settings</span>
             </div>
           </li>
-        </a>
+        </Link>
 
-        <li>
-          <button>
-            <div className='pageContainer'>
-              <div className='pageImage'>
-                <img src={logoutIcon} />
+        <Link to='/login'>
+          <li>
+              <div className='pageContainer'>
+                <div className='pageImage'>
+                  <img alt='logoutIcon' src={logoutIcon} />
+                </div>
+                <span>Login</span>
               </div>
-              <span>Logout</span>
-            </div>
-          </button>
-        </li>
+          </li>
+        </Link>
+          
       </ul>
     </div>
   );
