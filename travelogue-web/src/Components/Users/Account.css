@@ -1,7 +1,7 @@
 .body {
-    padding-left: 36%;
-    padding-right: 16%;
-    padding-bottom: 5vh;
+    padding-left: 434px;
+    padding-right: 200px;
+    padding-bottom: 30px;
 }
 
 .account-icon {
@@ -10,22 +10,33 @@
 }
 
 .page-title-div {
-    padding-left: 20%;
+    padding-left: 264px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .page-title-text {
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 48px;
     line-height: 143.2%;
+}
+
+.profile-pic-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .camera-icon {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    margin-left: -150px;
-    padding: 50px;
+    width: 192px;
+    height: 192px;
+    margin-left: -192px;
+    padding: 71px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     transition: 0.5s;
@@ -34,8 +45,8 @@
 
 .profile-img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 192px;
+    height: 192px;
 }
 
 .camera-icon:hover {
@@ -46,19 +57,34 @@
 .name-text {
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 155.14%;
 }
 
+.form-details-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.form-details-title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .textbox-icon {
-    width: 28px;
-    height: 28px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
 }
 
 .textbox-header {
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 143.2%;
     padding-bottom: 5px;
 }
@@ -72,7 +98,7 @@
     border-radius: 8px;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 143.2%;
 }
 
@@ -83,13 +109,14 @@
 }
 
 .save-btn {
-    width: 12vw;
+    width: 219px;
+    height: 50px;
     background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
     box-shadow: 0px 15px 30px rgba(47, 128, 237, 0.75);
     border-radius: 30px;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 34px;
     text-align: center;
     color: #FFFFFF;
@@ -103,28 +130,40 @@
 }
 
 .deactivate-btn {
-    width: 12vw;
+    width: 219px;
+    height: 50px;
     background: linear-gradient(90deg, #FFA0A0 -13.01%, #FF2727 123.97%);
     box-shadow: 0px 15px 30px rgba(255, 76, 76, 0.5);
     border-radius: 30px;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 34px;
     text-align: center;
     color: #FFFFFF;
     border: none;
 }
 
-.deactivate-grid {
+.deactivate-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     padding-top: 20px;
 }
 
 .deactivate-heading {
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 143.2%;
+}
+
+.deactivate-body-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .deactivate-text {
@@ -132,6 +171,14 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 143.2%;
+}
+
+.padding-right-10px {
+    padding-right: 10px;
+}
+
+.padding-right-20px {
+    padding-right: 20px;
 }
 
 @media screen and (max-width: 1110px) {

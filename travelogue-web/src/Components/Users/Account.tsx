@@ -4,7 +4,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
-import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Account.css';
@@ -75,55 +74,40 @@ class Account extends React.Component<{}, State> {
                 <div className="Account">
 
                     {/*Title*/}
-                    <Grid container
-                        direction="row"
-                        justify="flex-start"
-                        alignItems="center"
-                        spacing={2}
-                        className="page-title-div">
-                        <Grid item>
+                    <div className="page-title-div">
+                        <div className="padding-right-20px">
                             <img src={AccountIcon} className="account-icon" alt="accountIcon"/>
-                        </Grid>
-                        <Grid item>
+                        </div>
+                        <div>
                             <h3 className="page-title-text">Account Details</h3>
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
 
                     {/*Main form section*/}
                     <Body className="body">
-                        <Grid container
-                            direction="column"
-                            justify="center"
-                            alignItems="center">
-                            <Grid item>
+                        <div className="profile-pic-div">
+                            <div>
                                 <img src={ProfilePic} alt="profilePic" className="profile-img" />
                                 <img src={CameraIcon} alt="cameraIcon" className="camera-icon" />
-                            </Grid>
-                            <Grid item>
+                            </div>
+                            <div>
                                 <h4 className="name-text">{this.state.name}</h4>
-                            </Grid>
-                        </Grid>
+                            </div>
+                        </div>
 
                         <Form className="form-background" onSubmit={this.onSubmit}>
-                            <Grid container
-                                direction="column"
-                                justify="center"
-                                alignItems="stretch">
-                                <Grid item>
-                                    <Grid container
-                                        direction="row"
-                                        justify="flex-start"
-                                        alignItems="baseline"
-                                        spacing={1}>
-                                        <Grid item>
+                            <div className="form-details-div">
+                                <div>
+                                    <div className="form-details-title-div">
+                                        <div className="padding-right-10px">
                                             <img src={ProfileIcon} className="textbox-icon" alt="profileIcon"/>
-                                        </Grid>
-                                        <Grid item>
+                                        </div>
+                                        <div>
                                             <h5 className="textbox-header">Username</h5>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                                <Grid item xs={12} className="textbox-item">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="textbox-item">
                                     <Form.Group controlId="formUsername">
                                         <Form.Control type="text" 
                                         name="username" 
@@ -132,22 +116,18 @@ class Account extends React.Component<{}, State> {
                                         onChange={this.onChangeUsername} 
                                         className="textbox" />
                                     </Form.Group>
-                                </Grid>
-                                <Grid item>
-                                    <Grid container
-                                        direction="row"
-                                        justify="flex-start"
-                                        alignItems="baseline"
-                                        spacing={1}>
-                                        <Grid item>
+                                </div>
+                                <div>
+                                    <div className="form-details-title-div">
+                                        <div className="padding-right-10px">
                                             <img src={EmailIcon} className="textbox-icon" alt="emailIcon"/>
-                                        </Grid>
-                                        <Grid item>
+                                        </div>
+                                        <div>
                                             <h5 className="textbox-header">Email</h5>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                                <Grid item xs={12} className="textbox-item">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="textbox-item">
                                     <Form.Group controlId="formEmail">
                                         <Form.Control type="text" 
                                             name="email" 
@@ -156,8 +136,8 @@ class Account extends React.Component<{}, State> {
                                             onChange={this.onChangeEmail} 
                                             className="textbox" />
                                     </Form.Group>
-                                </Grid>
-                            </Grid>
+                                </div>
+                            </div>
                             <div className="save-btn-div">
                                 <Button type="submit" className="save-btn">
                                     Save Changes
@@ -168,32 +148,25 @@ class Account extends React.Component<{}, State> {
                         <hr className="line" />
 
                         {/*Deactivate Account Section*/}
-                        <Grid container
-                            direction="column"
-                            justify="flex-start"
-                            alignItems="stretch"
-                            className="deactivate-grid">
-                            <Grid item>
+                        <div className="deactivate-div">
+                            <div>
                                 <h4 className="deactivate-heading">Deactivate Account</h4>
-                            </Grid>
-                            <Grid item>
-                                <Grid container
-                                    direction="row"
-                                    justify="space-between"
-                                    alignItems="center">
-                                    <Grid item>
+                            </div>
+                            <div>
+                                <div className="deactivate-body-div">
+                                    <div>
                                         <text className="deactivate-text">Delete your account and all data</text>
-                                    </Grid>
-                                    <Grid item>
+                                    </div>
+                                    <div>
                                         <Form onSubmit={this.onDeactivate}>
                                             <Button className="deactivate-btn" type="submit">
                                                 Deactivate
                                             </Button>
                                         </Form>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </Body>
                 </div>
             </BrowserRouter >
