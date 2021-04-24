@@ -4,20 +4,17 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardMedia';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Home.css';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import LocationIcon from '../../Images/location-ico.svg';
-import CalendarIcon from '../../Images/calendar-ico.svg';
-import BudgetIcon from '../../Images/budget-ico.svg';
-import PeopleIcon from '../../Images/people-ico.svg';
-import SettingsIcon from '../../Images/settings-ico2.svg';
-import SearchIcon from '../../Images/search-ico.svg';
+import './MenuCard.css';
+import LocationIcon from '../../../Images/location-ico.svg';
+import CalendarIcon from '../../../Images/calendar-ico.svg';
+import BudgetIcon from '../../../Images/budget-ico.svg';
+import PeopleIcon from '../../../Images/people-ico.svg';
+import SettingsIcon from '../../../Images/settings-ico2.svg';
+import SearchIcon from '../../../Images/search-ico.svg';
 import React, { useState } from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import DatePicker from "react-datepicker";
-import { TripGenerationInputs, Coordinate , generateTrip} from '../BackEndLogic/APICaller';
+import { TripGenerationInputs, Coordinate , generateTrip} from '../../BackEndLogic/APICaller';
 
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -26,8 +23,6 @@ import {
     getLatLng,
   } from 'react-places-autocomplete';
 
-import { Link, useHistory } from 'react-router-dom';
-import { Select } from '@material-ui/core';
 const StyledButton1 = styled.button`
   padding: 0;
   border: none;
@@ -63,7 +58,6 @@ function MenuCard() {
     const [numPeople, setNumPeople] = useState<number>(0);
     const [startinglatLng, setStartingLatLng] = useState<object>({});
     const [endlatLng, setEndLatLng] = useState<object>({});
-    const history = useHistory();
 
     const [anchorEl, setAnchorEl] = useState(null);
 

@@ -35,7 +35,7 @@ function App() {
           render={() => (
             <div className='App'>
               <div className="left">
-                <NavBar />
+              <NavBar />
               </div>
               <div className="right">
                 <HomePage />

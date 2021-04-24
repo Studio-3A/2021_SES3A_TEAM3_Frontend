@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import './Home.css';
+import './Categories.css';
 
 interface State {
     selectedItem: string,

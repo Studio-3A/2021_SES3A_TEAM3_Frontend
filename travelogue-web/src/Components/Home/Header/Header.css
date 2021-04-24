@@ -1,0 +1,23 @@
+.HeaderH{
+    position: absolute;
+    top:10%;
+    padding-left: 2em;
+}
+
+.HeaderH-text1 {
+    /* Medium Text Semibold (20) */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.HeaderH-text2 {
+    /* Heading 1 (80) */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5em;
+    /* identical to box height */
+    color: #FFFFFF;
+}

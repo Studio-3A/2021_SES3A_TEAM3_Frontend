@@ -8,12 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 
 // Components
-import Header from './Header';
-import MenuCard from './MenuCard';
-import Categories from './Categories';
-import NewList from './NewList';
-import PopularList from './PopularList';
-import RecList from './RecList';
+import Header from './Header/Header';
+import MenuCard from './MenuCard/MenuCard';
+import Categories from './TripsCategories/Categories';
+import NewList from './TripsList/NewList';
+import PopularList from './TripsList/PopularList';
+import RecList from './TripsList/RecList';
 import NavButtons from './NavButtons';
 
 // Images
@@ -71,9 +71,8 @@ class Home extends React.Component<{}, State> {
   render() {
     return (
       <div className='Home'>
-        <div className='body'>
           <div className="top">
-              <Header name={this.state.name} />
+              {/* <Header name={this.state.name} /> */}
               <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
           </div>
           <div className="menu">
@@ -91,17 +90,6 @@ class Home extends React.Component<{}, State> {
             {this.state.selectedItem === 'Popular' ? <PopularList /> : null}
             {this.state.selectedItem === 'Recommendations' ? <RecList /> : null}
           </div>
-          {/* 
-                    
-                
-                    <div>
-                        
-                            
-                            <div className="nav-button-div">
-                                <NavButtons />
-                            </div> 
-                    </div> */}
-        </div>
       </div>
     );
   }
