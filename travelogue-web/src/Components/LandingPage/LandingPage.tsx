@@ -187,16 +187,16 @@ class frontPage extends Component<IProps, IState> {
                                     <div className="app-download">
                                         <div className="apple-download card-shadow">
                                             <img src={appleLogo}/>
-                                            <div>
-                                                <p className="ad-title">Download App</p>
-                                                <p className="ad-label">App Store</p>
+                                            <div className="ad">
+                                                <p>Download App</p>
+                                                <p>App Store</p>
                                             </div>
                                         </div>
                                         <div className="google-download card-shadow">
                                             <img src={googleLogo}></img>
                                             <div className="ad">
-                                                <p className="ad-title">Download App</p>
-                                                <p className="ad-label">App Store</p>
+                                                <p>Download App</p>
+                                                <p>App Store</p>
                                             </div>
                                         </div>
                                     </div>

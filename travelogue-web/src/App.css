@@ -92,7 +92,7 @@ Website Standard Style Sheet css
 .btn-secondary {
   margin: 2%;
   text-align: center;
-  padding: 2% 5%;
+  padding: 2% 0%;
   width: 15%;
   background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
   border-radius: 40px;
@@ -295,7 +295,7 @@ Website Standard Style Sheet css
 }
 .left-description {
   color: #69A7FC;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 0.67em;
 }
 
@@ -427,13 +427,14 @@ font-size: 3rem;
   font-size: 5.2rem;
   color: white;
   font-weight: 700;
+  margin-right: 8vw;
 }
 .mt-description {
   color: white;
   font-size: 2rem !important;
 }
 .app-download {
-  margin-top: 4%;
+  margin-top: 5vh;
   display: flex;
   flex-direction: row;
   width: 30vw;
@@ -452,11 +453,18 @@ font-size: 3rem;
 .apple-download div {
   margin-left: 10%;
 }
+.google-download div {
+  margin-left: 10%;
+}
+.ad {
+  display: flex;
+  flex-direction: column;
+}
 .ad-title {
   text-transform: uppercase;
   color: grey;
 }
 
 .ad-label {
-
+  color: black;
 }
