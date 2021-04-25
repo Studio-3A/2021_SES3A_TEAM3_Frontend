@@ -194,6 +194,7 @@ Website Standard Style Sheet css
 .container-fp {
   position: relative;
   height: auto;
+  overflow-x: hidden;
 }
 .page1 {
   position: relative;

@@ -4,8 +4,9 @@
     height: 100vh;
     align-items: center;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
     
 }
 .top {
@@ -18,9 +19,16 @@
     width: 100%;
 }
 .menu{
-    padding-left: 2em;
-    position: absolute;
-    top: 35%;
+    
+    /* position: absolute; */
+    /* top: 30%;
+    left: 25%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .nav-button-div {
@@ -30,16 +38,5 @@
 .right-arrow-btn {
     width: 50px;
     height: 50px;
-}
-.googleselect{
-    position:absolute;
-    background-color: #41b6e6;
-    width: 300px;
-    padding-left: -100px;
-}
-
-.dropdown {
-    position: relative;
-   display: inline-block;
 }
 

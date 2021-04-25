@@ -50,8 +50,12 @@ function App() {
           path='/generatedtrip'
           render={() => (
             <div className='generated-trips'>
+               <div className="left">
               <NavBar />
-              <GeneratedTrip />
+              </div>
+              <div className="right">
+                <GeneratedTrip />
+              </div>
             </div>
           )}
         />

@@ -70,26 +70,27 @@ class Home extends React.Component<{}, State> {
 
   render() {
     return (
-      <div className='Home'>
-          <div className="top">
-              {/* <Header name={this.state.name} /> */}
-              <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
-          </div>
-          <div className="menu">
-              <MenuCard />
-          </div>
+      <div className='Home'>  
+        <div className="top">
+            <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
+            <div className="menu">
+              <Header name={this.state.name}/>
+             <MenuCard />
+            </div>
+        </div>
+      
 
-      <div>
+        <div>
             <Categories
               selectedItem={this.state.selectedItem}
               onClickCategory={this.onClickCategory}
             />
-          </div>
-          <div className='location-card-div'>
+        </div>
+        <div className='location-card-div'>
             {this.state.selectedItem === 'New' ? <NewList /> : null}
             {this.state.selectedItem === 'Popular' ? <PopularList /> : null}
             {this.state.selectedItem === 'Recommendations' ? <RecList /> : null}
-          </div>
+        </div>
       </div>
     );
   }
