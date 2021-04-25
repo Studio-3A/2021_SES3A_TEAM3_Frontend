@@ -15,10 +15,10 @@ interface State {
 
 function LocationCard(props: State) {
     return (
-        <Card className="location-card" style={{ borderRadius: "20px" }}>
+        <Card className="location-card card" style={{ borderRadius: "20px" }}>
             <div>
                 <CardMedia className="location-card-media">
-                    <img src={props.image} className="image1" alt="location-image1" />
+                    <img src={props.image} className="image1 card-shadow" alt="location-image1" />
                 </CardMedia>
                 <CardContent className="location-card-content">
                     <text className="location-card-text1">{props.placeName}</text><br />

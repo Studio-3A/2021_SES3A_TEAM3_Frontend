@@ -1,7 +1,7 @@
 .activity-block {
     width: 100vw;
     height: auto;
-    max-width: 50vw;
+    max-width: 70vw;
     align-items: left;
     margin-bottom: 3.5%;
     display: flex;
@@ -28,6 +28,7 @@
     align-items: left;
     text-align: left;
     margin: 2%;
+    min-width: fit-content;
 }
 
 .activity-label{
@@ -60,4 +61,10 @@
 }
 .activities-block {
     padding: 2%;
+}
+.description-details{
+    display: flex;
+}
+.description-buttons{
+    display: flex;
 }

@@ -145,6 +145,9 @@
 .location-card-content {
     margin-left: 20px;
 }
+.home-recommendations {
+    padding: 2%;
+}
 
 .location-card-text1 {
     font-style: normal;

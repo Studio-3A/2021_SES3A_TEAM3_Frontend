@@ -4,6 +4,9 @@ import LocationImage1 from '../../Images/home-card-bg1.svg';
 import LocationImage2 from '../../Images/home-card-bg2.svg';
 import moment from 'moment';
 import { Activity, Trip } from '../../BackEndLogic/APICaller';
+import People from '../../svg/activity-people.svg';
+import Clock from '../../svg/activity-clock.svg';
+
 
 interface ActProps {
   activity: Activity;
@@ -39,7 +42,6 @@ const ActivitySingle = (props: ActProps) => {
       <div className='activity-card card card-shadow'>
         <div className='activity-img-backdrop'>
           <ActivityProperty label={'Name'} value={name} className={'h3'} />
-          <ActivityProperty label={'Description'} value={description} />
           <ActivityProperty
             label={'Price'}
             value={formattedPrice}
@@ -53,9 +55,19 @@ const ActivitySingle = (props: ActProps) => {
         </div>
       </div>
       <div className='activity-description'>
-        <ActivityProperty label={'Time'} value={actualTime} />
-        <ActivityProperty label={'Duration'} value={`${duration} minutes`} />
+        <h3><b>Description</b></h3>
         <ActivityProperty label={'Description'} value={description} />
+
+        <div className="description-details">
+          <img src={Clock}></img>
+          <ActivityProperty label={'Time'} value={`Time: ${actualTime}`} />
+          <img src={People}></img>
+          <ActivityProperty label={'Time'} value={"People: 10"} />
+        </div>
+        <div className="description-buttons">
+          <button className="btn-secondary btn-shadow-blue"><b>Bookings</b></button>
+          <button className="btn-secondary btn-shadow-blue"><b>Map</b></button>
+        </div>
       </div>
     </div>
   );

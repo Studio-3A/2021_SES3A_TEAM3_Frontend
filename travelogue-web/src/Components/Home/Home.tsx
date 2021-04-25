@@ -78,7 +78,7 @@ class Home extends React.Component<{}, State> {
           <div className='menu'>
             <MenuCard />
           </div>
-
+          <div className="home-recommendations"> 
           <div>
             <Categories
               selectedItem={this.state.selectedItem}
@@ -89,6 +89,7 @@ class Home extends React.Component<{}, State> {
             {this.state.selectedItem === 'New' ? <NewList /> : null}
             {this.state.selectedItem === 'Popular' ? <PopularList /> : null}
             {this.state.selectedItem === 'Recommendations' ? <RecList /> : null}
+          </div>
           </div>
           {/* 
                     
