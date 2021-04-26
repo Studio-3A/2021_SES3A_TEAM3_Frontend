@@ -22,11 +22,6 @@ function App() {
           path='/'
           render={() => <div className='App'></div>}
         />
-        <Route
-          exact={true}
-          path='/about'
-          render={() => <div className='App'></div>}
-        />
         {/* <Route
           exact={true}
           path='/leaderboard'
@@ -41,6 +36,15 @@ function App() {
           exact={true}
           path='/saved'
           render={() => <div className='App'>{/* <SavedTrips /> */}</div>}
+        />
+        <Route
+          exact={true}
+          path='/about'
+          render={() => (
+            <div>
+              <About />
+            </div>
+          )}
         />
         <Route
           exact={true}
