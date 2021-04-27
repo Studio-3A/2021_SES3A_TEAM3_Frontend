@@ -74,7 +74,7 @@ class Home extends React.Component<{}, State> {
         <div className="top">
             <img src={BackgroundImage} className="background-layer1" alt="home-bg2" />
             <div className="menu">
-              <Header name={this.state.name}/>
+             <Header name={this.state.name} />
              <MenuCard />
             </div>
         </div>

@@ -6,7 +6,6 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 60px;
     
 }
 .top {

@@ -1,7 +1,6 @@
 .HeaderH{
-    position: absolute;
+    position: fixed;
     top:10%;
-    padding-left: 2em;
 }
 
 .HeaderH-text1 {

@@ -23,7 +23,7 @@
     word-break: break-word;
 }
 .searchcard{
-    width: 60%;
+    width: 80%;
     background: rgb(248, 247, 249);
     border: 1px solid #4a4a4a;
     pointer-events: all;
@@ -35,14 +35,15 @@
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 8px 3px;
     padding: 20px;
-    position: absolute;
+    /* position: absolute; */
 
 }
 .searchtop{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1.5em;
-    
+    width: 100%;
+    height: 100%;
 }
 
 .left-searchcard{
@@ -99,7 +100,7 @@
 .searchtop input {
     font-style: normal;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #4B4B4B;
     border: none;
     background: #FFFFFF;
@@ -113,17 +114,18 @@
     height: 80%;
     border: 0.3px solid #B6CDDA;
 }
-button{
+.searchBtn{
     width: 100%;
     border: none;
     outline: none;
     background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
-    height: 100%;
+    height: 5vh;
     border-radius: 5px;
     font-size: 1.5em;
     color:#FFFFFF;
     align-items: center;
     align-content: center;
+   
 
 }
 .search-icon {
@@ -141,6 +143,9 @@ button{
     border-radius: 5px;
     color:#FFFFFF;
     height: 100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
 #numpeople{
     font-size: 20px;
@@ -177,8 +182,75 @@ button{
     }
 
     .searchcard{
-        height: 40vh;
-        width: 50%;
+        height: 30vh;
+        width: 40%;
         top: 30%;
+    }
+
+    .searchtop input {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.5em;
+        color: #4B4B4B;
+        border: none;
+        background: #FFFFFF;
+        outline: none;
+        word-wrap: break-word;
+        height: 100%;
+        width:100%;
+        cursor: pointer;
+    }
+    .left-searchcard{
+        width: 100%;
+        height: 4vh;
+    }
+    .inputbox{
+        height: 100%;
+    }
+    .search-icon {
+       height: 35px;
+        
+      
+    }
+    .searchBtn{
+        width: 100%;
+        border: none;
+        outline: none;
+        background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
+        height:4vh;
+        border-radius: 5px;
+        font-size: 0.5em;
+        color:#FFFFFF;
+        align-items: center;
+        align-content: center;
+    
+    }
+
+    .btn{
+        width: 10%;
+    }
+    #numpeople{
+        font-size: 0.8em;
+        text-align: center;
+        height: 100%;
+        color: #4B4B4B;
+        background: #FFFFFF;
+        word-wrap: break-word;
+        width: 10%;
+    }
+    .test{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    #ptext{
+        font-size: 0.8em;
+        text-align: center;
+        color: #4B4B4B;
+        padding-top: 10px;
+        padding-left: 5px;
     }
 } 

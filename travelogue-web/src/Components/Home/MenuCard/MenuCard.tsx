@@ -19,6 +19,10 @@ import {
   } from 'react-places-autocomplete';
 
 //TODO we should all for budget and number of people to be drop with suggested values
+const searchOptions = {
+    types: ['(cities)'],
+    componentRestrictions: {country: 'au'}
+  }
 
 function MenuCard() {
     const todaysDate = null;
@@ -37,14 +41,7 @@ function MenuCard() {
     const listItems = testing.map(item => 
         <div>{item}</div>
     );
-    function handleClick(event: Event) {
-      alert(event?.currentTarget);
-      console.log(event?.currentTarget);
-    }
-  
-    function handleClose(event: any) {
-      setAnchorEl(null);
-    }
+
     async function handleStartingSelect(value:string) {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
@@ -68,8 +65,9 @@ function MenuCard() {
             budget: budget,
             numberOfPeople: numPeople
         }
+        console.log(tripObject);
         const result = generateTrip(tripObject);
-        console.log(result);
+       
     }
 
     function  decrement() {
@@ -87,7 +85,7 @@ function MenuCard() {
             <div className="searchtop">
                <div className="left-searchcard"> 
                     <div className="inputbox">
-                        <PlacesAutocomplete value={startingAddress} onChange={setStartingAddress} onSelect={handleStartingSelect} searchOptions={{ types: ['country'] }}>
+                        <PlacesAutocomplete value={startingAddress} onChange={setStartingAddress} onSelect={handleStartingSelect} searchOptions={searchOptions}>
                             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                 <div className="placedropdown" >
                                     <img src={LocationIcon} className="search-icon" alt="locationIcon" />
@@ -107,7 +105,8 @@ function MenuCard() {
                     </div>
                     <hr className="line-vertical" />   
                     <div className="inputbox">
-                        <PlacesAutocomplete value={desAddress} onChange={setDesAddress} onSelect={handleDesSelect}>
+                        <PlacesAutocomplete value={desAddress} onChange={setDesAddress} onSelect={handleDesSelect} searchOptions={searchOptions}> 
+   
                             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                 <div className="placedropdown" >
                                     <img src={LocationIcon} className="search-icon" alt="locationIcon" />
@@ -152,8 +151,8 @@ function MenuCard() {
                </div>
                <div className="left-searchcard"> 
                     <div className="inputbox">
-                        <img src={BudgetIcon} className="search-icon" alt="locationIcon" />
-                        
+                        <img src={BudgetIcon} className="search-icon" alt="locationIcon"  />
+                        <input  type="text" onChange={b => setBudget(Number(b.target.value))} placeholder="Your Budget"/>
                     </div>
                     <hr className="line-vertical" />
                     <div className="inputbox">
@@ -169,7 +168,7 @@ function MenuCard() {
                     </div>
                </div>
 
-                    <button>  Search </button> 
+               <button className="searchBtn" onClick={handleSubmit}>  Search </button> 
                        
              
                
