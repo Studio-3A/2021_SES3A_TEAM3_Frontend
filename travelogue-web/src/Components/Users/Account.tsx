@@ -15,13 +15,6 @@ import EmailIcon from "../../Images/email-ico.svg";
 import ProfilePic from "../../Images/default-profile-ico.svg";
 import CameraIcon from "../../Images/camera-ico.svg";
 
-const Body = styled.body`
-    background-color: white;
-    background-blend-mode: multiply;
-    display: flex;
-    flex-direction: column;
-    color: black;
-`;
 
 interface State {
     name: string,
@@ -84,7 +77,7 @@ class Account extends React.Component<{}, State> {
                     </div>
 
                     {/*Main form section*/}
-                    <Body className="body">
+                    <div className="account-body">
                         <div className="profile-pic-div">
                             <div>
                                 <img src={ProfilePic} alt="profilePic" className="profile-img" />
@@ -167,7 +160,7 @@ class Account extends React.Component<{}, State> {
                                 </div>
                             </div>
                         </div>
-                    </Body>
+                    </div>
                 </div>
             </BrowserRouter >
         );

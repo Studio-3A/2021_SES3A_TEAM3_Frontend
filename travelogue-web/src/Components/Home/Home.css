@@ -1,0 +1,187 @@
+.Home {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+.top {
+    background-image: url('../../Images/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    min-height: 28vh;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    background-blend-mode: multiply;
+    align-items: center;
+}
+
+
+.header-text1 {
+    /* Medium Text Semibold (20) */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.header-text2 {
+    /* Heading 1 (80) */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.menu{
+    padding-left: 2em;
+}
+
+.menu-card {
+    margin-left: 0.52vw;
+    max-width: 80vw;
+    padding-right: 20px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card-content {
+    height: fit-content;
+}
+
+.menu-card-option:hover {
+    cursor: pointer;
+}
+
+.menu-card-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 8px;
+    /* identical to box height */
+    color: #4B4B4B;
+    border: none;
+    background: #FFFFFF;
+    outline: none;
+}
+
+.spacer-left {
+    padding-left: 20px;
+}
+
+.spacer-right {
+    padding-right: 20px;
+}
+
+.spacer-left2 {
+    padding-left: 55px;
+}
+
+.spacer-right2 {
+    padding-right: 55px;
+}
+
+.spacer-left3 {
+    padding-left: 10px;
+}
+
+.line-vertical {
+    height: 83px;
+    width: 0;
+    border: 2px solid #B6CDDA;
+}
+
+.categories-grid {
+    padding-top: 50px;
+    width: 70%;
+    padding-top: 50px;
+}
+
+.categories-text {
+    padding-right: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    color: #A2A2A2;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.categories-text-selected {
+    padding-right: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    color: #4B4B4B;
+    text-decoration-line: underline;
+    transition: 0.5s;
+}
+
+.location-card-div {
+    width: 1600px;
+    margin-top: 30px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.location-card {
+    width: 488px;
+    height: 303px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.location-card-content {
+    margin-left: 20px;
+}
+.home-recommendations {
+    padding: 2%;
+}
+
+.location-card-text1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.location-card-text2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.location-card-text3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.location-card-grid {
+    padding-top: 120px;
+}
+
+.nav-button-div {
+    padding-top: 40px;
+}
+
+.right-arrow-btn {
+    width: 50px;
+    height: 50px;
+}
