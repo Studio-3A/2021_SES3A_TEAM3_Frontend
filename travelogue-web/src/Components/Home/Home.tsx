@@ -10,12 +10,12 @@ import { useAuth } from '../../firebase/Auth';
 import { FirstName } from './GeneratedTrip';
 
 // Components
-import Header from './Header/Header';
-import MenuCard from './MenuCard/MenuCard';
-import Categories from './TripsCategories/Categories';
-import NewList from './TripsList/NewList';
-import PopularList from './TripsList/PopularList';
-import RecList from './TripsList/RecList';
+import Header from './Header';
+import MenuCard from './MenuCard';
+import Categories from './Categories';
+import NewList from './NewList';
+import PopularList from './PopularList';
+import RecList from './RecList';
 import NavButtons from './NavButtons';
 
 // Images
@@ -54,16 +54,16 @@ const Home: FC = () => {
   let onClickCategory = (e: React.MouseEvent<HTMLHeadingElement>) => {
     e.preventDefault();
     setSelectedItem(e.currentTarget.textContent as string);
-  };
+  }
   onClickCategory = onClickCategory.bind(this);
 
   return (
-    <div className="Home">
-      <div className="body">
-        <div className="top">
+    <div className='Home'>
+      <div className='body'>
+        <div className='top'>
           <Header name={FirstName()} />
         </div>
-        <div className="menu">
+        <div className='menu'>
           <MenuCard />
         </div>
 
@@ -73,7 +73,7 @@ const Home: FC = () => {
             onClickCategory={onClickCategory}
           />
         </div>
-        <div className="location-card-div">
+        <div className='location-card-div'>
           {selectedItem === 'New' ? <NewList /> : null}
           {selectedItem === 'Popular' ? <PopularList /> : null}
           {selectedItem === 'Recommendations' ? <RecList /> : null}
@@ -88,5 +88,5 @@ const Home: FC = () => {
       </div>
     </div>
   );
-};
+}
 export default Home;

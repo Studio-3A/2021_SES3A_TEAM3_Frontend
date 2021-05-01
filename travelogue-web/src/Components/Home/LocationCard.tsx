@@ -2,9 +2,9 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardMedia';
-import './LocationCard.css';
+import './Home.css';
 
-import LocationIcon from '../../../Images/location-ico2.svg';
+import LocationIcon from '../../Images/location-ico2.svg';
 
 interface State {
     placeName: string,
