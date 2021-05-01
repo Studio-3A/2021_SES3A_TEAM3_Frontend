@@ -92,6 +92,18 @@
     font-size: 20px;
 }
 
+.checkbox-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.form-check{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
 .save-btn-div {
     display: flex;
     justify-content: flex-end;

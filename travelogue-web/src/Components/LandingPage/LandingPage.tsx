@@ -1,7 +1,4 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
 import '../../App.css';
-import { BrowserRouter, Switch, Route, withRouter} from "react-router-dom";
 import telescopeLady from "../svg/telescopeLady.svg";
 import Logo from "../svg/travelogueLogo.svg";
 import blob1 from "../svg/frontpageBlob1.svg";
@@ -15,25 +12,21 @@ import mobilePhone from "../svg/mobilePhone.svg";
 import blueSeparator from "../svg/blueSeparator.svg";
 import appleLogo from "../svg/appleLogo.svg";
 import googleLogo from "../svg/googleLogo.svg";
-import Swal from 'sweetalert2';
 
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';
-
-declare var jquery: any;
-declare var $: any;
 
 function frontPage() {
     return (
         <div className="container-fp">
             <div className="page1">
-            <img className="frontPageBlob2" src={blob2}/>
-            <img className="frontPageBlob1" src={blob1}/>
+            <img alt="" className="frontPageBlob2" src={blob2}/>
+            <img alt="" className="frontPageBlob1" src={blob1}/>
         
             <div className="header">
                 <div className="logo">
                     <div className="logo-icon">
-                        <img className="logoIcon" src={Logo}></img>
+                        <img alt="logo" className="logoIcon" src={Logo}></img>
                     </div>
                     <div className="logo-text">
                         <p>Travelogue</p>
@@ -65,7 +58,7 @@ function frontPage() {
                         </div>
                     </div>
                     <div className="view-landing-right">
-                        <img className="telescopeLady" src={telescopeLady}></img>
+                        <img alt="" className="telescopeLady" src={telescopeLady}></img>
                     </div>
                 </div>
                 <div className="view-scroll"></div>
@@ -81,27 +74,27 @@ function frontPage() {
                     </div>
                 </div>
                 <div className="world-map">
-                    <img className="world-map-img" src={worldMap}/>
+                    <img alt="" className="world-map-img" src={worldMap}/>
                 </div>
             </div>
             <div className="page3">
                 <div className="experience-container">
                     <div className="ec-left">
-                        <img className="ecr-item-clock card-shadow" src={location}/>
+                        <img alt="" className="ecr-item-clock card-shadow" src={location}/>
                     </div>
                     <div className="ec-right">
                         <p className="page-title">Experience</p>
                         <p className="page-label"> Discover New Places</p>
                         <div className="ecr-item">
-                            <img src={clock}/>
+                            <img alt="" src={clock}/>
                             <p>Save Time</p>
                         </div>
                         <div className="ecr-item">
-                            <img src={wallet}/>
+                            <img alt="" src={wallet}/>
                             <p>Save Money</p>
                         </div>
                         <div className="ecr-item">
-                            <img src={bag}/>
+                            <img alt="" src={bag}/>
                             <p>Travel Instantly</p>
                         </div>
                     </div>
@@ -119,19 +112,19 @@ function frontPage() {
                         <div className="mobile-title">
                             <div>
                                 <p className="mt-heading">Travel easily with the click of a few buttons</p>
-                                <img className="mb-sep" src={blueSeparator}></img>
+                                <img alt="" className="mb-sep" src={blueSeparator}></img>
                                 <p className="mt-description">Simply enter information of your current situation and travelogue will 
 automatically generate a trip for you. Downloadable app is below</p>
                                 <div className="app-download">
                                     <div className="apple-download card-shadow">
-                                        <img src={appleLogo}/>
+                                        <img alt="Apple Logo" src={appleLogo}/>
                                         <div>
                                             <p className="ad-title">Download App</p>
                                             <p className="ad-label">App Store</p>
                                         </div>
                                     </div>
                                     <div className="google-download card-shadow">
-                                        <img src={googleLogo}></img>
+                                        <img alt="Google Logo" src={googleLogo}></img>
                                         <div className="ad">
                                             <p className="ad-title">Download App</p>
                                             <p className="ad-label">App Store</p>
@@ -140,7 +133,7 @@ automatically generate a trip for you. Downloadable app is below</p>
                                 </div>
                             </div>
                             <div>
-                                <img className="mb-img" src={mobilePhone}></img>
+                                <img alt="" className="mb-img" src={mobilePhone}></img>
                             </div>
                             
                             

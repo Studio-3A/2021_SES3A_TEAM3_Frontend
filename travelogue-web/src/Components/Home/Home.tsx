@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import { useAuth } from '../../firebase/Auth';
+import { FirstName } from './GeneratedTrip';
 
 // Components
 import Header from './Header';
@@ -60,7 +61,7 @@ const Home: FC = () => {
     <div className='Home'>
       <div className='body'>
         <div className='top'>
-          <Header name={auth.user?.displayName || "Some default display name"} />
+          <Header name={FirstName()} />
         </div>
         <div className='menu'>
           <MenuCard />

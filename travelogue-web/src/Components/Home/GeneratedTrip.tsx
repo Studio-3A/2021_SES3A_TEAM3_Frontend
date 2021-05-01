@@ -19,13 +19,20 @@ interface State {
 // do not do this irl
 const a = TestTrip as Trip;
 
-const GeneratedTrip: FC = () => {
-  const auth = useAuth();
 
+export function FirstName() {
+  const auth = useAuth();
+  let username = auth.user?.displayName || '';
+  let index = username.indexOf(' ');
+
+  return username.substr(0, index);
+}
+
+const GeneratedTrip: FC = () => {
   return (
     <div className='main'>
       <div className='header-text'>
-        <Header name={auth.user?.displayName || "Some default display name"} />
+        <Header name={FirstName()} />
       </div>
 
       <div>
@@ -41,6 +48,6 @@ const GeneratedTrip: FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default GeneratedTrip;
