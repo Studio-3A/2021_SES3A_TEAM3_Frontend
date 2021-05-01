@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import './Trips/Trips.css';
@@ -9,6 +9,7 @@ import { Activities } from './Trips/Activities';
 import { Trip } from 'travelogue-utility';
 import InteractiveMap from './Trips/InteractiveMap';
 import TestTrip from './Trips/testtrip.json';
+import { useAuth } from '../../firebase/Auth';
 
 interface State {
   trip: Trip;
@@ -18,28 +19,28 @@ interface State {
 // do not do this irl
 const a = TestTrip as Trip;
 
-class GeneratedTrip extends React.Component<{}, State> {
-  render() {
-    return (
-      <div className='main'>
-        <div className='header-text'>
-          <Header name='Gio' />
-        </div>
+const GeneratedTrip: FC = () => {
+  const auth = useAuth();
 
-        <div>
-          <MenuCard />
-        </div>
-
-        <div>
-          <InteractiveMap />
-        </div>
-
-        <div>
-          <Activities trip={a.trip} />
-        </div>
+  return (
+    <div className='main'>
+      <div className='header-text'>
+        <Header name={auth.user?.displayName || "Some default display name"} />
       </div>
-    );
-  }
+
+      <div>
+        <MenuCard />
+      </div>
+
+      <div>
+        <InteractiveMap />
+      </div>
+
+      <div>
+        <Activities trip={a.trip} />
+      </div>
+    </div>
+  );
 }
 
 export default GeneratedTrip;

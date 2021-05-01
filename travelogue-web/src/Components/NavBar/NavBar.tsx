@@ -12,10 +12,11 @@ import accountsIcon from '../../Images/accounts-ico.svg';
 import settingsIcon from '../../Images/settings-ico.svg';
 import logoutIcon from '../../Images/logout-ico.svg';
 
-import firebase from '../../firebase/firebase';
+import { useAuth } from "../../firebase/Auth";
 
 function NavBar() {
-  const avatarURL = firebase.auth().currentUser?.photoURL || defaultProfile;
+  const auth = useAuth();
+  const avatarURL = auth.user?.photoURL || defaultProfile;
 
   return (
     <div className='nav-content'>
