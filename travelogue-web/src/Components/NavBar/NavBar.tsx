@@ -30,7 +30,7 @@ function NavBar() {
         </div>
         <div className='navProfile'>
           <div className='profileImg'>
-            <img alt='profileIcon' src={avatarURL} />
+            <img className='avatarIcon' alt='profileIcon' src={avatarURL} />
           </div>
           <div className='profileTxt'>
             <p>

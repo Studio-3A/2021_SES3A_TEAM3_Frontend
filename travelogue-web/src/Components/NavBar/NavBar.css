@@ -53,6 +53,10 @@
     text-align: center;
 }
 
+.avatarIcon{
+  border-radius: 50px;
+}
+
 .pageContainer{
     width: 234px;
     height: 60px;
