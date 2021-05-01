@@ -3,7 +3,7 @@ import React from 'react';
 import LocationImage1 from '../../Images/home-card-bg1.svg';
 import LocationImage2 from '../../Images/home-card-bg2.svg';
 import moment from 'moment';
-import { Activity, Trip } from '../../BackEndLogic/APICaller';
+import { Activity, Trip } from 'travelogue-utility';
 import People from '../../svg/activity-people.svg';
 import Clock from '../../svg/activity-clock.svg';
 
@@ -76,7 +76,7 @@ const ActivitySingle = (props: ActProps) => {
 const TripDay = (props: Trip) => {
   return (
     <div className="tripday-block">
-      {props.trip.map((a) => (
+      {props.trip.map((a: Activity) => (
         <ActivitySingle activity={a} />
       ))}
     </div>

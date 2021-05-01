@@ -6,7 +6,7 @@ import './Trips/Trips.css';
 import MenuCard from './MenuCard';
 import Header from './Header';
 import { Activities } from './Trips/Activities';
-import { Trip } from '../BackEndLogic/APICaller';
+import { Trip } from 'travelogue-utility';
 import InteractiveMap from './Trips/InteractiveMap';
 import TestTrip from './Trips/testtrip.json';
 
@@ -15,7 +15,8 @@ interface State {
   name: string;
 }
 
-const a: Trip = TestTrip;
+// do not do this irl
+const a = TestTrip as Trip;
 
 class GeneratedTrip extends React.Component<{}, State> {
   render() {
