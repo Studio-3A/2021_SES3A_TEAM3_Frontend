@@ -5,11 +5,11 @@ import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
-import GeneratedTrip from './Components/Home/GeneratedTrip'
+import GeneratedTrip from './Components/Home/GeneratedTrip';
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 // import SavedTrips from './SavedTrips/SavedTrips';
-import { ProvideAuth } from "./firebase/Auth";
+import { ProvideAuth } from './firebase/Auth';
 
 export interface IAppProps {
   show?: boolean;
@@ -23,9 +23,9 @@ function App() {
         <ProvideAuth>
           <Route
             exact={true}
-            path='/'
+            path="/"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <LandingPage />
               </div>
             )}
@@ -33,9 +33,9 @@ function App() {
 
           <Route
             exact={true}
-            path='/home'
+            path="/home"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
                 <HomePage />
               </div>
@@ -44,9 +44,9 @@ function App() {
 
           <Route
             exact={true}
-            path='/generatedtrip'
+            path="/generatedtrip"
             render={() => (
-              <div className='generated-trips'>
+              <div className="generated-trips">
                 <NavBar />
                 <GeneratedTrip />
               </div>
@@ -55,9 +55,9 @@ function App() {
 
           <Route
             exact={true}
-            path='/about'
+            path="/about"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
               </div>
             )}
@@ -69,18 +69,18 @@ function App() {
           /> */}
           <Route
             exact={true}
-            path='/history'
+            path="/history"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
               </div>
             )}
           />
           <Route
             exact={true}
-            path='/saved'
+            path="/saved"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
                 {/* <SavedTrips /> */}
               </div>
@@ -88,9 +88,9 @@ function App() {
           />
           <Route
             exact={true}
-            path='/account'
+            path="/account"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
                 <Account />
               </div>
@@ -98,18 +98,18 @@ function App() {
           />
           <Route
             exact={true}
-            path='/settings'
+            path="/settings"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
               </div>
             )}
           />
           <Route
             exact={true}
-            path='/login'
+            path="/login"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <LandingPage />
                 <Login show={true} />
               </div>

@@ -3,22 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import './Trips/Trips.css';
 // Component Imports
-import MenuCard from './MenuCard';
-import Header from './Header';
 import { Activities } from './Trips/Activities';
 import { Trip } from 'travelogue-utility';
+import MenuCard from './MenuCard/MenuCard';
+import Header from './Header/Header';
 import InteractiveMap from './Trips/InteractiveMap';
 import TestTrip from './Trips/testtrip.json';
 import { useAuth } from '../../firebase/Auth';
 
-interface State {
-  trip: Trip;
-  name: string;
-}
-
 // do not do this irl
-const a = TestTrip as Trip;
-
+const a: Trip = TestTrip as Trip;
 
 export function FirstName() {
   const auth = useAuth();
@@ -30,8 +24,8 @@ export function FirstName() {
 
 const GeneratedTrip: FC = () => {
   return (
-    <div className='main'>
-      <div className='header-text'>
+    <div className="main">
+      <div className="header-text">
         <Header name={FirstName()} />
       </div>
 

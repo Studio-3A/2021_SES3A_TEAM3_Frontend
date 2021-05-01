@@ -1,4 +1,3 @@
-/* Remove Whitespace at top of react-app */
 * {
   margin: 0;
   padding: 0;
@@ -199,6 +198,7 @@ Website Standard Style Sheet css
 .container-fp {
   position: relative;
   height: auto;
+  overflow-x: hidden;
 }
 .page1 {
   position: relative;

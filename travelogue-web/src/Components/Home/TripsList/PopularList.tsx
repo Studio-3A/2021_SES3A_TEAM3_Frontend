@@ -1,16 +1,19 @@
 import Grid from '@material-ui/core/Grid';
-import LocationCard from './LocationCard';
+import LocationCard from '../Location/LocationCard';
 
 // Images
-import LocationImage1 from '../../Images/home-card-bg1.svg';
-import LocationImage2 from '../../Images/home-card-bg2.svg';
+import LocationImage1 from '../../../Images/home-card-bg1.svg';
+import LocationImage2 from '../../../Images/home-card-bg2.svg';
 
 function PopularList() {
     return (
-        <Grid container
+        <Grid container 
             direction="row"
-            justify="flex-start"
-            alignItems="flex-start">
+            justify="center" 
+            alignItems="center"
+            wrap="wrap"
+            spacing={10}
+            className="card-list">
             <Grid item>
                 <LocationCard placeName="Popular 1" price="$200" location="Melbourne, Australia" image={LocationImage1} />
             </Grid>
