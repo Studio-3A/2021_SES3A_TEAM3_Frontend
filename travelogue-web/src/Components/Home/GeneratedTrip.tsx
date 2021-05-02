@@ -17,7 +17,7 @@ interface State {
 }
 
 // do not do this irl
-const a = TestTrip as Trip;
+const a: Trip = TestTrip;
 
 
 export function FirstName() {
@@ -35,7 +35,7 @@ const GeneratedTrip: FC = () => {
         <Header name={FirstName()} />
       </div>
 
-      <div>
+      <div className="menu">
         <MenuCard />
       </div>
 

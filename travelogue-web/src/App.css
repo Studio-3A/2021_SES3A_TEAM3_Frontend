@@ -89,11 +89,15 @@ Website Standard Style Sheet css
   background: #F0F3F5;
 }
 
+hr {
+  margin: 0 !important;
+}
+
 .btn-secondary {
   margin: 2%;
   text-align: center;
-  padding: 2% 0%;
-  width: 15%;
+  padding: 10px 0%;
+  width: 250px;
   background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
   border-radius: 40px;
   border: none;
@@ -101,6 +105,7 @@ Website Standard Style Sheet css
   color: white;
   font-size: 24px;
   transition-duration: 0.4s;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   min-width: 160px;
 }
@@ -409,7 +414,6 @@ font-size: 3rem;
 
   min-width: 200px;
   width: 70vw;
-
   padding-top: 5%;
   display: flex;
   margin: auto;
@@ -462,9 +466,14 @@ font-size: 3rem;
 }
 .ad-title {
   text-transform: uppercase;
-  color: grey;
+
 }
 
 .ad-label {
-  color: black;
+ 
+}
+
+.google-download div {
+  display: flex;
+  flex-direction: column;
 }

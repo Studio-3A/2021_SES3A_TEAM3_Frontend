@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
-import About from './Components/About/About';
+//import About from './Components/About/About';
 import GeneratedTrip from './Components/Home/GeneratedTrip'
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';

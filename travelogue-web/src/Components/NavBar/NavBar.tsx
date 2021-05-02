@@ -18,6 +18,10 @@ function NavBar() {
   const auth = useAuth();
   const avatarURL = auth.user?.photoURL || defaultProfile;
 
+  const logout = () => {
+    auth.signOut();
+  }
+
   return (
     <div className='nav-content'>
       <div className='navbarCol'>
@@ -106,7 +110,7 @@ function NavBar() {
               </div>
             </Link>
 
-            <Link to='/login'>
+            <Link to='/' onClick={() => logout()}>
               <div className='pageContainer'>
                 <div className='pageImage'>
                   <img alt='logoutIcon' src={logoutIcon} />

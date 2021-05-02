@@ -16,13 +16,15 @@ interface BitProps {
   label: string;
   value: string | number | undefined;
   className?: string;
+  displayLabel?: boolean;
 }
 
 const ActivityProperty = (props: BitProps) => {
   const { value } = props;
   const className = props.className || '';
+  const displayLabel = props.displayLabel;
   return (
-    <>{value && <div className={`activity-label ${className}`}>{value}</div>}</>
+    <>{value && <div className={`activity-label ${className}`}>{displayLabel ? <b>{props.label}:</b> : ''} {value}</div>}</>
   );
 };
 
@@ -59,10 +61,14 @@ const ActivitySingle = (props: ActProps) => {
         <ActivityProperty label={'Description'} value={description} />
 
         <div className="description-details">
+          <div className="description-details-time">
           <img src={Clock}></img>
-          <ActivityProperty label={'Time'} value={`Time: ${actualTime}`} />
+          <ActivityProperty label={'Time'} displayLabel={true} value={`${actualTime}`} />
+          </div>
+          <div className="description-details-people">
           <img src={People}></img>
-          <ActivityProperty label={'Time'} value={"People: 10"} />
+          <ActivityProperty label={'People'} displayLabel={true} value={"10"} />
+          </div>
         </div>
         <div className="description-buttons">
           <button className="btn-secondary btn-shadow-blue"><b>Bookings</b></button>
