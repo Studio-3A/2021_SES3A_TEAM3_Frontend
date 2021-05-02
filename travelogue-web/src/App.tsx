@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
+import InteractiveMap from './Components/Common/InteractiveMap/InteractiveMap';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -12,7 +13,6 @@ export interface IAppProps {
   onHide?: boolean;
 }
 
-//remove the maptest when merging - its just to ensure people know how to kinda use it
 function App() {
   return (
     <BrowserRouter>
@@ -66,9 +66,17 @@ function App() {
             </div>
           )}
         />
+        <Route
+          exact={true}
+          path='/mapdemo'
+          render={() => (
+            <div style={{position: 'absolute', paddingLeft: '235px'}}>
+              <InteractiveMap defaultLatLng={[-33, 151]} defaultZoom={10} defaultDataMarkers={[{latlng: [-32.84123138501964, 151.36962890625], popup: "Cessnock"}, {latlng: [-32.91619713990886, 151.7362976074219], popup: "Hamilton North"}, {latlng: [-33.28232392051034, 151.43005371093753], popup: "Wyong"}]}/>
+            </div>
+          )}
+        />
       </React.Fragment>
     </BrowserRouter>
   );
 }
-
 export default App;
