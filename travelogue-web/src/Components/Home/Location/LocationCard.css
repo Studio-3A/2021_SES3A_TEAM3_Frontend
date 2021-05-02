@@ -43,4 +43,8 @@
 
 .location-card-grid {
     padding-top: 120px;
+    display: flex;
+    direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }

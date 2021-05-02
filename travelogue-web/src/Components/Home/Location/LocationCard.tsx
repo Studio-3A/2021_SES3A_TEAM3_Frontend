@@ -23,19 +23,14 @@ function LocationCard(props: State) {
                 <CardContent className="location-card-content">
                     <text className="location-card-text1">{props.placeName}</text><br />
                     <text className="location-card-text2">{props.price}</text><br />
-                    <Grid container
-                        direction="row"
-                        justify="flex-start"
-                        alignItems="center"
-                        className="location-card-grid"
-                    >
-                        <Grid item>
+                    <div className="location-card-grid">
+                        <div>
                             <img src={LocationIcon} className="location-icon" alt="location-ico" />
-                        </Grid>
-                        <Grid item>
+                        </div>
+                        <div>
                             <text className="location-card-text3">{props.location}</text>
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
                 </CardContent>
             </div>
         </Card>

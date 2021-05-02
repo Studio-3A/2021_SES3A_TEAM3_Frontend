@@ -2,6 +2,10 @@
     padding-left: 2em;
     width: 70%;
     padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .categories-text {
