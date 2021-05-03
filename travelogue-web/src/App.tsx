@@ -1,10 +1,11 @@
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import './App.css';
-import NavBar from './Components/NavBar/NavBar';
-import Account from './Components/Users/Account';
-import Login from './Components/Login/Login';
-import About from './Components/About/About';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import "./App.css";
+import NavBar from "./Components/NavBar/NavBar";
+import Account from "./Components/Users/Account";
+import Login from "./Components/Login/Login";
+import About from "./Components/About/About";
+import Features from "./Components/Features/Features";
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -19,8 +20,8 @@ function App() {
         <NavBar />
         <Route
           exact={true}
-          path='/'
-          render={() => <div className='App'></div>}
+          path="/"
+          render={() => <div className="App"></div>}
         />
         {/* <Route
           exact={true}
@@ -29,17 +30,17 @@ function App() {
         /> */}
         <Route
           exact={true}
-          path='/history'
-          render={() => <div className='App'></div>}
+          path="/history"
+          render={() => <div className="App"></div>}
         />
         <Route
           exact={true}
-          path='/saved'
-          render={() => <div className='App'>{/* <SavedTrips /> */}</div>}
+          path="/saved"
+          render={() => <div className="App">{/* <SavedTrips /> */}</div>}
         />
         <Route
           exact={true}
-          path='/about'
+          path="/about"
           render={() => (
             <div>
               <About />
@@ -48,7 +49,16 @@ function App() {
         />
         <Route
           exact={true}
-          path='/account'
+          path="/features"
+          render={() => (
+            <div>
+              <Features />
+            </div>
+          )}
+        />
+        <Route
+          exact={true}
+          path="/account"
           render={() => (
             <div>
               <Account />
@@ -57,14 +67,14 @@ function App() {
         />
         <Route
           exact={true}
-          path='/settings'
-          render={() => <div className='App'></div>}
+          path="/settings"
+          render={() => <div className="App"></div>}
         />
         <Route
           exact={true}
-          path='/login'
+          path="/login"
           render={() => (
-            <div className='App'>
+            <div className="App">
               <Login show={true} />
             </div>
           )}
