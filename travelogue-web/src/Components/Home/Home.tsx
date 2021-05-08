@@ -10,12 +10,12 @@ import { useAuth } from '../../firebase/Auth';
 import { FirstName } from './GeneratedTrip';
 
 // Components
-import Header from './Header';
-import MenuCard from './MenuCard';
-import Categories from './Categories';
-import NewList from './NewList';
-import PopularList from './PopularList';
-import RecList from './RecList';
+import Header from './Header/Header';
+import MenuCard from './MenuCard/MenuCard';
+import Categories from './TripsCategories/Categories';
+import NewList from './TripsList/NewList';
+import PopularList from './TripsList/PopularList';
+import RecList from './TripsList/RecList';
 import NavButtons from './NavButtons';
 
 // Images

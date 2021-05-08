@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import './Trips/Trips.css';
 // Component Imports
-import MenuCard from './MenuCard';
-import Header from './Header';
+import MenuCard from './MenuCard/MenuCard';
+import Header from './Header/Header';
 import { Activities } from './Trips/Activities';
 import { Trip } from 'travelogue-utility';
 import InteractiveMap from './Trips/InteractiveMap';
