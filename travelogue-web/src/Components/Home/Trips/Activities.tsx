@@ -43,7 +43,7 @@ const ActivitySingle = (props: ActProps) => {
     <div className='activity-block'>
       <div className='activity-card card card-shadow'>
         <div className='activity-img-backdrop'>
-          <ActivityProperty label={'Name'} value={name} className={'h3'} />
+          <ActivityProperty label={'Name'} value={name} className={'activity-name'} />
           <ActivityProperty
             label={'Price'}
             value={formattedPrice}
@@ -57,22 +57,22 @@ const ActivitySingle = (props: ActProps) => {
         </div>
       </div>
       <div className='activity-description'>
-        <h3><b>Description</b></h3>
+        <p className='activity-description-label'><b>Description</b></p>
         <ActivityProperty label={'Description'} value={description} />
 
-        <div className="description-details">
-          <div className="description-details-time">
+        <div className='description-details'>
+          <div className='description-details-time'>
           <img src={Clock}></img>
           <ActivityProperty label={'Time'} displayLabel={true} value={`${actualTime}`} />
           </div>
-          <div className="description-details-people">
+          <div className='description-details-people'>
           <img src={People}></img>
-          <ActivityProperty label={'People'} displayLabel={true} value={"10"} />
+          <ActivityProperty label={'People'} displayLabel={true} value={'10'} />
           </div>
         </div>
-        <div className="description-buttons">
-          <button className="btn-secondary btn-shadow-blue"><b>Bookings</b></button>
-          <button className="btn-secondary btn-shadow-blue"><b>Map</b></button>
+        <div className='description-buttons'>
+          <button className='btn-secondary btn-shadow-blue'><b>Bookings</b></button>
+          <button className='btn-secondary btn-shadow-blue'><b>Map</b></button>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@ const TripDay = (props: Trip) => {
 export const Activities = (state: Trip) => {
   return (
     <div className="activities-block">
-      <p className="page-label">Activities</p>
+      <p className="section-label">Activities</p>
       <div className="activities-tripday-block">
         <TripDay trip={state.trip} />
       </div>

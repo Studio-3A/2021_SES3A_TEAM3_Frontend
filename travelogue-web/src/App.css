@@ -30,6 +30,7 @@ Website Standard Style Sheet css
 
 * {
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-stretch: expanded;
 }
 
 /* Shadows */
@@ -98,6 +99,7 @@ hr {
   text-align: center;
   padding: 10px 0%;
   width: 250px;
+  height:56px;
   background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
   border-radius: 40px;
   border: none;
@@ -116,11 +118,8 @@ hr {
   backface-visibility: hidden;
   transition: background-color 1000ms linear;
 }
-.btn-secondary:active {
+.btn-secondary:focus {
   outline: none;
-  width: 15.5%;
-  padding-top: 1.2%;
-  padding-bottom: 1.2%;
   transition-duration: 0.1s;
 }
 .btn-secondary:focus {

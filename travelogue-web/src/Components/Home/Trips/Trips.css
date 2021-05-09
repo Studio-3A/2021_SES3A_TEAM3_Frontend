@@ -1,18 +1,20 @@
 .activity-block {
-    width: 100vw;
+
     height: auto;
     margin-bottom: 3.5%;
-    display: flex;
     flex-direction: row;
     text-align: left;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
 }
 .activity-card{
-    margin: 2%;
+    margin: auto;
     background-image: url('../../../Images/home-card-bg2.svg');
     background-repeat: no-repeat;
     color: white;
     background-size: cover;
+   
 }
 
 .activity-img-backdrop {
@@ -29,7 +31,6 @@
     margin: 2%;
     min-width: fit-content;
     justify-content: space-evenly;
-    width: 45vw;
 }
 
 .activity-label{
@@ -43,8 +44,18 @@
 }
 
 .activity-price{
-    font-size:40px;
-
+    font-size:30px;
+    font-style: bold;
+    font-weight: 600;
+}
+.activity-name{
+    font-size: 40px;
+    font-style: bold;
+    font-weight: 600;
+}
+.activity-location{
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .main{
@@ -73,9 +84,34 @@
 }
 .description-buttons{
     display: flex;
+    
+}
+.activity-description-label{
+    font-size: 40px;
+    font-style: bold;
+    color: #4B4B4B;
 }
 .description-details-time, .description-details-people{
   display: flex;
   flex-direction: row;
   margin: 0 1%;
 }
+.section-label{
+    font-size: 60px;
+    font-weight: 800;
+    color: #4B4B4B;
+}
+
+.activity-block:nth-child(even) .activity-card {
+    grid-column: 2;
+  }
+  
+  .activity-block:nth-child(even) .activity-description {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .activity-block:nth-child(odd) .activity-description {
+    grid-column: 2;
+    grid-row: 1;
+  }

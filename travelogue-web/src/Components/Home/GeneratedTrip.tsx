@@ -17,7 +17,7 @@ interface State {
 }
 
 // do not do this irl
-const a: Trip = TestTrip;
+const a = TestTrip as Trip;
 
 
 export function FirstName() {
