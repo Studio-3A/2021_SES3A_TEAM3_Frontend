@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { generateNewTrip, setBaseBackendUrl, TripGenerationInputs, postContent } from "travelogue-utility";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents, Polyline } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -18,6 +19,24 @@ interface IInteractiveMap {
     width?: number,
     height?: number,
     addMarkerOnClick?: boolean
+}
+
+setBaseBackendUrl("http://localhost:4000");
+const generateTrip = async (input: TripGenerationInputs) => {
+    const resp = fetch("http://localhost:4000/trip/new", {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(input)
+    }).then(resp => resp.json());
+    return resp;
+    //return postContent({
+    //    "url": "http://localhost:4000/trip/new",
+    //    "body": input
+    //});
+    //return generateNewTrip(input);
 }
 
 const DefaultIcon = L.icon({
@@ -63,7 +82,21 @@ const AddMarkerToClick = (addMarker: any) => {
     const map = useMapEvents({
         async dblclick(e) {
             // DO SOMETHING HERE (populate a sidebar by calling some APIs, etc)
-            console.log(e.latlng)
+            const body = {
+                "startDate": 1620562298834,
+                "endDate": 1620741600000,
+                "startLocation": {
+                    "lat": -32.93492866908232,
+                    "lng": 151.71569824218753
+                },
+                "endLocation": {
+                    "lat": -33.86927529957081,
+                    "lng": 151.21307373046878
+                }
+            }
+            const resp = await generateTrip(body);
+            console.log(resp);
+            console.log(e.latlng);
             const newMarker = e.latlng;
             setMarker(newMarker);
             map.setView(e.latlng, map.getZoom(), {
@@ -91,7 +124,7 @@ const InteractiveMap = ({defaultDataMarkers = [], defaultZoom = 13, defaultLatLn
             const route = await getTravelRoute(defaultDataMarkers);
             setRoutingLine(route);
         }
-        plotLine();
+        //plotLine();
     }, []);
 
     return(

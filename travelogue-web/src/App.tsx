@@ -71,7 +71,7 @@ function App() {
           path='/mapdemo'
           render={() => (
             <div style={{position: 'absolute', paddingLeft: '235px'}}>
-              <InteractiveMap defaultLatLng={[-33, 151]} defaultZoom={10} defaultDataMarkers={[{latlng: [-32.84123138501964, 151.36962890625], popup: "Cessnock"}, {latlng: [-32.91619713990886, 151.7362976074219], popup: "Hamilton North"}, {latlng: [-33.28232392051034, 151.43005371093753], popup: "Wyong"}]}/>
+              <InteractiveMap defaultLatLng={[-33, 151]} defaultZoom={10} defaultDataMarkers={[{latlng: [-32.84123138501964, 151.36962890625], popup: "Cessnock"}]}/>
             </div>
           )}
         />
