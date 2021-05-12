@@ -1,0 +1,110 @@
+.SavedTrips{
+    width: 100vw;
+    height: 100vh;
+}
+
+.st-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.st-padding-right-20px {
+    padding-right: 20px;
+}
+
+.st-title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1% 0% 0% 1%;
+}
+
+.st-title-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.st-card {
+    width: 260px;
+    height: 321px;
+}
+
+.st-card-title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.st-card-content {
+    margin-left: 10px;
+}
+
+.pin-icon {
+    margin-top: -5px;
+}
+
+.money-icon {
+    margin-top: -2px;
+}
+
+.st-card-text1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 5px;
+}
+
+.st-card-desc-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.st-card-text2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.st-card-text-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.st-card-text-cat {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 5px;
+}
+
+.st-view-btn {
+    width: 150px;
+    height: 30px;
+
+    /* Smooth Blue */
+    background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
+    box-shadow: 0px 5px 15px rgba(47, 128, 237, 0.85);
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 143.2%;
+    border: none;
+    transition: 0.3s;
+}
+
+.st-view-btn:hover {
+    width: 160px;
+    box-shadow: 0px 5px 15px rgba(47, 128, 237, 1.2);
+}

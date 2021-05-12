@@ -8,7 +8,7 @@ import About from './Components/About/About';
 import GeneratedTrip from './Components/Home/GeneratedTrip'
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
-// import SavedTrips from './SavedTrips/SavedTrips';
+import SavedTrips from './Components/SavedTrips/SavedTrips';
 
 export interface IAppProps {
   show?: boolean;
@@ -80,7 +80,7 @@ function App() {
           render={() => (
             <div className='App'>
               <NavBar />
-              {/* <SavedTrips /> */}
+              <SavedTrips />
             </div>
           )}
         />
