@@ -29,6 +29,35 @@
 .st-card {
     width: 260px;
     height: 321px;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+
+.st-card-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 50px;
+}
+
+.st-card-padding-left {
+    padding-left: 150px;
+}
+
+.st-heart-icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: -38px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.st-heart-icon:hover {
+    width: 28px;
+    height: 28px;
 }
 
 .st-card-title-div {
@@ -64,6 +93,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: left;
 }
 
 .st-card-text2 {
@@ -78,6 +108,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 10px;
+    text-align: left;
 }
 
 .st-card-text-cat {
