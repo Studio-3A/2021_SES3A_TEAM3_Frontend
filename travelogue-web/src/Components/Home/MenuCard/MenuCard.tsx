@@ -15,8 +15,7 @@ import { generateTrip } from "../../BackEndLogic/APICaller";
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
-  types: ["(cities)"],
-  componentRestrictions: { country: "au" },
+  types: ["(cities)"]
 };
 
 const MenuCard = () => {
@@ -70,12 +69,6 @@ const MenuCard = () => {
       throw Error(`Unhandled location type ${type}`);
     }
   };
-
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const testing = ["Sydney", "Melbourne", "Brisbane"];
-  const listItems = testing.map(item => <div>{item}</div>);
-
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
     if (!startCoordinate || !endCoordinate) {
@@ -91,11 +84,15 @@ const MenuCard = () => {
       numberOfPeople: numPeople,
     };
     console.log(tripObject);
-    // const result = await generateTrip(tripObject);
-    // console.log(result);
+    const result = await generateTrip(tripObject);
+    console.log(result);
   };
 
-  const decrementNumPeople = () => setNumPeople(numPeople - 1);
+  const decrementNumPeople = () => {
+    if(numPeople > 1){
+      setNumPeople(numPeople - 1);
+    }
+  }
 
   const incrementNumPeople = () => setNumPeople(numPeople + 1);
 
@@ -115,7 +112,7 @@ const MenuCard = () => {
               onSelect={v => handleLocationChange(v, Range.Start)}
               searchOptions={searchOptions}
             >
-              {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+               {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                 <div className="placedropdown">
                   <img src={LocationIcon} className="search-icon" alt="locationIcon" />
                   <input className="locationsearch" {...getInputProps({ placeholder: "Start location" })} />
@@ -123,8 +120,10 @@ const MenuCard = () => {
                   <div className="selecter">
                     {loading ? <div>loading...</div> : null}
                     {suggestions.map(suggestion => (
-                      <div className="dropdown-item" {...getSuggestionItemProps(suggestion)}>
+                      <div key={suggestion.id}>
+                        <div  className="dropdown-item" {...getSuggestionItemProps(suggestion)}>
                         {suggestion.description}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -148,8 +147,10 @@ const MenuCard = () => {
                   <div className="selecter">
                     {loading ? <div>loading...</div> : null}
                     {suggestions.map(suggestion => (
-                      <div className="dropdown-item" {...getSuggestionItemProps(suggestion)}>
+                      <div key={suggestion.id}>
+                        <div  className="dropdown-item" {...getSuggestionItemProps(suggestion)}>
                         {suggestion.description}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -187,22 +188,24 @@ const MenuCard = () => {
         <div className="left-searchcard">
           <div className="inputbox">
             <img src={BudgetIcon} className="search-icon" alt="locationIcon" />
-            <input type="text" onChange={b => setBudget(Number(b.target.value))} placeholder="Your Budget" />
+            <input type="number" value={budget} onChange={b => setBudget(Number(b.target.value))} placeholder="Your Budget" min="0.00" max="10000.00" />
           </div>
           <hr className="line-vertical" />
           <div className="inputbox">
             <div className="test">
               <img src={PeopleIcon} className="search-icon" alt="locationIcon" />
-              <button disabled={numPeople < 2} onClick={() => decrementNumPeople()} className="btn">
+              <button onClick={() => decrementNumPeople()} className="btn">
                 -
               </button>
 
               <input
                 id="numpeople"
-                type="text"
+                type="number"
                 value={numPeople}
                 onChange={handleNumPeopleChange}
                 placeholder="People No"
+                min="1"
+                max="5"
               />
               <button onClick={() => incrementNumPeople()} className="btn">
                 +

@@ -8,6 +8,13 @@
     word-break: break-word;
     
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 .dropdown-item{
     width: 80%;
     word-break: break-word;
@@ -183,7 +190,7 @@
 
     .searchcard{
         height: 30vh;
-        width: 40%;
+        width: 80%;
         top: 30%;
     }
 
