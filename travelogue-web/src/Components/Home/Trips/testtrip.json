@@ -1,0 +1,387 @@
+{
+    "trip": [
+        {
+            "types": [
+                "lodging",
+                "bar",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Melton Hotel",
+            "rating": 3.7,
+            "price": 150,
+            "location": "163 Parramatta Road, Auburn",
+            "duration": 64,
+            "time": 1618642110
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Mercure Sydney Parramatta",
+            "rating": 4,
+            "location": "106 Hassall Street, Rosehill",
+            "duration": 125,
+            "time": 1618642235
+        },
+        {
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Restaurant 317",
+            "rating": 4,
+            "price": 257,
+            "location": "317 Church Street, Parramatta",
+            "duration": 156,
+            "time": 1618642457
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Metro Inn Ryde",
+            "rating": 3.7,
+            "location": "860 Victoria Road, Ryde",
+            "duration": 37,
+            "time": 1618642529
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "PARKROYAL Parramatta",
+            "rating": 4.2,
+            "location": "30 Phillip Street, Parramatta",
+            "duration": 177,
+            "time": 1618642877
+        },
+        {
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Steeds Club Grill & Bar",
+            "rating": 3.2,
+            "price": 344,
+            "location": "116-118 James Ruse Drive, Rosehill",
+            "duration": 94,
+            "time": 1618643141
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Novotel Sydney Parramatta",
+            "rating": 3.9,
+            "location": "350 Church Street, Parramatta",
+            "duration": 112,
+            "time": 1618643292
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Rydges Parramatta",
+            "rating": 4,
+            "location": "116-118 James Ruse Drive, Rosehill",
+            "duration": 136,
+            "time": 1618643469
+        },
+        {
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Borrellis Italian Restaurant",
+            "rating": 4.2,
+            "price": 2,
+            "location": "3 Bridge Street, Epping",
+            "duration": 66,
+            "time": 1618643576
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Nesuto Parramatta Apartment Hotel",
+            "rating": 3.9,
+            "location": "110-114 James Ruse Drive, Parramatta",
+            "duration": 54,
+            "time": 1618643788
+        },
+        {
+            "types": [
+                "lodging",
+                "bar",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Melton Hotel",
+            "rating": 3.7,
+            "price": 1,
+            "location": "163 Parramatta Road, Auburn",
+            "duration": 114,
+            "time": 1618644061
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Mantra Parramatta",
+            "rating": 3.8,
+            "location": "Cnr Parkes St And, Valentine Avenue, Parramatta",
+            "duration": 142,
+            "time": 1618644258
+        },
+        {
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Subway",
+            "rating": 3.3,
+            "price": 1,
+            "location": "22 Betty Cuthbert Avenue, Ermington",
+            "duration": 118,
+            "time": 1618644457
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Holiday Inn Parramatta",
+            "rating": 4.1,
+            "location": "18-40 Anderson Street, Parramatta",
+            "duration": 46,
+            "time": 1618644594
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "APX Parramatta",
+            "rating": 3.1,
+            "location": "2/8 Hope Street, Rosehill",
+            "duration": 92,
+            "time": 1618644780
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Red Star Hotel West Ryde",
+            "rating": 3.6,
+            "location": "1188 Victoria Road, West Ryde",
+            "duration": 175,
+            "time": 1618644985
+        },
+        {
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Restaurant 317",
+            "rating": 4,
+            "price": 2,
+            "location": "317 Church Street, Parramatta",
+            "duration": 89,
+            "time": 1618645177
+        },
+        {
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Adamson Avenue House",
+            "rating": 4.7,
+            "location": "1 Adamson Avenue, Dundas Valley",
+            "duration": 131,
+            "time": 1618645438
+        },
+        {
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Parramatta Female Factory",
+            "rating": 4.5,
+            "location": "5/1 Fleet Street, North Parramatta",
+            "duration": 59,
+            "time": 1618645595
+        },
+        {
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "We Thai Cuisine",
+            "rating": 4.1,
+            "location": "Shop 5/90 Morrison Road, Putney",
+            "duration": 143,
+            "time": 1618645839
+        },
+        {
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Steeds Club Grill & Bar",
+            "rating": 3.2,
+            "price": 3,
+            "location": "116-118 James Ruse Drive, Rosehill",
+            "duration": 40,
+            "time": 1618646086
+        },
+        {
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Borrellis Italian Restaurant",
+            "rating": 4.2,
+            "price": 2,
+            "location": "3 Bridge Street, Epping",
+            "duration": 111,
+            "time": 1618646361
+        },
+        {
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Subway",
+            "rating": 3.3,
+            "price": 1,
+            "location": "22 Betty Cuthbert Avenue, Ermington",
+            "duration": 69,
+            "time": 1618646588
+        },
+        {
+            "types": [
+                "gas_station",
+                "atm",
+                "finance",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Apex Petroleum",
+            "rating": 3.7,
+            "location": "898-902 Victoria Road, West Ryde",
+            "duration": 78,
+            "time": 1618646769
+        },
+        {
+            "types": [
+                "meal_delivery",
+                "meal_takeaway",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "OZ Pizza & Kebabs",
+            "rating": 3.9,
+            "price": 1,
+            "location": "14 Betty Cuthbert Avenue, Ermington",
+            "duration": 98,
+            "time": 1618646941
+        },
+        {
+            "types": [
+                "gas_station",
+                "atm",
+                "finance",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "bp",
+            "rating": 3.3,
+            "location": "295 Quarry Road, Ryde",
+            "duration": 157,
+            "time": 1618647172
+        },
+        {
+            "types": [
+                "gas_station",
+                "atm",
+                "finance",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "bp Truckstop",
+            "rating": 4.2,
+            "location": "369 North Rocks Road, North Rocks",
+            "duration": 137,
+            "time": 1618647407
+        },
+        {
+            "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "name": "Albion Hotel",
+            "rating": 3.6,
+            "price": 2,
+            "location": "135 George Street, Parramatta",
+            "duration": 153,
+            "time": 1618647705
+        }
+    ]
+}

@@ -2,32 +2,33 @@
 //   -  Work out the best way to provide the user/auth data to children components
 
 import React, { useState } from "react";
-import Firebase from "firebase";
+import FirebaseTesting from "firebase";
 import Axios from "axios";
 import Params from "./params.json";
+import Firebase from '../../firebase/firebase';
+import {firebaseCredentials} from '../../firebase/firebase'
+// // Config
+// const firebaseConfig = {
+//     apiKey: "AIzaSyCfZO7BCJviQeD8oqu8-CIuADLkR3LS3gw",
+//     authDomain: "ses3a-autumn-2021-group-3.firebaseapp.com",
+//     projectId: "ses3a-autumn-2021-group-3",
+//     storageBucket: "ses3a-autumn-2021-group-3.appspot.com",
+//     messagingSenderId: "895809147085",
+//     appId: "1:895809147085:web:b3489691aa3e732ff11984"
+// };
 
-// Config
-const firebaseConfig = {
-    apiKey: "AIzaSyCfZO7BCJviQeD8oqu8-CIuADLkR3LS3gw",
-    authDomain: "ses3a-autumn-2021-group-3.firebaseapp.com",
-    projectId: "ses3a-autumn-2021-group-3",
-    storageBucket: "ses3a-autumn-2021-group-3.appspot.com",
-    messagingSenderId: "895809147085",
-    appId: "1:895809147085:web:b3489691aa3e732ff11984"
-};
-
-// Initialize Firebase
-// Try Catch for development as otherwise hot-reload will call initialise app mutliple times
-try {
-    Firebase.initializeApp(firebaseConfig);
-} catch (e) {}
-const provider = new Firebase.auth.GoogleAuthProvider();
+// // Initialize Firebase
+// // Try Catch for development as otherwise hot-reload will call initialise app mutliple times
+// try {
+//     Firebase.initializeApp(firebaseConfig);
+// } catch (e) {}
+// const provider = new Firebase.auth.GoogleAuthProvider();
 
 
 // TODO:
 function Auth({ children }: { children: Array<JSX.Element> }) {
 
-    async function signIn() {
+    async function signIn(provider: any) {
         try {
             const result = await Firebase.auth().signInWithPopup(provider);
             setAuth(result);
@@ -89,8 +90,8 @@ function Auth({ children }: { children: Array<JSX.Element> }) {
             console.log(errorCode, errorMessage, email, credential);
         }
     }
-
-    const [auth, setAuth]: [Firebase.auth.AuthCredential | any, any] = useState(undefined);
+    
+    const [auth, setAuth]: [FirebaseTesting.auth.AuthCredential | any, any] = useState(undefined);
     const [isAuth, setIsAuth] = useState(false);
     
     return (

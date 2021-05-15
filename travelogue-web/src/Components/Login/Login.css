@@ -14,12 +14,12 @@
 }
 
 .signup-modal{
-    background-color: #FFFFFF;
     height: 70%;
     width: 45%;
     display: flex;
     border-radius: 25px;
     border: 0.75px solid rgba(255, 255, 255, 0.6);
+    max-height: 700px;
 }
 .left-signup{
     height: 100%;
@@ -38,10 +38,10 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    padding-top: 50%;
+    margin:auto;
 }
 .right-signup{
-    background: rgba(0, 0, 0, 0.74);
+    background: rgba(0, 0, 0, 0.4);
     width: 70%;
     backdrop-filter: blur(30px);
     border-top-right-radius: 25px;  
@@ -65,7 +65,7 @@
     text-align: left;
 }
 .signup-content{
-   padding-top: 5%;
+   margin:auto;
    width: 70%;
 }
 
