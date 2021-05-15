@@ -1,15 +1,18 @@
-import { StringDecoder } from 'node:string_decoder';
 import React from 'react';
 import LocationImage1 from '../../Images/home-card-bg1.svg';
 import LocationImage2 from '../../Images/home-card-bg2.svg';
 import moment from 'moment';
-import { Activity, Trip } from 'travelogue-utility';
+import { Activity } from 'travelogue-utility';
 import People from '../../svg/activity-people.svg';
 import Clock from '../../svg/activity-clock.svg';
 
 
 interface ActProps {
   activity: Activity;
+}
+
+interface IActivityProps {
+  trip: Activity[]
 }
 
 interface BitProps {
@@ -79,22 +82,22 @@ const ActivitySingle = (props: ActProps) => {
   );
 };
 
-const TripDay = (props: Trip) => {
+const TripDay = ({trip}: IActivityProps) => {
   return (
     <div className="tripday-block">
-      {props.trip.map((a: Activity) => (
+      {trip.map((a: Activity) => (
         <ActivitySingle activity={a} />
       ))}
     </div>
   );
 };
 
-export const Activities = (state: Trip) => {
+export const Activities = ({trip}: IActivityProps) => {
   return (
     <div className="activities-block">
       <p className="section-label">Activities</p>
       <div className="activities-tripday-block">
-        <TripDay trip={state.trip} />
+        <TripDay trip={trip} />
       </div>
     </div>
   );
