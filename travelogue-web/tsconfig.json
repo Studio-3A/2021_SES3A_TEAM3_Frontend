@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,9 +9,9 @@
     "strict": true,
     "removeComments": true,
     "noImplicitAny": true,
-    "strictNullChecks": true, 
-    "noImplicitThis": true, 
-    "noImplicitReturns": true, 
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -25,7 +21,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-, "IRoute.ts"  ]
+  "include": ["src", "IRoute.ts"]
 }
