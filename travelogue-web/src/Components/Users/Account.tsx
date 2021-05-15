@@ -17,12 +17,6 @@ import ProfilePic from "../../Images/default-profile-ico.svg";
 import CameraIcon from '../../Images/camera-ico.svg';
 
 
-interface State {
-    name: string;
-    email: string;
-    sendEmails: boolean;
-}
-
 // TODO:
 const Account: FC = () => {
     const auth = useAuth();
@@ -153,9 +147,9 @@ const Account: FC = () => {
                     </div>
                     
                     <div className='save-btn-div'>
-                        <Button type='submit' className='save-btn'>
+                        <button type='submit' className='save-btn'>
                             Save Changes
-                        </Button>
+                        </button>
                     </div>
                 </Form>
 
@@ -175,9 +169,9 @@ const Account: FC = () => {
                         </div>
                         <div>
                         <Form onSubmit={onDeactivate}>
-                            <Button className='deactivate-btn' type='submit'>
+                            <button className='deactivate-btn' type='submit'>
                             Deactivate
-                            </Button>
+                            </button>
                         </Form>
                         </div>
                     </div>

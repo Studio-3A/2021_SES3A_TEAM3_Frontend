@@ -358,8 +358,6 @@ font-size: 3rem;
 .generated-trips{
   display: flex;
   flex-direction: row;
-  /* height: 100vh;
-  width: 72.8vw */
 }
 
 
@@ -479,9 +477,6 @@ font-size: 3rem;
 
 }
 
-.ad-label {
- 
-}
 
 .google-download div {
   display: flex;

@@ -10,8 +10,7 @@ import DatePicker from "react-datepicker";
 import { TripGenerationInputs, Coordinate } from "travelogue-utility";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
-import { generateTrip } from "../../BackEndLogic/APICaller";
+import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {

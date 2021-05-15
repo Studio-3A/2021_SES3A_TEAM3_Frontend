@@ -105,6 +105,13 @@
     border: 2px solid #B6CDDA;
 }
 
+.categories-grid{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
 .categories-text {
     padding-right: 40px;
     font-style: normal;

@@ -11,8 +11,7 @@ import bag from "../svg/bag.svg";
 import mobilePhone from "../svg/mobilePhone.svg";
 import blueSeparator from "../svg/blueSeparator.svg";
 import appleLogo from "../svg/appleLogo.svg";
-import googleLogo from "../svg/googleLogo.svg";
-import googledwnld from "../svg/Base.svg";
+import googleLogo from '../svg/googleLogo.svg';
 
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';

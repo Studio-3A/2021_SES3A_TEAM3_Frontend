@@ -2,11 +2,9 @@
 //   -  Create profile/accounts page for the user
 
 import React, { FC, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
-import { useAuth } from '../../firebase/Auth';
 import { FirstName } from './GeneratedTrip';
 
 // Components
@@ -18,43 +16,26 @@ import PopularList from './TripsList/PopularList';
 import RecList from './TripsList/RecList';
 import NavButtons from './NavButtons';
 
-// Images
-import Background from '../../Images/home-bg.svg';
-import BackgroundImage from '../../Images/home-bg2.svg';
-import NavBar from '../NavBar/NavBar';
-
-const Body = styled.body`
-    background-color: #FFFFFF;
-    background-blend-mode: multiply;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    color: black;
-    width:100%
-    height: 100vh;
-`;
-
-const NavButton = styled.button`
-  padding: 0;
-  border: none;
-  background: none;
-  height: 50px;
-  width: 50px;
-  /* Smooth Blue */
-  background: #f8f8f8;
-  border-radius: 50px;
-  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
-`;
+// const NavButton = styled.button`
+//   padding: 0;
+//   border: none;
+//   background: none;
+//   height: 50px;
+//   width: 50px;
+//   /* Smooth Blue */
+//   background: #f8f8f8;
+//   border-radius: 50px;
+//   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
+// `;
 
 // TODO:
 const Home: FC = () => {
-  const auth = useAuth();
   const [selectedItem, setSelectedItem] = useState<string>('New');
 
   let onClickCategory = (e: React.MouseEvent<HTMLHeadingElement>) => {
     e.preventDefault();
     setSelectedItem(e.currentTarget.textContent as string);
-  }
+  };
   onClickCategory = onClickCategory.bind(this);
 
   return (
@@ -88,5 +69,5 @@ const Home: FC = () => {
       </div>
     </div>
   );
-}
+};
 export default Home;

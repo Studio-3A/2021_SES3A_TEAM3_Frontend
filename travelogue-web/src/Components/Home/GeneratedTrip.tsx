@@ -11,10 +11,6 @@ import InteractiveMap from './Trips/InteractiveMap';
 import TestTrip from './Trips/testtrip.json';
 import { useAuth } from '../../firebase/Auth';
 
-interface State {
-  trip: Trip;
-  name: string;
-}
 
 // do not do this irl
 const a = TestTrip as Trip;
