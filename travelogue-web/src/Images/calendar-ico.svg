@@ -1,0 +1,17 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.25 27.5H3.75C3.0625 27.5 2.5 26.9375 2.5 26.25V13.75H27.5V26.25C27.5 26.9375 26.9375 27.5 26.25 27.5Z" fill="#B5C3CC"/>
+<path d="M21.25 6.25H26.25C26.9375 6.25 27.5 6.8125 27.5 7.5V13.75H2.5V7.5C2.5 6.8125 3.0625 6.25 3.75 6.25H8.75" fill="#B5C3CC"/>
+<path d="M17.5 6.25V8.12501C17.5 9.16251 18.3375 10 19.375 10C20.4125 10 21.25 9.16251 21.25 8.12501V6.25" stroke="white" stroke-miterlimit="10"/>
+<path d="M8.75 6.25V8.125C8.75 9.1625 9.5875 10 10.625 10C11.6625 10 12.5 9.1625 12.5 8.125V6.25" stroke="white" stroke-miterlimit="10"/>
+<path d="M10.625 10C9.5875 10 8.75 9.1625 8.75 8.125V4.375C8.75 3.3375 9.5875 2.5 10.625 2.5C11.6625 2.5 12.5 3.3375 12.5 4.375V8.125C12.5 9.1625 11.6625 10 10.625 10Z" fill="#B5C3CC"/>
+<path d="M21.875 23.75H23.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.875 23.75H18.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.875 23.75H13.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.875 23.75H8.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.875 18.75H23.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.875 18.75H18.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.875 18.75H13.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.875 18.75H8.125" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.5 13.75H2.5" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M19.375 10C18.3375 10 17.5 9.1625 17.5 8.125V4.375C17.5 3.3375 18.3375 2.5 19.375 2.5C20.4125 2.5 21.25 3.3375 21.25 4.375V8.125C21.25 9.1625 20.4125 10 19.375 10Z" fill="#B5C3CC"/>
+</svg>
