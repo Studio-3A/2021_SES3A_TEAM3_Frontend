@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { generateNewTrip, setBaseBackendUrl, TripGenerationInputs, postContent } from "travelogue-utility";
+import { DirectionsResponse } from "travelogue-utility";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents, Polyline } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -18,25 +18,8 @@ interface IInteractiveMap {
     defaultZoom?: number,
     width?: number,
     height?: number,
-    addMarkerOnClick?: boolean
-}
-
-setBaseBackendUrl("http://localhost:4000");
-const generateTrip = async (input: TripGenerationInputs) => {
-    const resp = fetch("http://localhost:4000/trip/new", {
-        method: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(input)
-    }).then(resp => resp.json());
-    return resp;
-    //return postContent({
-    //    "url": "http://localhost:4000/trip/new",
-    //    "body": input
-    //});
-    //return generateNewTrip(input);
+    addMarkerOnClick?: boolean,
+    directions?: DirectionsResponse | any
 }
 
 const DefaultIcon = L.icon({
@@ -46,34 +29,17 @@ const DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-const getTravelRoute = (route: Array<any>) => {
-    let allProms: Array<Promise<any>> = [];
-    for (let i = 0; i < route.length - 1; i++) {
-        const body = {origin: {lat: route[i].latlng[0], lng: route[i].latlng[1]}, destination: {lat: route[i+1].latlng[0], lng: route[i+1].latlng[1]}, travelModes: ["driving", "transit", "walking", "bicycling"]}
-        allProms.push(fetch('http://localhost:4000/data/directions', {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        }).then(resp => resp.json()));
-    }
-    const allSteps = Promise.all(allProms).then(resps => {
-        let fullRoute: Array<any> = [];
-        resps.forEach((resp: any, i: number) => {
-            fullRoute.push({lat: route[i].latlng[0], lng: route[i].latlng[1]});
-            resp.routes[0].legs.forEach((leg: any) => {
-                leg.steps.forEach((step: any) => {
-                    fullRoute.push(step.start_location);
-                    fullRoute.push(step.end_location);
-                });
+const getTravelRoute = (directions: DirectionsResponse) => {
+    let fullRoute: any[] = [];
+    if (directions.routes && directions.routes[0].legs) {
+        directions.routes[0].legs.forEach((leg: any, i: number) => {
+            leg.steps.forEach((step: any) => {
+                fullRoute.push(step.start_location);
+                fullRoute.push(step.end_location);
             });
         });
-        fullRoute.push({lat: route[route.length-1].latlng[0], lng: route[route.length-1].latlng[1]});
-        return fullRoute;
-    });
-    return allSteps;
+    }
+    return fullRoute;
 }
 
 const AddMarkerToClick = (addMarker: any) => {
@@ -82,20 +48,6 @@ const AddMarkerToClick = (addMarker: any) => {
     const map = useMapEvents({
         async dblclick(e) {
             // DO SOMETHING HERE (populate a sidebar by calling some APIs, etc)
-            const body = {
-                "startDate": 1620562298834,
-                "endDate": 1620741600000,
-                "startLocation": {
-                    "lat": -32.93492866908232,
-                    "lng": 151.71569824218753
-                },
-                "endLocation": {
-                    "lat": -33.86927529957081,
-                    "lng": 151.21307373046878
-                }
-            }
-            const resp = await generateTrip(body);
-            console.log(resp);
             console.log(e.latlng);
             const newMarker = e.latlng;
             setMarker(newMarker);
@@ -113,18 +65,17 @@ const AddMarkerToClick = (addMarker: any) => {
 }
 
 // You can add ANY HTML into the popup component
-const InteractiveMap = ({defaultDataMarkers = [], defaultZoom = 13, defaultLatLng, width = 800, height = 800, addMarkerOnClick = true}: IInteractiveMap) => {
+const InteractiveMap = ({defaultDataMarkers = [], defaultZoom = 13, defaultLatLng, width = 800, height = 800, addMarkerOnClick = true, directions}: IInteractiveMap) => {
     const [zoom, setZoom] = useState(defaultZoom);
     const [dataMarkers, setDataMarkers]: [Array<IMarker>, any] = useState(defaultDataMarkers);
     const [latlng, setLatlng]: [L.LatLngExpression, any] = useState(defaultLatLng);
     const [routingLine, setRoutingLine]: [Array<L.LatLngExpression>, any] = useState([]);
 
     useEffect(() => {
-        const plotLine = async () => {
-            const route = await getTravelRoute(defaultDataMarkers);
+        if (directions) { 
+            const route = getTravelRoute(directions);
             setRoutingLine(route);
         }
-        //plotLine();
     }, []);
 
     return(

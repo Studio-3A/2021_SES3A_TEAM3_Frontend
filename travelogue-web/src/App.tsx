@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
-import InteractiveMap from './Components/Common/InteractiveMap/InteractiveMap';
+import MapExample from './Components/Common/InteractiveMap/MapExample';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -71,7 +71,7 @@ function App() {
           path='/mapdemo'
           render={() => (
             <div style={{position: 'absolute', paddingLeft: '235px'}}>
-              <InteractiveMap defaultLatLng={[-33, 151]} defaultZoom={10} defaultDataMarkers={[{latlng: [-32.84123138501964, 151.36962890625], popup: "Cessnock"}]}/>
+              <MapExample />
             </div>
           )}
         />
