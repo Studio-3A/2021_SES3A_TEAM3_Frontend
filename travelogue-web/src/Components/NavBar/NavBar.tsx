@@ -23,6 +23,7 @@ function NavBar() {
   }
 
   return (
+    auth.user ? (
     <div className='nav-content'>
       <div className='navbarCol'>
         <div className='navHeader'>
@@ -124,6 +125,7 @@ function NavBar() {
         </div>
       </div>
     </div>
+    ) : null
   );
 }
 

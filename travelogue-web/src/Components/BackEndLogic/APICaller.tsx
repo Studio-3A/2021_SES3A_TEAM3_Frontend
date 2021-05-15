@@ -1,5 +1,5 @@
-import { generateNewTrip, TripGenerationInputs, setBaseBackendUrl } from 'travelogue-utility';
-import Params from './params.json';
+import Params from "./params.json";
+import { generateNewTrip, setBaseBackendUrl, TripGenerationInputs } from "travelogue-utility";
 
 setBaseBackendUrl(Params.SERVER);
 

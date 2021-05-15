@@ -15,8 +15,7 @@ import { generateTrip } from "../../BackEndLogic/APICaller";
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
-  types: ["(cities)"],
-  componentRestrictions: { country: "au" },
+  types: ["(cities)"]
 };
 
 const MenuCard = () => {
@@ -42,9 +41,9 @@ const MenuCard = () => {
       return;
     }
     if (type === Range.Start) {
-      setStartDate(startDate);
+      setStartDate(date);
     } else if (type === Range.End) {
-      setEndDate(startDate);
+      setEndDate(date);
     } else {
       throw Error(`Unhandled location type ${type}`);
     }
@@ -70,16 +69,11 @@ const MenuCard = () => {
       throw Error(`Unhandled location type ${type}`);
     }
   };
-
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const testing = ["Sydney", "Melbourne", "Brisbane"];
-  const listItems = testing.map(item => <div>{item}</div>);
-
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
     if (!startCoordinate || !endCoordinate) {
       // probably show some error here
+      alert("Please enter start and end locations");
       return;
     }
     const tripObject: TripGenerationInputs = {
@@ -90,12 +84,15 @@ const MenuCard = () => {
       budget: budget,
       numberOfPeople: numPeople,
     };
-    console.log(tripObject);
-    // const result = await generateTrip(tripObject);
-    // console.log(result);
+    localStorage.setItem("trip", JSON.stringify(tripObject))
+    window.location.href = "/generatedtrip"
   };
 
-  const decrementNumPeople = () => setNumPeople(numPeople - 1);
+  const decrementNumPeople = () => {
+    if (numPeople > 1) {
+      setNumPeople(numPeople - 1);
+    }
+  };
 
   const incrementNumPeople = () => setNumPeople(numPeople + 1);
 
@@ -112,19 +109,36 @@ const MenuCard = () => {
             <PlacesAutocomplete
               value={startAddress}
               onChange={setStartAddress}
-              onSelect={v => handleLocationChange(v, Range.Start)}
+              onSelect={(v) => handleLocationChange(v, Range.Start)}
               searchOptions={searchOptions}
             >
-              {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+              {({
+                getInputProps,
+                suggestions,
+                getSuggestionItemProps,
+                loading,
+              }) => (
                 <div className="placedropdown">
-                  <img src={LocationIcon} className="search-icon" alt="locationIcon" />
-                  <input className="locationsearch" {...getInputProps({ placeholder: "Start location" })} />
+                  <img
+                    src={LocationIcon}
+                    className="search-icon"
+                    alt="locationIcon"
+                  />
+                  <input
+                    className="locationsearch"
+                    {...getInputProps({ placeholder: "Start Location" })}
+                  />
 
                   <div className="selecter">
                     {loading ? <div>loading...</div> : null}
-                    {suggestions.map(suggestion => (
-                      <div className="dropdown-item" {...getSuggestionItemProps(suggestion)}>
-                        {suggestion.description}
+                    {suggestions.map((suggestion) => (
+                      <div key={suggestion.id}>
+                        <div
+                          className="dropdown-item"
+                          {...getSuggestionItemProps(suggestion)}
+                        >
+                          {suggestion.description}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -137,19 +151,36 @@ const MenuCard = () => {
             <PlacesAutocomplete
               value={endAddress}
               onChange={setEndAddress}
-              onSelect={v => handleLocationChange(v, Range.End)}
+              onSelect={(v) => handleLocationChange(v, Range.End)}
               searchOptions={searchOptions}
             >
-              {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+              {({
+                getInputProps,
+                suggestions,
+                getSuggestionItemProps,
+                loading,
+              }) => (
                 <div className="placedropdown">
-                  <img src={LocationIcon} className="search-icon" alt="locationIcon" />
-                  <input className="locationsearch" {...getInputProps({ placeholder: "End Location" })} />
+                  <img
+                    src={LocationIcon}
+                    className="search-icon"
+                    alt="locationIcon"
+                  />
+                  <input
+                    className="locationsearch"
+                    {...getInputProps({ placeholder: "End Location" })}
+                  />
 
                   <div className="selecter">
                     {loading ? <div>loading...</div> : null}
-                    {suggestions.map(suggestion => (
-                      <div className="dropdown-item" {...getSuggestionItemProps(suggestion)}>
-                        {suggestion.description}
+                    {suggestions.map((suggestion) => (
+                      <div key={suggestion.id}>
+                        <div
+                          className="dropdown-item"
+                          {...getSuggestionItemProps(suggestion)}
+                        >
+                          {suggestion.description}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -160,25 +191,33 @@ const MenuCard = () => {
         </div>
         <div className="left-searchcard">
           <div className="inputbox">
-            <img src={CalendarIcon} className="search-icon" alt="locationIcon" />
+            <img
+              src={CalendarIcon}
+              className="search-icon"
+              alt="locationIcon"
+            />
             <DatePicker
               className="datepicker"
               placeholderText="Start Date"
               selected={startDate}
               selectsRange={false}
               dateFormat="dd/MM/yyyy"
-              onChange={startDate => setDate(startDate, Range.Start)}
+              onChange={(startDate) => setDate(startDate, Range.Start)}
               minDate={new Date()}
             />
           </div>
           <hr className="line-vertical" />
           <div className="inputbox">
-            <img src={CalendarIcon} className="search-icon" alt="locationIcon" />
+            <img
+              src={CalendarIcon}
+              className="search-icon"
+              alt="locationIcon"
+            />
             <DatePicker
               className="datepicker"
               placeholderText="End Date"
               selected={endDate}
-              onChange={endDate => setDate(endDate, Range.End)}
+              onChange={(endDate) => setDate(endDate, Range.End)}
               dateFormat="dd/MM/yyyy"
               minDate={startDate}
             />
@@ -187,22 +226,33 @@ const MenuCard = () => {
         <div className="left-searchcard">
           <div className="inputbox">
             <img src={BudgetIcon} className="search-icon" alt="locationIcon" />
-            <input type="text" onChange={b => setBudget(Number(b.target.value))} placeholder="Your Budget" />
+            <input
+              type="number"
+              value={budget > 0 ? budget : ""}
+              onChange={(b) => setBudget(Number(b.target.value))}
+              placeholder="Your Budget"
+            />
           </div>
           <hr className="line-vertical" />
           <div className="inputbox">
             <div className="test">
-              <img src={PeopleIcon} className="search-icon" alt="locationIcon" />
-              <button disabled={numPeople < 2} onClick={() => decrementNumPeople()} className="btn">
+              <img
+                src={PeopleIcon}
+                className="search-icon"
+                alt="locationIcon"
+              />
+              <button onClick={() => decrementNumPeople()} className="btn">
                 -
               </button>
 
               <input
                 id="numpeople"
-                type="text"
+                type="number"
                 value={numPeople}
                 onChange={handleNumPeopleChange}
                 placeholder="People No"
+                min="1"
+                max="5"
               />
               <button onClick={() => incrementNumPeople()} className="btn">
                 +
@@ -211,9 +261,9 @@ const MenuCard = () => {
           </div>
         </div>
 
-        <button className="searchBtn" onClick={handleSubmit}>
-          Search
-        </button>
+          <button className="searchBtn" onClick={handleSubmit}>
+            Generate Trip
+          </button>
       </div>
     </div>
   );

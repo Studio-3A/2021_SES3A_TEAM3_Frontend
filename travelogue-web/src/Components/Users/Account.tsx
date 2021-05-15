@@ -169,9 +169,9 @@ const Account: FC = () => {
                     <div>
                     <div className='deactivate-body-div'>
                         <div>
-                        <text className='deactivate-text'>
+                        <p className='deactivate-text'>
                             Delete your account and all data
-                        </text>
+                        </p>
                         </div>
                         <div>
                         <Form onSubmit={onDeactivate}>

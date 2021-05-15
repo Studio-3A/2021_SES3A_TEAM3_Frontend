@@ -55,7 +55,9 @@ function frontPage() {
                             <p>Simply enter information of your current situation and travelogue will automatically generate a trip for you.</p>
                         </div>
                         <div className="left-start-button">
-                            <button className="btn-secondary btn-shadow-blue">Start Now</button>
+                            <Link to='/home'>
+                                <button className="btn-secondary btn-shadow-blue">Start Now</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="view-landing-right">
