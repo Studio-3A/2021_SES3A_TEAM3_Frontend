@@ -46,7 +46,10 @@
 }
 
 .activity-save:active{
-    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    filter: red;
+}
+.activity-save:focus{
+    filter: red;
 }
 
 .description-details-time .activity-label, .description-details-people .activity-label {
@@ -124,4 +127,10 @@
   .activity-block:nth-child(odd) .activity-description {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  .activity-name-save {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
   }

@@ -24,7 +24,7 @@ const ActivityProperty = (props: BitProps) => {
     <>
       {value && (
         <div className={`activity-label ${className}`}>
-          {displayLabel ? <b>{props.label}:</b> : ""} {value}
+          {displayLabel ? <b>{props.label}:</b> : ""} {value} 
         </div>
       )}
     </>
@@ -46,12 +46,14 @@ const ActivitySingle = (props: ActProps) => {
     <div className="activity-block">
       <div className="activity-card card card-shadow">
         <div className="activity-img-backdrop">
+          <div className="activity-name-save">
           <ActivityProperty
             label={"Name"}
             value={name}
             className={"activity-name"}
           />
           <img className="activity-save" src={Save}></img>
+          </div>
           <ActivityProperty
             label={"Price"}
             value={formattedPrice}

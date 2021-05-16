@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
@@ -30,13 +30,15 @@ function App() {
               </div>
             )}
           />
-
+          <div className="App-Content">
+          <NavBar />
+          <Switch>
           <Route
             exact={true}
             path='/home'
             render={() => (
               <div className='App'>
-                <NavBar />
+              
                 <HomePage />
               </div>
             )}
@@ -47,12 +49,12 @@ function App() {
             path='/generatedtrip'
             render={() => (
               <div className='generated-trips'>
-                <NavBar />
                 <GeneratedTrip />
               </div>
             )}
           />
-
+        </Switch>
+        </div>
           <Route
             exact={true}
             path='/about'
