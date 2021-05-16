@@ -3,6 +3,7 @@ import moment from "moment";
 import { Activity, Trip } from "travelogue-utility";
 import People from "../../svg/activity-people.svg";
 import Clock from "../../svg/activity-clock.svg";
+import Save from "../../svg/card-save-icon.svg";
 
 interface ActProps {
   activity: Activity;
@@ -50,6 +51,7 @@ const ActivitySingle = (props: ActProps) => {
             value={name}
             className={"activity-name"}
           />
+          <img className="activity-save" src={Save}></img>
           <ActivityProperty
             label={"Price"}
             value={formattedPrice}
