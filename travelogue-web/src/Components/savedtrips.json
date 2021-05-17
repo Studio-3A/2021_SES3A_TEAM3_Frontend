@@ -1,0 +1,100 @@
+
+{
+    "users": [
+        {
+            
+            "id":"1", 
+            "firstName":"an",
+            "savedtrips":[
+                {
+                    "trip_id": 1,
+                    "title": "Byron Bay",
+                    "description": "Byron Bay description",
+                    "total_cost":300,
+                    "rating": 3,
+                    "date":1618642110
+                },
+                {
+                    "trip_id": 2,
+                    "title": "Blue Mountains",
+                    "description": "Blue Mountains description",
+                    "total_cost":500,
+                    "rating": 4,
+                    "date":1618642110
+                },
+                {
+                    "trip_id": 3,
+                    "title": "Uluru",
+                    "description": "Uluru description",
+                    "total_cost":650,
+                    "rating": 5,
+                    "date":1618642110
+                }
+            ]
+        },
+       {
+            
+            "id":"WfVB9akBAlYvHE0TG4gKoNUm2x02", 
+            "firstName":"omer",
+            "savedtrips":[
+                {
+                    "trip_id": 1,
+                    "title": "Byron Bay",
+                    "description": "Byron Bay description",
+                    "total_cost":300,
+                    "rating": 3,
+                    "date":1618642110
+                },
+                {
+                    "trip_id": 2,
+                    "title": "Blue Mountains",
+                    "description": "Blue Mountains description",
+                    "total_cost":500,
+                    "rating": 4,
+                    "date":1618642110
+                },
+                {
+                    "trip_id": 3,
+                    "title": "Uluru",
+                    "description": "Uluru description",
+                    "total_cost":650,
+                    "rating": 5,
+                    "date":1618642110
+                }
+            ]
+        },
+        {
+            "id":"525oqOCyhfNi6jI41LrGH1POUx03",
+            "firstName":"giorgio",
+            "savedtrips":[
+                {
+                    "trip_id": 1,
+                    "title": "Byron Bay",
+                    "description": "Byron Bay description",
+                    "total_cost":300,
+                    "rating": 3,
+                    "date":1618642110
+                },
+                {
+                    "trip_id": 2,
+                    "title": "Blue Mountains",
+                    "description": "Blue Mountains description",
+                    "total_cost":500,
+                    "rating": 4,
+                    "date":1618642110
+                },
+                {
+                    "trip_id": 3,
+                    "title": "Uluru",
+                    "description": "Uluru description",
+                    "total_cost":650,
+                    "rating": 5,
+                    "date":1618642110
+                }
+            ]
+        }
+
+
+    ]
+}
+    
