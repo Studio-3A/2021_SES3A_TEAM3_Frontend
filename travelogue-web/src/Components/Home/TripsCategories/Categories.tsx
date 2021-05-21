@@ -1,20 +1,15 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import './Home.css';
+import '../Home.css';
 
 interface State {
-    selectedItem: string,
-    onClickCategory: (e: React.MouseEvent<HTMLHeadingElement>) => void
+  selectedItem: string;
+  onClickCategory: (e: React.MouseEvent<HTMLHeadingElement>) => void;
 }
 
 function Categories(props: State) {
-    return (
-        <Grid container
-            direction="row"
-            justify="flex-start"
-            alignItems="flex-start"
-            className="categories-grid">
-            <Grid item>
+  return (
+        <div className="categories-grid">
+            <div>
                 <h6
                     onClick={props.onClickCategory}
                     className={
@@ -24,8 +19,8 @@ function Categories(props: State) {
                     }>
                     New
                 </h6>
-            </Grid>
-            <Grid item>
+            </div>
+            <div>
                 <h6
                     onClick={props.onClickCategory}
                     className={
@@ -35,8 +30,8 @@ function Categories(props: State) {
                     }>
                     Popular
                 </h6>
-            </Grid>
-            <Grid item>
+            </div>
+            <div>
                 <h6
                     onClick={props.onClickCategory}
                     className={
@@ -46,9 +41,9 @@ function Categories(props: State) {
                     }>
                     Recommendations
                 </h6>
-            </Grid>
-        </Grid>
-    )
+            </div>
+        </div>
+  );
 }
 
 export default Categories;

@@ -1,19 +1,21 @@
 // TODO:
 //   -  Create profile/accounts page for the user
 
-import React from 'react';
+import React, { FC, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
+import { useAuth } from '../../firebase/Auth';
+import { FirstName } from './GeneratedTrip';
 
 // Components
-import Header from './Header';
-import MenuCard from './MenuCard';
-import Categories from './Categories';
-import NewList from './NewList';
-import PopularList from './PopularList';
-import RecList from './RecList';
+import Header from './Header/Header';
+import MenuCard from './MenuCard/MenuCard';
+import Categories from './TripsCategories/Categories';
+import NewList from './TripsList/NewList';
+import PopularList from './TripsList/PopularList';
+import RecList from './TripsList/RecList';
 import NavButtons from './NavButtons';
 
 // Images
@@ -44,66 +46,47 @@ const NavButton = styled.button`
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
 `;
 
-interface State {
-  name: string;
-  selectedItem: string;
-}
-
 // TODO:
-class Home extends React.Component<{}, State> {
-  constructor(props: {}) {
-    super(props);
+const Home: FC = () => {
+  const auth = useAuth();
+  const [selectedItem, setSelectedItem] = useState<string>('New');
 
-    this.state = {
-      name: 'Gio',
-      selectedItem: 'New',
-    };
-
-    this.onClickCategory = this.onClickCategory.bind(this);
-  }
-  onClickCategory(e: React.MouseEvent<HTMLHeadingElement>) {
+  let onClickCategory = (e: React.MouseEvent<HTMLHeadingElement>) => {
     e.preventDefault();
-    this.setState({
-      selectedItem: e.currentTarget.textContent as string,
-    });
+    setSelectedItem(e.currentTarget.textContent as string);
   }
+  onClickCategory = onClickCategory.bind(this);
 
-  render() {
-    return (
-      <div className='Home'>
-        <div className='body'>
-          <div className='top'>
-            <Header name={this.state.name} />
-          </div>
-          <div className='menu'>
-            <MenuCard />
-          </div>
-          <div className="home-recommendations"> 
-          <div>
-            <Categories
-              selectedItem={this.state.selectedItem}
-              onClickCategory={this.onClickCategory}
-            />
-          </div>
-          <div className='location-card-div'>
-            {this.state.selectedItem === 'New' ? <NewList /> : null}
-            {this.state.selectedItem === 'Popular' ? <PopularList /> : null}
-            {this.state.selectedItem === 'Recommendations' ? <RecList /> : null}
-          </div>
-          </div>
-          {/* 
-                    
-                
-                    <div>
-                        
-                            
-                            <div className="nav-button-div">
-                                <NavButtons />
-                            </div> 
-                    </div> */}
+  return (
+    <div className='Home'>
+      <div className='body'>
+        <div className='top'>
+          <Header name={FirstName()} />
         </div>
+        <div className='menu'>
+          <MenuCard />
+        </div>
+
+        <div>
+          <Categories
+            selectedItem={selectedItem}
+            onClickCategory={onClickCategory}
+          />
+        </div>
+        <div className='location-card-div'>
+          {selectedItem === 'New' ? <NewList /> : null}
+          {selectedItem === 'Popular' ? <PopularList /> : null}
+          {selectedItem === 'Recommendations' ? <RecList /> : null}
+        </div>
+        {/* 
+          <div>
+            <div className="nav-button-div">
+                <NavButtons />
+            </div> 
+          </div>
+        */}
       </div>
-    );
-  }
+    </div>
+  );
 }
 export default Home;

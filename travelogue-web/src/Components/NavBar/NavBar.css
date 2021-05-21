@@ -6,7 +6,7 @@
 .navbarCol{
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
   background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
@@ -58,7 +58,7 @@
 }
 
 .pageContainer{
-    width: 234px;
+    min-width: 234px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -76,7 +76,7 @@
 
 .nav-content {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   min-height: 100vh;
   max-width: 12.2vw;
   background-color: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);

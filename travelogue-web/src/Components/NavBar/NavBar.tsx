@@ -12,12 +12,18 @@ import accountsIcon from '../../Images/accounts-ico.svg';
 import settingsIcon from '../../Images/settings-ico.svg';
 import logoutIcon from '../../Images/logout-ico.svg';
 
-import firebase from '../../firebase/firebase';
+import { useAuth } from "../../firebase/Auth";
 
 function NavBar() {
-  const avatarURL = firebase.auth().currentUser?.photoURL || defaultProfile;
+  const auth = useAuth();
+  const avatarURL = auth.user?.photoURL || defaultProfile;
+
+  const logout = () => {
+    auth.signOut();
+  }
 
   return (
+    auth.user ? (
     <div className='nav-content'>
       <div className='navbarCol'>
         <div className='navHeader'>
@@ -105,7 +111,7 @@ function NavBar() {
               </div>
             </Link>
 
-            <Link to='/login'>
+            <Link to='/' onClick={() => logout()}>
               <div className='pageContainer'>
                 <div className='pageImage'>
                   <img alt='logoutIcon' src={logoutIcon} />
@@ -119,6 +125,7 @@ function NavBar() {
         </div>
       </div>
     </div>
+    ) : null
   );
 }
 

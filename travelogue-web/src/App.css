@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -30,6 +40,7 @@ Website Standard Style Sheet css
 
 * {
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-stretch: expanded;
 }
 
 /* Shadows */
@@ -89,11 +100,16 @@ Website Standard Style Sheet css
   background: #F0F3F5;
 }
 
+hr {
+  margin: 0 !important;
+}
+
 .btn-secondary {
   margin: 2%;
   text-align: center;
-  padding: 2% 0%;
-  width: 15%;
+  padding: 10px 0%;
+  width: 250px;
+  height:56px;
   background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
   border-radius: 40px;
   border: none;
@@ -101,6 +117,7 @@ Website Standard Style Sheet css
   color: white;
   font-size: 24px;
   transition-duration: 0.4s;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   min-width: 160px;
 }
@@ -111,11 +128,8 @@ Website Standard Style Sheet css
   backface-visibility: hidden;
   transition: background-color 1000ms linear;
 }
-.btn-secondary:active {
+.btn-secondary:focus {
   outline: none;
-  width: 15.5%;
-  padding-top: 1.2%;
-  padding-bottom: 1.2%;
   transition-duration: 0.1s;
 }
 .btn-secondary:focus {
@@ -199,6 +213,7 @@ Website Standard Style Sheet css
 .container-fp {
   position: relative;
   height: auto;
+  overflow-x: hidden;
 }
 .page1 {
   position: relative;
@@ -409,7 +424,6 @@ font-size: 3rem;
 
   min-width: 200px;
   width: 70vw;
-
   padding-top: 5%;
   display: flex;
   margin: auto;
@@ -424,7 +438,7 @@ font-size: 3rem;
   margin-bottom: 3%;
 }
 .mt-heading {
-  font-size: 5.2rem;
+  font-size: 4.2vw;
   color: white;
   font-weight: 700;
   margin-right: 8vw;
@@ -462,9 +476,14 @@ font-size: 3rem;
 }
 .ad-title {
   text-transform: uppercase;
-  color: grey;
+
 }
 
 .ad-label {
-  color: black;
+ 
+}
+
+.google-download div {
+  display: flex;
+  flex-direction: column;
 }

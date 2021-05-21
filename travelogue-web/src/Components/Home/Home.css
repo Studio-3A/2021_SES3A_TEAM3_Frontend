@@ -42,6 +42,11 @@
 
 .menu{
     padding-left: 2em;
+    margin-top: -3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-card {
@@ -100,12 +105,6 @@
     border: 2px solid #B6CDDA;
 }
 
-.categories-grid {
-    padding-top: 50px;
-    width: 70%;
-    padding-top: 50px;
-}
-
 .categories-text {
     padding-right: 40px;
     font-style: normal;
@@ -128,10 +127,12 @@
 }
 
 .location-card-div {
-    width: 1600px;
+    width: 100%;
     margin-top: 30px;
     overflow: hidden;
     align-items: center;
+    display: flex;
+    flex-direction: r;
 }
 
 .location-card {
