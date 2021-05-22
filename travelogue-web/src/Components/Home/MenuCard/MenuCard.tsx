@@ -14,7 +14,8 @@ import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
-  types: ["(cities)"]
+  types: ['(cities)'],
+  componentRestrictions: { country: 'au' },
 };
 
 const MenuCard = () => {
@@ -76,6 +77,7 @@ const MenuCard = () => {
       return;
     }
     const tripObject: TripGenerationInputs = {
+      tripName: 'Sydney To Melbourne',
       startLocation: startCoordinate,
       endLocation: endCoordinate,
       startDate: startDate.getTime(),
@@ -83,7 +85,7 @@ const MenuCard = () => {
       budget: budget,
       numberOfPeople: numPeople,
     };
-    localStorage.setItem("trip", JSON.stringify(tripObject))
+    localStorage.setItem('trip', JSON.stringify(tripObject));
     window.location.href = "/generatedtrip"
   };
 

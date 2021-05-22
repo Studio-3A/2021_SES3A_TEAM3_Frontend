@@ -30,31 +30,31 @@ function App() {
               </div>
             )}
           />
-          <div className="App-Content">
-          <NavBar />
-          <Switch>
-          <Route
-            exact={true}
-            path='/home'
-            render={() => (
-              <div className='App'>
-              
-                <HomePage />
-              </div>
-            )}
-          />
+          <div className='App-Content'>
+            <Switch>
+              <Route
+                exact={true}
+                path='/home'
+                render={() => (
+                  <div className='App'>
+                    <NavBar />
+                    <HomePage />
+                  </div>
+                )}
+              />
 
-          <Route
-            exact={true}
-            path='/generatedtrip'
-            render={() => (
-              <div className='generated-trips'>
-                <GeneratedTrip />
-              </div>
-            )}
-          />
-        </Switch>
-        </div>
+              <Route
+                exact={true}
+                path='/generatedtrip'
+                render={() => (
+                  <div className='generated-trips'>
+                    <NavBar />
+                    <GeneratedTrip />
+                  </div>
+                )}
+              />
+            </Switch>
+          </div>
           <Route
             exact={true}
             path='/about'

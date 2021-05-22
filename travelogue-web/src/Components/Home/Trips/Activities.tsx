@@ -34,12 +34,12 @@ const ActivityProperty = (props: BitProps) => {
 const ActivitySingle = (props: ActProps) => {
   const { description, name, price, location, time, duration } = props.activity;
   const formattedPrice = price != null ? `$${price}` : price;
-  const timeFormat = "h:m A";
+  const timeFormat = "h:mm A";
   const actualTime =
     time != null && duration != null
       ? moment(time).format(timeFormat) +
         " - " +
-        moment(time).add({ minute: duration }).format(timeFormat)
+        moment(time).add({ milliseconds: duration }).format(timeFormat)
       : time;
 
   return (
@@ -103,22 +103,26 @@ const ActivitySingle = (props: ActProps) => {
   );
 };
 
-const TripDay = (props: Trip) => {
+const TripDay = (props: TripProps) => {
   return (
     <div className="tripday-block">
-      {props.trip.map((a: Activity) => (
+      {props.trip.trip.map((a: Activity) => (
         <ActivitySingle activity={a} />
       ))}
     </div>
   );
 };
 
-export const Activities = (state: Trip) => {
+interface TripProps {
+  trip: Trip
+}
+
+export const Activities = (props: TripProps) => {
   return (
     <div className="activities-block">
       <p className="section-label">Activities</p>
       <div className="activities-tripday-block">
-        <TripDay trip={state.trip} />
+        <TripDay trip={props.trip} />
       </div>
     </div>
   );
