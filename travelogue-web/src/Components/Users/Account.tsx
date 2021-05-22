@@ -4,6 +4,7 @@
 import React, { FC, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
+import firebase from 'firebase';
 import { useAuth } from '../../firebase/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
@@ -46,6 +47,7 @@ const Account: FC = () => {
                     'Your account has been deactivated.',
                     'success'
                 ).then( () => {
+                    firebase.auth().currentUser?.delete();
                     window.location.href = '/';
                 });
             }
