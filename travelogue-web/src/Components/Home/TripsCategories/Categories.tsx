@@ -1,49 +1,35 @@
 import React from 'react';
 import '../Home.css';
 
-interface State {
-  selectedItem: string;
-  onClickCategory: (e: React.MouseEvent<HTMLHeadingElement>) => void;
+interface CategoryProps {
+  selected: SelectedCategory;
+  onClick: (newCategory: SelectedCategory) => void;
 }
 
-function Categories(props: State) {
+export type SelectedCategory = 'New' | 'Popular' | 'Recommendations';
+
+function Categories({selected, onClick}: CategoryProps) {
   return (
-        <div className="categories-grid">
-            <div>
-                <h6
-                    onClick={props.onClickCategory}
-                    className={
-                        props.selectedItem === "New"
-                            ? "categories-text-selected"
-                            : "categories-text"
-                    }>
-                    New
-                </h6>
-            </div>
-            <div>
-                <h6
-                    onClick={props.onClickCategory}
-                    className={
-                        props.selectedItem === "Popular"
-                            ? "categories-text-selected"
-                            : "categories-text"
-                    }>
-                    Popular
-                </h6>
-            </div>
-            <div>
-                <h6
-                    onClick={props.onClickCategory}
-                    className={
-                        props.selectedItem === "Recommendations"
-                            ? "categories-text-selected"
-                            : "categories-text"
-                    }>
-                    Recommendations
-                </h6>
-            </div>
-        </div>
+    <div className='categories-grid'>
+        <Category onClick={onClick} selected={selected} current={"New"}/>
+        <Category onClick={onClick} selected={selected} current={"Popular"}/>
+        <Category onClick={onClick} selected={selected} current={"Recommendations"}/>
+    </div>
   );
+}
+
+interface SingleCategoryProps extends CategoryProps {
+    current: SelectedCategory;
+}
+const Category = ({onClick, selected, current}: SingleCategoryProps) => {
+    return (
+        <h6
+            onClick={() => onClick(current)}
+            className={ selected === current ? 'categories-text-selected' : 'categories-text' }
+        >
+        {current}
+        </h6>
+    );
 }
 
 export default Categories;

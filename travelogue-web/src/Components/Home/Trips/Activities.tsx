@@ -16,15 +16,12 @@ interface BitProps {
   displayLabel?: boolean;
 }
 
-const ActivityProperty = (props: BitProps) => {
-  const { value } = props;
-  const className = props.className || "";
-  const displayLabel = props.displayLabel;
+const ActivityProperty = ({className, value, displayLabel, label}: BitProps) => {
   return (
     <>
       {value && (
-        <div className={`activity-label ${className}`}>
-          {displayLabel ? <b>{props.label}:</b> : ""} {value} 
+        <div className={`activity-label ${className || ""}`}>
+          {displayLabel ? <b>{label}:</b> : ""} {value} 
         </div>
       )}
     </>

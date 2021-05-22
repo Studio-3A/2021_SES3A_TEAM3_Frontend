@@ -1,24 +1,9 @@
-import React from 'react'
-import { RouteComponentProps } from 'react-router';
+import React from 'react';
 
-interface IProps{
-    name: string
-}
-interface IState {
-    name: string
+interface IProps {
+  name: string;
 }
 
-export default class About extends React.Component<IProps,IState> {
-    constructor(props: IProps) {
-        super(props)
-    
-        this.state = {
-             name: this.props.name
-        };
-    }
-    
-    render(){
-        alert(11);
-        return <h1>{this.state.name}</h1>
-    }
-}
+export const About = (props: IProps) => {
+    return <h1>{props.name}</h1>;
+};

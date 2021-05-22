@@ -7,18 +7,28 @@ import PeopleIcon from "../../../Images/people-ico.svg";
 import React, { useState } from "react";
 import PlacesAutocomplete from "react-places-autocomplete";
 import DatePicker from "react-datepicker";
-import { TripGenerationInputs, Coordinate } from "travelogue-utility";
+import {
+  isErrorResponse,
+  TripGenerationInputs,
+  Coordinate,
+  Trip,
+} from "travelogue-utility";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
+import { generateTrip } from "../../BackEndLogic/APICaller";
+import Swal from "sweetalert2";
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
-  types: ['(cities)'],
-  componentRestrictions: { country: 'au' },
+  types: ["(cities)"],
+  componentRestrictions: { country: "au" },
 };
+interface MenuCardProps {
+  setTrip: (trip: Trip) => void;
+}
 
-const MenuCard = () => {
+const MenuCard = ({ setTrip }: MenuCardProps) => {
   const [startAddress, setStartAddress] = useState("");
   const [endAddress, setEndAddress] = useState("");
 
@@ -52,9 +62,11 @@ const MenuCard = () => {
   const [budget, setBudget] = useState<number>(0);
   const [numPeople, setNumPeople] = useState<number>(1);
 
-  const [startCoordinate, setStartCoordinate] = useState<Coordinate | undefined>(undefined);
+  const [startCoordinate, setStartCoordinate] =
+    useState<Coordinate | undefined>(undefined);
 
-  const [endCoordinate, setEndCoordinate] = useState<Coordinate | undefined>(undefined);
+  const [endCoordinate, setEndCoordinate] =
+    useState<Coordinate | undefined>(undefined);
 
   const handleLocationChange = async (value: string, type: Range) => {
     const results = await geocodeByAddress(value);
@@ -77,7 +89,7 @@ const MenuCard = () => {
       return;
     }
     const tripObject: TripGenerationInputs = {
-      tripName: 'Sydney To Melbourne',
+      tripName: "Sydney To Melbourne",
       startLocation: startCoordinate,
       endLocation: endCoordinate,
       startDate: startDate.getTime(),
@@ -85,8 +97,17 @@ const MenuCard = () => {
       budget: budget,
       numberOfPeople: numPeople,
     };
-    localStorage.setItem('trip', JSON.stringify(tripObject));
-    window.location.href = "/generatedtrip"
+
+    const generatedTrip = await generateTrip(tripObject);
+    if (isErrorResponse(generatedTrip)) {
+      Swal.fire({
+        title: "Error",
+        text: "Trip Generation Failed",
+        icon: "error",
+      });
+    } else {
+      setTrip(generatedTrip);
+    }
   };
 
   const decrementNumPeople = () => {
@@ -262,9 +283,9 @@ const MenuCard = () => {
           </div>
         </div>
 
-          <button className="searchBtn" onClick={handleSubmit}>
-            Generate Trip
-          </button>
+        <button className="searchBtn" onClick={handleSubmit}>
+          Generate Trip
+        </button>
       </div>
     </div>
   );

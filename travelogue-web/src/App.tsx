@@ -5,7 +5,6 @@ import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
 //import About from './Components/About/About';
-import GeneratedTrip from './Components/Home/GeneratedTrip'
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 // import SavedTrips from './SavedTrips/SavedTrips';
@@ -30,31 +29,17 @@ function App() {
               </div>
             )}
           />
-          <div className='App-Content'>
-            <Switch>
-              <Route
-                exact={true}
-                path='/home'
-                render={() => (
-                  <div className='App'>
-                    <NavBar />
-                    <HomePage />
-                  </div>
-                )}
-              />
+          <Route
+            exact={true}
+            path='/home'
+            render={() => (
+              <div className='App'>
+                <NavBar />
+                <HomePage />
+              </div>
+            )}
+          />
 
-              <Route
-                exact={true}
-                path='/generatedtrip'
-                render={() => (
-                  <div className='generated-trips'>
-                    <NavBar />
-                    <GeneratedTrip />
-                  </div>
-                )}
-              />
-            </Switch>
-          </div>
           <Route
             exact={true}
             path='/about'
