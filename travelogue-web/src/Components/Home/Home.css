@@ -99,6 +99,12 @@
     padding-left: 10px;
 }
 
+.interactive-map{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
 .line-vertical {
     height: 83px;
     width: 0;

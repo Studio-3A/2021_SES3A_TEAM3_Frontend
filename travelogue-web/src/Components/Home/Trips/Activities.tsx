@@ -9,6 +9,10 @@ interface ActProps {
   activity: Activity;
 }
 
+interface IActivityProps {
+  trip: Activity[]
+}
+
 interface BitProps {
   label: string;
   value: string | number | undefined;
