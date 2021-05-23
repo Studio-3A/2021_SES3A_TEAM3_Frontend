@@ -1,5 +1,4 @@
 .activity-block {
-
     height: auto;
     margin-bottom: 3.5%;
     flex-direction: row;
@@ -13,16 +12,8 @@
 .activity-card{
     background-image: url('../../../Images/home-card-bg2.svg');
     background-repeat: no-repeat;
-    color: white;
+    color:white;
     background-size: cover;
-   
-}
-
-.activity-img-backdrop {
-    height: inherit;
-    border-radius: 25px;
-    background-color: rgba(0,0,0,0.5);
-    padding: 3.5%;
 }
 
 .activity-description{

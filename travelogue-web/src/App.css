@@ -67,13 +67,9 @@ Website Standard Style Sheet css
   box-shadow: 0px 15px 30px rgba(52, 154, 246, 0.6);
 }
 
-.card-shadow {
- box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
- transition-duration: 0.4s;
-}
-
 .card-shadow:hover {
-  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 30px 60px;
+  transition: .5s;
 }
 
 /* Radius */

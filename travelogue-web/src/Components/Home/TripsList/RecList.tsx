@@ -17,7 +17,6 @@ function RecList() {
           placeName='Recommendation 1'
           price='$100'
           location='Sydney, Australia'
-          image={LocationImage1}
         />
       </Grid>
       {/*<Grid item className="spacer-left2">

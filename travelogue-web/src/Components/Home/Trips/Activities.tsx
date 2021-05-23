@@ -44,12 +44,12 @@ const ActivitySingle = (props: ActProps) => {
       <div className="activity-card card card-shadow">
         <div className="activity-img-backdrop">
           <div className="activity-name-save">
-          <ActivityProperty
-            label={"Name"}
-            value={name}
-            className={"activity-name"}
-          />
-          <img className="activity-save" src={Save}></img>
+            <ActivityProperty
+              label={"Name"}
+              value={name}
+              className={"activity-name"}
+            />
+            <img className="activity-save" src={Save}></img>
           </div>
           <ActivityProperty
             label={"Price"}
