@@ -33,7 +33,7 @@ const ActivityProperty = ({className, value, displayLabel, label}: BitProps) => 
 };
 
 const ActivitySingle = (props: ActProps) => {
-  const { description, name, price, location, time, duration } = props.activity;
+  const { description, name, price, location, generalLocation, time, duration } = props.activity;
   const formattedPrice = price != null ? `$${price}` : price;
   const timeFormat = "h:mm A";
   const actualTime =
@@ -55,15 +55,20 @@ const ActivitySingle = (props: ActProps) => {
             />
             <img className="activity-save" src={Save}></img>
           </div>
-          <ActivityProperty
+          {/* <ActivityProperty
             label={"Price"}
             value={formattedPrice}
             className={"activity-price"}
-          />
+          /> */}
           <ActivityProperty
             label={"Location"}
             value={location}
             className={"activity-location"}
+          />
+          <ActivityProperty
+            label={"Suburb"}
+            value={generalLocation}
+            className={"activity-general-location"}
           />
         </div>
       </div>

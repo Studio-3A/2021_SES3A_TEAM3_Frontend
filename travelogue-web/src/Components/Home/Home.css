@@ -1,7 +1,8 @@
 .Home {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .top {
@@ -15,7 +16,7 @@
 
 .body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #FFFFFF;
     background-blend-mode: multiply;
     align-items: center;

@@ -56,15 +56,27 @@
     font-size:30px;
     font-style: bold;
     font-weight: 600;
+    margin-left: 20px;
 }
 .activity-name{
     font-size: 35px;
     font-style: bold;
     font-weight: 600;
+    margin-left: 20px;
 }
+
 .activity-location{
     font-size: 20px;
     font-weight: 600;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.activity-general-location{
+    margin-top: 90px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 600; 
 }
 
 .main{
