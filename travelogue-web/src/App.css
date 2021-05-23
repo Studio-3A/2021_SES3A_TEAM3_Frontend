@@ -23,7 +23,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -68,8 +68,14 @@ Website Standard Style Sheet css
 }
 
 .card-shadow:hover {
-  box-shadow: 0px 30px 60px;
-  transition: .5s;
+  box-shadow:
+  0 3.2px 2.1px -32px rgba(0, 0, 0, 0.102),
+  0 8px 5.2px -32px rgba(0, 0, 0, 0.146),
+  0 16.3px 10.6px -32px rgba(0, 0, 0, 0.184),
+  0 33.6px 21.9px -32px rgba(0, 0, 0, 0.228),
+  0 92px 60px -32px rgba(0, 0, 0, 0.33)
+;
+  transition: .3s;
 }
 
 /* Radius */
@@ -270,7 +276,7 @@ hr {
 
 .menu-items {
   display: flex;
-  width: 33%;
+  width: 39%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

@@ -10,12 +10,17 @@
     margin-right: 5%;
 }
 .activity-card{
-    background-image: url('../../../Images/home-card-bg2.svg');
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ),
+      /* your image */
+      url('../../../Images/home-card-bg2.svg');
     background-repeat: no-repeat;
     color:white;
     background-size: cover;
+    padding: 2%;
 }
-
 .activity-description{
     display: flex;
     flex-direction: column;
@@ -53,7 +58,7 @@
     font-weight: 600;
 }
 .activity-name{
-    font-size: 40px;
+    font-size: 35px;
     font-style: bold;
     font-weight: 600;
 }
@@ -124,4 +129,11 @@
       display: flex;
       justify-content: space-between;
       flex-direction: row;
+      width: 85%;
   }
+
+.activity-name-save img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
