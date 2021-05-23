@@ -4,7 +4,7 @@
   "trip": [
     {
       "types": ["lodging", "bar", "point_of_interest", "establishment"],
-      "name": "Melton Hotel",
+      "name": "Melton Hotel Is This Test Trip Location",
       "rating": 3.7,
       "price": 150,
       "location": "163 Parramatta Road, Auburn",

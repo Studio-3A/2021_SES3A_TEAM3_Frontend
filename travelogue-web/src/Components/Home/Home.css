@@ -129,11 +129,10 @@
 }
 
 .location-card-div {
-    margin-top: 30px;
-    margin-left: 30px;
     overflow: hidden;
     align-items: center;
     display: flex;
+    padding: 2vh 30px 14vh 30px;
 }
 
 .home-recommendations {
@@ -154,6 +153,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 3vh 0 14vh 0;
 }
 
 .location-card-text2 {
