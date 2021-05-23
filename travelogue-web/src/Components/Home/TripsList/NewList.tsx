@@ -7,37 +7,32 @@ import LocationImage2 from '../../../Images/home-card-bg2.svg';
 
 function NewList() {
   return (
-    <Grid
-      container
-      direction='row'
-      justify='flex-start'
-      alignItems='flex-start'
-    >
-      <Grid item>
+    <div className='new-list-content'>
+      <div>
         <LocationCard
           placeName='Australia Camp'
           price='$100'
           location='Sydney, Australia'
-          image={LocationImage1}
+          
         />
-      </Grid>
-      <Grid item className='spacer-left2'>
+      </div>
+      <div className='spacer-left2'>
         <LocationCard
           placeName='Australia Camp'
           price='$100'
           location='Sydney, Australia'
-          image={LocationImage2}
+          
         />
-      </Grid>
-      <Grid item className='spacer-left2'>
+      </div>
+      <div className='spacer-left2'>
         <LocationCard
           placeName='Australia Camp'
           price='$100'
           location='Sydney, Australia'
-          image={LocationImage1}
+          
         />
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 }
 

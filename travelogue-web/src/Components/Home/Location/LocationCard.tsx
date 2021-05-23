@@ -1,4 +1,4 @@
-import '../Home.css';
+import './LocationCard.css';
 
 import LocationIcon from '../../../Images/location-ico2.svg';
 
@@ -6,16 +6,11 @@ interface State {
   placeName: string;
   price: string;
   location: string;
-  image: string;
 }
 
 function LocationCard(props: State) {
   return (
-    <div className="location-card card card-shadow">
-      <div>
-        <div className="location-card-media  activity-img-backdrop">
-          <img src={props.image} className="image1" alt="location-image1" />
-        </div>
+    <div className="card card-shadow">
         <div className="location-card-content">
           <p className="location-card-text1">{props.placeName}</p>
           <br />
@@ -34,7 +29,6 @@ function LocationCard(props: State) {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }

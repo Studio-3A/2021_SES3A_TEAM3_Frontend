@@ -1,5 +1,4 @@
 .activity-block {
-
     height: auto;
     margin-bottom: 3.5%;
     flex-direction: row;
@@ -11,20 +10,17 @@
     margin-right: 5%;
 }
 .activity-card{
-    background-image: url('../../../Images/home-card-bg2.svg');
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ),
+      /* your image */
+      url('../../../Images/home-card-bg2.svg');
     background-repeat: no-repeat;
-    color: white;
+    color:white;
     background-size: cover;
-   
+    padding: 2%;
 }
-
-.activity-img-backdrop {
-    height: inherit;
-    border-radius: 25px;
-    background-color: rgba(0,0,0,0.5);
-    padding: 3.5%;
-}
-
 .activity-description{
     display: flex;
     flex-direction: column;
@@ -60,15 +56,27 @@
     font-size:30px;
     font-style: bold;
     font-weight: 600;
+    margin-left: 20px;
 }
 .activity-name{
-    font-size: 40px;
+    font-size: 35px;
     font-style: bold;
     font-weight: 600;
+    margin-left: 20px;
 }
+
 .activity-location{
     font-size: 20px;
     font-weight: 600;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.activity-general-location{
+    margin-top: 90px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 600; 
 }
 
 .main{
@@ -133,4 +141,11 @@
       display: flex;
       justify-content: space-between;
       flex-direction: row;
+      width: 85%;
   }
+
+.activity-name-save img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

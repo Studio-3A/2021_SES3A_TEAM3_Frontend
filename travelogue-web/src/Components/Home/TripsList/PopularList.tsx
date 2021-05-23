@@ -18,7 +18,6 @@ function PopularList() {
           placeName='Popular 1'
           price='$200'
           location='Melbourne, Australia'
-          image={LocationImage1}
         />
       </Grid>
       <Grid item className='spacer-left2'>
@@ -26,7 +25,6 @@ function PopularList() {
           placeName='Popular 2'
           price='$300'
           location='Queensland, Australia'
-          image={LocationImage2}
         />
       </Grid>
     </Grid>

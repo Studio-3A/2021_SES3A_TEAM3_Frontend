@@ -9,6 +9,10 @@ interface ActProps {
   activity: Activity;
 }
 
+interface IActivityProps {
+  trip: Activity[]
+}
+
 interface BitProps {
   label: string;
   value: string | number | undefined;
@@ -29,7 +33,7 @@ const ActivityProperty = ({className, value, displayLabel, label}: BitProps) => 
 };
 
 const ActivitySingle = (props: ActProps) => {
-  const { description, name, price, location, time, duration } = props.activity;
+  const { description, name, price, location, generalLocation, time, duration } = props.activity;
   const formattedPrice = price != null ? `$${price}` : price;
   const timeFormat = "h:mm A";
   const actualTime =
@@ -44,22 +48,27 @@ const ActivitySingle = (props: ActProps) => {
       <div className="activity-card card card-shadow">
         <div className="activity-img-backdrop">
           <div className="activity-name-save">
-          <ActivityProperty
-            label={"Name"}
-            value={name}
-            className={"activity-name"}
-          />
-          <img className="activity-save" src={Save}></img>
+            <ActivityProperty
+              label={"Name"}
+              value={name}
+              className={"activity-name"}
+            />
+            <img className="activity-save" src={Save}></img>
           </div>
-          <ActivityProperty
+          {/* <ActivityProperty
             label={"Price"}
             value={formattedPrice}
             className={"activity-price"}
-          />
+          /> */}
           <ActivityProperty
             label={"Location"}
             value={location}
             className={"activity-location"}
+          />
+          <ActivityProperty
+            label={"Suburb"}
+            value={generalLocation}
+            className={"activity-general-location"}
           />
         </div>
       </div>

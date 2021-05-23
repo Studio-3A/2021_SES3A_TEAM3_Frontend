@@ -16,9 +16,10 @@ import PopularList from './TripsList/PopularList';
 import RecList from './TripsList/RecList';
 import NavButtons from './NavButtons';
 import { Activities } from './Trips/Activities';
-import InteractiveMap from './Trips/InteractiveMap';
+import InteractiveMap from '../Common/InteractiveMap/InteractiveMap'
 import {Trip} from 'travelogue-utility';
 import { useAuth } from '../../firebase/Auth';
+import {setMarkers} from '../Common/InteractiveMap/InteractiveMapHelper';
 
 
 function FirstName() {
@@ -41,6 +42,24 @@ function FirstName() {
 // `;
 
 // TODO:
+
+function stylePopup(rawContent: any){
+    if (!rawContent.location) {
+        return rawContent
+    }
+    return (
+        <>
+            <h6>Location</h6>
+            <p>{rawContent.location}</p>
+            <h6>Name</h6>
+            <p>{rawContent.name}</p>
+            <h6>Rating</h6>
+            <p>{rawContent.rating}/5</p>
+            <h6>Type of Establishment</h6>
+            <p>{rawContent.types[0]}</p>
+        </>
+    )
+}
 const Home: FC = () => {
   const [trip, setTrip] = useState<Trip | undefined>(undefined);
   
@@ -62,8 +81,16 @@ const Home: FC = () => {
 
         {trip != null ? (
         <>
-          <div>
-            <InteractiveMap />
+          <div className="interactive-map">
+            {trip.directions && trip.directions[0].routes && trip.directions[0].routes[0].legs && trip.directions[0].routes[0].legs[0].start_location && 
+              <InteractiveMap 
+              width={1200} 
+              height={700} 
+              directions={trip.directions[0]} 
+              defaultZoom={7}
+              defaultDataMarkers={setMarkers(trip,stylePopup)} 
+              defaultLatLng={trip.directions[0].routes[0].legs[0].start_location} />
+            }
           </div>
 
           <div>

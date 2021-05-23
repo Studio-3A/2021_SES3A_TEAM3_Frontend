@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Home.css';
+import './Categories.css';
 
 interface CategoryProps {
   selected: SelectedCategory;

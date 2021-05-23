@@ -35,10 +35,10 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
                 });
             });
         } else {
-            auth.signOut();
-            alert(`User is already signed in as '${auth.user.displayName}'`);
+            //auth.signOut();
+            //alert(`User is already signed in as '${auth.user.displayName}'`);
             showModal(false);
-            window.location.href = "/settings";
+            window.location.href = "/home";
         }
         // What does this do??? It's returning a JSX fragment from within a non-rendering function?
         return  <Redirect to='/history'/>      

@@ -23,8 +23,9 @@ input::-webkit-inner-spin-button {
   text-align: center;
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .App-header {
@@ -67,13 +68,15 @@ Website Standard Style Sheet css
   box-shadow: 0px 15px 30px rgba(52, 154, 246, 0.6);
 }
 
-.card-shadow {
- box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
- transition-duration: 0.4s;
-}
-
 .card-shadow:hover {
-  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.35);
+  box-shadow:
+  0 3.2px 2.1px -32px rgba(0, 0, 0, 0.102),
+  0 8px 5.2px -32px rgba(0, 0, 0, 0.146),
+  0 16.3px 10.6px -32px rgba(0, 0, 0, 0.184),
+  0 33.6px 21.9px -32px rgba(0, 0, 0, 0.228),
+  0 92px 60px -32px rgba(0, 0, 0, 0.33)
+;
+  transition: .3s;
 }
 
 /* Radius */
@@ -274,7 +277,7 @@ hr {
 
 .menu-items {
   display: flex;
-  width: 33%;
+  width: 39%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

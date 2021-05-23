@@ -9,7 +9,7 @@
   justify-content: flex-start;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
+  background: linear-gradient( #4B7ADE 0%, #3599F6 100% );
 }
 
   .iconContainer{
@@ -79,7 +79,7 @@
   justify-content: flex-start;
   min-height: 100vh;
   max-width: 12.2vw;
-  background-color: linear-gradient(180deg, #4B7ADE 0%, #3599F6 100%);
+  background: linear-gradient( #4B7ADE 0%, #3599F6 100% );
 }
 
 .navHeader {
