@@ -10,7 +10,7 @@ interface State {
 
 function LocationCard(props: State) {
   return (
-    <div className="location-card card-shadow">
+    <div className="card card-shadow">
         <div className="location-card-content">
           <p className="location-card-text1">{props.placeName}</p>
           <br />
