@@ -14,10 +14,6 @@ export default function CommentList(props: any) {
           Be the first to comment
         </div>
       ) : null}
-
-      {props.comments.map((comment, index) => (
-        <Comment key={index} comment={comment} />
-      ))}
     </div>
   );
 }

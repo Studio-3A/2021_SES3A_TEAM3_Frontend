@@ -1,1 +1,22 @@
-/*add styling once component is done*/
+.container {
+}
+
+.container-cards {
+    padding-left: 200px;
+    padding-top: 50px;
+  }
+
+.comment-form {
+  padding-left: 200px;
+  padding-top: 20px;
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}

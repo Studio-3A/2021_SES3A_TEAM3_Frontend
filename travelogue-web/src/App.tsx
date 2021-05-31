@@ -59,6 +59,15 @@ function App() {
         />
         <Route
           exact={true}
+          path="/social"
+          render={() => (
+            <div>
+              <Comments />
+            </div>
+          )}
+        />
+        <Route
+          exact={true}
           path="/settings"
           render={() => <div className="App"></div>}
         />
