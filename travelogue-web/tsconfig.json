@@ -27,5 +27,6 @@
   },
   "include": [
     "src"
-, "IRoute.ts"  ]
+, "IRoute.ts"
+, "global.d.ts"  ]
 }
