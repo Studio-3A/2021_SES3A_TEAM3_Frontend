@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
-import About from './Components/About/About';
+import Feature from './Components/Feature/Feature';
 // import SavedTrips from './SavedTrips/SavedTrips';
 
 export interface IAppProps {
@@ -39,10 +39,10 @@ function App() {
         />
         <Route
           exact={true}
-          path='/about'
+          path='/feature'
           render={() => (
             <div>
-              <About />
+              <Feature />
             </div>
           )}
         />

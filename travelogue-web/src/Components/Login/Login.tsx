@@ -11,7 +11,7 @@ import { SignInWithSocialMedia } from '../../firebase/SignInWithSocialMedia';
 import { Link, Redirect } from 'react-router-dom';
 import { Providers } from '../../firebase/firebase';
 import { IAppProps } from '../../App';
-import About from '../About/About';
+import About from '../Feature/Feature';
 
 interface IProps {
     show?: boolean;
