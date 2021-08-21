@@ -283,10 +283,17 @@ hr {
   align-items: center;
 }
 
-.menu-items > div {
+.menu-items > a > div {
   font-weight: 700;
   font-size: 30px;
   text-align: center;
+  color: black;
+  text-decoration: none;
+  margin-right: 0.2em;
+}
+
+.menu-items > a:hover {
+  text-decoration: none;
 }
 
 /* Main-Content */

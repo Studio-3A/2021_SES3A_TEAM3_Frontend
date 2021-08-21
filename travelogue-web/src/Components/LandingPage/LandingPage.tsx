@@ -34,9 +34,15 @@ function frontPage() {
                 </div>
                 <div className="search"></div>
                 <div className="menu-items">
-                    <div className="menu-items-home">Home</div>
-                    <div className="menu-items-about">About</div>
-                    <div className="menu-items-features">Features</div>
+                    <Link to="/home">
+                        <div className="menu-items-home">Home</div>
+                    </Link>
+                    <Link to='/about'>
+                        <div className="menu-items-about">About</div>
+                    </Link>
+                    <Link to='/features'>
+                        <div className="menu-items-features">Features</div>
+                    </Link>
                     <Link to="/login">
                     <button className='menu-items-login btn-secondary' type='button'>
                     Login   
