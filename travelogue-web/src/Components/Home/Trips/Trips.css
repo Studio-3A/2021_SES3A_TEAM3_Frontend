@@ -1,0 +1,151 @@
+.activity-block {
+    height: auto;
+    margin-bottom: 3.5%;
+    flex-direction: row;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-left: 11%;
+    margin-right: 5%;
+}
+.activity-card{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ),
+      /* your image */
+      url('../../../Images/home-card-bg2.svg');
+    background-repeat: no-repeat;
+    color:white;
+    background-size: cover;
+    padding: 2%;
+}
+.activity-description{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin: 2%;
+    min-width: fit-content;
+    justify-content: space-around;
+}
+
+.activity-label{
+    margin-top: 2%;
+    margin-left: 0%;
+    min-width: fit-content;
+}
+
+.activity-save{
+    display: inline-block;
+}
+
+.activity-save:active{
+    filter: red;
+}
+.activity-save:focus{
+    filter: red;
+}
+
+.description-details-time .activity-label, .description-details-people .activity-label {
+    margin: auto 10px !important;
+}
+
+.activity-price{
+    font-size:30px;
+    font-style: bold;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.activity-name{
+    font-size: 35px;
+    font-style: bold;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.activity-location{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.activity-general-location{
+    margin-top: 90px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 600; 
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+}
+
+.header-text{
+    background-image: url('../../../Images/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    min-height: 28vh;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+.activities-tripday-block {
+    margin: 2% 0%;
+}
+.activities-block {
+    padding: 2%;
+}
+.description-details{
+    display: flex;
+}
+.description-buttons{
+    display: flex;
+    
+}
+.activity-description-label{
+    font-size: 40px;
+    font-style: bold;
+    color: #4B4B4B;
+}
+.description-details-time, .description-details-people{
+  display: flex;
+  flex-direction: row;
+  margin: 0 1%;
+}
+.section-label{
+    font-size: 60px;
+    font-weight: 800;
+    color: #4B4B4B;
+}
+
+.activity-block:nth-child(even) .activity-card {
+    grid-column: 2;
+  }
+  
+  .activity-block:nth-child(even) .activity-description {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .activity-block:nth-child(odd) .activity-description {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .activity-name-save {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 85%;
+  }
+
+.activity-name-save img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

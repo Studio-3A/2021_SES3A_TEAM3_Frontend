@@ -1,0 +1,28 @@
+.categories-grid {
+    width: 70%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.categories-text {
+    padding-right: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    color: #A2A2A2;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.categories-text-selected {
+    padding-right: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    cursor: pointer;
+    color: #4B4B4B;
+    text-decoration-line: underline;
+    transition: 0.3s;
+}
