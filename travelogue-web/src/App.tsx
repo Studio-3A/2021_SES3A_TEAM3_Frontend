@@ -7,7 +7,7 @@ import Login from './Components/Login/Login';
 //import About from './Components/About/About';
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
-// import SavedTrips from './SavedTrips/SavedTrips';
+import SavedTrips from './Components/Home/SavedTrips/SavedTrips';
 import { ProvideAuth } from "./firebase/Auth";
 
 export interface IAppProps {
@@ -69,7 +69,7 @@ function App() {
             render={() => (
               <div className='App'>
                 <NavBar />
-                {/* <SavedTrips /> */}
+                <SavedTrips />
               </div>
             )}
           />

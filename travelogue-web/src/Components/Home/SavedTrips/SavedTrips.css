@@ -1,0 +1,27 @@
+.container-s {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+}
+.saved-header {
+    display: flex;
+    flex-direction: row;
+}
+.saved-header-ico {
+    padding: 3%;
+}
+.saved-header-ico-img {
+    width: 125%;
+    height: auto;
+}
+.saved-header-title {
+    text-align:center;
+    font-size: 3.5rem;
+    margin: auto 0 auto 0;
+}
+.saved-body {
+    height: 100%;
+    width: 100%;
+}
