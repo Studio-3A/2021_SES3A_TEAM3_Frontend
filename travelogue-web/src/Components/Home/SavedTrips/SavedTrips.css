@@ -24,19 +24,27 @@
 .saved-body {
     height: 100%;
     width: 100%;
+    padding: 1%;
+
 }
 .saved-body-cards {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
 }
 .saved-activity-card {
     width: 10vw;
     height: 15vh;
+    margin: 1%;
+    min-width: 300px;
+    min-height: 150px;
 }
 .saved-activity-card-header {
-    width: 30%;
-    height: 70%;
+    width: 100%;
+    height: fit-content;
 }
 .saved-activity-card-body {
-
+    width:100%;
+    height: auto;
 }

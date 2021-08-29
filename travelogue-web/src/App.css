@@ -68,14 +68,12 @@ Website Standard Style Sheet css
   box-shadow: 0px 15px 30px rgba(52, 154, 246, 0.6);
 }
 
+.card-shadow {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 .card-shadow:hover {
-  box-shadow:
-  0 3.2px 2.1px -32px rgba(0, 0, 0, 0.102),
-  0 8px 5.2px -32px rgba(0, 0, 0, 0.146),
-  0 16.3px 10.6px -32px rgba(0, 0, 0, 0.184),
-  0 33.6px 21.9px -32px rgba(0, 0, 0, 0.228),
-  0 92px 60px -32px rgba(0, 0, 0, 0.33)
-;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   transition: .3s;
 }
 
@@ -84,13 +82,13 @@ Website Standard Style Sheet css
 .radius-sm {
   border-radius: 10px;
 }
-.radius-sm {
+.radius-m {
   border-radius: 14px;
 }
-.radius-sm {
+.radius-l {
   border-radius: 20px;  
 }
-.radius-sm {
+.radius-xl {
   border-radius: 30px;
 }
 
