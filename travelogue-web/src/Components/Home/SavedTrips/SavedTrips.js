@@ -1,13 +1,15 @@
 import '../../../App.css';
 import savedIcon from '../../svg/saved-ico.svg';
 import './SavedTrips.css';
+import React, { Component } from "react";
+import sTrips from './SavedTrips.json';
 //import tripBackground from '';
 
 
-const savedTrip = props => ( 
+const SavedTrip = (props) => (
     <div className="saved-activity-card radius-m card-shadow">
         <div className="saved-activity-card-header">
-            Hello
+            {props.trip.name}
             <hr/>
             { /* </div><img className="saved-activity-card-header-bg" src={tripBackground}> */}
         </div>
@@ -17,7 +19,7 @@ const savedTrip = props => (
                 { /* </div><img className="card-body-price-icon-img" src={}> */}
                 </div>
                 <div className="card-body-location-label">
-                    {props}
+                    {console.log(props)}
                 </div>
             </div>
             <div className="activity-card-body-description">
@@ -47,13 +49,19 @@ const savedTrip = props => (
     </div>
 )
 
-class SavedTrips extends component {
 
-    savedTripsList () {
-        
+class SavedTrips extends Component {
+
+    constructor() {
+        super();
+      }
+
+    tripsList () {
+        return sTrips.trip.map(currentTrip => {return <SavedTrip trip={currentTrip} key={currentTrip._id}/>})
     }
 
     render() {
+        return (
         <div className="container-s">
             <div className="saved-header">
                 <div className="saved-header-icon">
@@ -65,10 +73,11 @@ class SavedTrips extends component {
             </div>
             <div className="saved-body">
                 <div className="saved-body-cards">
-                    <Tickets />
+                    { this.tripsList() }
                 </div>
             </div>
         </div>
+        )
     }
 }
 export default SavedTrips;

@@ -1,0 +1,24 @@
+{
+    "trip": [
+            {
+            "types": ["lodging", "bar", "point_of_interest", "establishment"],
+            "name": "Melton Hotel Is This Test Trip Location",
+            "rating": 3.7,
+            "price": 150,
+            "location": "163 Parramatta Road, Auburn",
+            "duration": 64,
+            "description": "Lorem Ipsum",
+            "time": 1618642110,
+            "place_id": "238d7gbjnbeafschuqw"
+            },
+            {
+            "types": ["lodging", "point_of_interest", "establishment"],
+            "name": "Mercure Sydney Parramatta",
+            "rating": 4,
+            "location": "106 Hassall Street, Rosehill",
+            "duration": 125,
+            "time": 1618642235,
+            "place_id": "238d7gbfacjnschuqw"
+            }
+        ]
+}
