@@ -1,3 +1,5 @@
+//Co-authored-by: wasifhossainn <wasif.hossain@hotmail.com>
+
 import React, { useState, useEffect } from 'react';
 import LeaderBoardHeader from '../../assets/leaderboard.svg';
 
