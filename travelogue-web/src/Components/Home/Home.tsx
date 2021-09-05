@@ -18,13 +18,13 @@ import NavButtons from './NavButtons';
 import { Activities } from './Trips/Activities';
 import InteractiveMap from '../Common/InteractiveMap/InteractiveMap'
 import {Trip} from 'travelogue-utility';
-import { useAuth } from '../../firebase/Auth';
 import {setMarkers} from '../Common/InteractiveMap/InteractiveMapHelper';
+import { getUser } from '../../Auth/AuthContext';
 
 
 function FirstName() {
-  const auth = useAuth();
-  let username = auth.user?.displayName || '';
+  const user = getUser();
+  let username = user ? `${user.firstName} ${user?.lastName}` : ''
   let index = username.indexOf(' ');
 
   return username.substr(0, index);

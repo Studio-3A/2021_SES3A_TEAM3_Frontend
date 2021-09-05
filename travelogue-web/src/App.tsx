@@ -7,9 +7,6 @@ import Login from './Components/Login/Login';
 //import About from './Components/About/About';
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
-// import SavedTrips from './SavedTrips/SavedTrips';
-import { ProvideAuth } from "./firebase/Auth";
-
 export interface IAppProps {
   show?: boolean;
   onHide?: boolean;
@@ -19,7 +16,6 @@ function App() {
   return (
     <BrowserRouter>
       <React.Fragment>
-        <ProvideAuth>
           <Route
             exact={true}
             path='/'
@@ -102,7 +98,6 @@ function App() {
               </div>
             )}
           />
-        </ProvideAuth>
       </React.Fragment>
     </BrowserRouter>
   );

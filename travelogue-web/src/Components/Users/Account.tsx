@@ -5,7 +5,6 @@ import React, { FC, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import firebase from 'firebase';
-import { useAuth } from '../../firebase/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
 import './Account.css';
@@ -16,13 +15,12 @@ import ProfileIcon from "../../Images/profile-ico.svg";
 import EmailIcon from "../../Images/email-ico.svg";
 import ProfilePic from "../../Images/default-profile-ico.svg";
 import CameraIcon from '../../Images/camera-ico.svg';
-
-
+import { getUser } from '../../Auth/AuthContext';
 // TODO:
 const Account: FC = () => {
-    const auth = useAuth();
-    const [name] = useState<string>(auth.user?.displayName || '');
-    const [email] = useState<string>(auth.user?.email || '');
+    const user = getUser();
+    const [name] = useState<string>(user?.firstName || '');
+    const [email] = useState<string>(user?.googleId || '');
     const [sendEmails, setSendEmails] = useState(false)
 
     let onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -75,7 +73,7 @@ const Account: FC = () => {
                 <div className='account-body'>
                 <div className='profile-pic-div'>
                     <div>
-                    <img src={auth.user?.photoURL || ProfilePic} alt='profilePic' className='profile-img' />
+                    <img src={user?.userImage || ProfilePic} alt='profilePic' className='profile-img' />
                     <img src={CameraIcon} alt='cameraIcon' className='camera-icon' />
                     </div>
                     <div>
