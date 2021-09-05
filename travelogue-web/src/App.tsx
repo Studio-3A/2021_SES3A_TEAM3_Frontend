@@ -1,12 +1,13 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
-import NavBar from './Components/NavBar/NavBar';
-import Account from './Components/Users/Account';
-import Login from './Components/Login/Login';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import NavBar from "./Components/NavBar/NavBar";
+import Account from "./Components/Users/Account";
+import Login from "./Components/Login/Login";
+import LeaderBoard from "./Components/LeaderBoard/LeaderBoard";
 //import About from './Components/About/About';
-import LandingPage from './Components/LandingPage/LandingPage';
-import HomePage from './Components/Home/Home';
+import LandingPage from "./Components/LandingPage/LandingPage";
+import HomePage from "./Components/Home/Home";
 // import SavedTrips from './SavedTrips/SavedTrips';
 import { ProvideAuth } from "./firebase/Auth";
 
@@ -22,29 +23,38 @@ function App() {
         <ProvideAuth>
           <Route
             exact={true}
-            path='/'
+            path="/"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <LandingPage />
               </div>
             )}
           />
           <Route
             exact={true}
-            path='/home'
+            path="/home"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
                 <HomePage />
               </div>
             )}
           />
-
           <Route
             exact={true}
-            path='/about'
+            path="/LeaderBoard"
             render={() => (
-              <div className='App'>
+              <div className="App">
+                <NavBar />
+                <HomePage />
+              </div>
+            )}
+          />
+          <Route
+            exact={true}
+            path="/about"
+            render={() => (
+              <div className="App">
                 <NavBar />
               </div>
             )}
@@ -56,18 +66,18 @@ function App() {
           /> */}
           <Route
             exact={true}
-            path='/history'
+            path="/history"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
               </div>
             )}
           />
           <Route
             exact={true}
-            path='/saved'
+            path="/saved"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
                 {/* <SavedTrips /> */}
               </div>
@@ -75,9 +85,9 @@ function App() {
           />
           <Route
             exact={true}
-            path='/account'
+            path="/account"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
                 <Account />
               </div>
@@ -85,18 +95,18 @@ function App() {
           />
           <Route
             exact={true}
-            path='/settings'
+            path="/settings"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <NavBar />
               </div>
             )}
           />
           <Route
             exact={true}
-            path='/login'
+            path="/login"
             render={() => (
-              <div className='App'>
+              <div className="App">
                 <LandingPage />
                 <Login show={true} />
               </div>
