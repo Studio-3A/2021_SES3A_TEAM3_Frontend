@@ -24,7 +24,7 @@ import { getUser } from '../../Auth/AuthContext';
 
 function FirstName() {
   const user = getUser();
-  let username = user ? `${user.firstName} ${user?.lastName}` : ''
+  let username = user ? `${user.displayName}` : ''
   let index = username.indexOf(' ');
 
   return username.substr(0, index);

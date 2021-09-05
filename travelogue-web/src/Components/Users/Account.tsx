@@ -19,8 +19,8 @@ import { getUser } from '../../Auth/AuthContext';
 // TODO:
 const Account: FC = () => {
     const user = getUser();
-    const [name] = useState<string>(user?.firstName || '');
-    const [email] = useState<string>(user?.googleId || '');
+    const [name] = useState<string>(user?.displayName || '');
+    const [email] = useState<string>(user?.email || '');
     const [sendEmails, setSendEmails] = useState(false)
 
     let onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
