@@ -1,9 +1,10 @@
-//Co-authored by Wasif and Emanuel
+//Co-authored by Wasif and Emanuel 
 
 export { }; //trick TS into accepting below imports
 const mongoose = require("mongoose");
 const User = mongoose.model("users");
 
+// Logout function 
 module.exports = (app) => {
   app.post("/api/logout", (req: any, res: any) => {
     req.logout();
