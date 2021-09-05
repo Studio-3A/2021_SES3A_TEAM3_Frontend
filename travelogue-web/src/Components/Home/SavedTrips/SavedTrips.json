@@ -1,16 +1,6 @@
 {
     "trip": [
-            {
-            "types": ["lodging", "bar", "point_of_interest", "establishment"],
-            "name": "Melton Hotel Is This Test Trip Location",
-            "rating": 3.7,
-            "price": 150,
-            "location": "163 Parramatta Road, Auburn",
-            "duration": 64,
-            "description": "Lorem Ipsum",
-            "time": 1618642110,
-            "place_id": "238d7gbjnbeafschuqw"
-            },
+            
             {
             "types": ["lodging", "point_of_interest", "establishment"],
             "name": "Mercure Sydney Parramatta",
@@ -19,6 +9,49 @@
             "duration": 125,
             "time": 1618642235,
             "place_id": "238d7gbfacjnschuqw"
+            },
+            {
+                "types": ["lodging", "point_of_interest", "establishment"],
+                "name": "Metro Inn Ryde",
+                "rating": 3.7,
+                "location": "860 Victoria Road, Ryde",
+                "duration": 37,
+                "time": 1618642529,
+                "place_id": "238d7gbjnlschuqw"
+              },
+              {
+                "types": ["lodging", "point_of_interest", "establishment"],
+                "name": "PARKROYAL Parramatta",
+                "rating": 4.2,
+                "location": "30 Phillip Street, Parramatta",
+                "duration": 177,
+                "time": 1618642877,
+                "place_id": "238d7gbjns1chuqw"
+            },
+            {
+              "types": [
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+              ],
+              "name": "Steeds Club Grill & Bar",
+              "rating": 3.2,
+              "price": 344,
+              "location": "116-118 James Ruse Drive, Rosehill",
+              "duration": 94,
+              "time": 1618643141,
+              "place_id": "238d76gbjnschuqw"
+            },
+            {
+              "types": ["lodging", "point_of_interest", "establishment"],
+              "name": "Novotel Sydney Parramatta",
+              "rating": 3.9,
+              "location": "350 Church Street, Parramatta",
+              "duration": 112,
+              "time": 1618643292,
+              "place_id": "238da7gbjnschuqw"
             }
         ]
 }

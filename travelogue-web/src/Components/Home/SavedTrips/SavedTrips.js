@@ -9,9 +9,7 @@ import sTrips from './SavedTrips.json';
 const SavedTrip = (props) => (
     <div className="saved-activity-card radius-m card-shadow">
         <div className="saved-activity-card-header">
-            {props.trip.name}
-            <hr/>
-            { /* </div><img className="saved-activity-card-header-bg" src={tripBackground}> */}
+            <img className="saved-activity-card-header-bg" src={savedIcon}></img>
         </div>
         <div className="saved-activity-card-body ">
             <div className="activity-card-body-location">
@@ -19,18 +17,18 @@ const SavedTrip = (props) => (
                 { /* </div><img className="card-body-price-icon-img" src={}> */}
                 </div>
                 <div className="card-body-location-label">
-                    {console.log(props)}
+                    {props.trip.location}
                 </div>
             </div>
             <div className="activity-card-body-description">
-
+                {props.trip.description}
             </div>
             <div className="activity-card-body-price">
                 <div className="card-body-price-icon">
                 { /* </div><img className="card-body-price-icon-img" src={}> */}
                 </div>
                 <div className="card-body-price-label">
-
+                    {props.trip.price}
                 </div>
             </div>
             <div className="activity-card-body-no_people">
@@ -42,7 +40,9 @@ const SavedTrip = (props) => (
                 </div>
             </div>
             <div className="activity-card-body-view">
-
+                <button className="btn-secondary btn-shadow-blue">
+                    <b>View</b>
+                </button>
             </div>
             <hr/>
         </div>
