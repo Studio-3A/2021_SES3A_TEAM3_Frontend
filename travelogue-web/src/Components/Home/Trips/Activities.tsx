@@ -4,6 +4,7 @@ import { Activity, Trip } from "travelogue-utility";
 import People from "../../svg/activity-people.svg";
 import Clock from "../../svg/activity-clock.svg";
 import Save from "../../svg/card-save-icon.svg";
+import './Trips.css';
 
 interface ActProps {
   activity: Activity;
@@ -47,29 +48,33 @@ const ActivitySingle = (props: ActProps) => {
     <div className="activity-block">
       <div className="activity-card card card-shadow">
         <div className="activity-img-backdrop">
-          <div className="activity-name-save">
+          <div className="activity-card-top">
+            <div className="activity-name-save">
+              <ActivityProperty
+                label={"Name"}
+                value={name}
+                className={"activity-name"}
+              />
+              <img className="activity-save" src={Save}></img>
+            </div>
+            {/* <ActivityProperty
+              label={"Price"}
+              value={formattedPrice}
+              className={"activity-price"}
+            /> */}
             <ActivityProperty
-              label={"Name"}
-              value={name}
-              className={"activity-name"}
+              label={"Location"}
+              value={location}
+              className={"activity-location"}
             />
-            <img className="activity-save" src={Save}></img>
+            </div>
+          <div className="activity-card-bottom">
+            <ActivityProperty
+              label={"Suburb"}
+              value={generalLocation}
+              className={"activity-general-location"}
+            />
           </div>
-          {/* <ActivityProperty
-            label={"Price"}
-            value={formattedPrice}
-            className={"activity-price"}
-          /> */}
-          <ActivityProperty
-            label={"Location"}
-            value={location}
-            className={"activity-location"}
-          />
-          <ActivityProperty
-            label={"Suburb"}
-            value={generalLocation}
-            className={"activity-general-location"}
-          />
         </div>
       </div>
       <div className="activity-description">

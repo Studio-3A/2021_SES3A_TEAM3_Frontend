@@ -9,6 +9,7 @@
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+  min-width: 234px;
   background: linear-gradient( #4B7ADE 0%, #3599F6 100% );
 }
 

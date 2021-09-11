@@ -21,6 +21,16 @@
     background-size: cover;
     padding: 2%;
 }
+.activity-card-top{
+    display: flex;
+    flex-direction: column;
+}
+.activity-img-backdrop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
 .activity-description{
     display: flex;
     flex-direction: column;

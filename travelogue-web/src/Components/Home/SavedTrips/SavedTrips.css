@@ -26,6 +26,7 @@
     height: 100%;
     width: 100%;
     padding: 1%;
+    overflow: scroll;
 }
 .saved-body-cards {
     width: 100%;
@@ -34,13 +35,15 @@
     justify-content: center;
     text-align: left;
     flex-wrap: wrap;
+    
 }
 .saved-activity-card {
-    width: 10vw;
-    height: 15vh;
-    margin: 1%;
-    min-width: 500px;
-    min-height: 300px;
+    width: 18vw !important;
+    min-width: 260px !important;
+    height: 37vh !important;
+    min-height: 320px !important;
+    margin: 5%;
+    margin-top: 0px;
 }
 .saved-activity-card-header {
     width: 100%;
