@@ -113,14 +113,11 @@ const Home: FC = () => {
             </div> 
           </>
         )}
-        
-        {/* 
           <div>
             <div className="nav-button-div">
                 <NavButtons />
             </div> 
           </div>
-        */}
       </div>
     </div>
   );
