@@ -1,6 +1,16 @@
 {
   "tripId": "0",
   "tripName": "Sydney To Melbourne",
+  "startDate": 1618642110,
+  "endDate": 1618647705,
+  "startLocation": {
+    "lat": 33.8688,
+    "lng": 151.2093
+  },
+  "endLocation": {
+    "lat": 37.8136,
+    "lng": 144.9631
+  },
   "trip": [
     {
       "types": ["lodging", "bar", "point_of_interest", "establishment"],
@@ -11,7 +21,8 @@
       "duration": 64,
       "description": "Lorem Ipsum",
       "time": 1618642110,
-      "place_id": "238d7gbjnbeafschuqw"
+      "place_id": "238d7gbjnbeafschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -20,7 +31,8 @@
       "location": "106 Hassall Street, Rosehill",
       "duration": 125,
       "time": 1618642235,
-      "place_id": "238d7gbfacjnschuqw"
+      "place_id": "238d7gbfacjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -36,7 +48,8 @@
       "location": "317 Church Street, Parramatta",
       "duration": 156,
       "time": 1618642457,
-      "place_id": "238d7saddgbjnschuqw"
+      "place_id": "238d7saddgbjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -45,7 +58,8 @@
       "location": "860 Victoria Road, Ryde",
       "duration": 37,
       "time": 1618642529,
-      "place_id": "238d7gbjnlschuqw"
+      "place_id": "238d7gbjnlschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -54,7 +68,8 @@
       "location": "30 Phillip Street, Parramatta",
       "duration": 177,
       "time": 1618642877,
-      "place_id": "238d7gbjns1chuqw"
+      "place_id": "238d7gbjns1chuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -70,7 +85,8 @@
       "location": "116-118 James Ruse Drive, Rosehill",
       "duration": 94,
       "time": 1618643141,
-      "place_id": "238d76gbjnschuqw"
+      "place_id": "238d76gbjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -79,7 +95,8 @@
       "location": "350 Church Street, Parramatta",
       "duration": 112,
       "time": 1618643292,
-      "place_id": "238da7gbjnschuqw"
+      "place_id": "238da7gbjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -88,7 +105,8 @@
       "location": "116-118 James Ruse Drive, Rosehill",
       "duration": 136,
       "time": 1618643469,
-      "place_id": "238d7gbjnsvdsaschuqw"
+      "place_id": "238d7gbjnsvdsaschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -104,7 +122,8 @@
       "location": "3 Bridge Street, Epping",
       "duration": 66,
       "time": 1618643576,
-      "place_id": "238d7gbjnscsdafhuqw"
+      "place_id": "238d7gbjnscsdafhuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -113,7 +132,8 @@
       "location": "110-114 James Ruse Drive, Parramatta",
       "duration": 54,
       "time": 1618643788,
-      "place_id": "238d7gbjnrhhschuqw"
+      "place_id": "238d7gbjnrhhschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "bar", "point_of_interest", "establishment"],
@@ -123,7 +143,8 @@
       "location": "163 Parramatta Road, Auburn",
       "duration": 114,
       "time": 1618644061,
-      "place_id": "238d7gbtrwqjnschuqw"
+      "place_id": "238d7gbtrwqjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -132,7 +153,8 @@
       "location": "Cnr Parkes St And, Valentine Avenue, Parramatta",
       "duration": 142,
       "time": 1618644258,
-      "place_id": "238d7gbuyjnschuqw"
+      "place_id": "238d7gbuyjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
@@ -142,7 +164,8 @@
       "location": "22 Betty Cuthbert Avenue, Ermington",
       "duration": 118,
       "time": 1618644457,
-      "place_id": "238d7ggbjmabjnschuqw"
+      "place_id": "238d7ggbjmabjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -151,7 +174,8 @@
       "location": "18-40 Anderson Street, Parramatta",
       "duration": 46,
       "time": 1618644594,
-      "place_id": "238d7gbjnsmywchuqw"
+      "place_id": "238d7gbjnsmywchuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -160,7 +184,8 @@
       "location": "2/8 Hope Street, Rosehill",
       "duration": 92,
       "time": 1618644780,
-      "place_id": "238d7gbjngrewschuqw"
+      "place_id": "238d7gbjngrewschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -169,7 +194,8 @@
       "location": "1188 Victoria Road, West Ryde",
       "duration": 175,
       "time": 1618644985,
-      "place_id": "238d7gbjreqnschuqw"
+      "place_id": "238d7gbjreqnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -185,7 +211,8 @@
       "location": "317 Church Street, Parramatta",
       "duration": 89,
       "time": 1618645177,
-      "place_id": "238d7gbjnswtzchuqw"
+      "place_id": "238d7gbjnswtzchuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["lodging", "point_of_interest", "establishment"],
@@ -194,7 +221,8 @@
       "location": "1 Adamson Avenue, Dundas Valley",
       "duration": 131,
       "time": 1618645438,
-      "place_id": "hdsavdsdsvcdv"
+      "place_id": "hdsavdsdsvcdv",
+      "generalLocation": "hi"
     },
     {
       "types": ["tourist_attraction", "point_of_interest", "establishment"],
@@ -203,7 +231,8 @@
       "location": "5/1 Fleet Street, North Parramatta",
       "duration": 59,
       "time": 1618645595,
-      "place_id": "238d7gbqwtyjnschuqw"
+      "place_id": "238d7gbqwtyjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -218,7 +247,8 @@
       "location": "Shop 5/90 Morrison Road, Putney",
       "duration": 143,
       "time": 1618645839,
-      "place_id": "145sdfaseasd"
+      "place_id": "145sdfaseasd",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -234,7 +264,8 @@
       "location": "116-118 James Ruse Drive, Rosehill",
       "duration": 40,
       "time": 1618646086,
-      "place_id": "238d7gbjfsdhanschuqw"
+      "place_id": "238d7gbjfsdhanschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -250,7 +281,8 @@
       "location": "3 Bridge Street, Epping",
       "duration": 111,
       "time": 1618646361,
-      "place_id": "238d7gbjnsgndsfzxchuqw"
+      "place_id": "238d7gbjnsgndsfzxchuqw",
+      "generalLocation": "hi"
     },
     {
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
@@ -260,7 +292,8 @@
       "location": "22 Betty Cuthbert Avenue, Ermington",
       "duration": 69,
       "time": 1618646588,
-      "place_id": "238d7gbjnsfdshwchuqw"
+      "place_id": "238d7gbjnsfdshwchuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -277,7 +310,8 @@
       "location": "898-902 Victoria Road, West Ryde",
       "duration": 78,
       "time": 1618646769,
-      "place_id": "238d7degfmgbjnschuqw"
+      "place_id": "238d7degfmgbjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -294,7 +328,8 @@
       "location": "14 Betty Cuthbert Avenue, Ermington",
       "duration": 98,
       "time": 1618646941,
-      "place_id": "238d7gbwefhgjnschuqw"
+      "place_id": "238d7gbwefhgjnschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -311,7 +346,8 @@
       "location": "295 Quarry Road, Ryde",
       "duration": 157,
       "time": 1618647172,
-      "place_id": "238d7gbjwerynschuqw"
+      "place_id": "238d7gbjwerynschuqw",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -328,7 +364,8 @@
       "location": "369 North Rocks Road, North Rocks",
       "duration": 137,
       "time": 1618647407,
-      "place_id": "werrewrewrewscv"
+      "place_id": "werrewrewrewscv",
+      "generalLocation": "hi"
     },
     {
       "types": [
@@ -344,7 +381,8 @@
       "location": "135 George Street, Parramatta",
       "duration": 153,
       "time": 1618647705,
-      "place_id": "sfwg4hyrgfdbfdfeffs"
+      "place_id": "sfwg4hyrgfdbfdfeffs",
+      "generalLocation": "hi"
     }
   ]
 }

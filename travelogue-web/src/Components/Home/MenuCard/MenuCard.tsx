@@ -5,7 +5,7 @@ import CalendarIcon from "../../../Images/calendar-ico.svg";
 import BudgetIcon from "../../../Images/budget-ico.svg";
 import PeopleIcon from "../../../Images/people-ico.svg";
 import React, { useState } from "react";
-import PlacesAutocomplete from "react-places-autocomplete";
+//import PlacesAutocomplete from "react-places-autocomplete";
 import DatePicker from "react-datepicker";
 import {
   isErrorResponse,
@@ -15,9 +15,11 @@ import {
 } from "travelogue-utility";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
-import { generateTrip } from "../../BackEndLogic/APICaller";
+//import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
+//import { generateTrip } from "../../BackEndLogic/APICaller";
 import Swal from "sweetalert2";
+
+import testTrip from '../Trips/testtrip.json';
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
@@ -69,7 +71,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
     useState<Coordinate | undefined>(undefined);
 
   const handleLocationChange = async (value: string, type: Range) => {
-    const results = await geocodeByAddress(value);
+    /*const results = await geocodeByAddress(value);
     const latLng = await getLatLng(results[0]);
     if (type === Range.Start) {
       setStartAddress(value);
@@ -79,15 +81,24 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
       setEndCoordinate(latLng);
     } else {
       throw Error(`Unhandled location type ${type}`);
-    }
+    } */
   };
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
-    if (!startCoordinate || !endCoordinate) {
+
+    const startCoordinate = {
+      "lat": 33.8688,
+      "lng": 151.2093
+    }
+    const endCoordinate = {
+      "lat": 37.8136,
+      "lng": 144.9631
+    }
+    /*if (!startCoordinate || !endCoordinate) {
       // probably show some error here
       alert("Please enter start and end locations");
       return;
-    }
+    } */
     const tripObject: TripGenerationInputs = {
       tripName: "Sydney To Melbourne",
       startLocation: startCoordinate,
@@ -98,16 +109,18 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
       numberOfPeople: numPeople,
     };
 
-    const generatedTrip = await generateTrip(tripObject);
-    if (isErrorResponse(generatedTrip)) {
+    //const generatedTrip = await generateTrip(testTrip);
+    /*if (isErrorResponse(generatedTrip)) {
       Swal.fire({
         title: "Error",
         text: "Trip Generation Failed",
         icon: "error",
       });
     } else {
-      setTrip(generatedTrip);
-    }
+      setTrip(testTrip);
+    } */
+    setTrip(testTrip);
+  
   };
 
   const decrementNumPeople = () => {
@@ -128,7 +141,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
       <div className="searchtop">
         <div className="left-searchcard">
           <div className="inputbox">
-            <PlacesAutocomplete
+            {/*<PlacesAutocomplete
               value={startAddress}
               onChange={setStartAddress}
               onSelect={(v) => handleLocationChange(v, Range.Start)}
@@ -166,11 +179,11 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
                   </div>
                 </div>
               )}
-            </PlacesAutocomplete>
+                    </PlacesAutocomplete> */}
           </div>
           <hr className="line-vertical" />
           <div className="inputbox">
-            <PlacesAutocomplete
+            {/*<PlacesAutocomplete
               value={endAddress}
               onChange={setEndAddress}
               onSelect={(v) => handleLocationChange(v, Range.End)}
@@ -208,7 +221,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
                   </div>
                 </div>
               )}
-            </PlacesAutocomplete>
+                    </PlacesAutocomplete> */}
           </div>
         </div>
         <div className="left-searchcard">
