@@ -8,7 +8,9 @@
             "location": "106 Hassall Street, Rosehill",
             "duration": 125,
             "time": 1618642235,
-            "place_id": "238d7gbfacjnschuqw"
+            "place_id": "238d7gbfacjnschuqw",
+            "price": 250,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
             },
             {
                 "types": ["lodging", "point_of_interest", "establishment"],
@@ -17,7 +19,9 @@
                 "location": "860 Victoria Road, Ryde",
                 "duration": 37,
                 "time": 1618642529,
-                "place_id": "238d7gbjnlschuqw"
+                "place_id": "238d7gbjnlschuqw",
+                "price": 120,
+                "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
               },
               {
                 "types": ["lodging", "point_of_interest", "establishment"],
@@ -52,6 +56,17 @@
               "duration": 112,
               "time": 1618643292,
               "place_id": "238da7gbjnschuqw"
+            },
+            {
+              "types": ["restaurant", "food", "point_of_interest", "establishment"],
+              "name": "Subway",
+              "rating": 3.3,
+              "price": 1,
+              "location": "22 Betty Cuthbert Avenue, Ermington",
+              "duration": 118,
+              "time": 1618644457,
+              "place_id": "238d7ggbjmabjnschuqw",
+              "generalLocation": "hi"
             }
         ]
 }

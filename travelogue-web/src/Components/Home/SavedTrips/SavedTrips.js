@@ -3,15 +3,17 @@ import savedIcon from '../../svg/saved-ico.svg';
 import './SavedTrips.css';
 import React, { Component } from "react";
 import sTrips from './SavedTrips.json';
+import LocationIcon from '../../svg/location.svg';
 //import tripBackground from '';
 
 
 const SavedTrip = (props) => (
     <div className="saved-activity-card radius-m card-shadow">
         <div className="saved-activity-card-header">
-            <img className="saved-activity-card-header-bg" src={savedIcon}></img>
+            <div className="saved-activity-card-header-bg"><img className="card-header-save_icon" src={savedIcon}></img></div>
+            
         </div>
-        <div className="saved-activity-card-body ">
+        <div className="saved-activity-card-body">
             <div className="activity-card-body-location">
                 <div className="card-body-location-icon">  
                 { /* </div><img className="card-body-price-icon-img" src={}> */}
@@ -44,7 +46,6 @@ const SavedTrip = (props) => (
                     <b>View</b>
                 </button>
             </div>
-            <hr/>
         </div>
     </div>
 )
