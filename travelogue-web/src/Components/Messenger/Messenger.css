@@ -1,3 +1,5 @@
+ /* Chat  */
+
 .chat-col{
   right: -100vw;
   bottom: 0;
@@ -11,6 +13,7 @@
   padding-top: 15px;
   min-height: 100vh;
 }
+
 
 .chat-col.chat-opened {
   right: 0;
