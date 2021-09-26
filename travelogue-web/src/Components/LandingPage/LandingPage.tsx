@@ -12,6 +12,7 @@ import mobilePhone from "../svg/mobilePhone.svg";
 import blueSeparator from "../svg/blueSeparator.svg";
 import appleLogo from "../svg/appleLogo.svg";
 import googleLogo from '../svg/googleLogo.svg';
+import Header from './Header';
 
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';
@@ -23,33 +24,7 @@ function frontPage() {
             <img alt="" className="frontPageBlob2" src={blob2}/>
             <img alt="" className="frontPageBlob1" src={blob1}/>
         
-            <div className="header">
-                <div className="logo">
-                    <div className="logo-icon">
-                        <img alt="logo" className="logoIcon" src={Logo}></img>
-                    </div>
-                    <div className="logo-text">
-                        <p>Travelogue</p>
-                    </div>
-                </div>
-                <div className="search"></div>
-                <div className="menu-items">
-                    <Link to="/home">
-                        <div className="menu-items-home">Home</div>
-                    </Link>
-                    <Link to='/about'>
-                        <div className="menu-items-about">About</div>
-                    </Link>
-                    <Link to='/features'>
-                        <div className="menu-items-features">Features</div>
-                    </Link>
-                    <Link to="/login">
-                    <button className='menu-items-login btn-secondary' type='button'>
-                    Login   
-                    </button>
-                    </Link>
-                </div>
-            </div>
+            <Header />
             <div className="main-content">
                 <div className="view-landing">
                     <div className="view-landing-left">

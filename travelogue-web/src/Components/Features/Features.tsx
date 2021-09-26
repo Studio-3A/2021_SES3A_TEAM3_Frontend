@@ -1,83 +1,23 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import styled from "styled-components";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Features.css";
-import ProfilePic from "../../Images/default-profile-ico.svg";
+import './Features.css';
+import Header from '../LandingPage/Header';
+import blob2 from '../svg/frontpageBlob2.svg';
+import banner from '../svg/banner.svg';
+import star2 from '../svg/star-icon2.svg';
 
-const Body = styled.body`
-  background-color: white;
-  background-blend-mode: multiply;
-  display: flex;
-  flex-direction: column;
-  color: black;
-`;
-
-class Features extends React.Component<{}> {
-  render() {
+function Features() {
     return (
-      <BrowserRouter>
-        <Body className="body">
-          <div className="container">
-            <div className="row">
-              <div className="column-66">
-                <h1 className="xlarge-font">
-                  <b>Our Application</b>
-                </h1>
-                <h1 className="large-font">
-                  <b>Why download it?</b>
-                </h1>
-                <p>
-                  <span>text about travelogue</span> text about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about traveloguetext about
-                  travelogue text about traveloguetext about traveloguetext
-                  about travelogue text about traveloguetext about
-                  traveloguetext about travelogue text about traveloguetext
-                  about traveloguetext about travelogue text about
-                  traveloguetext about traveloguetext about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about travelogue
+        <div className='page1'>
+            <img alt='' className='frontPageBlob2' src={blob2} />
+            <Header />
+            <div className='banner-div'>
+                <p className='logo-text features-text'>
+                    <img id='features-star' src={star2} alt='star' />
+                    Features
                 </p>
-                <button className="button">Download Travelogue</button>
-              </div>
-              <div className="column-33">
-                <img src={ProfilePic}></img>
-              </div>
+                <img src={banner} id='features-banner' alt='square' />
             </div>
-          </div>
-          <div className="container">
-            <div className="row">
-            <div className="column-66">
-                <img src={ProfilePic}></img>
-              </div>
-              <div className="column-33">
-                <h1 className="xlarge-font">
-                  <b>Our Application</b>
-                </h1>
-                <h1 className="large-font">
-                  <b>Why download it?</b>
-                </h1>
-                <p>
-                  <span>text about travelogue</span> text about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about traveloguetext about
-                  travelogue text about traveloguetext about traveloguetext
-                  about travelogue text about traveloguetext about
-                  traveloguetext about travelogue text about traveloguetext
-                  about traveloguetext about travelogue text about
-                  traveloguetext about traveloguetext about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about travelogue
-                </p>
-                <button className="button">Download Travelogue</button>
-              </div>
-            </div>
-          </div>
-        </Body>
-      </BrowserRouter>
+        </div>
     );
-  }
 }
 
 export default Features;
