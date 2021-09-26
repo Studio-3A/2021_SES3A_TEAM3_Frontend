@@ -33,7 +33,7 @@ function frontPage() {
                     </div>
                 </div>
                 <div className="search">
-                <form className='search-form btn-shadow-black'>
+                <form className='search-form'>
                     <button type='submit' className='search-btn'>
                         <img src={Search}/>
                     </button>
@@ -46,9 +46,9 @@ function frontPage() {
                 </form>
                 </div>
                 <div className="menu-items">
-                    <div className="menu-items-home">Home</div>
-                    <div className="menu-items-about">About</div>
-                    <div className="menu-items-features">Features</div>
+                    <div className="menu-items-home menu-under">Home</div>
+                    <div className="menu-items-about menu-under">About</div>
+                    <div className="menu-items-features menu-under">Features</div>
                     <Link to="/login">
                     <button className='menu-items-login btn-secondary' type='button'>
                     Login   
@@ -133,15 +133,15 @@ automatically generate a trip for you. Downloadable app is below</p>
                                     <div className="apple-download card-shadow">
                                         <img alt="Apple Logo" src={appleLogo}/>
                                         <div>
-                                            <p className="ad-title">Download App</p>
-                                            <p className="ad-label">App Store</p>
+                                            <h4>Download App</h4>
+                                            <p>App Store</p>
                                         </div>
                                     </div>
                                     <div className="google-download card-shadow">
                                         <img alt="Google Logo" src={googleLogo}></img>
-                                        <div className="ad">
-                                            <p className="ad-title">Download App</p>
-                                            <p className="ad-label">App Store</p>
+                                        <div>
+                                            <h4>Download App</h4>
+                                            <p>App Store</p>
                                         </div>
                                     </div>
                                 </div>
@@ -149,8 +149,6 @@ automatically generate a trip for you. Downloadable app is below</p>
                             <div>
                                 <img alt="" className="mb-img" src={mobilePhone}></img>
                             </div>
-                            
-                            
                         </div>
                 </div>
                 </div>
