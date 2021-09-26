@@ -55,7 +55,14 @@
     justify-content: space-between;
     flex-direction: column;
     height: 20vh;
+    align-items: left;
+    text-align: left;
+    padding: 1% 5%;
+}
+
+.activity-card-body-view {
     align-items: center;
+    text-align: center;
 }
 
 .saved-activity-card-header-bg {

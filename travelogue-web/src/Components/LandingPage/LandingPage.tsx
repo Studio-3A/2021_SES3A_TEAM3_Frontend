@@ -12,7 +12,7 @@ import mobilePhone from "../svg/mobilePhone.svg";
 import blueSeparator from "../svg/blueSeparator.svg";
 import appleLogo from "../svg/appleLogo.svg";
 import googleLogo from '../svg/googleLogo.svg';
-
+import Search from '../svg/search.svg';
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';
 
@@ -32,7 +32,19 @@ function frontPage() {
                         <p>Travelogue</p>
                     </div>
                 </div>
-                <div className="search"></div>
+                <div className="search">
+                <form className='search-form btn-shadow-black'>
+                    <button type='submit' className='search-btn'>
+                        <img src={Search}/>
+                    </button>
+                    <input
+                        type='cust_search-text'
+                        className='search-input'
+                        placeholder='Search For Destinations...'
+                    />
+                    
+                </form>
+                </div>
                 <div className="menu-items">
                     <div className="menu-items-home">Home</div>
                     <div className="menu-items-about">About</div>

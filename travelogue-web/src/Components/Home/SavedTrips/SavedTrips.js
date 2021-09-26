@@ -19,7 +19,7 @@ const SavedTrip = (props) => (
                 { /* </div><img className="card-body-price-icon-img" src={}> */}
                 </div>
                 <div className="card-body-location-label">
-                    {props.trip.location}
+                    <h4><b>{props.trip.location}</b></h4>
                 </div>
             </div>
             <div className="activity-card-body-description">
@@ -30,7 +30,7 @@ const SavedTrip = (props) => (
                 { /* </div><img className="card-body-price-icon-img" src={}> */}
                 </div>
                 <div className="card-body-price-label">
-                    {props.trip.price}
+                    <b>Price: </b>${props.trip.price} per person
                 </div>
             </div>
             <div className="activity-card-body-no_people">
@@ -38,7 +38,7 @@ const SavedTrip = (props) => (
                 { /* </div><img className="card-body-no_people-icon-img" src={}> */}
                 </div>
                 <div className="card-body-no_people-label">
-
+                    <b>Number of people:</b> Suitable for up to {props.trip.people} people
                 </div>
             </div>
             <div className="activity-card-body-view">
