@@ -3,7 +3,9 @@ import savedIcon from '../../svg/saved-ico.svg';
 import './SavedTrips.css';
 import React, { Component } from "react";
 import sTrips from './SavedTrips.json';
-import LocationIcon from '../../svg/location.svg';
+import LocationIcon from '../../svg/location-ico.svg';
+import MoneyIcon from '../../svg/money-ico.svg';
+import PeopleIcon from '../../svg/people-ico.svg';
 //import tripBackground from '';
 
 
@@ -14,9 +16,9 @@ const SavedTrip = (props) => (
             
         </div>
         <div className="saved-activity-card-body">
-            <div className="activity-card-body-location">
-                <div className="card-body-location-icon">  
-                { /* </div><img className="card-body-price-icon-img" src={}> */}
+            <div className="activity-card-body-element">
+                <div className="card-body-icon">  
+                    <img className="card-body-icon-img" src={LocationIcon}/>
                 </div>
                 <div className="card-body-location-label">
                     <h4><b>{props.trip.location}</b></h4>
@@ -25,28 +27,29 @@ const SavedTrip = (props) => (
             <div className="activity-card-body-description">
                 {props.trip.description}
             </div>
-            <div className="activity-card-body-price">
-                <div className="card-body-price-icon">
-                { /* </div><img className="card-body-price-icon-img" src={}> */}
+            <div className="activity-card-body-element">
+                <div className="card-body-icon">
+                <img className="card-body-icon-img" src={MoneyIcon}/>
                 </div>
                 <div className="card-body-price-label">
                     <b>Price: </b>${props.trip.price} per person
                 </div>
             </div>
-            <div className="activity-card-body-no_people">
-                <div className="card-body-no_people-icon">
-                { /* </div><img className="card-body-no_people-icon-img" src={}> */}
+            <div className="activity-card-body-element">
+                <div className="card-body-icon">
+                <img className="card-body-icon-img" src={PeopleIcon}/>
                 </div>
                 <div className="card-body-no_people-label">
                     <b>Number of people:</b> Suitable for up to {props.trip.people} people
                 </div>
             </div>
-            <div className="activity-card-body-view">
+            
+        </div>
+        <div className="activity-card-body-view">
                 <button className="btn-secondary btn-shadow-blue">
                     <b>View</b>
                 </button>
             </div>
-        </div>
     </div>
 )
 

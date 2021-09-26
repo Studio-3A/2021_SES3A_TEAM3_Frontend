@@ -483,7 +483,6 @@ font-size: 3rem;
 }
 .ad-title {
   text-transform: uppercase;
-
 }
 
 
@@ -542,12 +541,12 @@ input[type=cust_search-text]::placeholder {
   content: '';
   display: block;
   margin: auto;
-  height: 3px;
+  height: 4px;
   width: 0px;
   background: transparent;
   transition: width .2s ease, background-color .2s ease;
 }
 .menu-under:hover:after {
   width: 100%;
-  background: linear-gradient(#14F1D9 0%,#3672F8 100%);
+  background: linear-gradient(to right,#14F1D9 0%,#3672F8 100%);
 }

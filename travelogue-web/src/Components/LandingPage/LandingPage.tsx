@@ -132,8 +132,8 @@ automatically generate a trip for you. Downloadable app is below</p>
                                 <div className="app-download">
                                     <div className="apple-download card-shadow">
                                         <img alt="Apple Logo" src={appleLogo}/>
-                                        <div>
-                                            <h4>Download App</h4>
+                                        <div className="apple-download-text">
+                                            <p>Download App</p>
                                             <p>App Store</p>
                                         </div>
                                     </div>

@@ -5,7 +5,7 @@ import People from "../../svg/activity-people.svg";
 import Clock from "../../svg/activity-clock.svg";
 import Save from "../../svg/card-save-icon.svg";
 import './Trips.css';
-
+/*
 interface ActProps {
   activity: Activity;
 }
@@ -19,9 +19,9 @@ interface BitProps {
   value: string | number | undefined;
   className?: string;
   displayLabel?: boolean;
-}
+} */
 
-const ActivityProperty = ({className, value, displayLabel, label}: BitProps) => {
+const ActivityProperty = ({className, value, displayLabel, label}) => {
   return (
     <>
       {value && (
@@ -33,7 +33,7 @@ const ActivityProperty = ({className, value, displayLabel, label}: BitProps) => 
   );
 };
 
-const ActivitySingle = (props: ActProps) => {
+const ActivitySingle = (props) => {
   const { description, name, price, location, generalLocation, time, duration } = props.activity;
   const formattedPrice = price != null ? `$${price}` : price;
   const timeFormat = "h:mm A";
@@ -114,21 +114,21 @@ const ActivitySingle = (props: ActProps) => {
   );
 };
 
-const TripDay = (props: TripProps) => {
+const TripDay = (props) => {
   return (
     <div className="tripday-block">
-      {props.trip.trip.map((a: Activity) => (
+      {props.trip.trip.map((a) => (
         <ActivitySingle activity={a} />
       ))}
     </div>
   );
 };
-
+/*
 interface TripProps {
   trip: Trip
-}
+} */
 
-export const Activities = (props: TripProps) => {
+export const Activities = (props) => {
   return (
     <div className="activities-block">
       <p className="section-label">Activities</p>
