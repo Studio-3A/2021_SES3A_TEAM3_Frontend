@@ -12,50 +12,19 @@ import mobilePhone from "../svg/mobilePhone.svg";
 import blueSeparator from "../svg/blueSeparator.svg";
 import appleLogo from "../svg/appleLogo.svg";
 import googleLogo from '../svg/googleLogo.svg';
-import Search from '../svg/search.svg';
+import Header from './Header';
+
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';
 
 function frontPage() {
     return (
         <div className="container-fp">
+            
             <div className="page1">
             <img alt="" className="frontPageBlob2" src={blob2}/>
             <img alt="" className="frontPageBlob1" src={blob1}/>
-        
-            <div className="header">
-                <div className="logo">
-                    <div className="logo-icon">
-                        <img alt="logo" className="logoIcon" src={Logo}></img>
-                    </div>
-                    <div className="logo-text">
-                        <p>Travelogue</p>
-                    </div>
-                </div>
-                <div className="search">
-                <form className='search-form'>
-                    <button type='submit' className='search-btn'>
-                        <img src={Search}/>
-                    </button>
-                    <input
-                        type='cust_search-text'
-                        className='search-input'
-                        placeholder='Search For Destinations...'
-                    />
-                    
-                </form>
-                </div>
-                <div className="menu-items">
-                    <div className="menu-items-home menu-under">Home</div>
-                    <div className="menu-items-about menu-under">About</div>
-                    <div className="menu-items-features menu-under">Features</div>
-                    <Link to="/login">
-                    <button className='menu-items-login btn-secondary' type='button'>
-                    Login   
-                    </button>
-                    </Link>
-                </div>
-            </div>
+            <Header />
             <div className="main-content">
                 <div className="view-landing">
                     <div className="view-landing-left">

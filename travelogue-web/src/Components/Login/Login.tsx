@@ -11,7 +11,7 @@ import { useAuth } from '../../firebase/Auth'
 import { Link, Redirect } from 'react-router-dom';
 import { Providers } from '../../firebase/firebase';
 import { IAppProps } from '../../App';
-import { About } from '../About/About';
+import About from '../About/About';
 
 const Login: FC<{show: boolean}> = ({ show }: any) => {
     const auth = useAuth();

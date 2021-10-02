@@ -4,11 +4,12 @@ import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
 import Login from './Components/Login/Login';
-//import About from './Components/About/About';
+import About from './Components/About/About';
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 import SavedTrips from './Components/Home/SavedTrips/SavedTrips';
 import { ProvideAuth } from "./firebase/Auth";
+import Features from './Components/Features/Features';
 
 export interface IAppProps {
   show?: boolean;
@@ -46,6 +47,17 @@ function App() {
             render={() => (
               <div className='App'>
                 <NavBar />
+                <About />
+              </div>
+            )}
+          />
+          <Route
+            exact={true}
+            path='/features'
+            render={() => (
+              <div className='App'>
+                <NavBar />
+                <Features />
               </div>
             )}
           />
