@@ -10,7 +10,7 @@ import './Trips/Trips.css';
 // Components
 import Header from './Header/Header';
 import MenuCard from './MenuCard/MenuCard';
-import Categories from './TripsCategories/Categories';
+import Categories, { SelectedCategory } from './TripsCategories/Categories';
 import NewList from './TripsList/NewList';
 import PopularList from './TripsList/PopularList';
 import RecList from './TripsList/RecList';
@@ -43,7 +43,7 @@ function FirstName() {
 
 // TODO:
 
-function stylePopup(rawContent){
+function stylePopup(rawContent: any){
     if (!rawContent.location) {
         return rawContent
     }
@@ -60,14 +60,14 @@ function stylePopup(rawContent){
         </>
     )
 }
-const Home = () => {
+const Home: FC = () => {
   const [trip, setTrip] = useState<Trip | undefined>(undefined);
   
   const [category, setCategory] = useState<SelectedCategory>('New');
 
-  const onCategoryClick = (category) => setCategory(category);
+  const onCategoryClick = (category: SelectedCategory) => setCategory(category);
 
-  const setTripProp = (trip) => setTrip(trip);
+  const setTripProp = (trip: Trip) => setTrip(trip);
 
   return (
     <div className='Home'>
@@ -113,11 +113,14 @@ const Home = () => {
             </div> 
           </>
         )}
+        
+        {/* 
           <div>
             <div className="nav-button-div">
                 <NavButtons />
             </div> 
           </div>
+        */}
       </div>
     </div>
   );

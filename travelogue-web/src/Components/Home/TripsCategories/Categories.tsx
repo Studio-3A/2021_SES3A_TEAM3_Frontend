@@ -1,12 +1,14 @@
 import React from 'react';
 import './Categories.css';
-/*
+
 interface CategoryProps {
   selected: SelectedCategory;
   onClick: (newCategory: SelectedCategory) => void;
-} */
+}
 
-function Categories({selected, onClick}) {
+export type SelectedCategory = 'New' | 'Popular' | 'Recommendations';
+
+function Categories({selected, onClick}: CategoryProps) {
   return (
     <div className='categories-grid'>
         <Category onClick={onClick} selected={selected} current={"New"}/>
@@ -15,11 +17,11 @@ function Categories({selected, onClick}) {
     </div>
   );
 }
-/*
+
 interface SingleCategoryProps extends CategoryProps {
     current: SelectedCategory;
-} */
-const Category = ({onClick, selected, current}) => {
+}
+const Category = ({onClick, selected, current}: SingleCategoryProps) => {
     return (
         <h6
             onClick={() => onClick(current)}
