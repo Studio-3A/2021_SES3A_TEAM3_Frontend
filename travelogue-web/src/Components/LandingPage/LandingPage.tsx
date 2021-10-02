@@ -16,8 +16,19 @@ import Header from './Header';
 
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';
+import { GetUser } from '../../Auth/AuthContext';
+import axios, { AxiosResponse } from 'axios';
 
 function frontPage() {
+    const user = GetUser();
+
+    const signOut = () => {
+        axios.get('http://localhost:5000/auth/logout', { withCredentials: true }).then((res: AxiosResponse) => {
+            if(res.data){
+                window.location.href = '/'
+            }
+        });
+    }
     return (
         <div className="container-fp">
             

@@ -11,19 +11,17 @@ import savedIcon from '../../Images/saved-ico.svg';
 import accountsIcon from '../../Images/accounts-ico.svg';
 import settingsIcon from '../../Images/settings-ico.svg';
 import logoutIcon from '../../Images/logout-ico.svg';
+import { GetUser } from '../../Auth/AuthContext';
 
-import { useAuth } from "../../firebase/Auth";
+
 
 function NavBar() {
-  const auth = useAuth();
-  const avatarURL = auth.user?.photoURL || defaultProfile;
+  const user = GetUser();
+  const avatarURL = user?.userImage || defaultProfile;
 
-  const logout = () => {
-    auth.signOut();
-  }
 
   return (
-    auth.user ? (
+    user ? (
     <div className='nav-content'>
       <div className='navbarCol'>
         <div className='navHeader'>
@@ -111,7 +109,7 @@ function NavBar() {
               </div>
             </Link>
 
-            <Link to='/' onClick={() => logout()}>
+            <Link to='/'>
               <div className='pageContainer'>
                 <div className='pageImage'>
                   <img alt='logoutIcon' src={logoutIcon} />

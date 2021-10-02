@@ -8,19 +8,19 @@ import About from './Components/About/About';
 import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 import SavedTrips from './Components/Home/SavedTrips/SavedTrips';
-import { ProvideAuth } from "./firebase/Auth";
 import Features from './Components/Features/Features';
 
+import { GetUser } from './Auth/AuthContext';
 export interface IAppProps {
   show?: boolean;
   onHide?: boolean;
 }
 
 function App() {
+  const user = GetUser();
   return (
     <BrowserRouter>
       <React.Fragment>
-        <ProvideAuth>
           <Route
             exact={true}
             path='/'
@@ -110,11 +110,14 @@ function App() {
             render={() => (
               <div className='App'>
                 <LandingPage />
-                <Login show={true} />
+                {
+                  user ? null :  ( < Login show={true} />)
+                    
+                }
+               
               </div>
             )}
           />
-        </ProvideAuth>
       </React.Fragment>
     </BrowserRouter>
   );
