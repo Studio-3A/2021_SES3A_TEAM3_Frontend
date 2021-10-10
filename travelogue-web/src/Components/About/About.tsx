@@ -20,10 +20,30 @@ function About() {
         </div>
       </div>
       <div className='page2'>
-        <p className="page-title">Our Mission</p>
+        <p className="page-title">Mission</p>
         <p className="page-label">What We Hope to Solve!</p>
         <div>
-          
+          <p>Helping organising trips with mates a very stressfree and enjoyable experience</p>
+        </div>
+        <p className="page-title">Goals</p>
+        <p className="page-label">Our Goals</p>
+        <div>
+
+          <div>
+            <img/>
+            <p>To introduce some spontaneuity in customer trip destinations</p>
+          </div>
+
+          <div>
+            <img/>
+            <p>Be the number one travel website in Australia</p>
+          </div>
+
+          <div>
+            <img/>
+            <p>Develop an inviting and collaborative working experience</p>
+          </div>
+
         </div>
       </div>
     </div>
