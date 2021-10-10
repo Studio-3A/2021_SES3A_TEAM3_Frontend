@@ -6,6 +6,7 @@ import Search from '../svg/search.svg';
 function Header() {
     return (
         <div className='header'>
+            <Link to='/'>
             <div className='logo'>
                 <div className='logo-icon'>
                     <img alt='logo' className='logoIcon' src={Logo}></img>
@@ -14,6 +15,7 @@ function Header() {
                     <p>Travelogue</p>
                 </div>
             </div>
+            </Link>
             <div className="search">
                 <form className='search-form'>
                     <button type='submit' className='search-btn'>

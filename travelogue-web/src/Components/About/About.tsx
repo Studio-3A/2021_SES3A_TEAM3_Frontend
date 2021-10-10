@@ -1,83 +1,33 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import styled from "styled-components";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./About.css";
-import ProfilePic from "../../Images/default-profile-ico.svg";
+import './About.css';
+import Header from '../LandingPage/Header';
+import blob2 from '../svg/frontpageBlob2.svg';
+import banner from '../svg/banner.svg';
+import star2 from '../svg/star-icon2.svg';
+import '../../App.css';
 
-const Body = styled.body`
-  background-color: white;
-  background-blend-mode: multiply;
-  display: flex;
-  flex-direction: column;
-  color: black;
-`;
-
-class About extends React.Component<{}> {
-  render() {
-    return (
-      <BrowserRouter>
-        <Body className="body">
-          <div className="container">
-            <div className="row">
-              <div className="column-66">
-                <h1 className="xlarge-font">
-                  <b>Our Application</b>
-                </h1>
-                <h1 className="large-font">
-                  <b>Why download it?</b>
-                </h1>
-                <p>
-                  <span>text about travelogue</span> text about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about traveloguetext about
-                  travelogue text about traveloguetext about traveloguetext
-                  about travelogue text about traveloguetext about
-                  traveloguetext about travelogue text about traveloguetext
-                  about traveloguetext about travelogue text about
-                  traveloguetext about traveloguetext about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about travelogue
-                </p>
-                <button className="button">Download Travelogue</button>
-              </div>
-              <div className="column-33">
-                <img src={ProfilePic}></img>
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-            <div className="column-66">
-                <img src={ProfilePic}></img>
-              </div>
-              <div className="column-33">
-                <h1 className="xlarge-font">
-                  <b>Our Application</b>
-                </h1>
-                <h1 className="large-font">
-                  <b>Why download it?</b>
-                </h1>
-                <p>
-                  <span>text about travelogue</span> text about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about traveloguetext about
-                  travelogue text about traveloguetext about traveloguetext
-                  about travelogue text about traveloguetext about
-                  traveloguetext about travelogue text about traveloguetext
-                  about traveloguetext about travelogue text about
-                  traveloguetext about traveloguetext about travelogue text
-                  about traveloguetext about traveloguetext about travelogue
-                  text about traveloguetext about travelogue
-                </p>
-                <button className="button">Download Travelogue</button>
-              </div>
-            </div>
-          </div>
-        </Body>
-      </BrowserRouter>
-    );
-  }
+function About() {
+  return (
+    <div className="container-fp">
+      <div className='page1'>
+        <img alt='' className='frontPageBlob2' src={blob2} />
+        <Header />
+        <div className='banner-div'>
+            <p className='logo-text features-text'>
+                <img id='features-star' src={star2} alt='star' />
+                About
+            </p>
+            <img src={banner} id='features-banner' alt='square' />
+        </div>
+      </div>
+      <div className='page2'>
+        <p className="page-title">Our Mission</p>
+        <p className="page-label">What We Hope to Solve!</p>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default About;
