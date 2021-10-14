@@ -1,0 +1,81 @@
+.leader-card {
+  width: 65%;
+  height: 100px;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: 2px solid #dbdbdb;
+  -webkit-box-shadow: 0px 9px 20px 3px rgba(26, 26, 26, 0.16);
+  -moz-box-shadow: 0px 9px 20px 3px rgba(26, 26, 26, 0.16);
+  box-shadow: 0px 9px 20px 3px rgba(26, 26, 26, 0.16);
+}
+
+.leader-card-square-bg {
+  background-color: #ff6464;
+  height: 100%;
+  float: left;
+  width: 100px;
+  overflow: hidden;
+}
+
+.leader-card-trophy {
+  height: 100%;
+  float: right;
+  margin-top: 11px;
+  width: 150px;
+  overflow: hidden;
+}
+
+
+.gold {
+  width: 50% !important;
+  position: relative;
+}
+
+.leader-title-txt {
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: left;
+  float: left;
+  margin-right: 30px;
+  font-size: 30px;
+  color: #8b9ca8;
+}
+
+.card-text {
+  font-size: 17px;
+  color: #596773;
+  font-weight: bold;
+  display: inline;
+  float: left;
+  margin-left: 20px;
+}
+
+.leader-points-text {
+  color: #15b987;
+  text-align: left;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+.leader-content {
+  width: 90%;
+}
+
+.rank {
+  float: left;
+  height: 100%;
+  background-color: #4d6bff;
+  width: 100px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+.rank * {
+  margin-top: 10px;
+}
+

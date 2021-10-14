@@ -9,6 +9,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 // import SavedTrips from './SavedTrips/SavedTrips';
 import { ProvideAuth } from "./firebase/Auth";
+import Leaderboard from './Components/Leaderboard/Leaderboard';
 
 export interface IAppProps {
   show?: boolean;
@@ -49,11 +50,18 @@ function App() {
               </div>
             )}
           />
-          {/* <Route
+
+          <Route
             exact={true}
             path='/leaderboard'
-            render={() => <About />}
-          /> */}
+            render={() => (
+              <div className='App'>
+                <NavBar />
+                <Leaderboard />
+              </div>
+            )}
+          />
+
           <Route
             exact={true}
             path='/history'
