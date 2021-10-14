@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { leaderboard } from '../../APIFetchers';
+import { leaderboard } from '../../APIFetchers';
 import LeaderBoardHeader from '../../Images/leaderboard.svg';
 
 import '../../App.css';
@@ -8,6 +8,7 @@ import './Leaderboard.css';
 
 
 import LeaderCard from '../Common/LeaderCard/LeaderCard';
+import { ContactSupportOutlined } from '@material-ui/icons';
 
 const LeaderBoard = () => {
   const [loading, setLoading] = useState(false);
@@ -15,19 +16,18 @@ const LeaderBoard = () => {
 
   const populateLeaderboard = async () => {
     setLoading(true);
-
+    console.log("Loading the scores");
     //Placeholder backend api skeleton code
-    // let leaders = await leaderboard();
-    // leaders = leaders.map((leader, i) => <LeaderCard key={leader.fullName} name={leader.fullName} xp={leader.experiencePoints} place={i} />);
-    // setTopUsers(leaders);
-    console.log(topUsers);
+    let leaders = await leaderboard();
+    leaders = leaders.map((leader: any, i: any) => <LeaderCard key={leader.firstName} name={leader.firstName} xp={leader.experiencePoints} place={i} />);
+    setTopUsers(leaders);
+    // console.log(topUsers);
     setLoading(false);
   }
 
-  //Populate leaderboard
-  // useEffect(() => {
-  //   populateLeaderboard();
-  // }, []);
+  useEffect(() => {
+    populateLeaderboard();
+  }, []);
 
   return (
     <div className='leaderboard'>
@@ -43,9 +43,6 @@ const LeaderBoard = () => {
         <h4 className='leader-subtitle'>
           These users have earned the most experience points by travelling!
         </h4>
-        <LeaderCard key={1} name={"Hello"} xp={4444} place={1} />
-        <LeaderCard key={1} name={"Hello"} xp={4444} place={1} />
-        <LeaderCard key={1} name={"Hello"} xp={4444} place={1} />
         {loading &&
           <div className="loading-card">
           </div>
