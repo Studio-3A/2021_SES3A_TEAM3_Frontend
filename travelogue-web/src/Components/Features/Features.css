@@ -23,3 +23,34 @@
 #features-star {
     margin-right: 0.5em;
 }
+
+.features-title1 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #5e90f9;
+}
+
+.features-title2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #343434;
+    margin-bottom: 1.5em;
+}
+
+.textWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.ft-hr {
+    margin-bottom: 3em;
+    border: 0;
+    border: 1px solid #bdbdbd;
+    width: 80%;
+}
+#waves {
+    opacity: 100%;
+}
