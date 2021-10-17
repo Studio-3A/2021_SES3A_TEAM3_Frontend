@@ -79,3 +79,8 @@
   margin-top: 10px;
 }
 
+.profile_pic {
+  position: absolute;
+  margin-left:-250px;
+  border-radius: 50px;
+}

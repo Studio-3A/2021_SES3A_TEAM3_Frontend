@@ -6,6 +6,9 @@ import bronze from '../../../Images/bronze.svg';
 import './LeaderCard.css';
 import rankone from '../../../Images/rankone.svg';
 
+import ProfilePic from "../../../Images/default-profile-ico.svg";
+import { useAuth } from '../../../firebase/Auth';
+
 interface IProps {
   name: String;
   xp: number;
@@ -17,10 +20,14 @@ const LeaderCard = ({ name, xp, place }: IProps) => {
   const colors = ['#01C48A', '#A051FB', '#FF995A'];
   const trophys = [gold, silver, bronze]
 
+  const auth = useAuth();
   return (
     <>
       <div className='leader-card'>
         <div className="rank" style={{ backgroundColor: colors[place] }}><p>{place + 1}</p></div>
+        <div className='profile-pic-div'>
+          {/* <img src={auth.user?.photoURL || ProfilePic} alt='profilePic' className='profile_pic' /> */}
+        </div>
         <div className='right-details'>
           <h4 className='leader-title-txt'>{name}</h4>
           <p className='leader-points-text'>{`${xp}XP`}</p>

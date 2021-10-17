@@ -9,6 +9,8 @@ import './Leaderboard.css';
 
 import LeaderCard from '../Common/LeaderCard/LeaderCard';
 import { ContactSupportOutlined } from '@material-ui/icons';
+// const ConfettiGenerator = require('confetti-js');
+import ConfettiGenerator from 'confetti-js';
 
 const LeaderBoard = () => {
   const [loading, setLoading] = useState(false);
@@ -19,7 +21,9 @@ const LeaderBoard = () => {
     console.log("Loading the scores");
     //Placeholder backend api skeleton code
     let leaders = await leaderboard();
-    leaders = leaders.map((leader: any, i: any) => <LeaderCard key={leader.firstName} name={leader.firstName} xp={leader.experiencePoints} place={i} />);
+    leaders = leaders.map((leader, i) => <LeaderCard key={leader.firstName} name={leader.firstName} xp={leader.experiencePoints} place={i} />);
+
+    // leaders = leaders.map((leader: any, i: any) => <LeaderCard key={leader.firstName} name={leader.firstName} xp={leader.experiencePoints} place={i} />);
     setTopUsers(leaders);
     // console.log(topUsers);
     setLoading(false);
@@ -27,10 +31,15 @@ const LeaderBoard = () => {
 
   useEffect(() => {
     populateLeaderboard();
+    const confettiSettings = { target: 'my-canvas' };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    return () => confetti.clear();
   }, []);
 
   return (
     <div className='leaderboard'>
+      <canvas id='my-canvas'></canvas>
       <img
         className='leaderboard-img'
         src={LeaderBoardHeader}

@@ -43,4 +43,12 @@
   margin-right: 25px;
 }
 
+#my-canvas {
+  z-index: -1;
+  float: left;
+  width: 100%;
+  left: 0;
+  height: 700px;
+  position: absolute;
+}
 
