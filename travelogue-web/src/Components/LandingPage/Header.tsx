@@ -55,7 +55,7 @@ function Header() {
                 </Link>
                 <Link to='/login'>
                     <button
-                        className='menu-items-login btn-secondary'
+                        className='menu-items-login btn-primary'
                         type='button'
                     >
                         Login

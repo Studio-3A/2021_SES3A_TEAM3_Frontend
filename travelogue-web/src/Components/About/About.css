@@ -1,0 +1,18 @@
+.goals-section {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+}
+.goals {
+    text-align: center;
+    margin: auto;
+}
+div.goals > div > p {
+    margin: 0 10px;
+}
+.page1-about {
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+}
