@@ -10,6 +10,7 @@ import HomePage from './Components/Home/Home';
 // import SavedTrips from './SavedTrips/SavedTrips';
 import { ProvideAuth } from "./firebase/Auth";
 import Leaderboard from './Components/Leaderboard/Leaderboard';
+import FriendList from './Components/FriendsList/FriendsList';
 
 export interface IAppProps {
   show?: boolean;
@@ -58,6 +59,17 @@ function App() {
               <div className='App'>
                 <NavBar />
                 <Leaderboard />
+              </div>
+            )}
+          />
+
+          <Route
+            exact={true}
+            path='/friendlist'
+            render={() => (
+              <div className='App'>
+                <NavBar />
+                <FriendList />
               </div>
             )}
           />
