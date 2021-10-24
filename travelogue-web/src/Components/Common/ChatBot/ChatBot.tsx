@@ -1,6 +1,6 @@
 import './ChatBot.css';
 import '../../../App.css';
-import star2 from '../../svg/chatbot.svg';
+import ChatBotIcon from '../../svg/chatbot.svg';
 
 function ChatBot() {
 
@@ -32,8 +32,7 @@ function ChatBot() {
                 <div className="cb-button">
                     
                     <div id="chatbot-btn" className="cb-button-ico" onClick={() => handleChatButton()}>
-                    <img src={star2} />
-  
+                    <img alt="Chat" src={ChatBotIcon} />
                     </div>
                 </div>
             </div>
