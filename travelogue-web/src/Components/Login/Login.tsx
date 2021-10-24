@@ -17,8 +17,11 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
         window.location.href = "/";
     };
 
-    const signIn = () => {
+    const signInWithGoogle = () => {
         window.open('http://localhost:5000/auth/google', '_self')
+    }
+    const signInWithMicrosoft = () => {
+        window.open('http://localhost:5000/auth/microsoft', '_self')
     }
     
     return (
@@ -35,8 +38,8 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
                                 <p className="heading">Login</p>
                                 <p className="tx">Get access to amazing features that will help you start your journey today.</p>
                                 <div className="signup-btns"> 
-                                    <GoogleSignUp className="signup-btn" onClick={signIn}/>
-                                    <MicrosoftSignup className="signup-btn" />
+                                    <GoogleSignUp className="signup-btn" onClick={signInWithGoogle}/>
+                                    <MicrosoftSignup className="signup-btn"  onClick={signInWithMicrosoft}/>
                                     <FacebookSignup className="signup-btn"/>
                                     <AppleSignUp className="signup-btn"/>
                                 </div>
