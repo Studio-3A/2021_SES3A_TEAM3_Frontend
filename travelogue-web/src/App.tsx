@@ -9,6 +9,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 import SavedTrips from './Components/Home/SavedTrips/SavedTrips';
 import Features from './Components/Features/Features';
+import ChatBot from './Components/Common/ChatBot/ChatBot';
 
 import { GetUser } from './Auth/AuthContext';
 export interface IAppProps {
@@ -20,15 +21,8 @@ function App() {
     const user = GetUser();
     return (
         <BrowserRouter>
-            <div>
-                <iframe
-                    allow='microphone;'
-                    width='350'
-                    height='430'
-                    src='https://console.dialogflow.com/api-client/demo/embedded/44cd97b1-9772-4c73-a472-204fbe864c8c'
-                ></iframe>
-            </div>
             <React.Fragment>
+                <ChatBot/>
                 <Route
                     exact={true}
                     path='/'
