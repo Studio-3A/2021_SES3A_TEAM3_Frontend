@@ -82,7 +82,7 @@ Website Standard Style Sheet css
 /* Radius */
 
 .radius-sm {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 .radius-m {
   border-radius: 14px;
@@ -97,15 +97,28 @@ Website Standard Style Sheet css
 /* Buttons */
 
 .btn-primary {
-    height: 30px;
-    width: 120px;
-    background: linear-gradient(115.74deg, #83c2fe 1.79%, #3672f8 100%);
-    border-radius: 30px;
-    border: none;
     text-align: center;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(115.74deg, #83C2FE 1.79%, #3672F8 100%);
+    border-radius: 6px;    
+    border: none;
+    font-weight: 700;
+    color: white;
+    font-size: 24px;
+    transition-duration: 0.4s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    min-width: 160px;
 }
 .btn-primary:disabled {
     background: #f0f3f5;
+}
+.btn-primary:hover {
+    background: linear-gradient(#83c2fe, #83c2fe);
+    transition-duration: 0.4s;
+    backface-visibility: hidden;
+    transition: background-color 1000ms linear;
 }
 
 hr {
@@ -113,15 +126,13 @@ hr {
 }
 
 .btn-secondary {
-    margin: 2%;
     text-align: center;
-    padding: 10px 0%;
-    width: 250px;
-    height: 56px;
-    background: linear-gradient(115.74deg, #14f1d9 1.79%, #3672f8 100%);
-    border-radius: 40px;
+    width: 300px;
+    height: 75px;
+    background: linear-gradient(115.74deg, #14F1D9 1.79%, #3672F8 100%);
+    border-radius: 6px;    
     border: none;
-    font-weight: 400;
+    font-weight: 700;
     color: white;
     font-size: 24px;
     transition-duration: 0.4s;
@@ -330,15 +341,16 @@ hr {
 }
 
 .left-title {
-    font-size: 5.2rem !important;
+    font-size: 7.2rem !important;
     color: #3672f8;
-    min-width: 200px;
+    min-width: 450px;
     font-weight: 700;
 }
 .left-description {
     color: #69a7fc;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 0.67em;
+    width: 80%;
 }
 
 .view-landing-right {
@@ -512,7 +524,7 @@ hr {
 
 .search-input{
   background: #F6F5F5;
-  width: 550px;
+  width: 23vw;
   height: 45px;
   border: none;
   border-top-right-radius: 30px;
@@ -552,6 +564,7 @@ input[type=cust_search-text]::placeholder {
   
 }
 
+
 .menu-under {
   display: inline-block;
   position: relative;
@@ -568,4 +581,8 @@ input[type=cust_search-text]::placeholder {
 .menu-under:hover:after {
   width: 100%;
   background: linear-gradient(to right,#14F1D9 0%,#3672F8 100%);
+}
+
+div.left-title > p > u {
+    text-underline-offset: 35%;
 }
