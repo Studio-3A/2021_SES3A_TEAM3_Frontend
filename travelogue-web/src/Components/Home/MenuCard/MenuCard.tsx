@@ -10,7 +10,9 @@ import DatePicker from 'react-datepicker';
 import { TripGenerationInputs, Coordinate, Trip } from 'travelogue-utility';
 import 'react-datepicker/dist/react-datepicker.css';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import axios from 'axios';
 import Swal from 'sweetalert2';
+import testTrip from '../Trips/testtrip.json';
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
@@ -93,9 +95,9 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
             budget: budget,
             numberOfPeople: numPeople,
         };
-        /*
-        const generatedTrip = await generateTrip(tripObject);
-        if (isErrorResponse(generatedTrip)) {
+
+        //axios.get('');
+        /*if (isErrorResponse(generatedTrip)) {
             Swal.fire({
                 title: 'Error',
                 text: 'Trip Generation Failed',
@@ -103,9 +105,8 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
             });
         } else {
             setTrip(generatedTrip);
-        }
-        setTrip(generatedTrip); 
-        }*/
+        } */
+        setTrip(testTrip);
     };
 
     const decrementNumPeople = () => {
