@@ -5,6 +5,7 @@ import CalendarIcon from "../../../Images/calendar-ico.svg";
 import BudgetIcon from "../../../Images/budget-ico.svg";
 import PeopleIcon from "../../../Images/people-ico.svg";
 import React, { useState } from "react";
+import { updatePoints } from '../../../APIFetchers';
 import PlacesAutocomplete from "react-places-autocomplete";
 import DatePicker from "react-datepicker";
 import {
@@ -83,31 +84,35 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
   };
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
-    if (!startCoordinate || !endCoordinate) {
-      // probably show some error here
-      alert("Please enter start and end locations");
-      return;
-    }
-    const tripObject: TripGenerationInputs = {
-      tripName: "Sydney To Melbourne",
-      startLocation: startCoordinate,
-      endLocation: endCoordinate,
-      startDate: startDate.getTime(),
-      endDate: endDate.getTime(),
-      budget: budget,
-      numberOfPeople: numPeople,
-    };
+    // if (!startCoordinate || !endCoordinate) {
+    //   // probably show some error here
+    //   alert("Please enter start and end locations");
+    //   return;
+    // }
+    // const tripObject: TripGenerationInputs = {
+    //   tripName: "Sydney To Melbourne",
+    //   startLocation: startCoordinate,
+    //   endLocation: endCoordinate,
+    //   startDate: startDate.getTime(),
+    //   endDate: endDate.getTime(),
+    //   budget: budget,
+    //   numberOfPeople: numPeople,
+    // };
 
-    const generatedTrip = await generateTrip(tripObject);
-    if (isErrorResponse(generatedTrip)) {
-      Swal.fire({
-        title: "Error",
-        text: "Trip Generation Failed",
-        icon: "error",
-      });
-    } else {
-      setTrip(generatedTrip);
-    }
+    const points = await updatePoints();
+    console.log("Current points updated", points)
+
+
+    // const generatedTrip = await generateTrip(tripObject);
+    // if (isErrorResponse(generatedTrip)) {
+    //   Swal.fire({
+    //     title: "Error",
+    //     text: "Trip Generation Failed",
+    //     icon: "error",
+    //   });
+    // } else {
+    //   setTrip(generatedTrip);
+    // }
   };
 
   const decrementNumPeople = () => {

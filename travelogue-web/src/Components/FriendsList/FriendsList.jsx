@@ -5,6 +5,8 @@ import FriendBG from '../../Images/friendlist.svg';
 import FriendCard from '../FriendCard/FriendCard';
 import Swal from "sweetalert2";
 
+import SkeletonCard from '../Common/SkeletonLoad/Skeleton';
+
 import Pagination from '../Common/Pagination/Pagination';
 
 import { getAllUsers, getFriendNames, addAFriend, removeFriend } from '../../APIFetchers';
@@ -27,13 +29,20 @@ const FriendsList = (props) => {
     let mates = await getFriendNames();
     setYourFriends(mates);
     let users = await getAllUsers();
+    console.log('Coolusers', users);
     users = users.map((user) => {
+      // if (mates) {
       const match = mates.find(i => i._id == user._id) !== undefined;
       return <div key={user._id}>
         {user.fullName.toLowerCase().includes(filter.toLowerCase()) &&
           <FriendCard name={user.fullName} xp={user.experiencePoints} id={user._id} addFriend={addFriends} removeFriend={removeFriends} isFriend={match} />}
       </div>
+      // }
+      // else {
+      //   return <div> </div>
+      // }
     });
+
     setFriendsList(users);
   }
 
@@ -52,6 +61,7 @@ const FriendsList = (props) => {
     if (addFriend.success) {
       Swal.fire(
         "Friend added",
+        "Hit them up with a favour!",
         "success"
       );
       populateFriendsList();
@@ -132,14 +142,19 @@ const FriendsList = (props) => {
           </button>
           <div className='friend-bg'>
 
-
-            <div>
-              {friendsList.length !== 0 ? <>
-                {friendsList.slice(indexOfFirstPost, indexOfLastPost)}
-                <Pagination postsPerPage={postsPerPage} totalUserCards={friendsList.length} paginate={paginate} />
-              </> : <h2 className="friends-placeholder-text">Go add some friends!</h2>}
-            </div>
-
+            {loading &&
+              <div className="loading-card">
+                <SkeletonCard />
+              </div>
+            }
+            {!loading &&
+              <div>
+                {friendsList.length !== 0 ? <>
+                  {friendsList.slice(indexOfFirstPost, indexOfLastPost)}
+                  <Pagination postsPerPage={postsPerPage} totalAvatarCards={friendsList.length} paginate={paginate} />
+                </> : <h2 className="friends-placeholder-text">Go add some friends!</h2>}
+              </div>
+            }
           </div>
         </div>
       </div>
