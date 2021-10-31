@@ -12,6 +12,7 @@ import accountsIcon from '../../Images/accounts-ico.svg';
 import settingsIcon from '../../Images/settings-ico.svg';
 import logoutIcon from '../../Images/logout-ico.svg';
 import { GetUser } from '../../Auth/AuthContext';
+import axios, { AxiosResponse } from 'axios';
 
 
 
@@ -19,6 +20,13 @@ function NavBar() {
   const user = GetUser();
   const avatarURL = user?.userImage || defaultProfile;
 
+  const signOut = () => {
+    axios.get('http://localhost:5000/auth/logout', { withCredentials: true }).then((res: AxiosResponse) => {
+        if(res.data){
+            window.location.href = '/'
+        }
+    });
+}
 
   return (
     user ? (
@@ -109,7 +117,7 @@ function NavBar() {
               </div>
             </Link>
 
-            <Link to='/'>
+            <Link to='/'  onClick={signOut}>
               <div className='pageContainer'>
                 <div className='pageImage'>
                   <img alt='logoutIcon' src={logoutIcon} />
