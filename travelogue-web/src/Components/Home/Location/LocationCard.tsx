@@ -12,7 +12,6 @@ function LocationCard(props: State) {
   return (
     <div className="activity-card card card-shadow">
      
-        <div className="location-card-content">
         <div className='activity-img-backdrop'>
           <p className="location-card-text1">{props.placeName}</p>
           <br />
@@ -29,7 +28,6 @@ function LocationCard(props: State) {
             <div>
               <p className="location-card-text3">{props.location}</p>
             </div>
-          </div>
         </div>
         </div>
     </div>
