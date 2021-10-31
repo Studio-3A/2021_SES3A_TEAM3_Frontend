@@ -68,6 +68,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
     const handleLocationChange = async (value: string, type: Range) => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
+        
         if (type === Range.Start) {
             console.log("Start Addy: " + value);
             setStartAddress(value);
@@ -98,6 +99,8 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
             budget: budget,
             numberOfPeople: numPeople,
         };
+
+        console.log(startDate.getTime);
 
         axios.post('http://localhost:5000/api/trip', tripObject, {withCredentials: true}).then((res: AxiosResponse) => {
             if(res.data){

@@ -6,7 +6,19 @@ import sTrips from './SavedTrips.json';
 import LocationIcon from '../../svg/location-ico.svg';
 import MoneyIcon from '../../svg/money-ico.svg';
 import PeopleIcon from '../../svg/people-ico.svg';
+import axios from 'axios';
 //import tripBackground from '';
+
+function getTripActivities(id) {
+    const body = {
+        savedTripID: id,
+    }
+    axios.post('http://localhost:5000/api/getUserVenuesTrip', body).then((res) => {
+        if(res){
+            console.log(res);
+        }
+    });
+}
 
 export const SavedTrip = (props) => (
     <div className='saved-activity-card radius-m card-shadow'>
@@ -15,6 +27,7 @@ export const SavedTrip = (props) => (
                 <img className='card-header-save_icon' src={savedIcon}></img>
             </div>
         </div>
+        <div className='saved-activity-card-body-el'>
         <div className='saved-activity-card-body'>
             <div className='activity-card-body-element'>
                 <div className='card-body-icon'>
@@ -22,19 +35,19 @@ export const SavedTrip = (props) => (
                 </div>
                 <div className='card-body-location-label'>
                     <h4>
-                        <b>{props.trip.location}</b>
+                        <b>{props.trip.startLocation} to {props.trip.endLocation}</b>
                     </h4>
                 </div>
             </div>
             <div className='activity-card-body-description'>
-                {props.trip.description}
+     
             </div>
             <div className='activity-card-body-element'>
                 <div className='card-body-icon'>
                     <img className='card-body-icon-img' src={MoneyIcon} />
                 </div>
                 <div className='card-body-price-label'>
-                    <b>Price: </b>${props.trip.price} per person
+                    <b>Dates:</b> {props.trip.startDate.split(",")[0].toLocaleString('en-GB')} <b>to</b> {props.trip.endDate.split(",")[0].toLocaleString('en-GB')}
                 </div>
             </div>
             <div className='activity-card-body-element'>
@@ -43,14 +56,15 @@ export const SavedTrip = (props) => (
                 </div>
                 <div className='card-body-no_people-label'>
                     <b>Number of people:</b> Suitable for up to{' '}
-                    {props.trip.people} people
+                     people
                 </div>
             </div>
         </div>
         <div className='activity-card-body-view'>
-            <button className='btn-secondary btn-shadow-blue'>
+            <button className='btn-secondary btn-shadow-blue' onClick={() => getTripActivities(props.trip._id)}>
                 <b>View</b>
             </button>
+        </div>
         </div>
     </div>
 );
@@ -58,15 +72,25 @@ export const SavedTrip = (props) => (
 class SavedTrips extends Component {
     constructor() {
         super();
+        this.state = {trips: []};
     }
 
-    tripsList() {
-        return sTrips.trip.map((currentTrip) => {
-            return <SavedTrip trip={currentTrip} key={currentTrip._id} />;
+    componentDidMount() {
+        axios.get('http://localhost:5000/api/getUserTrips', { withCredentials: true }).then((res) => {
+            if(res.data.data){
+                this.setState({ trips: res.data.data })
+            }
         });
     }
 
+    tripsList() {
+        return this.state.trips.map((currentTrip) => {
+            return <SavedTrip trip={currentTrip} key={currentTrip._id} />;
+        })
+    }
+
     render() {
+        
         return (
             <div className='container-s'>
                 <div className='saved-header'>
@@ -78,7 +102,7 @@ class SavedTrips extends Component {
                     </div>
                     <div className='saved-header-title'>
                         <span></span>
-                        <b>Saved Trips</b>
+                        <b>Trip History</b>
                     </div>
                 </div>
                 <div className='saved-body'>

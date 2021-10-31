@@ -59,7 +59,11 @@
     flex-direction: column;
     align-items: left;
     text-align: left;
-    padding: 1% 5%;
+    padding: 0 5%; 
+}
+
+.saved-activity-card-body-el {
+    padding-bottom: 5%;
 }
 
 .activity-card-body-view {
