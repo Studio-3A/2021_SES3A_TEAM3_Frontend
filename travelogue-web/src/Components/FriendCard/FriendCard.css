@@ -36,11 +36,17 @@
 
 .friend-points-text {
   color: #15b987;
-  clear: left;
   text-align: left;
-  margin-left: 20px;
   font-weight: bolder;
   font-size: 20px;
+  color: #15b987;
+  text-align: justify;
+  position: inherit;
+  margin-left: 120 px;
+  margin-top: 25 px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 30px;
 }
 
 .friend * {
@@ -103,10 +109,9 @@
   border-radius: 5px;
   width: 150px;
   border: none;
-  margin-top: -60px;
+  margin-top: -42px;
   margin-right: 40px;
   height: 40px;
   font-weight: 600;
   color: white;
-  cursor: pointer;
 }

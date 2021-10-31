@@ -7,6 +7,7 @@ import '../../App.css';
 import './Leaderboard.css';
 
 
+import SkeletonCard from '../Common/SkeletonLoad/Skeleton';
 import LeaderCard from '../Common/LeaderCard/LeaderCard';
 import { ContactSupportOutlined } from '@material-ui/icons';
 // const ConfettiGenerator = require('confetti-js');
@@ -54,6 +55,7 @@ const LeaderBoard = () => {
         </h4>
         {loading &&
           <div className="loading-card">
+            <SkeletonCard />
           </div>
         }
         {!loading &&

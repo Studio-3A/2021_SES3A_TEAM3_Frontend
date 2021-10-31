@@ -32,28 +32,28 @@ const FriendsList = (props) => {
     console.log('Coolusers', users);
     users = users.map((user) => {
       // if (mates) {
-      const match = mates.find(i => i._id == user._id) !== undefined;
-      return <div key={user._id}>
-        {user.fullName.toLowerCase().includes(filter.toLowerCase()) &&
-          <FriendCard name={user.fullName} xp={user.experiencePoints} id={user._id} addFriend={addFriends} removeFriend={removeFriends} isFriend={match} />}
-      </div>
+      // const match = mates.find(i => i._id == user._id) !== undefined;
+      // return <div key={user._id}>
+      //   {user.fullName.toLowerCase().includes(filter.toLowerCase()) &&
+      //     <FriendCard name={user.fullName} xp={user.experiencePoints} id={user._id} addFriend={addFriends} removeFriend={removeFriends} isFriend={match} />}
+      // </div>
       // }
       // else {
       //   return <div> </div>
       // }
     });
 
-    setFriendsList(users);
+    // setFriendsList(users);
   }
 
-  const populateYourFriends = async () => {
-    setLoading(true);
-    let users = yourFriends.map(user => <div key={user._id}>
-      {user.fullName.toLowerCase().includes(filter.toLowerCase()) &&
-        <FriendCard name={user.fullName} xp={user.experiencePoints} id={user._id} addFriend={addFriends} removeFriend={removeFriends} isFriend={true} />}
-    </div>)
-    setFriendsList(users);
-  }
+  // const populateYourFriends = async () => {
+  //   setLoading(true);
+  //   let users = yourFriends.map(user => <div key={user._id}>
+  //     {user.fullName.toLowerCase().includes(filter.toLowerCase()) &&
+  //       <FriendCard name={user.fullName} xp={user.experiencePoints} id={user._id} addFriend={addFriends} removeFriend={removeFriends} isFriend={true} />}
+  //   </div>)
+  //   setFriendsList(users);
+  // }
 
   const addFriends = async (key) => {
     let addFriend = await addAFriend(key);
@@ -102,14 +102,14 @@ const FriendsList = (props) => {
   };
 
   const showFriends = () => {
-    populateYourFriends();
+    // populateYourFriends();
   };
 
   const paginate = pageNumbers => setCurrentPage(pageNumbers);
 
   //update on launch and when filter changes
   useEffect(() => {
-    populateFriendsList();
+    // populateFriendsList();
   }, [filter]);
 
   //set loading to false AFTER friends list is updated
@@ -149,10 +149,14 @@ const FriendsList = (props) => {
             }
             {!loading &&
               <div>
-                {friendsList.length !== 0 ? <>
+                <FriendCard name={"James"} xp={1333334} id={12333} isFriend={true} />
+                <FriendCard name={"Greg"} xp={433553} id={124353} isFriend={true} />
+                <FriendCard name={"Raj"} xp={433553} id={124353} isFriend={true} />
+                <FriendCard name={"EK"} xp={433553} id={124353} isFriend={true} />
+                {/* {friendsList.length !== 0 ? <>
                   {friendsList.slice(indexOfFirstPost, indexOfLastPost)}
                   <Pagination postsPerPage={postsPerPage} totalAvatarCards={friendsList.length} paginate={paginate} />
-                </> : <h2 className="friends-placeholder-text">Go add some friends!</h2>}
+                </> : <h2 className="friends-placeholder-text">Go add some friends!</h2>} */}
               </div>
             }
           </div>
