@@ -38,7 +38,6 @@ const ActivitySingle = (props) => {
         description,
         name,
         price,
-        location,
         generalLocation,
         time,
         duration,
@@ -70,11 +69,6 @@ const ActivitySingle = (props) => {
               value={formattedPrice}
               className={"activity-price"}
             /> */}
-                        <ActivityProperty
-                            label={'Location'}
-                            value={location}
-                            className={'activity-location'}
-                        />
                     </div>
                     <div className='activity-card-bottom'>
                         <ActivityProperty
@@ -125,11 +119,7 @@ const ActivitySingle = (props) => {
 const TripDay = (props) => {
     return (
         <div className='tripday-block'>
-            {window.location.href.endsWith('features')
-                ? props.trip.trip
-                      .splice(0, 2)
-                      .map((a) => <ActivitySingle activity={a} />)
-                : props.trip.trip.map((a) => <ActivitySingle activity={a} />)}
+            {props.trip.data.trip.map((a) => <ActivitySingle key={a} activity={a} />)}
         </div>
     );
 };

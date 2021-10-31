@@ -112,7 +112,7 @@ function App() {
                     render={() => (
                         <div className='App'>
                             <LandingPage />
-                            {user ? null : <Login show={true} />}
+                            {user ? window.location.href = '/home' : <Login show={true}/>}
                         </div>
                     )}
                 />

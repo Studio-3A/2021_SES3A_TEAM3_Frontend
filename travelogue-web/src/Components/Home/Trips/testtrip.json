@@ -1,388 +1,228 @@
 {
-  "tripId": "0",
-  "tripName": "Sydney To Melbourne",
-  "startDate": 1618642110,
-  "endDate": 1618647705,
-  "startLocation": {
-    "lat": 33.8688,
-    "lng": 151.2093
-  },
-  "endLocation": {
-    "lat": 37.8136,
-    "lng": 144.9631
-  },
+  "tripId": "60aedc74-ab1d-464d-858c-2cc485a61a93",
+  "tripName": "Lalor VIC to Wollongong NSW with friends!",
+  "startDate": 1635644993905,
+  "endDate": 1635731393905,
+  "startLocation": "Lalor VIC",
+  "endLocation": "Wollongong NSW",
   "trip": [
-    {
-      "types": ["lodging", "bar", "point_of_interest", "establishment"],
-      "name": "Melton Hotel Is This Test Trip Location",
-      "rating": 3.7,
-      "price": 150,
-      "location": "163 Parramatta Road, Auburn",
-      "duration": 64,
-      "description": "Lorem Ipsum",
-      "time": 1618642110,
-      "place_id": "238d7gbjnbeafschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Mercure Sydney Parramatta",
-      "rating": 4,
-      "location": "106 Hassall Street, Rosehill",
-      "duration": 125,
-      "time": 1618642235,
-      "place_id": "238d7gbfacjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "meal_takeaway",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Restaurant 317",
-      "rating": 4,
-      "price": 257,
-      "location": "317 Church Street, Parramatta",
-      "duration": 156,
-      "time": 1618642457,
-      "place_id": "238d7saddgbjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Metro Inn Ryde",
-      "rating": 3.7,
-      "location": "860 Victoria Road, Ryde",
-      "duration": 37,
-      "time": 1618642529,
-      "place_id": "238d7gbjnlschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "PARKROYAL Parramatta",
-      "rating": 4.2,
-      "location": "30 Phillip Street, Parramatta",
-      "duration": 177,
-      "time": 1618642877,
-      "place_id": "238d7gbjns1chuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "bar",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Steeds Club Grill & Bar",
-      "rating": 3.2,
-      "price": 344,
-      "location": "116-118 James Ruse Drive, Rosehill",
-      "duration": 94,
-      "time": 1618643141,
-      "place_id": "238d76gbjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Novotel Sydney Parramatta",
-      "rating": 3.9,
-      "location": "350 Church Street, Parramatta",
-      "duration": 112,
-      "time": 1618643292,
-      "place_id": "238da7gbjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Rydges Parramatta",
-      "rating": 4,
-      "location": "116-118 James Ruse Drive, Rosehill",
-      "duration": 136,
-      "time": 1618643469,
-      "place_id": "238d7gbjnsvdsaschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "meal_takeaway",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Borrellis Italian Restaurant",
-      "rating": 4.2,
-      "price": 2,
-      "location": "3 Bridge Street, Epping",
-      "duration": 66,
-      "time": 1618643576,
-      "place_id": "238d7gbjnscsdafhuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Nesuto Parramatta Apartment Hotel",
-      "rating": 3.9,
-      "location": "110-114 James Ruse Drive, Parramatta",
-      "duration": 54,
-      "time": 1618643788,
-      "place_id": "238d7gbjnrhhschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "bar", "point_of_interest", "establishment"],
-      "name": "Melton Hotel",
-      "rating": 3.7,
-      "price": 1,
-      "location": "163 Parramatta Road, Auburn",
-      "duration": 114,
-      "time": 1618644061,
-      "place_id": "238d7gbtrwqjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Mantra Parramatta",
-      "rating": 3.8,
-      "location": "Cnr Parkes St And, Valentine Avenue, Parramatta",
-      "duration": 142,
-      "time": 1618644258,
-      "place_id": "238d7gbuyjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      "name": "Subway",
-      "rating": 3.3,
-      "price": 1,
-      "location": "22 Betty Cuthbert Avenue, Ermington",
-      "duration": 118,
-      "time": 1618644457,
-      "place_id": "238d7ggbjmabjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Holiday Inn Parramatta",
-      "rating": 4.1,
-      "location": "18-40 Anderson Street, Parramatta",
-      "duration": 46,
-      "time": 1618644594,
-      "place_id": "238d7gbjnsmywchuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "APX Parramatta",
-      "rating": 3.1,
-      "location": "2/8 Hope Street, Rosehill",
-      "duration": 92,
-      "time": 1618644780,
-      "place_id": "238d7gbjngrewschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Red Star Hotel West Ryde",
-      "rating": 3.6,
-      "location": "1188 Victoria Road, West Ryde",
-      "duration": 175,
-      "time": 1618644985,
-      "place_id": "238d7gbjreqnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "meal_takeaway",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Restaurant 317",
-      "rating": 4,
-      "price": 2,
-      "location": "317 Church Street, Parramatta",
-      "duration": 89,
-      "time": 1618645177,
-      "place_id": "238d7gbjnswtzchuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["lodging", "point_of_interest", "establishment"],
-      "name": "Adamson Avenue House",
-      "rating": 4.7,
-      "location": "1 Adamson Avenue, Dundas Valley",
-      "duration": 131,
-      "time": 1618645438,
-      "place_id": "hdsavdsdsvcdv",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["tourist_attraction", "point_of_interest", "establishment"],
-      "name": "Parramatta Female Factory",
-      "rating": 4.5,
-      "location": "5/1 Fleet Street, North Parramatta",
-      "duration": 59,
-      "time": 1618645595,
-      "place_id": "238d7gbqwtyjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "meal_takeaway",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "We Thai Cuisine",
-      "rating": 4.1,
-      "location": "Shop 5/90 Morrison Road, Putney",
-      "duration": 143,
-      "time": 1618645839,
-      "place_id": "145sdfaseasd",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "bar",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Steeds Club Grill & Bar",
-      "rating": 3.2,
-      "price": 3,
-      "location": "116-118 James Ruse Drive, Rosehill",
-      "duration": 40,
-      "time": 1618646086,
-      "place_id": "238d7gbjfsdhanschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "meal_takeaway",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Borrellis Italian Restaurant",
-      "rating": 4.2,
-      "price": 2,
-      "location": "3 Bridge Street, Epping",
-      "duration": 111,
-      "time": 1618646361,
-      "place_id": "238d7gbjnsgndsfzxchuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      "name": "Subway",
-      "rating": 3.3,
-      "price": 1,
-      "location": "22 Betty Cuthbert Avenue, Ermington",
-      "duration": 69,
-      "time": 1618646588,
-      "place_id": "238d7gbjnsfdshwchuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "gas_station",
-        "atm",
-        "finance",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Apex Petroleum",
-      "rating": 3.7,
-      "location": "898-902 Victoria Road, West Ryde",
-      "duration": 78,
-      "time": 1618646769,
-      "place_id": "238d7degfmgbjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "meal_delivery",
-        "meal_takeaway",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "OZ Pizza & Kebabs",
-      "rating": 3.9,
-      "price": 1,
-      "location": "14 Betty Cuthbert Avenue, Ermington",
-      "duration": 98,
-      "time": 1618646941,
-      "place_id": "238d7gbwefhgjnschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "gas_station",
-        "atm",
-        "finance",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "bp",
-      "rating": 3.3,
-      "location": "295 Quarry Road, Ryde",
-      "duration": 157,
-      "time": 1618647172,
-      "place_id": "238d7gbjwerynschuqw",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "gas_station",
-        "atm",
-        "finance",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "bp Truckstop",
-      "rating": 4.2,
-      "location": "369 North Rocks Road, North Rocks",
-      "duration": 137,
-      "time": 1618647407,
-      "place_id": "werrewrewrewscv",
-      "generalLocation": "hi"
-    },
-    {
-      "types": [
-        "bar",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "name": "Albion Hotel",
-      "rating": 3.6,
-      "price": 2,
-      "location": "135 George Street, Parramatta",
-      "duration": 153,
-      "time": 1618647705,
-      "place_id": "sfwg4hyrgfdbfdfeffs",
-      "generalLocation": "hi"
-    }
+      {
+          "types": [
+              "meal_takeaway",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Lorne St Fish & Chips (Lalor)",
+          "rating": 4.8,
+          "location": {
+              "lat": -37.673558,
+              "lng": 145.028245
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJuWkY-PNP1moRPIKISnG-W2k",
+          "generalLocation": "12 Lorne St, Lalor VIC 3075, Australia"
+      },
+      {
+          "types": [
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Hawkstowe Picnic Area",
+          "rating": 4.5,
+          "location": {
+              "lat": -37.6355288,
+              "lng": 145.1020622
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJyR9fUDZK1moRiTLQrmf5Uf0",
+          "generalLocation": "Nikola, Nioka Bush Camp Rd, South Morang VIC 3752, Australia"
+      },
+      {
+          "types": [
+              "rv_park",
+              "lodging",
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Wollongong Surf Leisure Resort",
+          "rating": 4.3,
+          "location": {
+              "lat": -34.3904043,
+              "lng": 150.9044422
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJ-S6xuCkZE2sRjYUpT9ysJzw",
+          "generalLocation": "201 Pioneer Rd, Fairy Meadow NSW 2519, Australia"
+      },
+      {
+          "types": [
+              "cafe",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "store",
+              "establishment"
+          ],
+          "name": "Mudcat Cafe",
+          "rating": 4.4,
+          "price": 2,
+          "location": {
+              "lat": -34.4148369,
+              "lng": 150.9005127
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJWaXLaQQZE2sRwfZ7zNfSbf0",
+          "generalLocation": "7/2-14 Cliff Rd, North Wollongong NSW 2500, Australia"
+      },
+      {
+          "types": [
+              "shopping_mall",
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Bunnings North South North Wollongong",
+          "rating": 3.6,
+          "location": {
+              "lat": -34.4186302,
+              "lng": 150.8908331
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJtbZNEkQZE2sRJU_mlB9F5wo",
+          "generalLocation": "Lot 205 Gipps St, Wollongong NSW 2500, Australia"
+      },
+      {
+          "types": [
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Viet'z eatery",
+          "rating": 4.9,
+          "location": {
+              "lat": -34.4249025,
+              "lng": 150.8922707
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJ-0IrefgZE2sR22sa21ImE3M",
+          "generalLocation": "234 Crown St, Wollongong NSW 2500, Australia"
+      },
+      {
+          "types": [
+              "aquarium",
+              "pet_store",
+              "point_of_interest",
+              "store",
+              "establishment"
+          ],
+          "name": "Bespoke Aquariums",
+          "rating": 4.6,
+          "location": {
+              "lat": -33.7656846,
+              "lng": 150.9093277
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJ8WhNTCOZEmsRoXSEZ98BPr4",
+          "generalLocation": "2/32 Third Ave, Blacktown NSW 2148, Australia"
+      },
+      {
+          "types": [
+              "cafe",
+              "bar",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "store",
+              "establishment"
+          ],
+          "name": "Bull & Bear Cafe - Restaurant",
+          "rating": 4.4,
+          "price": 2,
+          "location": {
+              "lat": -34.422216,
+              "lng": 150.893166
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJjepEVKYZE2sRJr_WYuxC5H0",
+          "generalLocation": "2A Victoria St, Wollongong NSW 2500, Australia"
+      },
+      {
+          "types": [
+              "bar",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Moominn",
+          "rating": 4.6,
+          "location": {
+              "lat": -34.4256114,
+              "lng": 150.8992391
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJVVUFL6kZE2sRtIXm8PtQC7w",
+          "generalLocation": "68 Crown St, Wollongong NSW 2500, Australia"
+      },
+      {
+          "types": [
+              "casino",
+              "liquor_store",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "store",
+              "establishment"
+          ],
+          "name": "Players @ Crown Hotel Surry Hills",
+          "rating": 5,
+          "location": {
+              "lat": -33.89133960000001,
+              "lng": 151.2126219
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJ99XSN-CxEmsR8iLIt9RniKI",
+          "generalLocation": "589 Crown St, Surry Hills NSW 2010, Australia"
+      },
+      {
+          "types": [
+              "lodging",
+              "point_of_interest",
+              "establishment"
+          ],
+          "name": "Mount Kembla Village Hotel",
+          "rating": 4.4,
+          "location": {
+              "lat": -34.4320803,
+              "lng": 150.8212942
+          },
+          "duration": 120,
+          "description": "Lorem Ipsem don't have this data",
+          "time": 1618642110,
+          "place_id": "ChIJGw8pRHsaE2sRVPclNNGdyfE",
+          "generalLocation": "274 Cordeaux Rd, Mount Kembla NSW 2526, Australia"
+      }
   ]
 }

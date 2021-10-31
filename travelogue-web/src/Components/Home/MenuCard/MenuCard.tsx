@@ -7,10 +7,10 @@ import PeopleIcon from '../../../Images/people-ico.svg';
 import React, { useState } from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import DatePicker from 'react-datepicker';
-import { TripGenerationInputs, Coordinate, Trip } from 'travelogue-utility';
+import { Trip } from 'travelogue-utility';
 import 'react-datepicker/dist/react-datepicker.css';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import Swal from 'sweetalert2';
 import testTrip from '../Trips/testtrip.json';
 
@@ -20,7 +20,7 @@ const searchOptions = {
     componentRestrictions: { country: 'au' },
 };
 interface MenuCardProps {
-    setTrip: (trip: Trip) => void;
+    setTrip: (trip: any) => void;
 }
 
 const MenuCard = ({ setTrip }: MenuCardProps) => {
@@ -58,10 +58,10 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
     const [numPeople, setNumPeople] = useState<number>(1);
 
     const [startCoordinate, setStartCoordinate] = useState<
-        Coordinate | undefined
+        String | undefined
     >(undefined);
 
-    const [endCoordinate, setEndCoordinate] = useState<Coordinate | undefined>(
+    const [endCoordinate, setEndCoordinate] = useState<String | undefined>(
         undefined
     );
 
@@ -69,32 +69,42 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
         if (type === Range.Start) {
+            console.log("Start Addy: " + value);
             setStartAddress(value);
-            setStartCoordinate(latLng);
+            //setStartCoordinate(latLng);
         } else if (type === Range.End) {
             setEndAddress(value);
-            setEndCoordinate(latLng);
+            //setEndCoordinate(latLng);
         } else {
             throw Error(`Unhandled location type ${type}`);
         }
     };
     const handleSubmit = async (evt: any) => {
         evt.preventDefault();
-
+/*
         if (!startCoordinate || !endCoordinate) {
             // probably show some error here
             alert('Please enter start and end locations');
             return;
-        }
-        const tripObject: TripGenerationInputs = {
+        } */
+        console.log("Start Addy: " + startAddress);
+        const eaddy = endAddress.split(',')[0].split(" ")
+        const tripObject: any = {
             tripName: 'Sydney To Melbourne',
-            startLocation: startCoordinate,
-            endLocation: endCoordinate,
+            startLocation: startAddress.split(',')[0],
+            endLocation: endAddress.split(',')[0],
             startDate: startDate.getTime(),
             endDate: endDate.getTime(),
             budget: budget,
             numberOfPeople: numPeople,
         };
+
+        axios.post('http://localhost:5000/api/trip', tripObject, {withCredentials: true}).then((res: AxiosResponse) => {
+            if(res.data){
+                console.log(res.data);
+                setTrip(res.data);
+            }
+        });
 
         //axios.get('');
         /*if (isErrorResponse(generatedTrip)) {
@@ -106,7 +116,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
         } else {
             setTrip(generatedTrip);
         } */
-        setTrip(testTrip);
+        
     };
 
     const decrementNumPeople = () => {
@@ -121,6 +131,10 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
         e.preventDefault();
         setNumPeople(Number(e.target.value));
     };
+
+    const generateTrip = () => {
+       
+    }
 
     return (
         <div className='searchcard'>
