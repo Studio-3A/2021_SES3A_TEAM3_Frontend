@@ -5,14 +5,17 @@ import CalendarIcon from '../../../Images/calendar-ico.svg';
 import BudgetIcon from '../../../Images/budget-ico.svg';
 import PeopleIcon from '../../../Images/people-ico.svg';
 import React, { useState } from 'react';
-import PlacesAutocomplete from 'react-places-autocomplete';
-import DatePicker from 'react-datepicker';
-import { Trip } from 'travelogue-utility';
-import 'react-datepicker/dist/react-datepicker.css';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import axios, { AxiosResponse } from 'axios';
 import Swal from 'sweetalert2';
 import testTrip from '../Trips/testtrip.json';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./MenuCard.css";
+import { updatePoints } from '../../../APIFetchers';
+import PlacesAutocomplete from "react-places-autocomplete";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { generateTrip } from "../../BackEndLogic/APICaller";
 
 //TODO we should all for budget and number of people to be drop with suggested values
 const searchOptions = {
@@ -88,6 +91,10 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
             alert('Please enter start and end locations');
             return;
         } */
+
+        const points = await updatePoints();
+        console.log("Current points updated", points)
+
         console.log("Start Addy: " + startAddress);
         const eaddy = endAddress.split(',')[0].split(" ")
         const tripObject: any = {

@@ -10,6 +10,9 @@ import HomePage from './Components/Home/Home';
 import SavedTrips from './Components/Home/SavedTrips/SavedTrips';
 import Features from './Components/Features/Features';
 import ChatBot from './Components/Common/ChatBot/ChatBot';
+// import SavedTrips from './SavedTrips/SavedTrips';
+import Leaderboard from './Components/Leaderboard/Leaderboard';
+import FriendList from './Components/FriendsList/FriendsList';
 
 import { GetUser } from './Auth/AuthContext';
 export interface IAppProps {
@@ -63,11 +66,27 @@ function App() {
                         </div>
                     )}
                 />
-                {/* <Route
-            exact={true}
-            path='/leaderboard'
-            render={() => <About />}
-          /> */}
+                <Route
+                    exact={true}
+                    path='/leaderboard'
+                    render={() => (
+                    <div className='App'>
+                        <NavBar />
+                        <Leaderboard />
+                    </div>
+                    )}
+                />
+
+                <Route
+                    exact={true}
+                    path='/friendlist'
+                    render={() => (
+                    <div className='App'>
+                        <NavBar />
+                        <FriendList />
+                    </div>
+                    )}
+                />
                 <Route
                     exact={true}
                     path='/history'
