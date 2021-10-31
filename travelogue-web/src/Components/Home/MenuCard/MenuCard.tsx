@@ -106,7 +106,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
             budget: budget,
             numberOfPeople: numPeople,
         };
-
+        Swal.showLoading ();
         console.log(startDate.getTime);
 
         axios.post('http://localhost:5000/api/trip', tripObject, {withCredentials: true}).then((res: AxiosResponse) => {

@@ -29,9 +29,9 @@ function ChatBot() {
                         </iframe>
     </div> 
                 </div>
-                <div className="cb-button">
+                <div className="cb-button" onClick={() => handleChatButton()}>
                     
-                    <div id="chatbot-btn" className="cb-button-ico" onClick={() => handleChatButton()}>
+                    <div id="chatbot-btn" className="cb-button-ico" >
                     <img alt="Chat" src={ChatBotIcon} />
                     </div>
                 </div>

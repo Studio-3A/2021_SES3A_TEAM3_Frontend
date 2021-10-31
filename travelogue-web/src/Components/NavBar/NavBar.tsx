@@ -84,17 +84,6 @@ function NavBar() {
                 </div>
               </Link>
 
-              <Link to='/saved'>
-                <div className='pageContainer'>
-                  <div className='pageImage'>
-                    <img alt='savedIcon' src={savedIcon} />
-                  </div>
-                  <div className='pageLink'>
-                    <span>Saved</span>
-                  </div>
-                </div>
-              </Link>
-
               <Link to='/account'>
                 <div className='pageContainer'>
                   <div className='pageImage'>

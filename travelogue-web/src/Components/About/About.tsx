@@ -48,8 +48,7 @@ function About() {
             <img src={goals3} alt='3' />
             <p>Develop an inviting and collaborative working experience</p>
           </div>
-          <p className="page-title">Team</p>
-          <p className="page-label">Our People</p>
+        
           <div></div>
         </div>
       </div>

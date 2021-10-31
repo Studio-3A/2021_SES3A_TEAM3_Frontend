@@ -6,15 +6,31 @@ import sTrips from './SavedTrips.json';
 import LocationIcon from '../../svg/location-ico.svg';
 import MoneyIcon from '../../svg/money-ico.svg';
 import PeopleIcon from '../../svg/people-ico.svg';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 //import tripBackground from '';
 
-export const SavedTrip = (props) => (
+
+function getTripActivities(id) {
+    const body = {
+        savedTripID: id,
+    }
+    axios.post('http://localhost:5000/api/getUserVenuesTrip', body).then((res) => {
+        if(res){
+            return res;
+        }
+    });
+}
+
+export const SavedActivity = (props) => (
     <div className='saved-activity-card radius-m card-shadow'>
         <div className='saved-activity-card-header'>
             <div className='saved-activity-card-header-bg'>
                 <img className='card-header-save_icon' src={savedIcon}></img>
             </div>
         </div>
+        <div className='saved-activity-card-body-el'>
         <div className='saved-activity-card-body'>
             <div className='activity-card-body-element'>
                 <div className='card-body-icon'>
@@ -22,47 +38,62 @@ export const SavedTrip = (props) => (
                 </div>
                 <div className='card-body-location-label'>
                     <h4>
-                        <b>{props.trip.location}</b>
+                        <b>{props.trip.venueName}</b>
                     </h4>
                 </div>
             </div>
             <div className='activity-card-body-description'>
-                {props.trip.description}
+     
             </div>
             <div className='activity-card-body-element'>
                 <div className='card-body-icon'>
-                    <img className='card-body-icon-img' src={MoneyIcon} />
                 </div>
                 <div className='card-body-price-label'>
-                    <b>Price: </b>${props.trip.price} per person
+                    <b>Rating:</b> {props.trip.venueRating}/5
                 </div>
             </div>
             <div className='activity-card-body-element'>
                 <div className='card-body-icon'>
-                    <img className='card-body-icon-img' src={PeopleIcon} />
                 </div>
-                <div className='card-body-no_people-label'>
-                    <b>Number of people:</b> Suitable for up to{' '}
-                    {props.trip.people} people
+                <div className='card-body-price-label'>
+                    <b>Weather:</b> High, {props.trip.venueWeather[0].maxTemp}&#176;C | Low, {props.trip.venueWeather[0].minTemp}&#176;C
+                </div>
+            </div>
+            <div className='activity-card-body-element'>
+                <div className='card-body-icon'>
+                </div>
+                <div className='card-body-price-label'>
+                    <b>Venue Type:</b> {props.trip.venueType.replaceAll("_", " ")}
                 </div>
             </div>
         </div>
-        <div className='activity-card-body-view'>
-            <button className='btn-secondary btn-shadow-blue'>
-                <b>View</b>
-            </button>
         </div>
     </div>
 );
 
-class SavedTrips extends Component {
-    constructor() {
-        super();
+class TripHistory extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {activities: []};
     }
 
-    tripsList() {
-        return sTrips.trip.map((currentTrip) => {
-            return <SavedTrip trip={currentTrip} key={currentTrip._id} />;
+    componentDidMount () {
+       const tripId = window.location.href.split("/").pop()
+       const body = {
+        savedTripID: tripId,
+    }
+    axios.post('http://localhost:5000/api/getUserVenuesTrip', body).then((res) => {
+        if(res){
+            console.log("hehre")
+            console.log(res)
+            this.setState({activities: res.data.data});;
+        }
+    });
+    }
+
+    activityList() {
+        return this.state.activities.map((currentActivity) => {
+            return <SavedActivity trip={currentActivity} key={currentActivity._id} />;
         });
     }
 
@@ -78,14 +109,19 @@ class SavedTrips extends Component {
                     </div>
                     <div className='saved-header-title'>
                         <span></span>
-                        <b>Trip History</b>
+                        <b>Trip Activities</b>
+                        <Link to="/history">
+                            <button className='btn-secondary btn-shadow-blue take-me-back'>
+                                <b>Take Me Back</b>
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 <div className='saved-body'>
-                    <div className='saved-body-cards'>{this.tripsList()}</div>
+                    <div className='saved-body-cards' >{this.activityList()}</div>
                 </div>
             </div>
         );
     }
 }
-export default SavedTrips;
+export default TripHistory;

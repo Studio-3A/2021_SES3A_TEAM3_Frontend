@@ -7,18 +7,11 @@ import LocationIcon from '../../svg/location-ico.svg';
 import MoneyIcon from '../../svg/money-ico.svg';
 import PeopleIcon from '../../svg/people-ico.svg';
 import axios from 'axios';
+import Modal from 'react-modal';
+import moment from 'moment';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 //import tripBackground from '';
-
-function getTripActivities(id) {
-    const body = {
-        savedTripID: id,
-    }
-    axios.post('http://localhost:5000/api/getUserVenuesTrip', body).then((res) => {
-        if(res){
-            console.log(res);
-        }
-    });
-}
 
 export const SavedTrip = (props) => (
     <div className='saved-activity-card radius-m card-shadow'>
@@ -47,23 +40,19 @@ export const SavedTrip = (props) => (
                     <img className='card-body-icon-img' src={MoneyIcon} />
                 </div>
                 <div className='card-body-price-label'>
-                    <b>Dates:</b> {props.trip.startDate.split(",")[0].toLocaleString('en-GB')} <b>to</b> {props.trip.endDate.split(",")[0].toLocaleString('en-GB')}
+                    <b>Dates:</b> {props.trip.startDate} <b>to</b> {props.trip.endDate}
                 </div>
             </div>
-            <div className='activity-card-body-element'>
-                <div className='card-body-icon'>
-                    <img className='card-body-icon-img' src={PeopleIcon} />
-                </div>
-                <div className='card-body-no_people-label'>
-                    <b>Number of people:</b> Suitable for up to{' '}
-                     people
-                </div>
-            </div>
+        
         </div>
         <div className='activity-card-body-view'>
-            <button className='btn-secondary btn-shadow-blue' onClick={() => getTripActivities(props.trip._id)}>
-                <b>View</b>
-            </button>
+            <Link to={{ 
+                pathname: "/tripActivity/" + props.trip._id, 
+                }}>
+                <button className='btn-secondary btn-shadow-blue'>
+                    <b>View</b>
+                </button>
+            </Link>
         </div>
         </div>
     </div>

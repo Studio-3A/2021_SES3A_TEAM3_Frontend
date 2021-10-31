@@ -9,6 +9,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import HomePage from './Components/Home/Home';
 import SavedTrips from './Components/Home/SavedTrips/SavedTrips';
 import Features from './Components/Features/Features';
+import TripHistory from './Components/Home/SavedTrips/TripHistory';
 import ChatBot from './Components/Common/ChatBot/ChatBot';
 // import SavedTrips from './SavedTrips/SavedTrips';
 import Leaderboard from './Components/Leaderboard/Leaderboard';
@@ -93,9 +94,20 @@ function App() {
                     render={() => (
                         <div className='App'>
                             <NavBar />
+                            <SavedTrips />
                         </div>
                     )}
                 />
+                <Route
+                    exact={true}
+                    path='/tripActivity/:tripId'
+                    render={() => (
+                        <div className='App'>
+                            <NavBar />
+                            <TripHistory />
+                        </div>
+                    )}
+                />{/*
                 <Route
                     exact={true}
                     path='/saved'
@@ -105,7 +117,7 @@ function App() {
                             <SavedTrips />
                         </div>
                     )}
-                />
+                /> */}
                 <Route
                     exact={true}
                     path='/account'
