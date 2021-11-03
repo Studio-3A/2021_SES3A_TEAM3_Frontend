@@ -9,6 +9,8 @@ import PeopleIcon from '../../svg/people-ico.svg';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
+import locationBlue from '../../svg/location-blu.svg';
+import locationBlueLarge from '../../svg/location-blulrg.svg';
 //import tripBackground from '';
 
 
@@ -27,7 +29,7 @@ export const SavedActivity = (props) => (
     <div className='saved-activity-card radius-m card-shadow'>
         <div className='saved-activity-card-header'>
             <div className='saved-activity-card-header-bg'>
-                <img className='card-header-save_icon' src={savedIcon}></img>
+                <img className='card-header-save_icon' src={locationBlue}></img>
             </div>
         </div>
         <div className='saved-activity-card-body-el'>
@@ -64,6 +66,13 @@ export const SavedActivity = (props) => (
                 </div>
                 <div className='card-body-price-label'>
                     <b>Venue Type:</b> {props.trip.venueType.replaceAll("_", " ")}
+                </div>
+            </div>
+            <div className='activity-card-body-element'>
+                <div className='card-body-icon'>
+                </div>
+                <div className='card-body-price-label'>
+                    <b>Address:</b> {props.trip.venueAddress}
                 </div>
             </div>
         </div>
@@ -104,7 +113,7 @@ class TripHistory extends Component {
                     <div className='saved-header-icon'>
                         <img
                             className='saved-header-icon-img'
-                            src={savedIcon}
+                            src={locationBlueLarge}
                         />
                     </div>
                     <div className='saved-header-title'>

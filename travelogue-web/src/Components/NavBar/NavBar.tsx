@@ -9,6 +9,7 @@ import leaderboardIcon from '../../Images/leaderboard-ico.svg';
 import historyIcon from '../../Images/history-ico.svg';
 import savedIcon from '../../Images/saved-ico.svg';
 import accountsIcon from '../../Images/accounts-ico.svg';
+import friendsIcon from '../../Images/friendsico.svg';
 import settingsIcon from '../../Images/settings-ico.svg';
 import logoutIcon from '../../Images/logout-ico.svg';
 import { GetUser } from '../../Auth/AuthContext';
@@ -23,6 +24,7 @@ function NavBar() {
   const signOut = () => {
     axios.get('http://localhost:5000/auth/logout', { withCredentials: true }).then((res: AxiosResponse) => {
         if(res.data){
+            console.log(res.data);
             window.location.href = '/'
         }
     });
@@ -84,6 +86,19 @@ function NavBar() {
                 </div>
               </Link>
 
+              
+              <Link to='/friendslist'>
+                <div className='pageContainer'>
+                  <div className='pageImage'>
+                    <img alt='accountsIcon' src={friendsIcon} />
+                  </div>
+
+                  <div className='pageLink'>
+                    <span>Friends List</span>
+                  </div>
+                </div>
+              </Link>
+
               <Link to='/account'>
                 <div className='pageContainer'>
                   <div className='pageImage'>
@@ -95,29 +110,8 @@ function NavBar() {
                   </div>
                 </div>
               </Link>
-              <Link to='/friendslist'>
-                <div className='pageContainer'>
-                  <div className='pageImage'>
-                    <img alt='accountsIcon' src={accountsIcon} />
-                  </div>
 
-                  <div className='pageLink'>
-                    <span>Friends List</span>
-                  </div>
-                </div>
-              </Link>
-              <Link to='/settings'>
-                <div className='pageContainer'>
-                  <div className='pageImage'>
-                    <img alt='settingsIcon' src={settingsIcon} />
-                  </div>
-                  <div className='pageLink'>
-                    <span>Settings</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/' onClick={() => signOut}>
+              <Link to='/' onClick={() => signOut()}>
                 <div className='pageContainer'>
                   <div className='pageImage'>
                     <img alt='logoutIcon' src={logoutIcon} />

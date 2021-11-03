@@ -4,6 +4,7 @@ import { Activity, Trip } from 'travelogue-utility';
 import People from '../../svg/activity-people.svg';
 import Clock from '../../svg/activity-clock.svg';
 import Save from '../../svg/card-save-icon.svg';
+import LocationBlue from '../../svg/location-blu.svg';
 import './Trips.css';
 /*
 interface ActProps {
@@ -62,7 +63,7 @@ const ActivitySingle = (props) => {
                                 value={name}
                                 className={'activity-name'}
                             />
-                            <img className='activity-save' src={Save}></img>
+                            <img className='activity-save' src={LocationBlue}></img>
                         </div>
                         {/* <ActivityProperty
               label={"Price"}
@@ -104,10 +105,10 @@ const ActivitySingle = (props) => {
                     </div>
                 </div>
                 <div className='description-buttons'>
-                    <button className='btn-secondary btn-shadow-blue'>
+                    <button className='btn-secondary btn-shadow-blue m-medium'>
                         <b>Bookings</b>
                     </button>
-                    <button className='btn-secondary btn-shadow-blue'>
+                    <button className='btn-secondary btn-shadow-blue m-medium'>
                         <b>Map</b>
                     </button>
                 </div>

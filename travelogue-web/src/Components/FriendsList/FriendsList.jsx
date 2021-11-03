@@ -4,6 +4,8 @@ import './FriendsList.css';
 import FriendBG from '../../Images/friendlist.svg';
 import FriendCard from '../FriendCard/FriendCard';
 import Swal from "sweetalert2";
+import '../../App.css';
+import Search from '../svg/search.svg';
 
 import SkeletonCard from '../Common/SkeletonLoad/Skeleton';
 
@@ -119,26 +121,28 @@ const FriendsList = (props) => {
   }, [friendsList]);
 
   return (
-    <>
-      <div>
         <div className="content">
           <img className="friend-img" src={FriendBG} alt="friend-img"></img>
           <h1 className="friend-title">Friends List</h1>
           <br></br>
-          <div className='nav-middle'>
+          <div className='search'>
+          
             <form className='search-form'>
+            <button type='submit' className='search-btn'>
+                        <img src={Search}/>
+                    </button>
               <input
                 type='text'
-                className='search-input-friend'
+                className='search-input'
                 placeholder='Search for friends....'
                 onChange={(e) => handleFilter(e)}
               />
             </form>
           </div>
-          <button className="button-all" onClick={showAllUsers}>
+          <button className="btn-primary m-medium" onClick={showAllUsers}>
             Add Friends
           </button>
-          <button className="button-all" onClick={showFriends}>
+          <button className="btn-primary m-medium" onClick={showFriends}>
             Your Friends
           </button>
           <div className='friend-bg'>
@@ -162,8 +166,6 @@ const FriendsList = (props) => {
             }
           </div>
         </div>
-      </div>
-    </>
   );
 };
 

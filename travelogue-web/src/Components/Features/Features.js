@@ -41,7 +41,7 @@ function Features() {
                 <div className='ft-hr'></div>
             </div>
             <div className='textWrap'>
-                <p className='features-title1'>Save Trips on the Go</p>
+                <p className='features-title1'>View Past Trips on the Go</p>
                 <p className='features-title2'>
                     Ticking Off Bucket List Items Has Never Been So Easy!
                 </p>

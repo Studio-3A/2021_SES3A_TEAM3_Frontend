@@ -103,7 +103,7 @@ const Account: FC = () => {
                                 type='text'
                                 name='username'
                                 placeholder='Username'
-                                value={name.replace(/ /g,'')}
+                                value={name}
                                 className='textbox'
                                 readOnly
                             />
@@ -140,7 +140,7 @@ const Account: FC = () => {
                         <div key="default-checkbox" className="mb-3">
                             <Form.Check 
                                 type='checkbox'
-                                label = 'Receive Promotional Emails'
+                                label = 'Show my progress on the Leaderboard'
                                 onClick= {handlePromotionalEmail}
                             />
                         </div>

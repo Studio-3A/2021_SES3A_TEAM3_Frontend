@@ -101,7 +101,7 @@ function frontPage() {
             <div className="page4">
                 <div>
                     <div className="page-title">
-                        <p>Download</p>
+                        <p>On Its Way!</p>
                     </div>
                     <div className="page-label">
                         <p>Mobile Application</p>
@@ -117,14 +117,14 @@ automatically generate a trip for you. Downloadable app is below</p>
                                     <div className="google-download card-shadow">
                                         <img alt="Apple Logo" src={appleLogo}/>
                                         <div>
-                                            <h4>Download App</h4>
+                                            <h4>Coming Soon</h4>
                                             <p>App Store</p>
                                         </div>
                                     </div>
                                     <div className="google-download card-shadow">
                                         <img alt="Google Logo" src={googleLogo}></img>
                                         <div>
-                                            <h4>Download App</h4>
+                                            <h4>Coming Soon</h4>
                                             <p>App Store</p>
                                         </div>
                                     </div>

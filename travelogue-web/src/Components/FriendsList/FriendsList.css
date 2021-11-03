@@ -6,10 +6,7 @@
 }
 
 .friend-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 101%;
+  width: 100%;
 }
 
 .friend-title {
@@ -25,48 +22,10 @@
   margin-right: 25px;
 }
 
-.search-input-friend {
-  background: #f2f2f2;
-  width: 750px;
-  height: 35px;
-  border: 2px solid #f2f2f2;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  padding: 10px;
-  padding-left: 15px;
-  font-size: 14px;
-  box-shadow: none !important;
-  transition-duration: 0.7s;
-  caret-color: #8a2980;
+.search-form {
+  justify-content: center !important;
 }
-.search-input:hover,
-.search-input:focus {
-  transition-duration: 0.7s;
-  outline: none;
-  border: 2px solid #8a2980;
-}
-.search-input:hover + .search-btns {
-  transition-duration: 0.7s;
-  outline: none;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  background-color: #8a2980;
-}
-.search-input:focus + .search-btns {
-  transition-duration: 0.7s;
-  outline: none;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  background-color: #8a2980;
-}
-.search-input:hover ~ .search-btns .search-icon {
-  color: #ffffff;
-}
-.search-input:focus ~ .search-btns .search-icon {
-  color: #ffffff;
-}
+
 
 .search-btns {
   transition-duration: 0.7s;
@@ -91,12 +50,6 @@
 }
 .search-btns:hover .search-icon {
   color: #ffffff;
-}
-.search-form {
-  display: flex !important;
-  align-items: center !important;
-  position: relative !important;
-  justify-content: space-around !important;
 }
 
 .button-all {

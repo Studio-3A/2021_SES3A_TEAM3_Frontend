@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../svg/travelogueLogo.svg';
 import Star from '../svg/star-icon.svg';
 import Search from '../svg/search.svg';
+import '../../App.css';
 
 function Header() {
     return (
@@ -31,7 +32,7 @@ function Header() {
                 </div>
             <div className='menu-items'>
                 <Link to='/home'>
-                    <div className='menu-items-home'>Home</div>
+                    <div className='menu-items-home menu-under'>Home</div>
                 </Link>
                 <Link to='/about'>
                     {window.location.href.endsWith('about') ? (
@@ -40,7 +41,7 @@ function Header() {
                             About
                         </div>
                     ) : (
-                        <div className='menu-items-about'>About</div>
+                        <div className='menu-items-about menu-under'>About</div>
                     )}
                 </Link>
                 <Link to='/features'>

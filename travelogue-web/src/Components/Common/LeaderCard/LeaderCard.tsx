@@ -3,6 +3,9 @@ import React from 'react';
 import gold from '../../../Images/gold.svg';
 import silver from '../../../Images/silver.svg';
 import bronze from '../../../Images/bronze.svg';
+import firstBadge from '../../svg/first-badge.svg';
+import secondBadge from '../../svg/second-badge.svg';
+import thirdBadge from '../../svg/third-badge.svg';
 import './LeaderCard.css';
 import rankone from '../../../Images/rankone.svg';
 
@@ -17,7 +20,7 @@ interface IProps {
 const LeaderCard = ({ name, xp, place }: IProps) => {
 
   const colors = ['#01C48A', '#A051FB', '#FF995A'];
-  const trophys = [gold, silver, bronze]
+  const trophys = [firstBadge, secondBadge, thirdBadge]
 
   return (
       <div className='leader-card card-shadow'>

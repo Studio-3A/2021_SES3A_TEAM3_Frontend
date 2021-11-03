@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Account from './Components/Users/Account';
@@ -52,7 +52,6 @@ function App() {
                     path='/about'
                     render={() => (
                         <div className='App'>
-                            <NavBar />
                             <About />
                         </div>
                     )}
@@ -62,7 +61,6 @@ function App() {
                     path='/features'
                     render={() => (
                         <div className='App'>
-                            <NavBar />
                             <Features />
                         </div>
                     )}
@@ -80,7 +78,7 @@ function App() {
 
                 <Route
                     exact={true}
-                    path='/friendlist'
+                    path='/friendslist'
                     render={() => (
                     <div className='App'>
                         <NavBar />
@@ -143,7 +141,7 @@ function App() {
                     render={() => (
                         <div className='App'>
                             <LandingPage />
-                            {user ? window.location.href = '/home' : <Login show={true}/>}
+                            {user ? <Redirect to="/home" /> : <Login show={true}/>}
                         </div>
                     )}
                 />

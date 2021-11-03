@@ -111,6 +111,7 @@ const MenuCard = ({ setTrip }: MenuCardProps) => {
 
         axios.post('http://localhost:5000/api/trip', tripObject, {withCredentials: true}).then((res: AxiosResponse) => {
             if(res.data){
+                Swal.close();
                 console.log(res.data);
                 setTrip(res.data);
             }

@@ -6,6 +6,8 @@ import sTrips from './SavedTrips.json';
 import LocationIcon from '../../svg/location-ico.svg';
 import MoneyIcon from '../../svg/money-ico.svg';
 import PeopleIcon from '../../svg/people-ico.svg';
+import CalendarIcon from '../../svg/timecal.svg';
+import HistoryIcon from '../../svg/history-blu.svg';
 import axios from 'axios';
 import Modal from 'react-modal';
 import moment from 'moment';
@@ -17,7 +19,7 @@ export const SavedTrip = (props) => (
     <div className='saved-activity-card radius-m card-shadow'>
         <div className='saved-activity-card-header'>
             <div className='saved-activity-card-header-bg'>
-                <img className='card-header-save_icon' src={savedIcon}></img>
+                <img className='card-header-save_icon' src={HistoryIcon}></img>
             </div>
         </div>
         <div className='saved-activity-card-body-el'>
@@ -37,7 +39,7 @@ export const SavedTrip = (props) => (
             </div>
             <div className='activity-card-body-element'>
                 <div className='card-body-icon'>
-                    <img className='card-body-icon-img' src={MoneyIcon} />
+                    <img className='card-body-icon-img' src={CalendarIcon} />
                 </div>
                 <div className='card-body-price-label'>
                     <b>Dates:</b> {props.trip.startDate} <b>to</b> {props.trip.endDate}
@@ -86,7 +88,7 @@ class SavedTrips extends Component {
                     <div className='saved-header-icon'>
                         <img
                             className='saved-header-icon-img'
-                            src={savedIcon}
+                            src={HistoryIcon}
                         />
                     </div>
                     <div className='saved-header-title'>
