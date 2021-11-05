@@ -23,6 +23,13 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
     const signInWithMicrosoft = () => {
         window.open('http://localhost:5000/auth/microsoft', '_self')
     }
+    const signInWithFacebook = () => {
+        window.open('http://localhost:5000/auth/facebook', '_self')
+    }
+    const signInWithApple = () => {
+        window.open('http://localhost:5000/auth/apple', '_self')
+    }
+    
     
     return (
         <div>
@@ -40,8 +47,8 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
                                 <div className="signup-btns"> 
                                     <GoogleSignUp className="signup-btn" onClick={signInWithGoogle}/>
                                     <MicrosoftSignup className="signup-btn"  onClick={signInWithMicrosoft}/>
-                                    <FacebookSignup className="signup-btn"/>
-                                    <AppleSignUp className="signup-btn"/>
+                                    <FacebookSignup className="signup-btn" onClick={signInWithFacebook}/>
+                                    <AppleSignUp className="signup-btn" onClick={signInWithApple}/>
                                 </div>
                                 <div className="vl"></div>
                                 {/* <p className="tx">Already have an account? <b style={{ color: "aquamarine", cursor:"pointer"}}>Login</b></p> */}
