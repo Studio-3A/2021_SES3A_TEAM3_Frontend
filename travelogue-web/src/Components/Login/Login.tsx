@@ -6,15 +6,10 @@ import {ReactComponent as MicrosoftSignup} from '../../Images/microsignup.svg'
 import {ReactComponent as GoogleSignUp} from '../../Images/googlesignup.svg'
 import {ReactComponent as CloseBtn} from '../../Images/closebtn.svg'
 import './Login.css'
-import firebase from 'firebase';
-import { useAuth } from '../../firebase/Auth'
-import { Link, Redirect } from 'react-router-dom';
-import { Providers } from '../../firebase/firebase';
-import { IAppProps } from '../../App';
-import { About } from '../About/About';
+import { getUser } from '../../Auth/AuthContext';
 
 const Login: FC<{show: boolean}> = ({ show }: any) => {
-    const auth = useAuth();
+    const auth = getUser();
     const [showState, setShow] = useState<boolean>(show);
     
     const showModal = (status:boolean) => {
@@ -22,27 +17,19 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
         window.location.href = "/";
     };
 
-    const signInWithProvider = (provider: firebase.auth.AuthProvider) => {
-        if (!auth.user){
-            //session cleared when the tab is closed.
-            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).then(() => {
-                auth.signIn(provider)
-                .then(result => {
-                    window.location.href = '/home';
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-            });
-        } else {
-            //auth.signOut();
-            //alert(`User is already signed in as '${auth.user.displayName}'`);
-            showModal(false);
-            window.location.href = "/home";
-        }
-        // What does this do??? It's returning a JSX fragment from within a non-rendering function?
-        return  <Redirect to='/history'/>      
+    const signInWithGoogle = () => {
+        window.open('http://localhost:5000/auth/google', '_self')
     }
+    const signInWithMicrosoft = () => {
+        window.open('http://localhost:5000/auth/microsoft', '_self')
+    }
+    const signInWithFacebook = () => {
+        window.open('http://localhost:5000/auth/facebook', '_self')
+    }
+    const signInWithApple = () => {
+        window.open('http://localhost:5000/auth/apple', '_self')
+    }
+    
     
     return (
         <div>
@@ -58,10 +45,10 @@ const Login: FC<{show: boolean}> = ({ show }: any) => {
                                 <p className="heading">Login</p>
                                 <p className="tx">Get access to amazing features that will help you start your journey today.</p>
                                 <div className="signup-btns"> 
-                                    <GoogleSignUp className="signup-btn" onClick={() => signInWithProvider(Providers.google)}/>
-                                    <MicrosoftSignup className="signup-btn" onClick={() => signInWithProvider(Providers.facebook)}/>
-                                    <FacebookSignup className="signup-btn"/>
-                                    <AppleSignUp className="signup-btn"/>
+                                    <GoogleSignUp className="signup-btn" onClick={signInWithGoogle}/>
+                                    <MicrosoftSignup className="signup-btn"  onClick={signInWithMicrosoft}/>
+                                    <FacebookSignup className="signup-btn" onClick={signInWithFacebook}/>
+                                    <AppleSignUp className="signup-btn" onClick={signInWithApple}/>
                                 </div>
                                 <div className="vl"></div>
                                 {/* <p className="tx">Already have an account? <b style={{ color: "aquamarine", cursor:"pointer"}}>Login</b></p> */}

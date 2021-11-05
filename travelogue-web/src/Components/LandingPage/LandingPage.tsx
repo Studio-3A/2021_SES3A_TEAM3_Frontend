@@ -15,8 +15,19 @@ import googleLogo from '../svg/googleLogo.svg';
 
 import '../Login/Login.css'
 import { Link } from 'react-router-dom';
+import { getUser } from '../../Auth/AuthContext';
+import axios, { AxiosResponse } from 'axios';
 
 function frontPage() {
+    const user = getUser();
+
+    const signOut = () => {
+        axios.get('http://localhost:5000/auth/logout', { withCredentials: true }).then((res: AxiosResponse) => {
+            if(res.data){
+                window.location.href = '/'
+            }
+        });
+    }
     return (
         <div className="container-fp">
             <div className="page1">
@@ -37,11 +48,15 @@ function frontPage() {
                     <div className="menu-items-home">Home</div>
                     <div className="menu-items-about">About</div>
                     <div className="menu-items-features">Features</div>
-                    <Link to="/login">
-                    <button className='menu-items-login btn-secondary' type='button'>
-                    Login   
-                    </button>
-                    </Link>
+                    {
+                        user ?  
+                        (<button className='menu-items-login btn-secondary' type='button' onClick={signOut}> Logout </button>) 
+                        :
+                        (<Link to="/login">
+                            <button className='menu-items-login btn-secondary' type='button'>Login</button>
+                        </Link>)
+                    }
+                    
                 </div>
             </div>
             <div className="main-content">
